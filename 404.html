@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found | Tboy450 Projects</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      // Project addresses are case-sensitive, and phones often capitalize the first letter.
+      // Send mistyped or shortened project addresses to the right site.
+      (function () {
+        var sites = ["dragonfly-titan-gcs-demo", "beyond-the-screen-visual-transduction", "ghost-ai-downloads", "zoom-loop"];
+        var parts = location.pathname.split("/");
+        var typed = (parts[1] || "").toLowerCase();
+        if (!typed) return;
+        var match = null;
+        for (var i = 0; i < sites.length && !match; i += 1) {
+          if (sites[i] === typed || (typed.length >= 4 && sites[i].indexOf(typed) === 0)) match = sites[i];
+        }
+        if (match && parts[1] !== match) {
+          parts[1] = match;
+          location.replace(parts.join("/") + location.search + location.hash);
+        }
+      })();
+    </script>
+    <style>
+      :root { color-scheme: dark; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; background: #081018; color: #e6f0f7; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; }
+      a { color: #7ce7ff; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Page not found</h1>
+      <p>That address doesn't exist. Project addresses are all lowercase.</p>
+      <p><a href="/">See all Tboy450 projects</a> or open the <a href="/dragonfly-titan-gcs-demo/">Dragonfly Titan Simulator</a>.</p>
+    </main>
+  </body>
+</html>
