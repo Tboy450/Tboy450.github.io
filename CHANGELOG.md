@@ -3,6 +3,13 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-10-04: Use the map's GitHub Pages website
+- **Signed:** GitHub Copilot
+- **What changed:** Replaced Existential Puzzle Mapper's old ChatGPT-hosted link with
+  `https://tboy450.github.io/existential-puzzle-mapper/`. Added the GitHub Pages
+  address to the sitemap and the map to the 404 page's address correction list.
+- **Why:** Share the current, automatically published map instead of the old hosted copy.
+
 ## 2026-10-04: Add game and puzzle websites
 - **Signed:** GitHub Copilot
 - **What changed:** Added website and code links for White House Game: Rocket Run and
