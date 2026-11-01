@@ -16,6 +16,8 @@ Newest first. Each entry is signed with who made it, so the next person or assis
   - A collapsible "Early work & experiments" list and a "Work with HASK" contact section.
   - A share image, favicons, and a matching 404 page.
   - Styles and scripts moved to `assets/`.
+  - Removed the YouTube Hidden Video Return listing at the owner's request, because it didn't give good results.
+    Its repository stays on GitHub.
 - **Why:** The owner asked for a more impressive, branded hub for LinkedIn and the HASK business.
 
 ## 2026-11-01: Add the laser engraving apps

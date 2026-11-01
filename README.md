@@ -12,6 +12,8 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
   - **From the workshop** shows laser-engraved pieces.
   - **Early work & experiments** is the collapsible list of beginner repositories.
   - List only **public** repositories; private ones stay off on purpose.
+  - Two public repositories are also left off on purpose: `Rblox-game` (an empty duplicate of
+    `Roblox-game`) and `youtube-hidden-video-return` (the owner's request).
 - `assets/site.css` and `assets/site.js`: styles, the filters, the header counts and the GitHub dates.
   The page works without scripts.
 - `assets/shots/`: card images, 800 × 500 WebP, with 1280 × 720 `-wide` versions for featured cards.
