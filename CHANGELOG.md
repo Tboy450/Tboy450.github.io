@@ -3,6 +3,12 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-01: Add the laser engraving apps
+- **Signed:** GitHub Copilot (Claude Opus 5.5 model)
+- **What changed:** Added Laser Photo Studio (`laser-photo-studio`, which includes the Perimeter Check)
+  and Positioning Laser (`positioning-laser`) to Design & fabrication. Both are newly public repositories.
+- **Why:** The owner asked for the laser apps to be public and listed.
+
 ## 2026-11-01: Add Cornerfield Market
 - **Signed:** GitHub Copilot (Claude Opus 5.5 model)
 - **What changed:** Added a code card for Cornerfield Market (`cornerfield-market`) after the Roblox
