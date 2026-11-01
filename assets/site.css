@@ -69,7 +69,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
 /* Header */
 .hero { position: relative; padding: 76px 0 44px; }
-.brand { display: flex; flex-direction: column; gap: 2px; }
+.brand { display: flex; align-items: center; gap: 18px; }
+.brand .emblem { width: 88px; height: 88px; filter: drop-shadow(0 0 22px rgba(47, 208, 224, 0.35)); }
+.wordmark { display: flex; flex-direction: column; gap: 2px; }
 .brand .bar { width: 64px; height: 5px; margin-bottom: 14px; border-radius: 2px; background: var(--cyan); box-shadow: 0 0 18px rgba(47, 208, 224, 0.6); }
 .brand strong { font-size: 1.45rem; letter-spacing: 0.05em; }
 .brand small { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); }
@@ -251,6 +253,7 @@ h2 { margin: 0; color: var(--cyan); font-size: 0.78rem; font-weight: 700; letter
 
 /* Contact and footer */
 .contact {
+  position: relative;
   margin-top: 60px;
   padding: clamp(22px, 4vw, 36px);
   border: 1px solid rgba(47, 208, 224, 0.35);
@@ -259,8 +262,13 @@ h2 { margin: 0; color: var(--cyan); font-size: 0.78rem; font-weight: 700; letter
 }
 .contact h3 { margin: 10px 0 8px; font-size: clamp(1.4rem, 3vw, 2rem); }
 .contact p { max-width: 62ch; margin: 0 0 18px; color: var(--silver); }
+.contact-emblem { position: absolute; top: 50%; right: clamp(24px, 5vw, 64px); width: 190px; height: 190px; transform: translateY(-50%); filter: drop-shadow(0 0 30px rgba(47, 208, 224, 0.3)); }
 footer { padding: 40px 0 56px; color: var(--muted); font-size: 0.85rem; }
 footer a { color: var(--cyan); }
+
+@media (max-width: 960px) {
+  .contact-emblem { display: none; }
+}
 
 @media (max-width: 760px) {
   .orbit { display: none; }
@@ -268,6 +276,7 @@ footer a { color: var(--cyan); }
 
 @media (max-width: 640px) {
   .hero { padding-top: 48px; }
+  .brand .emblem { width: 64px; height: 64px; }
   .corner { width: 90px; height: 90px; top: 28px; }
   .feature .overlay { padding: 0 18px 20px; }
   .timeline li { grid-template-columns: 44px 1fr; }

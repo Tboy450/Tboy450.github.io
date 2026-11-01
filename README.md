@@ -20,8 +20,10 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
   Live sites were captured with headless Edge. When adding a project, add a screenshot in the
   same size.
 - `assets/workshop/`: 800 × 600 WebP photos for the workshop row.
-- `assets/og-image.jpg`, `favicon.svg`, `favicon-32.png` and `apple-touch-icon.png`: the share
-  preview for LinkedIn and other sites, plus the browser icons.
+- `assets/hask-emblem.webp` and `.png`: the HASK logo emblem, cut out of the supplied HASK artwork. The
+  artwork's lettering misspells "Hybridized", so the page puts a text wordmark beside the emblem.
+- `assets/og-image.jpg`, `favicon-32.png`, `favicon-192.png` and `apple-touch-icon.png`: the share
+  preview for LinkedIn and other sites, plus the browser icons, all carrying the emblem.
 - `404.html`: project addresses are case-sensitive, and phones often capitalize the first
   letter. This page sends mistyped or shortened project addresses (for example
   `/Dragonfly-titan-gcs-demo/` or `/dragonfly`) to the right site.
