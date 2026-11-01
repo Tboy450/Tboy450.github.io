@@ -3,6 +3,17 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-01: Add Swarmfall, 5 Senses, Assets Lab and Roblox game
+- **Signed:** GitHub Copilot (Claude Opus 5.5 model)
+- **What changed:** Added website cards for Swarmfall: Drone Invasion (`/dragonfly-titan-gcs-demo/invasion/`),
+  5 Senses: Together to the Core (`/five-senses/`) and the Assets & Environments Lab
+  (`/assets-and-environments-lab/`), plus a code card for the Roblox Retail Game. Added the three
+  addresses to the sitemap, and `five-senses` and `assets-and-environments-lab` to the 404 page's
+  address correction list. All new links returned HTTP 200 on November 1.
+- **Why:** A reconciliation of GitHub, the live sites and the owner's project notes found these public
+  projects missing from the home page. `Rblox-game` was left out because it is an empty duplicate of
+  `Roblox-game`.
+
 ## 2026-10-04: Use the map's GitHub Pages website
 - **Signed:** GitHub Copilot
 - **What changed:** Replaced Existential Puzzle Mapper's old ChatGPT-hosted link with
