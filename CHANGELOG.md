@@ -3,6 +3,21 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-01: Redesign the hub
+- **Signed:** GitHub Copilot (Claude Opus 5.5 model)
+- **What changed:**
+  - A new identity header: Tristan Boyd Hash, HASK branding, and live project counts.
+  - The HASK cyan, graphite and silver palette replaces the orange.
+  - An animated blueprint-grid background and an orbit graphic, both switched off for reduced-motion users.
+  - Featured cards for Dragonfly and Swarmfall.
+  - Screenshots on every card (captured from the live sites, or taken from each project's own art).
+  - Category filters, Live / In development / Prototype badges, and "updated X ago" dates from the GitHub API.
+  - New cards for the BMW F800GS handguard and a "From the workshop" laser gallery.
+  - A collapsible "Early work & experiments" list and a "Work with HASK" contact section.
+  - A share image, favicons, and a matching 404 page.
+  - Styles and scripts moved to `assets/`.
+- **Why:** The owner asked for a more impressive, branded hub for LinkedIn and the HASK business.
+
 ## 2026-11-01: Add the laser engraving apps
 - **Signed:** GitHub Copilot (Claude Opus 5.5 model)
 - **What changed:** Added Laser Photo Studio (`laser-photo-studio`, which includes the Perimeter Check)

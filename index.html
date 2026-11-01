@@ -3,195 +3,292 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tboy450 Projects</title>
-    <meta name="description" content="Projects by Tboy450: the Dragonfly Titan Simulator, Beyond the Screen: Visual Transduction, Ghost A.I. downloads, Zoom Loop, games and coding experiments." />
+    <title>Tristan Boyd Hash · Projects</title>
+    <meta name="description" content="Projects by Tristan Boyd Hash (Tboy450) and HASK - Hybridized Business Solutions: the Dragonfly Titan Simulator, Swarmfall, games, research tools and digital fabrication." />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#070d13" />
     <link rel="canonical" href="https://tboy450.github.io/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Tboy450 Projects" />
-    <meta property="og:description" content="Websites, simulators, tools and games by Tboy450." />
+    <meta property="og:title" content="Tristan Boyd Hash · Projects" />
+    <meta property="og:description" content="Simulations, games, research tools and digital fabrication by Tristan Boyd Hash (Tboy450)." />
     <meta property="og:url" content="https://tboy450.github.io/" />
-    <style>
-      :root { color-scheme: dark; --bg: #081018; --card: #0f1d29; --line: rgba(151, 184, 209, 0.22); --text: #e6f0f7; --muted: #9db3c4; --accent: #7ce7ff; --warm: #ffb457; }
-      * { box-sizing: border-box; }
-      body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-      main { max-width: 980px; margin: 0 auto; padding: 32px 16px 48px; }
-      header h1 { margin: 0; font-size: 2rem; }
-      header p { margin: 6px 0 0; color: var(--muted); }
-      h2 { margin: 36px 0 12px; font-size: 1.15rem; color: var(--warm); letter-spacing: 0.02em; }
-      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
-      .card { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
-      .card h3 { margin: 0; font-size: 1.05rem; }
-      .card .repo { color: var(--muted); font: 0.78rem Consolas, monospace; }
-      .card p { margin: 0; color: #c9d8e4; font-size: 0.92rem; flex: 1; }
-      .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
-      .links a { padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--text); text-decoration: none; font-size: 0.85rem; }
-      .links a.primary { border-color: rgba(124, 231, 255, 0.6); color: #06121a; background: var(--accent); font-weight: 700; }
-      .links a:hover { border-color: var(--accent); }
-      footer { margin-top: 40px; color: var(--muted); font-size: 0.85rem; }
-      footer a { color: var(--accent); }
-    </style>
+    <meta property="og:image" content="https://tboy450.github.io/assets/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tristan Boyd Hash projects: the Dragonfly simulator, Swarmfall, 5 Senses and laser engraving" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <script src="/assets/site.js" defer></script>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Tboy450 Projects</h1>
-        <p>Websites, simulators, tools and games. Sites open in your browser; the rest link to their code on GitHub.</p>
-      </header>
+    <a class="skip" href="#projects">Skip to projects</a>
+    <div class="bg" aria-hidden="true"></div>
 
-      <h2>Websites</h2>
-      <section class="grid" aria-label="Projects with websites">
-        <article class="card">
-          <h3>Dragonfly Titan Simulator</h3>
-          <span class="repo">dragonfly-titan-gcs-demo</span>
-          <p>NASA Dragonfly-inspired Titan flight simulator with 3D terrain, telemetry, and orbit cameras.</p>
-          <div class="links"><a class="primary" href="/dragonfly-titan-gcs-demo/">Open site</a><a href="https://github.com/Tboy450/dragonfly-titan-gcs-demo">Code</a></div>
+    <header class="hero wrap">
+      <div class="brand"><span class="bar"></span><strong>HASK</strong><small>Hybridized Business Solutions</small></div>
+      <h1>Tristan <span>Boyd Hash</span></h1>
+      <p class="lede">Independent developer and maker: simulations, games, research tools and digital fabrication.</p>
+      <p class="term"><span class="prompt">&gt;</span> <span data-stats>Projects, live sites and code</span><span class="cursor" aria-hidden="true"></span></p>
+      <nav class="cta" aria-label="Contact">
+        <a class="btn primary" href="#contact">Work with HASK</a>
+        <a class="btn" href="https://github.com/Tboy450">GitHub</a>
+      </nav>
+      <svg class="corner" viewBox="0 0 150 150" aria-hidden="true">
+        <path d="M6 6H118L144 32V146" fill="none" stroke="currentColor" stroke-width="4" />
+        <path d="M36 32H118V122" fill="none" stroke="rgba(200,211,220,0.35)" stroke-width="1.5" />
+      </svg>
+      <svg class="orbit" viewBox="0 0 400 400" aria-hidden="true">
+        <g fill="none" stroke="currentColor">
+          <circle cx="200" cy="200" r="190" stroke-opacity="0.18" />
+          <circle class="spin slow" cx="200" cy="200" r="150" stroke-opacity="0.45" stroke-dasharray="2 10" />
+          <circle class="spin rev" cx="200" cy="200" r="108" stroke-opacity="0.3" stroke-dasharray="30 14" />
+          <circle cx="200" cy="200" r="64" stroke-opacity="0.22" />
+          <path d="M200 0V400M0 200H400" stroke-opacity="0.1" />
+        </g>
+        <g class="spin">
+          <circle cx="350" cy="200" r="6" fill="currentColor" />
+          <circle cx="350" cy="200" r="14" fill="none" stroke="currentColor" stroke-opacity="0.4" />
+        </g>
+        <g class="spin rev fast">
+          <circle cx="200" cy="92" r="4" fill="#c8d3dc" />
+        </g>
+        <circle cx="200" cy="200" r="22" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.6" />
+      </svg>
+    </header>
+
+    <main id="projects" class="wrap">
+      <section class="featured" aria-label="Featured projects">
+        <article class="feature" data-cat="simulations" data-repo="dragonfly-titan-gcs-demo" data-project>
+          <a class="media" href="/dragonfly-titan-gcs-demo/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/dragonfly-wide.webp" alt="" width="1280" height="720" /></a>
+          <div class="overlay">
+            <div class="meta"><span class="badge live">Live</span><span>Simulation</span><span class="updated"></span></div>
+            <h3>Dragonfly Titan Simulator</h3>
+            <p>A NASA Dragonfly-inspired flight simulator on Titan, with 3D terrain, live telemetry and orbit cameras.</p>
+            <ul class="tags"><li>Three.js</li><li>JavaScript</li><li>Telemetry</li></ul>
+            <div class="links"><a class="btn primary" href="/dragonfly-titan-gcs-demo/">Launch simulator</a><a class="btn" href="https://github.com/Tboy450/dragonfly-titan-gcs-demo">Code</a></div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Swarmfall: Drone Invasion</h3>
-          <span class="repo">dragonfly-titan-gcs-demo/invasion</span>
-          <p>A strategy game built from the Dragonfly simulator: drop drone swarms on planet after planet in a campaign galaxy.</p>
-          <div class="links"><a class="primary" href="/dragonfly-titan-gcs-demo/invasion/">Play</a><a href="https://github.com/Tboy450/dragonfly-titan-gcs-demo">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Beyond the Screen: Visual Transduction</h3>
-          <span class="repo">beyond-the-screen-visual-transduction</span>
-          <p>A visual transduction technology map from encoded signals to carriers, transducers, biological interfaces, and learned perception.</p>
-          <div class="links"><a class="primary" href="/beyond-the-screen-visual-transduction/">Open site</a><a href="https://github.com/Tboy450/beyond-the-screen-visual-transduction">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Ghost A.I. Downloads</h3>
-          <span class="repo">ghost-ai-downloads</span>
-          <p>Ghost A.I. Windows preview downloads and installation instructions. Development source stays private.</p>
-          <div class="links"><a class="primary" href="/ghost-ai-downloads/">Open site</a><a href="https://github.com/Tboy450/ghost-ai-downloads">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Zoom Loop</h3>
-          <span class="repo">zoom-loop</span>
-          <p>a.i. photo zoom loop</p>
-          <div class="links"><a class="primary" href="/zoom-loop/">Open site</a><a href="https://github.com/Tboy450/zoom-loop">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>White House Game: Rocket Run</h3>
-          <span class="repo">whitehousegame</span>
-          <p>Rocket Run game.</p>
-          <div class="links"><a class="primary" href="https://whitehouse-rocket-run-tboy450.tboy450.chatgpt.site/">Open site</a><a href="https://github.com/Tboy450/whitehousegame">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Existential Puzzle Mapper</h3>
-          <span class="repo">existential-puzzle-mapper</span>
-          <p>An interactive map for exploring philosophical, existential, spiritual, and communication puzzle structures.</p>
-          <div class="links"><a class="primary" href="/existential-puzzle-mapper/">Open site</a><a href="https://github.com/Tboy450/existential-puzzle-mapper">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>5 Senses: Together to the Core</h3>
-          <span class="repo">five-senses</span>
-          <p>A clean 3D d20 board game for two. Compete for points, restore five sense beacons together, and reach the core.</p>
-          <div class="links"><a class="primary" href="/five-senses/">Open site</a><a href="https://github.com/Tboy450/five-senses">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Assets &amp; Environments Lab</h3>
-          <span class="repo">assets-and-environments-lab</span>
-          <p>Independent 3D asset and terrain explorer, Blender and Houdini library, RPG assets, and local import tools.</p>
-          <div class="links"><a class="primary" href="/assets-and-environments-lab/">Open site</a><a href="https://github.com/Tboy450/assets-and-environments-lab">Code</a></div>
+        <article class="feature" data-cat="games" data-repo="dragonfly-titan-gcs-demo" data-project>
+          <a class="media" href="/dragonfly-titan-gcs-demo/invasion/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/swarmfall-wide.webp" alt="" width="1280" height="720" /></a>
+          <div class="overlay">
+            <div class="meta"><span class="badge live">Live</span><span>Game</span><span class="updated"></span></div>
+            <h3>Swarmfall: Drone Invasion</h3>
+            <p>A strategy game built from the simulator: drop drone swarms on planet after planet in a campaign galaxy.</p>
+            <ul class="tags"><li>JavaScript</li><li>Strategy</li><li>Automated tests</li></ul>
+            <div class="links"><a class="btn primary" href="/dragonfly-titan-gcs-demo/invasion/">Play</a><a class="btn" href="https://github.com/Tboy450/dragonfly-titan-gcs-demo">Code</a></div>
+          </div>
         </article>
       </section>
 
-      <h2>Design &amp; fabrication</h2>
-      <section class="grid" aria-label="Design and fabrication projects">
-        <article class="card">
-          <h3>TINEBOX C-01</h3>
-          <span class="repo">tinebox</span>
-          <p>A 3D-printable musical fidget with printed tuned tines, first-build test fixtures and a comb calibration tool. Early prototype.</p>
-          <div class="links"><a href="https://github.com/Tboy450/tinebox">Code</a></div>
+      <div class="toolbar">
+        <h2>All projects</h2>
+        <div class="filters" role="group" aria-label="Filter projects" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="simulations" aria-pressed="false">Simulations</button>
+          <button type="button" data-filter="games" aria-pressed="false">Games</button>
+          <button type="button" data-filter="fabrication" aria-pressed="false">Fabrication</button>
+          <button type="button" data-filter="research" aria-pressed="false">Research</button>
+          <button type="button" data-filter="tools" aria-pressed="false">Tools</button>
+        </div>
+      </div>
+
+      <section class="grid" aria-label="Projects">
+        <article class="card" data-cat="games" data-repo="five-senses" data-project>
+          <a class="thumb" href="/five-senses/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/senses.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Game</span><span class="updated"></span></div>
+            <h3>5 Senses: Together to the Core</h3>
+            <p>A 3D d20 board game for two. Compete for points, restore five sense beacons together, and reach the core.</p>
+            <ul class="tags"><li>Three.js</li><li>WebGL</li><li>2 players</li></ul>
+            <div class="links"><a class="btn primary" href="/five-senses/">Play</a><a class="btn" href="https://github.com/Tboy450/five-senses">Code</a></div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Laser Photo Studio</h3>
-          <span class="repo">laser-photo-studio</span>
-          <p>Turns a picture into a checked, safe laser engraving on a Grbl diode laser: material presets, a 1% dot perimeter check, and recovery after USB dropouts. Still in development.</p>
-          <div class="links"><a href="https://github.com/Tboy450/laser-photo-studio">Code</a></div>
+        <article class="card" data-cat="games" data-repo="cornerfield-market" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/cornerfield-market" tabindex="-1" aria-hidden="true"><img src="/assets/shots/cornerfield.webp" alt="" width="800" height="500" loading="lazy" /></a>
+          <div class="body">
+            <div class="meta"><span>Game</span><span class="updated"></span></div>
+            <h3>Cornerfield Market</h3>
+            <p>A first-person retail store game: order stock, fill shelves, set prices and serve shoppers. Extracted from the Roblox game into its own Godot project.</p>
+            <ul class="tags"><li>Godot 4</li><li>GDScript</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/cornerfield-market">Code</a></div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Positioning Laser</h3>
-          <span class="repo">positioning-laser</span>
-          <p>A Windows switch that pulses the engraving laser at 1% power for lining up jobs, with strict laser-off checks.</p>
-          <div class="links"><a href="https://github.com/Tboy450/positioning-laser">Code</a></div>
+        <article class="card" data-cat="games" data-repo="Roblox-game" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/Roblox-game" tabindex="-1" aria-hidden="true"><img src="/assets/shots/roblox.webp" alt="" width="800" height="500" loading="lazy" /></a>
+          <div class="body">
+            <div class="meta"><span>Game</span><span class="updated"></span></div>
+            <h3>Roblox Retail Game</h3>
+            <p>A Roblox retail store game built with Rojo, plus a separate arena shooter project.</p>
+            <ul class="tags"><li>Luau</li><li>Rojo</li><li>Roblox Studio</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/Roblox-game">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="games" data-repo="Tboy450-new-rpg-update" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/Tboy450-new-rpg-update" tabindex="-1" aria-hidden="true"><img src="/assets/shots/rpg.webp" alt="" width="800" height="500" loading="lazy" /></a>
+          <div class="body">
+            <div class="meta"><span>Game</span><span class="updated"></span></div>
+            <h3>Tboy450 RPG</h3>
+            <p>A fantasy RPG in Python, with an Android build in progress.</p>
+            <ul class="tags"><li>Python</li><li>Android</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/Tboy450-new-rpg-update">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="games" data-repo="whitehousegame" data-project>
+          <a class="thumb" href="https://whitehouse-rocket-run-tboy450.tboy450.chatgpt.site/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/rocket.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Game</span><span class="updated"></span></div>
+            <h3>White House Game: Rocket Run</h3>
+            <p>A one-button space-race arcade game in the browser.</p>
+            <ul class="tags"><li>Browser game</li></ul>
+            <div class="links"><a class="btn primary" href="https://whitehouse-rocket-run-tboy450.tboy450.chatgpt.site/">Play</a><a class="btn" href="https://github.com/Tboy450/whitehousegame">Code</a></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="fabrication" data-repo="laser-photo-studio" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/laser-photo-studio" tabindex="-1" aria-hidden="true"><img src="/assets/shots/laser-photo-studio.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge dev">In development</span></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
+            <h3>Laser Photo Studio</h3>
+            <p>Turns a picture into a checked, safe laser engraving on a Grbl diode laser: material presets, a 1% dot perimeter check and recovery after USB dropouts.</p>
+            <ul class="tags"><li>Python</li><li>G-code</li><li>Grbl</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="fabrication" data-repo="tinebox" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/tinebox" tabindex="-1" aria-hidden="true"><img src="/assets/shots/tinebox.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge">Prototype</span></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
+            <h3>TINEBOX C-01</h3>
+            <p>A 3D-printable musical fidget with printed tuned tines, first-build test fixtures and a comb calibration tool.</p>
+            <ul class="tags"><li>Python</li><li>CAD</li><li>3D printing</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/tinebox">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="fabrication" data-project>
+          <a class="thumb" href="/assets/shots/handguard.webp" tabindex="-1" aria-hidden="true"><img src="/assets/shots/handguard.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge">Prototype</span></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span></div>
+            <h3>BMW F800GS Replacement Handguard</h3>
+            <p>Replacement handguard designed from physical measurements, with a custom nut seat at the bar end. 3D printed.</p>
+            <ul class="tags"><li>CAD</li><li>3D printing</li></ul>
+            <div class="links"><a class="btn" href="/assets/shots/handguard.webp">View model</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="fabrication" data-repo="positioning-laser" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/positioning-laser" tabindex="-1" aria-hidden="true"><img src="/assets/shots/positioning-laser.webp" alt="" width="800" height="500" loading="lazy" /></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
+            <h3>Positioning Laser</h3>
+            <p>A Windows switch that pulses the engraving laser at 1% power for lining up jobs, with strict laser-off checks.</p>
+            <ul class="tags"><li>C#</li><li>Windows</li><li>Grbl</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/positioning-laser">Code</a></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="research" data-repo="beyond-the-screen-visual-transduction" data-project>
+          <a class="thumb" href="/beyond-the-screen-visual-transduction/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/beyond.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Research</span><span class="updated"></span></div>
+            <h3>Beyond the Screen: Visual Transduction</h3>
+            <p>A visual transduction technology map, from encoded signals to carriers, transducers, biological interfaces and learned perception.</p>
+            <ul class="tags"><li>Research</li><li>Writing</li></ul>
+            <div class="links"><a class="btn primary" href="/beyond-the-screen-visual-transduction/">Read</a><a class="btn" href="https://github.com/Tboy450/beyond-the-screen-visual-transduction">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="research" data-repo="existential-puzzle-mapper" data-project>
+          <a class="thumb" href="/existential-puzzle-mapper/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/mapper.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Research</span><span class="updated"></span></div>
+            <h3>Existential Puzzle Mapper</h3>
+            <p>An interactive map for exploring philosophical, existential, spiritual and communication puzzle structures.</p>
+            <ul class="tags"><li>JavaScript</li><li>Visualization</li></ul>
+            <div class="links"><a class="btn primary" href="/existential-puzzle-mapper/">Open map</a><a class="btn" href="https://github.com/Tboy450/existential-puzzle-mapper">Code</a></div>
+          </div>
+        </article>
+
+        <article class="card" data-cat="tools" data-repo="assets-and-environments-lab" data-project>
+          <a class="thumb" href="/assets-and-environments-lab/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/assets.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Tool</span><span class="updated"></span></div>
+            <h3>Assets &amp; Environments Lab</h3>
+            <p>Independent 3D asset and terrain explorer, Blender and Houdini library, RPG assets and local import tools.</p>
+            <ul class="tags"><li>Three.js</li><li>Blender</li><li>Houdini</li></ul>
+            <div class="links"><a class="btn primary" href="/assets-and-environments-lab/">Explore</a><a class="btn" href="https://github.com/Tboy450/assets-and-environments-lab">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="tools" data-repo="ghost-ai-downloads" data-project>
+          <a class="thumb" href="/ghost-ai-downloads/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/ghost.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Tool</span><span class="updated"></span></div>
+            <h3>Ghost A.I.</h3>
+            <p>A local AI studio for Windows. This site has the preview downloads and installation instructions; development source stays private.</p>
+            <ul class="tags"><li>AI</li><li>Windows</li></ul>
+            <div class="links"><a class="btn primary" href="/ghost-ai-downloads/">Download</a><a class="btn" href="https://github.com/Tboy450/ghost-ai-downloads">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="tools" data-repo="zoom-loop" data-project>
+          <a class="thumb" href="/zoom-loop/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/zoom.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Tool</span><span class="updated"></span></div>
+            <h3>Zoom Loop</h3>
+            <p>Builds an endless zoom from your photos, with blending, timing controls and video export.</p>
+            <ul class="tags"><li>JavaScript</li><li>Images</li></ul>
+            <div class="links"><a class="btn primary" href="/zoom-loop/">Open</a><a class="btn" href="https://github.com/Tboy450/zoom-loop">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="tools" data-repo="youtube-hidden-video-return" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/youtube-hidden-video-return" tabindex="-1" aria-hidden="true"><img src="/assets/shots/youtube.webp" alt="" width="800" height="500" loading="lazy" /></a>
+          <div class="body">
+            <div class="meta"><span>Tool</span><span class="updated"></span></div>
+            <h3>YouTube Hidden Video Return</h3>
+            <p>A Return YouTube Dislike-style recovery tool for missing public YouTube video lists.</p>
+            <ul class="tags"><li>JavaScript</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/youtube-hidden-video-return">Code</a></div>
+          </div>
         </article>
       </section>
+      <p class="grid-empty" hidden>The featured project above is the one in this category.</p>
 
-      <h2>Code on GitHub</h2>
-      <section class="grid" aria-label="Code repositories">
-        <article class="card">
-          <h3>Roblox Retail Game</h3>
-          <span class="repo">Roblox-game</span>
-          <p>Roblox retail game built with Rojo, plus a separate arena shooter project.</p>
-          <div class="links"><a href="https://github.com/Tboy450/Roblox-game">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Cornerfield Market</h3>
-          <span class="repo">cornerfield-market</span>
-          <p>A standalone first-person retail store game in Godot, extracted from the Roblox Retail Game. Order stock, fill shelves, set prices and serve shoppers.</p>
-          <div class="links"><a href="https://github.com/Tboy450/cornerfield-market">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>YouTube Hidden Video Return</h3>
-          <span class="repo">youtube-hidden-video-return</span>
-          <p>Return YouTube Dislike-style recovery tool for missing public YouTube video lists.</p>
-          <div class="links"><a href="https://github.com/Tboy450/youtube-hidden-video-return">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Lexicon Tactics Lab</h3>
-          <span class="repo">lexicon-tactics-lab</span>
-          <p>JavaScript project.</p>
-          <div class="links"><a href="https://github.com/Tboy450/lexicon-tactics-lab">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Rips Pokemon</h3>
-          <span class="repo">rips-pokemon</span>
-          <p>Python project.</p>
-          <div class="links"><a href="https://github.com/Tboy450/rips-pokemon">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>New RPG Update</h3>
-          <span class="repo">Tboy450-new-rpg-update</span>
-          <p>read and write</p>
-          <div class="links"><a href="https://github.com/Tboy450/Tboy450-new-rpg-update">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>New RPG Update (earlier)</h3>
-          <span class="repo">new-rpg-update</span>
-          <p>RPG game update.</p>
-          <div class="links"><a href="https://github.com/Tboy450/new-rpg-update">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>123</h3>
-          <span class="repo">123</span>
-          <p>Lua project.</p>
-          <div class="links"><a href="https://github.com/Tboy450/123">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Novice Python RPG Game</h3>
-          <span class="repo">novice-python-rpg-game-code-base-incomplete</span>
-          <p>novice python rpg game code base incomplete recreational</p>
-          <div class="links"><a href="https://github.com/Tboy450/novice-python-rpg-game-code-base-incomplete">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>Novice Code RPG Module</h3>
-          <span class="repo">novice-code-rpg-module</span>
-          <p>code I'm working on any contribution is appreciated</p>
-          <div class="links"><a href="https://github.com/Tboy450/novice-code-rpg-module">Code</a></div>
-        </article>
-        <article class="card">
-          <h3>RPG: Playing Around in the Dragon's Lair</h3>
-          <span class="repo">Rpg-playing-around-dragons-lair</span>
-          <p>New to this using a.i. to learn code novice coder</p>
-          <div class="links"><a href="https://github.com/Tboy450/Rpg-playing-around-dragons-lair">Code</a></div>
-        </article>
+      <section class="workshop" aria-labelledby="workshop-title">
+        <h2 id="workshop-title">From the workshop</h2>
+        <p class="sub">Laser-engraved pieces from the project behind Laser Photo Studio, made on a Tronxy Ultrabot U20.</p>
+        <div class="strip">
+          <figure><a href="/assets/workshop/north-pole-plank.webp"><img src="/assets/workshop/north-pole-plank.webp" alt="Laser-engraved North Pole scene on a pine plank" width="800" height="600" loading="lazy" /></a><figcaption><strong>North Pole plank</strong>Pine, layered shading, 7 × 6 in</figcaption></figure>
+          <figure><a href="/assets/workshop/dragon-test.webp"><img src="/assets/workshop/dragon-test.webp" alt="Dragon engraved on pine with interlaced shrinking layers" width="800" height="600" loading="lazy" /></a><figcaption><strong>Dragon test 12</strong>Pine, interlaced shrinking layers</figcaption></figure>
+          <figure><a href="/assets/workshop/goku-vegeta-lid.webp"><img src="/assets/workshop/goku-vegeta-lid.webp" alt="Goku and Vegeta line art etched on a jar lid" width="800" height="600" loading="lazy" /></a><figcaption><strong>Goku + Vegeta lid</strong>Coated steel, vector lines</figcaption></figure>
+          <figure><a href="/assets/workshop/goku-mural.webp"><img src="/assets/workshop/goku-mural.webp" alt="Goku mural engraved on the back of a pine plaque" width="800" height="600" loading="lazy" /></a><figcaption><strong>Goku mural</strong>Pine, shading and outline passes</figcaption></figure>
+        </div>
       </section>
 
-      <footer>
-        <p>All projects: <a href="https://github.com/Tboy450">github.com/Tboy450</a></p>
-      </footer>
+      <details class="early">
+        <summary>Early work &amp; experiments <small>7 repositories</small></summary>
+        <ol class="timeline">
+          <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/lexicon-tactics-lab">Lexicon Tactics Lab</a><span class="lang">JavaScript</span></li>
+          <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/rips-pokemon">Rips Pokemon</a><span class="lang">Python</span></li>
+          <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/new-rpg-update">New RPG Update (earlier)</a><span class="lang">RPG</span><p>An earlier step toward the current Tboy450 RPG.</p></li>
+          <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/123">123</a><span class="lang">Lua</span></li>
+          <li data-project><span class="year">2025</span><a href="https://github.com/Tboy450/novice-python-rpg-game-code-base-incomplete">Novice Python RPG Game</a><span class="lang">Python</span><p>Novice Python RPG game code base, incomplete and recreational.</p></li>
+          <li data-project><span class="year">2025</span><a href="https://github.com/Tboy450/novice-code-rpg-module">Novice Code RPG Module</a><span class="lang">Python</span><p>Code in progress; any contribution is appreciated.</p></li>
+          <li data-project><span class="year">2025</span><a href="https://github.com/Tboy450/Rpg-playing-around-dragons-lair">RPG: Playing Around in the Dragon's Lair</a><span class="lang">Python</span><p>Where it started: learning to code with AI as a novice.</p></li>
+        </ol>
+      </details>
+
+      <section id="contact" class="contact" aria-labelledby="contact-title">
+        <h2>Work with HASK</h2>
+        <h3 id="contact-title">Have an idea worth building?</h3>
+        <p>Research, concept development, prototyping, coding and fabrication for individuals, teams and small businesses. Scope, deliverables, fees and turnaround are agreed before work begins. Research discussions and idea swaps are always welcome.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:mxbike17@outlook.com">mxbike17@outlook.com</a>
+          <a class="btn" href="mailto:hkslugpro17@gmail.com">hkslugpro17@gmail.com</a>
+        </div>
+      </section>
     </main>
+
+    <footer class="wrap">
+      <p>© 2026 Tristan Boyd Hash · All projects on <a href="https://github.com/Tboy450">github.com/Tboy450</a></p>
+    </footer>
   </body>
 </html>
