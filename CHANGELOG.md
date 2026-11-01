@@ -3,6 +3,14 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-01: Add Cornerfield Market
+- **Signed:** GitHub Copilot (Claude Opus 5.5 model)
+- **What changed:** Added a code card for Cornerfield Market (`cornerfield-market`) after the Roblox
+  Retail Game. It's a newly public repository holding the Godot game's own history, split from
+  `Roblox-game`'s `game/` folder.
+- **Why:** The owner said the game is basically complete and taking its own direction, and asked for it
+  to be public.
+
 ## 2026-11-01: Add a Design & fabrication section with TINEBOX C-01
 - **Signed:** GitHub Copilot (Claude Opus 5.5 model)
 - **What changed:** Added a "Design & fabrication" section between Websites and Code on GitHub, starting
