@@ -3,6 +3,15 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-01: Add the HASK logo
+- **Signed:** GitHub Copilot (Claude Opus 5.5 model)
+- **What changed:**
+  - Cut the HASK emblem out of the owner's artwork with Pillow and NumPy. It now appears in the header beside
+    the HASK wordmark and in the "Work with HASK" section.
+  - Rebuilt the favicons (32 and 192 px), the Apple touch icon and the share image around the emblem.
+  - Fixed "Â·" appearing instead of "·" in the share image's tagline.
+- **Why:** The owner asked for the HASK logo on the site.
+
 ## 2026-11-01: Redesign the hub
 - **Signed:** GitHub Copilot (Claude Opus 5.5 model)
 - **What changed:**
