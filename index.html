@@ -63,7 +63,63 @@
     </header>
 
     <main id="projects" class="wrap">
-      <section class="featured" aria-label="Featured projects">
+      <div class="toolbar">
+        <h2>All projects</h2>
+        <div class="filters" role="group" aria-label="Filter projects" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="fabrication" aria-pressed="false">Fabrication</button>
+          <button type="button" data-filter="simulations" aria-pressed="false">Simulations</button>
+          <button type="button" data-filter="games" aria-pressed="false">Games</button>
+          <button type="button" data-filter="research" aria-pressed="false">Research</button>
+          <button type="button" data-filter="tools" aria-pressed="false">Tools</button>
+        </div>
+      </div>
+
+      <section class="grid" aria-label="Physical projects">
+        <article class="card" data-cat="fabrication" data-project>
+          <a class="thumb" href="/assets/shots/handguard-fitted.webp" tabindex="-1" aria-hidden="true"><img src="/assets/shots/handguard.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge">Prototype</span></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span></div>
+            <h3>BMW F800GS Replacement Handguard</h3>
+            <p>Replacement handguard designed from physical measurements, with a custom nut seat at the bar end. Modeled and mesh-checked as an STL, then fitted to the bike after printing.</p>
+            <small class="credit">Printing service: 3D Print Studio VA</small>
+            <ul class="tags"><li>CAD</li><li>3D printing</li></ul>
+            <div class="links"><a class="btn" href="/assets/shots/handguard-fitted.webp">View photo</a><a class="btn" href="/assets/shots/handguard-model.webp">View model</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="fabrication" data-repo="tinebox" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/tinebox" tabindex="-1" aria-hidden="true"><img src="/assets/shots/tinebox.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge">Prototype</span></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
+            <h3>TINEBOX C-01</h3>
+            <p>A 3D-printable musical fidget with printed tuned tines, first-build test fixtures and a comb calibration tool.</p>
+            <ul class="tags"><li>Python</li><li>CAD</li><li>3D printing</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/tinebox">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="fabrication" data-repo="laser-photo-studio" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/laser-photo-studio" tabindex="-1" aria-hidden="true"><img src="/assets/shots/laser-photo-studio.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge dev">In development</span></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
+            <h3>Laser Photo Studio</h3>
+            <p>Turns a picture into a checked, safe laser engraving on a Grbl diode laser: material presets, a 1% dot perimeter check and recovery after USB dropouts.</p>
+            <ul class="tags"><li>Python</li><li>G-code</li><li>Grbl</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="fabrication" data-repo="positioning-laser" data-project>
+          <a class="thumb" href="https://github.com/Tboy450/positioning-laser" tabindex="-1" aria-hidden="true"><img src="/assets/shots/positioning-laser.webp" alt="" width="800" height="500" loading="lazy" /></a>
+          <div class="body">
+            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
+            <h3>Positioning Laser</h3>
+            <p>A Windows switch that pulses the engraving laser at 1% power for lining up jobs, with strict laser-off checks.</p>
+            <ul class="tags"><li>C#</li><li>Windows</li><li>Grbl</li></ul>
+            <div class="links"><a class="btn" href="https://github.com/Tboy450/positioning-laser">Code</a></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="featured" aria-label="Featured software">
         <article class="feature" data-cat="simulations" data-repo="dragonfly-titan-gcs-demo" data-project>
           <a class="media" href="/dragonfly-titan-gcs-demo/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/dragonfly-wide.webp" alt="" width="1280" height="720" /></a>
           <div class="overlay">
@@ -86,19 +142,7 @@
         </article>
       </section>
 
-      <div class="toolbar">
-        <h2>All projects</h2>
-        <div class="filters" role="group" aria-label="Filter projects" hidden>
-          <button type="button" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" data-filter="simulations" aria-pressed="false">Simulations</button>
-          <button type="button" data-filter="games" aria-pressed="false">Games</button>
-          <button type="button" data-filter="fabrication" aria-pressed="false">Fabrication</button>
-          <button type="button" data-filter="research" aria-pressed="false">Research</button>
-          <button type="button" data-filter="tools" aria-pressed="false">Tools</button>
-        </div>
-      </div>
-
-      <section class="grid" aria-label="Projects">
+      <section class="grid" aria-label="Software projects">
         <article class="card" data-cat="games" data-repo="five-senses" data-project>
           <a class="thumb" href="/five-senses/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/senses.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
           <div class="body">
@@ -149,70 +193,6 @@
             <div class="links"><a class="btn primary" href="https://whitehouse-rocket-run-tboy450.tboy450.chatgpt.site/">Play</a><a class="btn" href="https://github.com/Tboy450/whitehousegame">Code</a></div>
           </div>
         </article>
-
-        <article class="card" data-cat="fabrication" data-repo="laser-photo-studio" data-project>
-          <a class="thumb" href="https://github.com/Tboy450/laser-photo-studio" tabindex="-1" aria-hidden="true"><img src="/assets/shots/laser-photo-studio.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge dev">In development</span></a>
-          <div class="body">
-            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
-            <h3>Laser Photo Studio</h3>
-            <p>Turns a picture into a checked, safe laser engraving on a Grbl diode laser: material presets, a 1% dot perimeter check and recovery after USB dropouts.</p>
-            <ul class="tags"><li>Python</li><li>G-code</li><li>Grbl</li></ul>
-            <div class="links"><a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Code</a></div>
-          </div>
-        </article>
-        <article class="card" data-cat="fabrication" data-repo="tinebox" data-project>
-          <a class="thumb" href="https://github.com/Tboy450/tinebox" tabindex="-1" aria-hidden="true"><img src="/assets/shots/tinebox.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge">Prototype</span></a>
-          <div class="body">
-            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
-            <h3>TINEBOX C-01</h3>
-            <p>A 3D-printable musical fidget with printed tuned tines, first-build test fixtures and a comb calibration tool.</p>
-            <ul class="tags"><li>Python</li><li>CAD</li><li>3D printing</li></ul>
-            <div class="links"><a class="btn" href="https://github.com/Tboy450/tinebox">Code</a></div>
-          </div>
-        </article>
-        <article class="card" data-cat="fabrication" data-project>
-          <a class="thumb" href="/assets/shots/handguard-fitted.webp" tabindex="-1" aria-hidden="true"><img src="/assets/shots/handguard.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge">Prototype</span></a>
-          <div class="body">
-            <div class="meta"><span>Fabrication</span></div>
-            <h3>BMW F800GS Replacement Handguard</h3>
-            <p>Replacement handguard designed from physical measurements, with a custom nut seat at the bar end. Modeled and mesh-checked as an STL, then fitted to the bike after printing.</p>
-            <small class="credit">Printing service: 3D Print Studio VA</small>
-            <ul class="tags"><li>CAD</li><li>3D printing</li></ul>
-            <div class="links"><a class="btn" href="/assets/shots/handguard-fitted.webp">View photo</a><a class="btn" href="/assets/shots/handguard-model.webp">View model</a></div>
-          </div>
-        </article>
-        <article class="card" data-cat="fabrication" data-repo="positioning-laser" data-project>
-          <a class="thumb" href="https://github.com/Tboy450/positioning-laser" tabindex="-1" aria-hidden="true"><img src="/assets/shots/positioning-laser.webp" alt="" width="800" height="500" loading="lazy" /></a>
-          <div class="body">
-            <div class="meta"><span>Fabrication</span><span class="updated"></span></div>
-            <h3>Positioning Laser</h3>
-            <p>A Windows switch that pulses the engraving laser at 1% power for lining up jobs, with strict laser-off checks.</p>
-            <ul class="tags"><li>C#</li><li>Windows</li><li>Grbl</li></ul>
-            <div class="links"><a class="btn" href="https://github.com/Tboy450/positioning-laser">Code</a></div>
-          </div>
-        </article>
-
-        <article class="card" data-cat="research" data-repo="beyond-the-screen-visual-transduction" data-project>
-          <a class="thumb" href="/beyond-the-screen-visual-transduction/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/beyond.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
-          <div class="body">
-            <div class="meta"><span>Research</span><span class="updated"></span></div>
-            <h3>Beyond the Screen: Visual Transduction</h3>
-            <p>A visual transduction technology map, from encoded signals to carriers, transducers, biological interfaces and learned perception.</p>
-            <ul class="tags"><li>Research</li><li>Writing</li></ul>
-            <div class="links"><a class="btn primary" href="/beyond-the-screen-visual-transduction/">Read</a><a class="btn" href="https://github.com/Tboy450/beyond-the-screen-visual-transduction">Code</a></div>
-          </div>
-        </article>
-        <article class="card" data-cat="research" data-repo="existential-puzzle-mapper" data-project>
-          <a class="thumb" href="/existential-puzzle-mapper/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/mapper.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
-          <div class="body">
-            <div class="meta"><span>Research</span><span class="updated"></span></div>
-            <h3>Existential Puzzle Mapper</h3>
-            <p>An interactive map for exploring philosophical, existential, spiritual and communication puzzle structures.</p>
-            <ul class="tags"><li>JavaScript</li><li>Visualization</li></ul>
-            <div class="links"><a class="btn primary" href="/existential-puzzle-mapper/">Open map</a><a class="btn" href="https://github.com/Tboy450/existential-puzzle-mapper">Code</a></div>
-          </div>
-        </article>
-
         <article class="card" data-cat="tools" data-repo="assets-and-environments-lab" data-project>
           <a class="thumb" href="/assets-and-environments-lab/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/assets.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
           <div class="body">
@@ -221,6 +201,16 @@
             <p>Independent 3D asset and terrain explorer, Blender and Houdini library, RPG assets and local import tools.</p>
             <ul class="tags"><li>Three.js</li><li>Blender</li><li>Houdini</li></ul>
             <div class="links"><a class="btn primary" href="/assets-and-environments-lab/">Explore</a><a class="btn" href="https://github.com/Tboy450/assets-and-environments-lab">Code</a></div>
+          </div>
+        </article>
+        <article class="card" data-cat="research" data-repo="beyond-the-screen-visual-transduction" data-project>
+          <a class="thumb" href="/beyond-the-screen-visual-transduction/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/beyond.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Research</span><span class="updated"></span></div>
+            <h3>Beyond the Screen: Visual Transduction</h3>
+            <p>A visual transduction technology map, from encoded signals to carriers, transducers, biological interfaces and learned perception.</p>
+            <ul class="tags"><li>Research</li><li>Writing</li></ul>
+            <div class="links"><a class="btn primary" href="/beyond-the-screen-visual-transduction/">Read</a><a class="btn" href="https://github.com/Tboy450/beyond-the-screen-visual-transduction">Code</a></div>
           </div>
         </article>
         <article class="card" data-cat="tools" data-repo="ghost-ai-downloads" data-project>
@@ -243,6 +233,16 @@
             <div class="links"><a class="btn primary" href="/zoom-loop/">Open</a><a class="btn" href="https://github.com/Tboy450/zoom-loop">Code</a></div>
           </div>
         </article>
+        <article class="card" data-cat="research" data-repo="existential-puzzle-mapper" data-project>
+          <a class="thumb" href="/existential-puzzle-mapper/" tabindex="-1" aria-hidden="true"><img src="/assets/shots/mapper.webp" alt="" width="800" height="500" loading="lazy" /><span class="badge live">Live</span></a>
+          <div class="body">
+            <div class="meta"><span>Research</span><span class="updated"></span></div>
+            <h3>Existential Puzzle Mapper</h3>
+            <p>An interactive map for exploring philosophical, existential, spiritual and communication puzzle structures.</p>
+            <ul class="tags"><li>JavaScript</li><li>Visualization</li></ul>
+            <div class="links"><a class="btn primary" href="/existential-puzzle-mapper/">Open map</a><a class="btn" href="https://github.com/Tboy450/existential-puzzle-mapper">Code</a></div>
+          </div>
+        </article>
       </section>
       <p class="grid-empty" hidden>The featured project above is the one in this category.</p>
 
@@ -258,12 +258,10 @@
       </section>
 
       <details class="early">
-        <summary>Early work &amp; experiments <small>7 repositories</small></summary>
+        <summary>Early work &amp; experiments <small>5 repositories</small></summary>
         <ol class="timeline">
           <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/lexicon-tactics-lab">Lexicon Tactics Lab</a><span class="lang">JavaScript</span></li>
-          <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/rips-pokemon">Rips Pokemon</a><span class="lang">Python</span></li>
           <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/new-rpg-update">New RPG Update (earlier)</a><span class="lang">RPG</span><p>An earlier step toward the current Tboy450 RPG.</p></li>
-          <li data-project><span class="year">2026</span><a href="https://github.com/Tboy450/123">123</a><span class="lang">Lua</span></li>
           <li data-project><span class="year">2025</span><a href="https://github.com/Tboy450/novice-python-rpg-game-code-base-incomplete">Novice Python RPG Game</a><span class="lang">Python</span><p>Novice Python RPG game code base, incomplete and recreational.</p></li>
           <li data-project><span class="year">2025</span><a href="https://github.com/Tboy450/novice-code-rpg-module">Novice Code RPG Module</a><span class="lang">Python</span><p>Code in progress; any contribution is appreciated.</p></li>
           <li data-project><span class="year">2025</span><a href="https://github.com/Tboy450/Rpg-playing-around-dragons-lair">RPG: Playing Around in the Dragon's Lair</a><span class="lang">Python</span><p>Where it started: learning to code with AI as a novice.</p></li>

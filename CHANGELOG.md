@@ -3,6 +3,16 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-03: Physical work first; hide two personal repositories
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - New order under All projects: projects with a physical output first (the handguard, TINEBOX C-01,
+    Laser Photo Studio, Positioning Laser), then the Dragonfly and Swarmfall feature row, then the games, then the
+    Assets & Environments Lab, then side projects, with the Existential Puzzle Mapper last.
+  - The Fabrication filter button moved next to All.
+  - Removed Rips Pokemon (`rips-pokemon`) and `123` from Early work. Both repositories stay on GitHub.
+- **Why:** The owner wants physical work to lead, and those two read as personal projects.
+
 ## 2026-11-03: Handguard reprint photo
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** The handguard card now shows the owner's photo of the reprinted guard fitted on the F800GS,
