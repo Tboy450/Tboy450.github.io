@@ -194,6 +194,7 @@ h2 { margin: 0; color: var(--cyan); font-size: 0.78rem; font-weight: 700; letter
 .meta .updated:empty { display: none; }
 .card h3 { margin: 0; font-size: 1.08rem; }
 .card p { flex: 1; margin: 0; color: #bfccd6; font-size: 0.92rem; }
+.card .credit { color: var(--muted); font-size: 0.78rem; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 0; padding: 0; list-style: none; }
 .tags li { padding: 2px 7px; border: 1px solid var(--line); border-radius: 6px; background: rgba(200, 211, 220, 0.04); color: var(--silver); font: 0.72rem var(--mono); }
 .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }

@@ -7,7 +7,8 @@ Newest first. Each entry is signed with who made it, so the next person or assis
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** The handguard card now shows the owner's photo of the reprinted guard fitted on the F800GS,
   with a full-size "View photo" link. The STL render stays available as "View model" (`handguard-model.webp`).
-- **Also:** The card credits 3D Print Studio VA for printing the owner's design.
+- **Also:** The card says the guard was designed, modeled, mesh-checked and fitted by the owner, with a separate
+  "Printing service: 3D Print Studio VA" credit line.
 - **Why:** The owner supplied photos of the reprint and asked for the studio to be credited.
 
 ## 2026-11-01: Add the HASK logo
