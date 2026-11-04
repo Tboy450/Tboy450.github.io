@@ -3,6 +3,14 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-03: Handguard reprint photo
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** The handguard card now shows the owner's photo of the reprinted guard fitted on the F800GS,
+  with a full-size "View photo" link. The STL render stays available as "View model" (`handguard-model.webp`).
+- **Also:** The card says the guard was designed, modeled, mesh-checked and fitted by the owner, with a separate
+  "Printing service: 3D Print Studio VA" credit line.
+- **Why:** The owner supplied photos of the reprint and asked for the studio to be credited.
+
 ## 2026-11-01: Add the HASK logo
 - **Signed:** GitHub Copilot (Claude Opus 5.5 model)
 - **What changed:**
