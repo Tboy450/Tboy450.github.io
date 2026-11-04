@@ -98,12 +98,23 @@ h1 span {
 @keyframes blink { 50% { opacity: 0; } }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; }
 .corner { position: absolute; top: 46px; right: 0; width: 150px; height: 150px; color: var(--cyan); filter: drop-shadow(0 0 10px rgba(47, 208, 224, 0.45)); }
-.orbit { position: absolute; top: 120px; right: 40px; z-index: -1; width: min(400px, 36vw); height: auto; color: var(--cyan); opacity: 0.85; }
+.orbit { position: absolute; top: 120px; right: 40px; z-index: 0; width: min(400px, 36vw); height: auto; overflow: visible; color: var(--cyan); opacity: 0.85; pointer-events: none; }
 .orbit .spin { transform-origin: 200px 200px; animation: spin 40s linear infinite; }
 .orbit .slow { animation-duration: 90s; }
 .orbit .fast { animation-duration: 18s; }
 .orbit .rev { animation-direction: reverse; }
 @keyframes spin { to { transform: rotate(360deg); } }
+/* Draggable planets and a clickable sun (site.js). Everything else lets clicks through to the page. */
+.orbit .planet { pointer-events: auto; cursor: grab; touch-action: none; }
+.orbit.dragging .planet { cursor: grabbing; }
+.orbit .hit { fill: transparent; }
+.orbit .sun { pointer-events: auto; cursor: pointer; transition: fill-opacity 0.2s; }
+.orbit .sun:hover { fill-opacity: 0.28; }
+.orbit .tether { stroke: currentColor; stroke-width: 1; stroke-dasharray: 3 4; opacity: 0; }
+.orbit .ripple { fill: none; stroke: currentColor; transform-origin: 200px 200px; animation: ripple 1.4s ease-out forwards; }
+@keyframes ripple { from { transform: scale(1); opacity: 0.8; } to { transform: scale(8.6); opacity: 0; } }
+.orbit .hint { fill: var(--muted); font: 11px var(--mono); letter-spacing: 0.12em; text-anchor: middle; transition: opacity 0.8s; }
+.orbit .hint.gone { opacity: 0; }
 
 /* Buttons */
 .btn {

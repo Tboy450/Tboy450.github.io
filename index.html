@@ -51,14 +51,22 @@
           <circle cx="200" cy="200" r="64" stroke-opacity="0.22" />
           <path d="M200 0V400M0 200H400" stroke-opacity="0.1" />
         </g>
-        <g class="spin">
+        <circle class="sun" cx="200" cy="200" r="22" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.6" />
+        <!-- Planets: data-period is seconds per orbit (negative runs backwards). site.js makes them draggable. -->
+        <g class="spin planet" data-period="40">
           <circle cx="350" cy="200" r="6" fill="currentColor" />
           <circle cx="350" cy="200" r="14" fill="none" stroke="currentColor" stroke-opacity="0.4" />
         </g>
-        <g class="spin rev fast">
+        <g class="spin rev fast planet" data-period="-18">
           <circle cx="200" cy="92" r="4" fill="#c8d3dc" />
         </g>
-        <circle cx="200" cy="200" r="22" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.6" />
+        <g class="spin planet" data-period="11" style="animation-duration: 11s">
+          <circle cx="162.3" cy="148.3" r="3" fill="currentColor" />
+        </g>
+        <g class="spin planet" data-period="140" style="animation-duration: 140s">
+          <circle cx="59.9" cy="328.8" r="5" fill="#c8d3dc" />
+          <ellipse cx="59.9" cy="328.8" rx="11" ry="3.5" fill="none" stroke="#c8d3dc" stroke-opacity="0.55" transform="rotate(-24 59.9 328.8)" />
+        </g>
       </svg>
     </header>
 

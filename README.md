@@ -1,5 +1,9 @@
 # Tboy450.github.io
 
+## Website update plan
+
+The owner's website-specific working checklist and priority order are in [UPDATE_CHECKLIST.md](UPDATE_CHECKLIST.md). Track mobile and Solar System access first, followed by homepage presentation, demonstrations, project pages, gallery and HASK improvements.
+
 Home page for **https://tboy450.github.io/**: Tristan Boyd Hash's (Tboy450) project hub and the
 HASK - Hybridized Business Solutions portfolio. It links each public project's website and code.
 
