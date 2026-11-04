@@ -4,16 +4,17 @@ Home page for **https://tboy450.github.io/**: Tristan Boyd Hash's (Tboy450) proj
 HASK - Hybridized Business Solutions portfolio. It links each public project's website and code.
 
 - `index.html`: the page.
-  - **Featured** holds Dragonfly and Swarmfall.
-  - **All projects** is a card per project. Each card's `data-cat` sets its filter
+  - **All projects** is a card per project, in this order: physical-output projects (fabrication),
+    then the featured Dragonfly and Swarmfall row, then games, the Assets & Environments Lab and side projects. Each card's `data-cat` sets its filter
     (`simulations`, `games`, `fabrication`, `research` or `tools`), and `data-repo` names its GitHub
     repository for the "updated X ago" date.
   - The status badge is `badge live`, `badge dev` or plain `badge` (prototype).
   - **From the workshop** shows laser-engraved pieces.
   - **Early work & experiments** is the collapsible list of beginner repositories.
   - List only **public** repositories; private ones stay off on purpose.
-  - Two public repositories are also left off on purpose: `Rblox-game` (an empty duplicate of
-    `Roblox-game`) and `youtube-hidden-video-return` (the owner's request).
+  - Four public repositories are also left off on purpose: `Rblox-game` (an empty duplicate of
+    `Roblox-game`), plus `youtube-hidden-video-return`, `rips-pokemon` and `123` (personal projects, at the
+    owner's request).
 - `assets/site.css` and `assets/site.js`: styles, the filters, the header counts and the GitHub dates.
   The page works without scripts.
 - `assets/shots/`: card images, 800 × 500 WebP, with 1280 × 720 `-wide` versions for featured cards.
