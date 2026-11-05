@@ -3,6 +3,23 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-04: Interactive header solar system
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - Planets in the header graphic can be dragged off their orbits. A dashed tether shows the pull, and they spring
+    back on release. A quick flick along the orbit spins a planet faster for a few seconds.
+  - Clicking the sun sends out a pulse ring that nudges every planet outward.
+  - Two more planets: a small fast inner one and a slow ringed outer one. A "Drag a planet" hint fades after first use.
+  - Works with mouse and touch. Without scripts the planets keep their CSS spin. With reduced motion they stay put
+    and still snap back after a drag. The graphic stays hidden below 760 px wide, as before.
+- **Why:** The owner asked for the solar system visual to be slightly interactive.
+
+## 2026-11-04: Add the website-specific update checklist
+- **Signed:** Codex (OpenAI)
+- **What changed:** Added `UPDATE_CHECKLIST.md` with the owner's nine website work areas, Solar System and mobile requirements, recommended priority order and completion tracking. Linked it from the README.
+- **Scope:** Projects website only; the wider AI Projects & Computer master list and standalone product development stay separate. Checklist items remain unverified until implemented and checked.
+- **Why:** The owner requested that the supplied website to-do list be added to this project's update checklist.
+
 ## 2026-11-03: Physical work first; hide two personal repositories
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:**
