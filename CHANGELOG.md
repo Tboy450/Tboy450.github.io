@@ -3,6 +3,26 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-05: Release the mobile Solar System update
+- **Signed:** Codex (OpenAI)
+- **What changed:** Added versioned CSS/JavaScript URLs so returning visitors request the mobile-visible Solar System styles and existing controls. Includes Claude's mobile support, right alignment on phones and the warm SVG sun; desktop remains in its original right-hand position.
+- **Why:** The owner confirmed publication after a phone screenshot showed the older deployed stylesheet, which still hid the graphic below 760 px.
+- **Validation:** Final local mobile/desktop browser checks and GitHub Pages deployment verification are recorded with this release.
+
+## 2026-11-05: Correct Solar System placement to the right
+- **Signed:** Codex (OpenAI)
+- **What changed:** Restored the original absolute desktop placement (`top: 120px; right: 40px`, original size). On phones the graphic stays visible below the buttons and aligns right with an automatic left margin.
+- **Preserved:** The glowing SVG sun and all planet-control JavaScript; neither HTML nor JavaScript changed in this correction.
+- **Why:** The owner clarified that earlier references to left meant right. This supersedes the previous left-alignment update.
+- **Validation:** Source checks and local preview CSS verification; real-device and browser interaction testing remain outstanding. Not published.
+
+## 2026-11-04: Restore left solar-system alignment on desktop and mobile
+- **Signed:** Codex (OpenAI)
+- **What changed:** Kept the header solar system in normal page flow below the contact buttons and aligned it to their left edge at desktop and phone sizes. Added a warm radial-gradient sun and a subtle corona using native SVG.
+- **Preserved:** Claude's four planets, dragging, spring-back, flick-to-spin, sun pulse and reduced-motion logic. Planet-control JavaScript was not changed.
+- **Why:** The owner's latest instruction requested left placement on both computer and mobile. This supersedes the earlier desktop-right position.
+- **Validation:** See `SOLAR_LAYOUT_VERIFICATION.md` for observed browser checks. Changes remain local until separately published.
+
 ## 2026-11-04: Solar system on phones
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** The header solar system now shows on phones, left-aligned under the buttons, instead of being hidden below
