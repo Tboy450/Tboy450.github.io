@@ -20,8 +20,8 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Tristan Boyd Hash projects: the Dragonfly simulator, Swarmfall, 5 Senses and laser engraving" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="/assets/site.css" />
-    <script src="/assets/site.js" defer></script>
+    <link rel="stylesheet" href="/assets/site.css?v=solar-mobile-20261105" />
+    <script src="/assets/site.js?v=solar-mobile-20261105" defer></script>
   </head>
   <body>
     <a class="skip" href="#projects">Skip to projects</a>
@@ -44,6 +44,18 @@
         <path d="M36 32H118V122" fill="none" stroke="rgba(200,211,220,0.35)" stroke-width="1.5" />
       </svg>
       <svg class="orbit" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <radialGradient id="solar-core" cx="36%" cy="30%" r="72%">
+            <stop offset="0" stop-color="#fff6ce" />
+            <stop offset="0.48" stop-color="#ffd36a" />
+            <stop offset="1" stop-color="#f38a36" />
+          </radialGradient>
+          <radialGradient id="solar-corona">
+            <stop offset="0" stop-color="#ffd36a" stop-opacity="0.38" />
+            <stop offset="0.48" stop-color="#f6a34b" stop-opacity="0.15" />
+            <stop offset="1" stop-color="#f6a34b" stop-opacity="0" />
+          </radialGradient>
+        </defs>
         <g fill="none" stroke="currentColor">
           <circle cx="200" cy="200" r="190" stroke-opacity="0.18" />
           <circle class="spin slow" cx="200" cy="200" r="150" stroke-opacity="0.45" stroke-dasharray="2 10" />
@@ -51,7 +63,8 @@
           <circle cx="200" cy="200" r="64" stroke-opacity="0.22" />
           <path d="M200 0V400M0 200H400" stroke-opacity="0.1" />
         </g>
-        <circle class="sun" cx="200" cy="200" r="22" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.6" />
+        <circle cx="200" cy="200" r="51" fill="url(#solar-corona)" pointer-events="none" />
+        <circle class="sun" cx="200" cy="200" r="22" fill="url(#solar-core)" stroke="#ffe6a3" stroke-opacity="0.8" />
         <!-- Planets: data-period is seconds per orbit (negative runs backwards). site.js makes them draggable. -->
         <g class="spin planet" data-period="40">
           <circle cx="350" cy="200" r="6" fill="currentColor" />

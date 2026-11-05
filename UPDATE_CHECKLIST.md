@@ -33,15 +33,15 @@ All items begin unchecked. Some features already exist in an earlier form; asses
 - [ ] Optimize interactive visualizations for touchscreens.
 - [ ] Ensure large elements scale or scroll properly.
 
-### Solar System access
+### Solar System (header graphic)
 
-- [ ] Add a prominent Solar System link on mobile.
-- [ ] Add an Explore Solar System homepage preview.
-- [ ] Make the full interactive experience accessible from phones.
-- [ ] Implement mobile-friendly touch controls and zoom.
-- [ ] Preserve the desktop version.
+The "Solar System" is the orbit graphic in the homepage header, not a separate project. The owner wants a
+graphics and mechanics update: interactive and draggable, and working on phones (clarified Nov 4, 2026).
 
-Identify the existing Solar System experience and its source before implementing these items. Record any required change to a separate repository as a linked dependency rather than silently expanding this website's scope.
+- [x] Make planets draggable, with spring-back, flick-to-spin and a clickable sun. (Nov 4, PR #8; tested in the browser.)
+- [x] Show it on phones with finger-sized touch targets. (Nov 4; checked at 375 px wide. Not yet tried on a real phone.)
+- [ ] Further graphics polish as the owner directs.
+- [ ] Verify the desktop solar-system experience, preserving interactions and the original right-hand position (owner correction, Nov 5).
 
 ## 3. Project presentation
 

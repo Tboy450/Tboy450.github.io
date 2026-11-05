@@ -98,6 +98,7 @@ h1 span {
 @keyframes blink { 50% { opacity: 0; } }
 .cta { display: flex; flex-wrap: wrap; gap: 10px; }
 .corner { position: absolute; top: 46px; right: 0; width: 150px; height: 150px; color: var(--cyan); filter: drop-shadow(0 0 10px rgba(47, 208, 224, 0.45)); }
+/* Original desktop position: to the right of the identity and contact buttons. */
 .orbit { position: absolute; top: 120px; right: 40px; z-index: 0; width: min(400px, 36vw); height: auto; overflow: visible; color: var(--cyan); opacity: 0.85; pointer-events: none; }
 .orbit .spin { transform-origin: 200px 200px; animation: spin 40s linear infinite; }
 .orbit .slow { animation-duration: 90s; }
@@ -109,7 +110,7 @@ h1 span {
 .orbit.dragging .planet { cursor: grabbing; }
 .orbit .hit { fill: transparent; }
 .orbit .sun { pointer-events: auto; cursor: pointer; transition: fill-opacity 0.2s; }
-.orbit .sun:hover { fill-opacity: 0.28; }
+.orbit .sun:hover { filter: brightness(1.15); }
 .orbit .tether { stroke: currentColor; stroke-width: 1; stroke-dasharray: 3 4; opacity: 0; }
 .orbit .ripple { fill: none; stroke: currentColor; transform-origin: 200px 200px; animation: ripple 1.4s ease-out forwards; }
 @keyframes ripple { from { transform: scale(1); opacity: 0.8; } to { transform: scale(8.6); opacity: 0; } }
@@ -286,7 +287,8 @@ footer a { color: var(--cyan); }
 }
 
 @media (max-width: 760px) {
-  .orbit { display: none; }
+  /* On phones, keep it visible in page flow, right-aligned under the buttons. */
+  .orbit { position: relative; top: auto; right: auto; display: block; width: min(270px, 74vw); margin: 30px 0 24px auto; }
 }
 
 @media (max-width: 640px) {
