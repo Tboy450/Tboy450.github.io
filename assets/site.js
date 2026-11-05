@@ -146,18 +146,20 @@
       });
     }
 
+    // Keep grab areas at least finger-sized (about 44 px across) however small the graphic is drawn.
+    const sizeHits = () => {
+      const width = orbit.getBoundingClientRect().width;
+      if (!width) return;
+      const r = Math.max(24, (22 * 400) / width);
+      $$('.hit', orbit).forEach((hit) => hit.setAttribute('r', r.toFixed(1)));
+    };
+    sizeHits();
+    addEventListener('resize', sizeHits);
+
     draw();
     if (!still) {
-      // site.css hides the orbit at this width; stop animating while it's hidden. Browsers
-      // already pause animation frames in background tabs.
-      const phone = matchMedia('(max-width: 760px)');
-      let last = 0;
-      let running = false;
-      const tick = (now) => {
-        if (phone.matches) {
-          running = false;
-          return;
-        }
+      let last = performance.now();
+      const tick = (now) => { // browsers pause this in background tabs
         const dt = Math.min(0.05, (now - last) / 1000);
         last = now;
         planets.forEach((p) => {
@@ -173,14 +175,7 @@
         draw();
         requestAnimationFrame(tick);
       };
-      const start = () => {
-        if (running) return;
-        running = true;
-        last = performance.now();
-        requestAnimationFrame(tick);
-      };
-      phone.addEventListener('change', start);
-      start();
+      requestAnimationFrame(tick);
     }
   }
 
