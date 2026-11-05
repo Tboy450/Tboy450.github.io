@@ -5,7 +5,7 @@ Newest first. Each entry is signed with who made it, so the next person or assis
 
 ## 2026-11-04: Solar system on phones
 - **Signed:** Claude Code (Claude Opus 5.5)
-- **What changed:** The header solar system now shows on phones, under the buttons, instead of being hidden below
+- **What changed:** The header solar system now shows on phones, left-aligned under the buttons, instead of being hidden below
   760 px. Grab areas stay about 44 px across at any size. `UPDATE_CHECKLIST.md` now describes the Solar System as the
   header graphic, as the owner clarified, rather than a separate project.
 - **Why:** The owner wants it interactive and working on mobile.

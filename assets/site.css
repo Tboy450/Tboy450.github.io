@@ -287,7 +287,7 @@ footer a { color: var(--cyan); }
 
 @media (max-width: 760px) {
   /* On phones the solar system sits in the page flow, under the buttons. */
-  .orbit { position: relative; top: auto; right: auto; display: block; width: min(270px, 74vw); margin: 30px auto 24px; }
+  .orbit { position: relative; top: auto; right: auto; display: block; width: min(270px, 74vw); margin: 30px 0 24px; }
 }
 
 @media (max-width: 640px) {
