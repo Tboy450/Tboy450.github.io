@@ -287,8 +287,14 @@ footer a { color: var(--cyan); }
 }
 
 @media (max-width: 760px) {
-  /* On phones, keep it visible in page flow, right-aligned under the buttons. */
-  .orbit { position: relative; top: auto; right: auto; display: block; width: min(270px, 74vw); margin: 30px 0 24px auto; }
+  /* On phones it sits behind the name and header text, running off the right edge, and takes no page space.
+     The text stays on top but lets touches through, so planets behind it can still be grabbed. */
+  .hero { width: 100%; padding-inline: 20px; overflow-x: clip; }
+  .corner { right: 20px; }
+  .orbit { top: 96px; right: -36px; width: min(310px, 80vw); opacity: 0.7; }
+  .orbit .hint { display: none; }
+  .brand, .hero h1, .lede, .term { position: relative; z-index: 1; pointer-events: none; }
+  .cta { position: relative; z-index: 1; }
 }
 
 @media (max-width: 640px) {
