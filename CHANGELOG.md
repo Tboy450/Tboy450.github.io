@@ -3,6 +3,12 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-05: Solar system behind the header text on phones
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** On phones the solar system now sits behind the name and header text, running off the right edge,
+  and takes no page space. The text stays on top but lets touches through, so planets can still be grabbed.
+- **Why:** The owner wants it up beside or behind the name, as decoration, not in its own spot lower down.
+
 ## 2026-11-05: Release the mobile Solar System update
 - **Signed:** Codex (OpenAI)
 - **What changed:** Added versioned CSS/JavaScript URLs so returning visitors request the mobile-visible Solar System styles and existing controls. Includes Claude's mobile support, right alignment on phones and the warm SVG sun; desktop remains in its original right-hand position.
