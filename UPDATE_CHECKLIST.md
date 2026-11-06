@@ -89,10 +89,10 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 
 ## 6. Workshop and fabrication gallery
 
-- [ ] Expand the laser engraving gallery.
+- [x] Expand the laser engraving gallery. Added the finished anodized card and a laser-process close-up (November 6, 2026).
 - [ ] Add before-and-after comparisons.
 - [ ] Show CAD designs alongside finished physical objects.
-- [ ] Include 3D printing projects.
+- [x] Include 3D printing projects. Added the fitted F800GS handguard to the workshop gallery with original-part comparison and printing credit (November 6, 2026).
 - [ ] Include CNC and laser experiments.
 - [ ] Add material and testing documentation.
 
@@ -125,3 +125,11 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 ## Completion record
 
 For completed items, record the date, changed files or commit, verification performed and remaining limitations. Sign substantive changes in CHANGELOG.md under the project's existing convention.
+
+### November 6, 2026 — game links and workshop examples
+
+- Added Emberwake and Smoke Cult directly above the existing RPG listing, with real screenshots, Play/Code links and prototype/early-build descriptions.
+- Expanded From the workshop from four examples to seven: anodized card, laser-process close-up and the fitted handguard with a comparison link.
+- Added both game URLs to the sitemap and case-correcting 404 routes.
+- Validation: Passed 99 headless Microsoft Edge checks at 1440, 768, 390 and 360 px: project order/counts, category filters, image decoding, gallery links, no horizontal overflow and no page script errors. Both live game pages returned HTTP 200. Desktop and phone-width previews were visually reviewed. No real-device gameplay testing is claimed.
+- Signed: Codex (OpenAI).
