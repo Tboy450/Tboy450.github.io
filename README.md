@@ -13,7 +13,8 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
     (`simulations`, `games`, `fabrication`, `research` or `tools`), and `data-repo` names its GitHub
     repository for the "updated X ago" date.
   - The status badge is `badge live`, `badge dev` or plain `badge` (prototype).
-  - **From the workshop** shows laser-engraved pieces.
+  - Emberwake and Smoke Cult appear immediately above Tboy450 RPG, with playable-site and public-code links.
+  - **From the workshop** shows laser-engraved wood and metal, an engraving-process photo and the fitted handguard prototype. The handguard comparison credits 3D Print Studio VA for printing.
   - **Early work & experiments** is the collapsible list of beginner repositories.
   - List only **public** repositories; private ones stay off on purpose.
   - Four public repositories are also left off on purpose: `Rblox-game` (an empty duplicate of

@@ -3,6 +3,12 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-06: Add Emberwake, Smoke Cult and more workshop examples
+- **Signed:** Codex (OpenAI)
+- **What changed:** Added Emberwake and Smoke Cult directly above Tboy450 RPG, with screenshots, Play/Code links and development-status descriptions. Expanded the workshop gallery with a finished anodized card, an engraving-process close-up and the fitted handguard with original-part comparison and printing credit.
+- **Supporting updates:** Added game sitemap entries and case-correcting 404 routes; recorded the completed gallery work in the checklist.
+- **Validation:** Passed 99 headless Microsoft Edge checks at 1440, 768, 390 and 360 px: project order/counts, category filters, image decoding, gallery links, no horizontal overflow and no page script errors. Both live game pages returned HTTP 200. Desktop and phone-width previews were visually reviewed. No real-device gameplay testing is claimed.
+
 ## 2026-11-05: Solar system behind the header text on phones
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** On phones the solar system now sits behind the name and header text, running off the right edge,
