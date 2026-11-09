@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Red Hill tin lid engraving · Tristan Boyd Hash</title>
+    <meta name="description" content="A HASK workshop case study on Red Hill tin lid prototypes, Laser Photo Studio burn previews and small lettering tests." />
+    <meta name="theme-color" content="#070d13" />
+    <link rel="canonical" href="https://tboy450.github.io/red-hill/" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Red Hill tin lid engraving · HASK workshop" />
+    <meta property="og:description" content="Prototype engraving on reflective tin, from the burn preview to the physical lid." />
+    <meta property="og:url" content="https://tboy450.github.io/red-hill/" />
+    <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-lid.webp" />
+    <meta property="og:image:alt" content="Photograph of the laser-engraved Red Hill Pine Resin Salve tin lid" />
+    <link rel="stylesheet" href="/assets/site.css?v=solar-mobile-20261105" />
+    <style>
+      .case-study { max-width: 1020px; }
+      .case-study .hero { padding: clamp(32px, 7vw, 72px) 0 24px; }
+      .case-study .hero h1 { font-size: clamp(2.25rem, 6vw, 4.4rem); }
+      .case-study section { margin: 0 0 36px; }
+      .case-study section > p { max-width: 72ch; color: var(--silver); }
+      .case-study h2 { margin-top: 0; }
+      .case-intro {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        align-items: start;
+        gap: 24px;
+      }
+      .case-study figure { margin: 0; }
+      .case-study figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+      .case-study figcaption { margin-top: 8px; color: var(--muted); font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <main class="wrap case-study">
+      <header class="hero">
+        <a class="btn" href="/">Back to projects</a>
+        <p class="sub">HASK workshop · November 2026</p>
+        <h1>Red Hill <span>tin lid engraving</span></h1>
+      </header>
+
+      <section class="case-intro" aria-labelledby="overview">
+        <div>
+          <h2 id="overview">Packaging prototypes</h2>
+          <p>I adapted the Red Hill salve badge and chapel artwork to the flat face of a roughly two-inch reflective tin lid. I prepared the jobs in Laser Photo Studio, ran them on a Tronxy Ultrabot U20 diode laser, and compared the saved burn previews with the marks on the lids.</p>
+          <p>The salve badge trial took 11 minutes and 27 seconds of engraving. The main title and product name read clearly, while the smallest lines and some dense illustration details merged.</p>
+          <ul class="tags"><li>Reflective tin</li><li>Laser engraving</li><li>Prototype testing</li></ul>
+        </div>
+        <figure>
+          <a href="/assets/workshop/red-hill-lid.webp"><img src="/assets/workshop/red-hill-lid.webp" width="920" height="920" alt="Photographed Red Hill Pine Resin Salve badge engraved on a reflective round tin lid" /></a>
+          <figcaption>Physical salve badge trial. Select the photo for a closer look.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="trials">
+        <h2 id="trials">What the chapel tests showed</h2>
+        <p>The 45.72 mm chapel layouts kept the illustration on the lid face. The first trial reproduced the chapel and trees, with gaps in parts of the rim and title. Later passes filled in some of the title and steeple. The smallest lower lettering stayed hard to read.</p>
+        <figure>
+          <a href="/assets/workshop/red-hill-trials.webp"><img src="/assets/workshop/red-hill-trials.webp" width="1356" height="642" loading="lazy" alt="Three photographed chapel trials, showing the first lid and a second lid after full passes and later detail runs" /></a>
+          <figcaption>The first photo shows a separate trial lid. The last two show the same earlier chapel prototype at different stages, photographed under different lighting.</figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="lettering">
+        <h2 id="lettering">Checking the lettering at engraving size</h2>
+        <p>Some original letters were about 0.9 mm tall. The preview already showed gaps in thin strokes, and more strokes merged on the tin. I compared the original raster, the lid photo and a revised proof with larger letters and wider spacing.</p>
+        <figure>
+          <a href="/assets/workshop/red-hill-lettering.webp"><img src="/assets/workshop/red-hill-lettering.webp" width="1356" height="452" loading="lazy" alt="Three enlarged lettering samples showing the original burn preview, the physical lid after detail runs, and a digital proof with larger letters and wider spacing" /></a>
+          <figcaption>The right panel is a digital proof awaiting a fresh-lid engraving. “Built 1937” appears on the earlier prototype. The corrected chapel artwork reads “First Built 1837”.</figcaption>
+        </figure>
+        <p>A separate full-verse lid preserved the illustration, but a second pass made the small text harder to read. The next physical test uses a fresh lid and separates the lettering from the shaded illustration. The tests also exposed a recovery issue: after a deliberate USB interruption, a later detail run replayed part of the mask. Verifying placement after reconnect is still part of the software work.</p>
+      </section>
+
+      <div class="links">
+        <a class="btn primary" href="/#contact">Work with HASK</a>
+        <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Laser Photo Studio code</a>
+        <a class="btn" href="https://red-hill-lid-progress.tboy450.chatgpt.site/">Red Hill progress report</a>
+      </div>
+    </main>
+    <footer class="wrap case-study">
+      <p>© 2026 Tristan Boyd Hash · Hybridized Business Solutions</p>
+    </footer>
+  </body>
+</html>

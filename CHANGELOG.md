@@ -3,6 +3,13 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-09: Document the Red Hill tin lid trials
+
+- **Signed:** Codex (OpenAI)
+- Added a Red Hill case study linked from the Laser Photo Studio card and From the workshop. It shows the physical salve badge, chapel test photos, and a lettering comparison that labels the revised artwork as a digital proof.
+- Updated the Laser Photo Studio card to describe the burn preview workflow demonstrated by the trials. The case study records the interrupted detail run and the fresh-lid lettering test still to be done.
+- Verified both entry points, photo loading, return navigation, and responsive layout in headless Edge at 1440, 390, and 360 px.
+
 ## 2026-11-06: Add Emberwake, Smoke Cult and more workshop examples
 - **Signed:** Codex (OpenAI)
 - **What changed:** Added Emberwake and Smoke Cult directly above Tboy450 RPG, with screenshots, Play/Code links and development-status descriptions. Expanded the workshop gallery with a finished anodized card, an engraving-process close-up and the fitted handguard with original-part comparison and printing credit.

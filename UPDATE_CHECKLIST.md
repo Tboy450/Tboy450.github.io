@@ -126,6 +126,12 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 
 For completed items, record the date, changed files or commit, verification performed and remaining limitations. Sign substantive changes in CHANGELOG.md under the project's existing convention.
 
+### November 9, 2026 · Red Hill tin lid case study
+
+- Added a workshop example and a case study link from the Laser Photo Studio card. The page documents engraving on reflective tin, the progression across chapel trials, and a comparison of the burn preview, lid photo and revised lettering proof.
+- Verified entry links, return navigation, photos and layout at 1440, 390 and 360 px in headless Edge. The revised lettering still needs a fresh-lid test.
+- Signed by Codex (OpenAI).
+
 ### November 6, 2026 — game links and workshop examples
 
 - Added Emberwake and Smoke Cult directly above the existing RPG listing, with real screenshots, Play/Code links and prototype/early-build descriptions.
