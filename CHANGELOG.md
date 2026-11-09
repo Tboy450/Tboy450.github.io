@@ -8,6 +8,7 @@ Newest first. Each entry is signed with who made it, so the next person or assis
 - **Signed:** Codex (OpenAI)
 - Added a Red Hill case study linked from the Laser Photo Studio card and From the workshop. It shows the physical salve badge, chapel test photos, and a lettering comparison that labels the revised artwork as a digital proof.
 - Updated the Laser Photo Studio card to describe the burn preview workflow demonstrated by the trials. The case study records the interrupted detail run and the fresh-lid lettering test still to be done.
+- Linked the public Red Hill progress summary, project update and technical test history from the case study.
 - Verified both entry points, photo loading, return navigation, and responsive layout in headless Edge at 1440, 390, and 360 px.
 
 ## 2026-11-06: Add Emberwake, Smoke Cult and more workshop examples
