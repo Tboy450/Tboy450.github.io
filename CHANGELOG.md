@@ -3,6 +3,14 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-10: Update Red Hill samples and software findings
+
+- **Signed:** Codex (OpenAI)
+- Added the November 8 and 9 full-verse lid photographs with the actual pass order and the limits of comparing differently lit samples.
+- Recorded the optional one-way scan setting, saved setup and position recovery, and inspection controls in the local development version. The page identifies the 77-test result as offline verification and the higher-power lid grid as a prepared diagnostic awaiting a physical result.
+- Promoted the public original project log as the main report link. Relative asset paths now let the case study load its styling and photographs when opened directly as a local file, with portfolio navigation pointing to the public homepage.
+- Verified normal homepage entry links, all five images, report links, and overflow at 1440, 390 and 360 px in headless Edge. Direct local-file loading also passed with the stylesheet and all images available. Desktop and phone previews were visually reviewed.
+
 ## 2026-11-09: Document the Red Hill tin lid trials
 
 - **Signed:** Codex (OpenAI)
