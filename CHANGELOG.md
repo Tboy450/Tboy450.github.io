@@ -3,6 +3,31 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-10: Publish Red Hill near the top; fix two photos
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - Added a Red Hill Tin Lid Engraving card as the first project card, linking to the case study.
+  - Replaced the salve badge photo (page header, share image, workshop tile) with the full-verse chapel lid. The
+    badge photo showed the label's product claims, which aren't verified. Removed `red-hill-lid.webp` and its thumbnail.
+  - The fresh-lid lettering proof now reads "FIRST BUILT 1837", matching its caption and the corrected artwork.
+- **Why:** The owner asked for Red Hill to go up near the top now, with the design polish to follow.
+
+## 2026-11-10: Update Red Hill samples and software findings
+
+- **Signed:** Codex (OpenAI)
+- Added the November 8 and 9 full-verse lid photographs with the actual pass order and the limits of comparing differently lit samples.
+- Recorded the optional one-way scan setting, saved setup and position recovery, and inspection controls in the local development version. The page identifies the 77-test result as offline verification and the higher-power lid grid as a prepared diagnostic awaiting a physical result.
+- Promoted the public original project log as the main report link. Relative asset paths now let the case study load its styling and photographs when opened directly as a local file, with portfolio navigation pointing to the public homepage.
+- Verified normal homepage entry links, all five images, report links, and overflow at 1440, 390 and 360 px in headless Edge. Direct local-file loading also passed with the stylesheet and all images available. Desktop and phone previews were visually reviewed.
+
+## 2026-11-09: Document the Red Hill tin lid trials
+
+- **Signed:** Codex (OpenAI)
+- Added a Red Hill case study linked from the Laser Photo Studio card and From the workshop. It shows the physical salve badge, chapel test photos, and a lettering comparison that labels the revised artwork as a digital proof.
+- Updated the Laser Photo Studio card to describe the burn preview workflow demonstrated by the trials. The case study records the interrupted detail run and the fresh-lid lettering test still to be done.
+- Linked the public Red Hill progress summary, project update and technical test history from the case study.
+- Verified both entry points, photo loading, return navigation, and responsive layout in headless Edge at 1440, 390, and 360 px.
+
 ## 2026-11-06: Add Emberwake, Smoke Cult and more workshop examples
 - **Signed:** Codex (OpenAI)
 - **What changed:** Added Emberwake and Smoke Cult directly above Tboy450 RPG, with screenshots, Play/Code links and development-status descriptions. Expanded the workshop gallery with a finished anodized card, an engraving-process close-up and the fitted handguard with original-part comparison and printing credit.
