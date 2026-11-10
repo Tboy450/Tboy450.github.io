@@ -3,6 +3,15 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-10: Publish Red Hill near the top; fix two photos
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - Added a Red Hill Tin Lid Engraving card as the first project card, linking to the case study.
+  - Replaced the salve badge photo (page header, share image, workshop tile) with the full-verse chapel lid. The
+    badge photo showed the label's product claims, which aren't verified. Removed `red-hill-lid.webp` and its thumbnail.
+  - The fresh-lid lettering proof now reads "FIRST BUILT 1837", matching its caption and the corrected artwork.
+- **Why:** The owner asked for Red Hill to go up near the top now, with the design polish to follow.
+
 ## 2026-11-10: Update Red Hill samples and software findings
 
 - **Signed:** Codex (OpenAI)
