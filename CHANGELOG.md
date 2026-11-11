@@ -3,6 +3,16 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-11: Red Hill credits, with a founder alias
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** Added a "Who does what" credits section to the Red Hill page:
+  - Red Hill Forest Products: the business, its products and its brand.
+  - "The Red Hill founder": founding vision, and the harvesting and processing work behind the products.
+  - HASK (Tristan Boyd Hash): business development.
+  - A line saying credits describe contributions, not ownership.
+  - The HASK section intro now says the business began as its founder's idea.
+- **Why:** The owner asked to credit the founder with a professional alias for now. Naming him waits for his OK.
+
 ## 2026-11-11: Show both Red Hill business cards, art next to the engraved card
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:**
