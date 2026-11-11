@@ -3,6 +3,28 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-11: Rebuild the Red Hill case study with the full process and media
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - Rebuilt `red-hill/` around the process: a six-stage timeline, a table of every run's settings, and one section
+    per stage (artwork, first lids, full-verse lid, software check, power and speed ladder, batch jig, test cards).
+  - Added November 10 work: the 165-patch ladder, the provisional 42-pocket jig and the anodized test cards.
+  - 17 photos in stage galleries (thumbnails that open full size) and three short videos (H.264, about 2.3 MB each,
+    muted, `preload="none"`, never autoplay). Media copied from the owner's Red Hill media pack.
+  - Every lid and card is labelled a test sample, and a notice says none is the finished product. The ladder is
+    still under way.
+  - Red Hill touches on this page only: slab-serif headings, a cream process panel and a brushed-metal lid.
+  - The three progress-site buttons became one small link to the November 8 log.
+  - Homepage Red Hill card and workshop tile reworded as tests in progress.
+  - Added "How HASK takes an idea into development": six steps linking to the stages, so the page doubles as a worked
+    example of HASK's development process for business ideas, not only laser work.
+- **Kept off, per the records brief:** the church name, the 1837/1937 dates, the salve badge photo and its label
+  claims, the partner's name and messages. Hands and table are cropped where possible.
+- **Checked:** 1440 px and 375 px. Viewer, all three videos and all 17 thumbnails work. No horizontal overflow.
+  About 510 KB to scroll the page; full photos and videos load only on click or play.
+- **Why:** The owner said the page was missing process information and should look more professional and closer to
+  the Red Hill branding.
+
 ## 2026-11-10: Publish Red Hill near the top; fix two photos
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:**

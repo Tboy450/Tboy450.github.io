@@ -4,117 +4,411 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Red Hill tin lid engraving · Tristan Boyd Hash</title>
-    <meta name="description" content="A HASK workshop case study on Red Hill tin lid prototypes, Laser Photo Studio burn previews and small lettering tests." />
+    <meta name="description" content="A HASK workshop case study: engraving a 2 in reflective tin lid on a diode laser, from first test lids to a power and speed ladder and a batch jig." />
     <meta name="theme-color" content="#070d13" />
     <link rel="canonical" href="https://tboy450.github.io/red-hill/" />
     <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Red Hill tin lid engraving · HASK workshop" />
-    <meta property="og:description" content="Prototype engraving on reflective tin, from the burn preview to the physical lid." />
+    <meta property="og:description" content="Test lids, settings, a 165-patch power and speed ladder and a batch jig for engraving reflective tin." />
     <meta property="og:url" content="https://tboy450.github.io/red-hill/" />
     <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-verse-pass-1.webp" />
-    <meta property="og:image:alt" content="Laser-engraved Red Hill full-verse tin lid with a chapel illustration" />
+    <meta property="og:image:alt" content="Laser-engraved Red Hill tin lid with the Matthew 6:25 verse and a chapel illustration" />
     <link rel="stylesheet" href="../assets/site.css?v=solar-mobile-20261105" />
     <style>
-      .case-study { max-width: 1020px; }
-      .case-study .hero { padding: clamp(32px, 7vw, 72px) 0 24px; }
-      .case-study .hero h1 { font-size: clamp(2.25rem, 6vw, 4.4rem); }
-      .case-study section { margin: 0 0 36px; }
-      .case-study section > p { max-width: 72ch; color: var(--silver); }
-      .case-study h2 { margin-top: 0; }
-      .case-intro, .sample-pair {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-        align-items: start;
-        gap: 24px;
+      /* Red Hill touches, this page only: engraved serif type, cream-on-ink panel, brushed metal. */
+      .rh {
+        --ink: #15130f;
+        --cream: #efe3ce;
+        --cream-2: #e4d6bd;
+        --cream-line: rgba(21, 19, 15, 0.16);
+        --slab: Rockwell, "Rockwell Nova", "Roboto Slab", "Clarendon", "Century Schoolbook", Georgia, serif;
+        max-width: 1080px;
       }
-      .case-study figure { margin: 0; }
-      .case-study figure img {
-        display: block;
-        width: 100%;
-        height: auto;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
+      .rh section { margin: 0 0 64px; }
+      .rh section > p, .rh .prose p { max-width: 70ch; color: var(--silver); }
+      .rh h2 { font: 700 clamp(1.5rem, 3.2vw, 2.1rem)/1.15 var(--slab); text-transform: none; letter-spacing: 0.005em; color: var(--cream); margin: 0 0 14px; }
+      .rh h3 { font: 700 1.05rem/1.3 var(--slab); color: var(--cream); margin: 0 0 6px; }
+      .eyebrow { font: 600 12px/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-2); opacity: 0.75; margin: 0 0 10px; }
+      .rh figure { margin: 0; }
+      .rh figure img { width: 100%; border: 1px solid var(--line); border-radius: var(--radius); background: #0b0f13; }
+      .rh figcaption { margin-top: 8px; color: var(--muted); font-size: 0.88rem; }
+      .rh figcaption b { color: var(--silver); font-weight: 600; }
+      .grid2, .grid3 { display: grid; gap: 22px; align-items: start; }
+      .grid2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+      .grid3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+      .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 4vw, 44px); align-items: start; }
+      .status { display: inline-block; margin-left: 6px; padding: 1px 8px; border: 1px solid var(--line-strong); border-radius: 99px; font: 600 11px/1.6 var(--mono); color: var(--muted); vertical-align: 2px; }
+      .status.done { color: var(--green); border-color: rgba(78, 224, 138, 0.35); }
+
+      /* Hero */
+      .rh-hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: center; padding: clamp(28px, 6vw, 60px) 0 36px; }
+      .rh-hero .sub { margin: 18px 0 0; }
+      .rh-hero h1 { font: 700 clamp(2.8rem, 7.5vw, 5rem)/1 var(--slab); color: var(--cream); margin: 10px 0 0; letter-spacing: 0.01em; }
+      .rh-hero h1 span { display: block; font: 300 clamp(1.1rem, 2.5vw, 1.6rem)/1.25 var(--sans); color: var(--silver); margin-top: 12px; }
+      .lede { color: var(--silver); max-width: 54ch; margin: 18px 0 0; font-size: 1.05rem; }
+      .facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 24px 0 0; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+      .facts div { background: var(--panel); padding: 10px 14px; }
+      .facts dt { font: 600 11px/1.3 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+      .facts dd { margin: 4px 0 0; font-size: 0.95rem; }
+      .lid {
+        position: relative; aspect-ratio: 1; width: min(100%, 400px); justify-self: center; border-radius: 50%;
+        background:
+          radial-gradient(circle, #a9aeb2 0 64%, transparent 64.4%),
+          repeating-conic-gradient(from 8deg, rgba(255,255,255,0.05) 0 2deg, rgba(0,0,0,0.07) 2deg 4deg),
+          conic-gradient(from 210deg, #6f767c, #d9dde0, #80878d, #c4c9cc, #5f666c, #b8bdc1, #6f767c);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.45), inset 0 0 0 2px rgba(255,255,255,0.08);
       }
-      .case-study figcaption { margin-top: 8px; color: var(--muted); font-size: 0.9rem; }
+      .lid img { position: absolute; inset: 9%; width: 82%; height: 82%; border: 0; border-radius: 50%; background: none; }
+      .lid::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.16), transparent 42%); pointer-events: none; }
+
+      /* Pine rule */
+      .pine-rule { display: flex; align-items: center; gap: 14px; color: var(--cream-2); margin: 0 0 52px; opacity: 0.8; }
+      .pine-rule::before, .pine-rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(239,227,206,0.4), transparent); }
+      .pine-rule svg { width: 54px; height: 22px; }
+
+      /* Process timeline: cream "label" panel with ink type and a brushed-metal rail */
+      .process { background: var(--cream); color: var(--ink); border-radius: 18px; padding: clamp(22px, 4vw, 40px); box-shadow: inset 0 0 0 1px var(--cream-line), inset 0 0 0 7px var(--cream), inset 0 0 0 8px var(--cream-line); }
+      .process h2 { color: var(--ink); }
+      .process .eyebrow { color: #6b5a3e; opacity: 1; }
+      .process > p { color: #3b352b; max-width: 70ch; }
+      .steps { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; position: relative; }
+      .steps::before {
+        content: ""; position: absolute; left: 3%; right: 3%; top: 19px; height: 4px; border-radius: 4px;
+        background: repeating-linear-gradient(90deg, rgba(255,255,255,0.25) 0 1px, transparent 1px 3px), linear-gradient(90deg, #6b7278, #c9ced2, #7a8187, #b4b9bd);
+      }
+      .steps li { position: relative; padding-top: 52px; }
+      .steps .n {
+        position: absolute; top: 0; left: 0; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+        font: 700 1rem/1 var(--slab); color: var(--ink);
+        background: radial-gradient(circle at 35% 30%, #fbfbfb, #b3b9be 60%, #80878c);
+        box-shadow: 0 0 0 4px var(--cream), 0 0 0 5px rgba(21,19,15,0.35);
+      }
+      .steps li.next .n { background: var(--cream); color: #6b5a3e; box-shadow: 0 0 0 4px var(--cream), 0 0 0 5px rgba(21,19,15,0.35); border: 1px dashed #6b5a3e; }
+      .steps h3 { color: var(--ink); font-size: 0.98rem; }
+      .steps .when { font: 600 11.5px/1.3 var(--mono); color: #7b4a2a; }
+      .steps p { margin: 6px 0 0; color: #4a4337; font-size: 0.86rem; line-height: 1.45; }
+
+      /* Settings table, stacks to cards on phones */
+      .table-wrap { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel); margin: 18px 0 10px; }
+      table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+      th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+      th { font: 600 11px/1.3 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); background: var(--panel-2); }
+      tbody tr:last-child td { border-bottom: 0; }
+      td.num { font-family: var(--mono); font-size: 0.84rem; }
+      td:first-child { color: var(--text); font-weight: 600; }
+      td { color: var(--silver); }
+      .note { color: var(--muted); font-size: 0.88rem; }
+
+      .card-note { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--cream-2); border-radius: 12px; padding: 16px 18px; }
+      .card-note ul { margin: 8px 0 0; padding-left: 18px; color: var(--silver); }
+      .card-note li { margin: 4px 0; }
+      .stat { font: 700 2.1rem/1 var(--slab); color: var(--cream); margin-right: 6px; }
+      .lessons { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; }
+      .lessons li { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: var(--silver); font-size: 0.93rem; }
+      .lessons b { display: block; font: 700 1rem/1.3 var(--slab); color: var(--cream); margin-bottom: 4px; }
+      .hask-steps { list-style: none; counter-reset: hs; margin: 20px 0 18px; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; }
+      .hask-steps li { counter-increment: hs; }
+      .hask-steps a { display: block; height: 100%; padding: 14px 16px 14px 52px; position: relative; text-decoration: none; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; transition: border-color .2s; }
+      .hask-steps a:hover { border-color: var(--cream-2); }
+      .hask-steps a::before { content: counter(hs); position: absolute; left: 14px; top: 14px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 700 0.85rem/1 var(--slab); color: var(--ink); background: var(--cream); }
+      .hask-steps b { display: block; font: 700 1rem/1.3 var(--slab); color: var(--cream); margin-bottom: 4px; }
+      .hask-steps span { color: var(--silver); font-size: 0.9rem; }
+      .small-link { color: var(--muted); font-size: 0.88rem; }
+      .small-link a { color: var(--silver); }
+
+
+      .rh .process > p { color: #3b352b; }
+      /* Stage galleries: thumbnails open full size in a lightbox */
+      .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: 14px; margin: 20px 0 0; }
+      .gallery .g a { display: block; aspect-ratio: 1; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: #0b0f13; }
+      .gallery .g img { width: 100%; height: 100%; object-fit: cover; border: 0; border-radius: 0; transition: transform .25s ease; }
+      .gallery .g a:hover img { transform: scale(1.04); }
+      .gallery .g.wide { grid-column: span 2; }
+      .gallery .g.wide a { aspect-ratio: 2 / 1; }
+      .gallery .g.fit img { object-fit: contain; background: #fff; }
+      .gallery .g a { position: relative; }
+      .gallery .g.sample a::after, .rh figure.vid.sample::before {
+        content: "Test sample"; position: absolute; top: 8px; left: 8px; z-index: 1; padding: 2px 8px; border-radius: 99px;
+        background: rgba(21, 19, 15, 0.82); border: 1px solid rgba(239, 227, 206, 0.45); color: var(--cream);
+        font: 600 10.5px/1.5 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; pointer-events: none;
+      }
+      .rh figure.vid { position: relative; }
+      .rh figure.vid.sample::before { top: 10px; left: 10px; }
+      .notice { display: flex; gap: 14px; align-items: flex-start; margin: 0 0 40px; padding: 16px 18px; border: 1px solid rgba(239, 227, 206, 0.35); border-left: 4px solid var(--cream); border-radius: 12px; background: rgba(239, 227, 206, 0.06); }
+      .notice strong { display: block; font: 700 1.05rem/1.3 var(--slab); color: var(--cream); margin-bottom: 4px; }
+      .notice p { margin: 0; color: var(--silver); max-width: 78ch; }
+      .lid-note { margin: 10px 0 0; text-align: center; color: var(--muted); font-size: 0.82rem; }
+      .lid-wrap { justify-self: center; width: min(100%, 400px); }
+      .lid-wrap .lid { width: 100%; }
+      .gallery .g.pano { grid-column: 1 / -1; max-width: 760px; }
+      .gallery .g.pano a { aspect-ratio: 1600 / 563; }
+      .rh figure.vid { max-width: 320px; width: 100%; justify-self: center; }
+      .rh figure.vid video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #000; border: 1px solid var(--line); border-radius: var(--radius); }
+      .lb { padding: 0; border: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; overflow: visible; }
+      .lb::backdrop { background: rgba(4, 7, 10, 0.88); }
+      .lb img { display: block; max-width: 100%; max-height: 80vh; margin: 0 auto; border-radius: 10px; }
+      .lb p { margin: 10px 0 0; color: var(--silver); text-align: center; font-size: 0.92rem; }
+      .lb button { position: fixed; top: 14px; right: 16px; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--panel); color: var(--text); font-size: 1.3rem; cursor: pointer; }
+      .lb .prev, .lb .next { top: 50%; transform: translateY(-50%); }
+      .lb .prev { left: 12px; right: auto; }
+      .lb .next { right: 12px; }
+      @media (max-width: 760px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gallery .g.wide { grid-column: 1 / -1; } }
+      @media (max-width: 900px) {
+        .steps { grid-template-columns: 1fr; gap: 20px; }
+        .steps::before { left: 19px; right: auto; top: 4px; bottom: 4px; width: 4px; height: auto;
+          background: repeating-linear-gradient(0deg, rgba(255,255,255,0.25) 0 1px, transparent 1px 3px), linear-gradient(180deg, #6b7278, #c9ced2, #7a8187, #b4b9bd); }
+        .steps li { padding: 0 0 0 60px; min-height: 42px; }
+      }
+      @media (max-width: 760px) {
+        .rh-hero, .split { grid-template-columns: 1fr; }
+        .lid-wrap { width: min(70vw, 290px); order: -1; }
+        .table-wrap { border: 0; background: none; overflow: visible; }
+        table, tbody, tr, td { display: block; }
+        thead { display: none; }
+        tr { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; margin: 0 0 10px; padding: 6px 0; }
+        td { border: 0; padding: 4px 14px; }
+        td[data-label]::before { content: attr(data-label); display: block; font: 600 10.5px/1.4 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+        td:first-child { padding-top: 8px; font: 700 1rem/1.3 var(--slab); color: var(--cream); }
+      }
     </style>
   </head>
   <body>
     <div class="bg" aria-hidden="true"></div>
-    <main class="wrap case-study">
-      <header class="hero">
-        <a class="btn" href="https://tboy450.github.io/">Back to projects</a>
-        <p class="sub">HASK workshop · Updated November 10, 2026</p>
-        <h1>Red Hill <span>tin lid engraving</span></h1>
+    <main class="wrap rh">
+      <header class="rh-hero">
+        <div>
+          <a class="btn" href="https://tboy450.github.io/">Back to projects</a>
+          <p class="sub">HASK workshop · Updated November 11, 2026</p>
+          <h1>Red Hill <span>Tin lid engraving, from first test to batch jig</span></h1>
+          <p class="lede">Packaging tests for a small-batch pine salve. I adapted engraved chapel and verse artwork to the face of a 2&nbsp;in reflective tin lid, tested it on the laser, mapped how power and speed change the mark, and designed a jig for running lids in batches. It's also a worked example of <a href="#hask-way">how HASK takes an idea into development</a>.</p>
+          <dl class="facts">
+            <div><dt>Material</dt><dd>Reflective tin, 2 in lid</dd></div>
+            <div><dt>Artwork</dt><dd>45.72 mm (1.8 in) face</dd></div>
+            <div><dt>Machine</dt><dd>Tronxy Ultrabot U20 diode laser</dd></div>
+            <div><dt>Software</dt><dd>Laser Photo Studio, my own</dd></div>
+          </dl>
+        </div>
+        <div class="lid-wrap"><div class="lid"><img src="../assets/workshop/red-hill-crest.webp" width="640" height="640" alt="Drawing of the Red Hill Matthew 6:25 artwork as dark engraving on a silver tin lid: the verse above a chapel with sun rays and pines" /></div><p class="lid-note">The lid artwork on a drawn tin. Not a photo of a finished lid.</p></div>
       </header>
 
-      <section class="case-intro" aria-labelledby="overview">
-        <div>
-          <h2 id="overview">Packaging prototypes</h2>
-          <p>I adapted the Red Hill salve badge and chapel artwork to the flat face of a roughly two-inch reflective tin lid. I prepared the jobs in Laser Photo Studio, ran them on a Tronxy Ultrabot U20 diode laser, and compared the saved burn previews with the marks on the lids.</p>
-          <p>The salve badge trial took 11 minutes and 27 seconds of engraving. The main title and product name read clearly, while the smallest lines and some dense illustration details merged.</p>
-          <ul class="tags"><li>Reflective tin</li><li>Laser engraving</li><li>Prototype testing</li></ul>
-        </div>
-        <figure>
-          <a href="../assets/workshop/red-hill-verse-pass-1.webp"><img src="../assets/workshop/red-hill-verse-pass-1.webp" width="1200" height="900" alt="Laser-engraved Red Hill full-verse tin lid with a chapel illustration" /></a>
-          <figcaption>Full-verse chapel lid after its first pass. Select the photo for a closer look.</figcaption>
-        </figure>
+      <div class="pine-rule" aria-hidden="true">
+        <svg viewBox="0 0 54 22" fill="currentColor"><path d="M8 2 3 10h3l-4 6h4v4h4v-4h4l-4-6h3z"/><path d="M27 0l-6 9h4l-5 7h5v6h4v-6h5l-5-7h4z"/><path d="M46 2l-5 8h3l-4 6h4v4h4v-4h4l-4-6h3z"/></svg>
+      </div>
+
+      <aside class="notice" aria-label="About these photos">
+        <div><strong>Every lid and card here is a test sample.</strong>
+        <p>Nothing on this page is the finished product. These are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it.</p></div>
+      </aside>
+
+      <section class="process" aria-labelledby="process">
+        <p class="eyebrow">The process</p>
+        <h2 id="process">Four days, six stages</h2>
+        <p>Each stage answered one question before the next started. Small lettering turned out to be the hard part, so most of the work went into finding out why.</p>
+        <ol class="steps">
+          <li><span class="n">1</span><h3>Artwork</h3><span class="when">Nov 7–8</span><p>Chapel and verse art redrawn for a 45.72 mm face.</p></li>
+          <li><span class="n">2</span><h3>First lids</h3><span class="when">Nov 8</span><p>Chapel lids: big shapes read, fine type is patchy.</p></li>
+          <li><span class="n">3</span><h3>Full-verse lid</h3><span class="when">Nov 8–9</span><p>Two passes on one lid. The best test so far.</p></li>
+          <li><span class="n">4</span><h3>Software check</h3><span class="when">Nov 9</span><p>Jobs checked against their commands. 77 offline tests.</p></li>
+          <li><span class="n">5</span><h3>Power and speed ladder</h3><span class="when">Nov 10</span><p>165 patches map which exposure gives which tone.</p></li>
+          <li><span class="n">6</span><h3>Batch jig</h3><span class="when">Nov 10</span><p>42-pocket tray designed. Not printed yet.</p></li>
+          <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Tone ladder, one-direction scan, fresh-lid comparison.</p></li>
+        </ol>
       </section>
 
-      <section aria-labelledby="trials">
-        <h2 id="trials">What the chapel tests showed</h2>
-        <p>The 45.72 mm chapel layouts kept the illustration on the lid face. The first trial reproduced the chapel and trees, with gaps in parts of the rim and title. Later passes filled in some of the title and steeple. The smallest lower lettering stayed hard to read.</p>
-        <figure>
-          <a href="../assets/workshop/red-hill-trials.webp"><img src="../assets/workshop/red-hill-trials.webp" width="1356" height="642" loading="lazy" alt="Three photographed chapel trials, showing the first lid and a second lid after full passes and later detail runs" /></a>
-          <figcaption>The first photo shows a separate trial lid. The last two show the same earlier chapel prototype at different stages, photographed under different lighting.</figcaption>
-        </figure>
-      </section>
-
-      <section aria-labelledby="verse-trial">
-        <h2 id="verse-trial">The full-verse lid, November 8–9</h2>
-        <p>The full Matthew 6:25 front used a centered 45.72 mm layout. The first grayscale pass took about 29 minutes. A second, slower Floyd–Steinberg pass took about 38 minutes. The church and rays remained recognizable, but I judged the small lettering worse after the second pass.</p>
-        <div class="sample-pair">
-          <figure>
-            <a href="../assets/workshop/red-hill-verse-pass-1.webp"><img src="../assets/workshop/red-hill-verse-pass-1.webp" width="1200" height="900" loading="lazy" alt="Full-verse Red Hill lid after the first grayscale pass on November 8" /></a>
-            <figcaption>November 8 · After the first pass. Some verse strokes and the lower reference are uneven.</figcaption>
-          </figure>
-          <figure>
-            <a href="../assets/workshop/red-hill-verse-pass-2.webp"><img src="../assets/workshop/red-hill-verse-pass-2.webp" width="1200" height="900" loading="lazy" alt="The same full-verse lid after the additional Floyd–Steinberg pass on November 9, with rough small lettering" /></a>
-            <figcaption>November 9 · After the additional pass. Small letter edges are rough and difficult to read.</figcaption>
-          </figure>
-        </div>
-        <p>The photos use different lighting and angles. Processing style, speed and accumulated exposure also changed, so the pair records the progression of this sample. A controlled comparison still needs fresh matching lids.</p>
-      </section>
-
-      <section aria-labelledby="lettering">
-        <h2 id="lettering">Checking the lettering at engraving size</h2>
-        <p>Some original letters were about 0.9 mm tall. The preview already showed gaps in thin strokes, and more strokes merged on the tin. I compared the original raster, the lid photo and a revised proof with larger letters and wider spacing.</p>
-        <figure>
-          <a href="../assets/workshop/red-hill-lettering.webp"><img src="../assets/workshop/red-hill-lettering.webp" width="1356" height="452" loading="lazy" alt="Three enlarged lettering samples showing the original burn preview, the physical lid after detail runs, and a digital proof with larger letters and wider spacing" /></a>
-          <figcaption>The right panel is a digital proof awaiting a fresh-lid engraving. “Built 1937” appears on the earlier prototype. The corrected chapel artwork reads “First Built 1837”.</figcaption>
-        </figure>
-      </section>
-
-      <section aria-labelledby="software-update">
-        <h2 id="software-update">Software changes prompted by the trials</h2>
-        <p>The November 9 investigation checked the saved jobs against their generated commands, then added an optional left-to-right scan direction to Laser Photo Studio for a controlled comparison. The local development version also gained saved setup and position recovery, an inspection park, and return-to-zero controls.</p>
-        <p>The final offline suite passed 77 tests, including simulated jobs and recovery checks. Physical lettering quality remains unresolved, and the new controls still need validation on the machine. A higher-power comparison grid has been prepared and checked offline for a fresh matching lid. Its physical result is still pending.</p>
-      </section>
-
-      <section aria-labelledby="public-logs">
-        <h2 id="public-logs">Public project logs</h2>
-        <div class="links">
-          <a class="btn primary" href="https://red-hill-lid-progress.tboy450.chatgpt.site/project-update">Full project update · original log</a>
-          <a class="btn" href="https://red-hill-lid-progress.tboy450.chatgpt.site/">Progress summary and photos</a>
-          <a class="btn" href="https://red-hill-lid-progress.tboy450.chatgpt.site/technical.html">Technical test history</a>
+      <section aria-labelledby="settings">
+        <p class="eyebrow">Settings and results</p>
+        <h2 id="settings">Every run, in order</h2>
+        <p>All runs used 0.10 mm rows on the diode laser. Results are judged by eye from the photos, not measured.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Run</th><th>Date</th><th>Power and speed</th><th>Mode and time</th><th>What it showed</th></tr></thead>
+            <tbody>
+              <tr><td>First chapel lid</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">65% · 2,500 mm/min</td><td data-label="Mode and time">One pass, about 8 min</td><td data-label="What it showed">Church and trees read. Sign, rim and small lettering weak.</td></tr>
+              <tr><td>Second chapel lid</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">60% · 2,000, then 1,900 mm/min</td><td data-label="Mode and time">Two full passes, then detail runs</td><td data-label="What it showed">Big shapes and rim took. Small lettering stayed patchy.</td></tr>
+              <tr><td>Detail runs</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">55–60% · 1,700–1,750; title 80% · 1,700–2,000</td><td data-label="Mode and time">Masked touch-ups, one deliberate recovery test</td><td data-label="What it showed">Large title reads. The finest lines do not.</td></tr>
+              <tr><td>Dense badge design</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">80% · 1,600 mm/min</td><td data-label="Mode and time">Threshold, 11 min 27 s</td><td data-label="What it showed">Title readable. Smallest lines and dense detail merge.</td></tr>
+              <tr><td>Full verse, pass 1</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">65% · 600 mm/min</td><td data-label="Mode and time">Grayscale, about 29 min</td><td data-label="What it showed">Chapel and rays clear. Verse strokes uneven.</td></tr>
+              <tr><td>Full verse, pass 2</td><td class="num" data-label="Date">Nov 9</td><td class="num" data-label="Power and speed">65% · 450 mm/min</td><td data-label="Mode and time">Floyd–Steinberg over pass 1, about 38 min</td><td data-label="What it showed">Better illustration detail. Best test lid so far; letters still a little short.</td></tr>
+              <tr><td>Power and speed ladder</td><td class="num" data-label="Date">Nov 10</td><td class="num" data-label="Power and speed">50–100% · 50–6,000 mm/min</td><td data-label="Mode and time">165 patches, one pass each; finishing job 39.6 min</td><td data-label="What it showed">A full tone map. Did not burn through the lid.</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
+
+      <section aria-labelledby="artwork">
+        <p class="eyebrow">Stage 1</p>
+        <h2 id="artwork">The artwork</h2>
+        <p>The designs are drawn in a woodcut style: black linework with hatching, pines and a chapel. Each was redrawn for a 45.72 mm (1.8 in) round so it stays on the flat face of a 2 in lid, then prepared for the laser in Laser Photo Studio.</p>
+        <div class="gallery">
+          <figure class="g fit"><a href="../assets/workshop/red-hill-crest-art.webp" data-lb><img src="../assets/workshop/red-hill-crest-art-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Matthew 6:25 crest artwork: the verse above a chapel with sun rays, clouds and pines" /></a><figcaption><b>Matthew 6:25 crest · Nov 8–9.</b> As drawn for engraving.</figcaption></figure>
+          <figure class="g wide fit"><a href="../assets/workshop/red-hill-card-art.webp" data-lb><img src="../assets/workshop/red-hill-card-art-t.webp" width="520" height="260" loading="lazy" decoding="async" alt="Red Hill Forest Products card artwork with pines, cones and a mountain" /></a><figcaption><b>Forest Products card art · Nov 9.</b> Before engraving.</figcaption></figure>
+          </div>
+      </section>
+
+      <section aria-labelledby="chapel">
+        <p class="eyebrow">Stage 2</p>
+        <h2 id="chapel">First lids: the chapel</h2>
+        <p>The chapel design was the first artwork on tin. The church, trees and rim came through from the first lid. The small lines of lettering under the title did not, and more passes made them patchier, not sharper. That set the question for the rest of the project: how small can type get on this lid?</p>
+        <div class="gallery">
+          <figure class="g sample"><a href="../assets/workshop/red-hill-first-lid-a.webp" data-lb><img src="../assets/workshop/red-hill-first-lid-a-t.webp" width="520" height="390" loading="lazy" decoding="async" alt="The first chapel lid on the laser bed: church and trees marked, lettering broken" /></a><figcaption><b>First lid · Nov 8, 6:21 AM.</b> One 8-minute pass, 65% · 2,500 mm/min.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-first-lid-b.webp" data-lb><img src="../assets/workshop/red-hill-first-lid-b-t.webp" width="520" height="504" loading="lazy" decoding="async" alt="An early chapel trial lid in bright light with the title barely marked" /></a><figcaption><b>An early trial lid · Nov 8.</b> In bright light the title barely marked.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-trial-2.webp" data-lb><img src="../assets/workshop/red-hill-trial-2-t.webp" width="420" height="409" loading="lazy" decoding="async" alt="Second chapel lid after two full passes" /></a><figcaption><b>Second lid · Nov 8.</b> Two passes, 60% · 2,000 and 1,900 mm/min.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-trial-3.webp" data-lb><img src="../assets/workshop/red-hill-trial-3-t.webp" width="420" height="409" loading="lazy" decoding="async" alt="The same second lid after detail runs" /></a><figcaption><b>After detail runs.</b> 55–60% · 1,700–1,750. The title reads; the small lines don't.</figcaption></figure>
+          </div>
+      </section>
+
+      <section aria-labelledby="verse">
+        <p class="eyebrow">Stage 3</p>
+        <h2 id="verse">The full-verse lid</h2>
+        <div class="split">
+          <div class="prose">
+            <p>The Matthew 6:25 design puts the whole verse above the chapel. Pass 1 was a slow grayscale run. Pass 2 went over it with Floyd–Steinberg dithering, slower again.</p>
+            <p>Right after pass 2, I thought the lettering looked worse. In daylight the next morning, I judged it the best test lid so far, with the letters still a little short of where I want them.</p>
+            <p>Why pass 2 didn't sharpen the letters: every mark it made landed on a spot pass 1 had already marked, and the slower speed re-exposed some letter edges. A fair comparison needs a fresh, matching lid.</p>
+          </div>
+          <figure class="vid sample"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-verse-test-lid-poster.webp" width="540" height="960" aria-label="Video: the full-verse test lid turned in daylight"><source src="../assets/video/red-hill-verse-test-lid.mp4" type="video/mp4" /></video><figcaption><b>Full-verse test lid · Nov 9,</b> after both passes, in daylight. 12 s, muted.</figcaption></figure>
+        </div>
+        <div class="gallery">
+          <figure class="g sample"><a href="../assets/workshop/red-hill-verse-pass-1.webp" data-lb><img src="../assets/workshop/red-hill-verse-pass-1-t.webp" width="520" height="390" loading="lazy" decoding="async" alt="Full-verse lid after the first grayscale pass" /></a><figcaption><b>After pass 1 · Nov 8.</b> Grayscale, 65% · 600 mm/min, about 29 min.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-verse-straight-on.webp" data-lb><img src="../assets/workshop/red-hill-verse-straight-on-t.webp" width="520" height="390" loading="lazy" decoding="async" alt="The full-verse lid straight on after pass 1, with crisp sun rays and chapel" /></a><figcaption><b>Straight on after pass 1 · Nov 8.</b> Rays, chapel and the name are crisp; the verse is partly legible.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-verse-pass-2.webp" data-lb><img src="../assets/workshop/red-hill-verse-pass-2-t.webp" width="520" height="390" loading="lazy" decoding="async" alt="The same lid after the second Floyd–Steinberg pass" /></a><figcaption><b>After pass 2 · Nov 9.</b> Floyd–Steinberg, 65% · 450 mm/min, about 38 min.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-verse-test-lid.webp" data-lb><img src="../assets/workshop/red-hill-verse-test-lid-t.webp" width="465" height="520" loading="lazy" decoding="async" alt="Still of the full-verse test lid in daylight" /></a><figcaption><b>After both passes · Nov 9.</b> Still from the video.</figcaption></figure>
+          </div>
+      </section>
+
+      <section aria-labelledby="software">
+        <p class="eyebrow">Stage 4</p>
+        <h2 id="software">Checking the software</h2>
+        <p>Before blaming the machine, I checked my own software. I compared every saved job against the commands it generated: no missing samples, no power or direction mismatches. The rough letters weren't a software fault. Spot width and how the laser handles very short marks are still unmeasured.</p>
+        <div class="grid2">
+          <div class="card-note"><h3>Added to Laser Photo Studio</h3>
+            <ul>
+              <li>Optional left-to-right-only scan, for a direction comparison</li>
+              <li>Saved setup and position recovery</li>
+              <li>A park-left inspection move and return-to-zero</li>
+            </ul>
+          </div>
+          <div class="card-note"><span class="stat">77</span>offline tests passed, including simulated jobs and recovery.
+            <ul><li>The one-direction scan is ready for a fresh-lid comparison. It hasn't been run on a lid yet.</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="ladder">
+        <p class="eyebrow">Stage 5</p>
+        <h2 id="ladder">Mapping power and speed</h2>
+        <div class="split">
+          <div class="prose">
+            <p>To stop guessing, I burned a ladder: 165 squares of 2 mm on one lid, 11 power levels (50 to 100% in 5% steps) against 15 speeds (50 to 6,000 mm/min). I ran it fastest first and stopped partway to protect the lid, then finished the last 33 squares, the slowest ones, in a second job.</p>
+            <p>In the photos, the hottest corner turned gold and tan, the middle went dark grey and the fast end stayed light grey. It never burned through. It's the first map of which exposure gives which tone on this tin.</p>
+          </div>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-laser-running-poster.webp" width="540" height="960" aria-label="Video: the diode laser head running in the dark with its blue light"><source src="../assets/video/red-hill-laser-running.mp4" type="video/mp4" /></video><figcaption><b>The laser at work · Nov 10.</b> 12 s, muted. Mostly blue light; it shows the machine, not a result.</figcaption></figure>
+        </div>
+        <div class="gallery">
+          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder.webp" data-lb><img src="../assets/workshop/red-hill-ladder-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Tin lid covered in a grid of small engraved squares from gold through dark grey to light grey" /></a><figcaption><b>Ladder after the finishing job · Nov 10.</b> Power rises one way, speed the other.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder-in-hand.webp" data-lb><img src="../assets/workshop/red-hill-ladder-in-hand-t.webp" width="488" height="520" loading="lazy" decoding="async" alt="The ladder lid held up mid-run, grid of squares partly burned" /></a><figcaption><b>Mid-run · Nov 10, 6:11 PM.</b> The ladder lid held up between jobs.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder-close.webp" data-lb><img src="../assets/workshop/red-hill-ladder-close-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Close-up of the ladder squares during the run" /></a><figcaption><b>Close-up during the run · Nov 10.</b> Gold at the hot end, grey through the middle.</figcaption></figure>
+          <figure class="g fit"><a href="../assets/workshop/red-hill-ladder-map.webp" data-lb><img src="../assets/workshop/red-hill-ladder-map-t.webp" width="499" height="520" loading="lazy" decoding="async" alt="Map of all 165 ladder patches labelled with power and speed; the 33 slowest are outlined in red" /></a><figcaption><b>Ladder map.</b> Each square's power % over speed. Red outlines: the 33 slowest, hottest squares burned in the finishing job.</figcaption></figure>
+          </div>
+      </section>
+
+      <section aria-labelledby="jig">
+        <p class="eyebrow">Stage 6</p>
+        <h2 id="jig">A jig for batches <span class="status">Designed, not yet printed</span></h2>
+        <p>A single lid can be lined up by eye. A batch can't. The jig is a 6 mm tray with 42 pockets (7 × 6 on 57.15 mm centres), each Ø51.30 mm for a 2 in tin, so every lid sits at a known position. It's split into tiles that fit a 3D printer bed, with a three-pocket fit coupon to print first. Mesh checks passed offline. The tin sizes are nominal, so the coupon has to prove the fit before the full tray is printed.</p>
+        <div class="gallery">
+          <figure class="g wide fit"><a href="../assets/workshop/red-hill-jig-drawing.webp" data-lb><img src="../assets/workshop/red-hill-jig-drawing-t.webp" width="520" height="302" loading="lazy" decoding="async" alt="Dimensioned drawing of the provisional 42-pocket tin jig" /></a><figcaption><b>Provisional jig drawing · Nov 10.</b> Pocket grid, section and fit coupon.</figcaption></figure>
+          <figure class="g fit"><a href="../assets/workshop/red-hill-fit-coupon.webp" data-lb><img src="../assets/workshop/red-hill-fit-coupon-t.webp" width="520" height="344" loading="lazy" decoding="async" alt="3D render of the three-pocket fit-test coupon" /></a><figcaption><b>Fit coupon render.</b> Three pocket sizes. This gets printed first.</figcaption></figure>
+          </div>
+      </section>
+
+      <section aria-labelledby="cards">
+        <p class="eyebrow">Same artwork, another material</p>
+        <h2 id="cards">Test cards on black anodized aluminum</h2>
+        <div class="split">
+          <div class="prose">
+            <p>The same woodcut-style art also went onto 4 × 2 in black anodized aluminum test cards: light marks on black, Floyd–Steinberg dots, 60% · 2,400 mm/min, one pass, about 85 minutes.</p>
+            <p>Fine detail reads well here. It's a different material from the tin, so it isn't a direct comparison, but it shows the artwork itself holds up at small sizes.</p>
+          </div>
+          <figure class="vid sample"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Test card, Forest Products design · Nov 10.</b> One pass. 11 s, muted.</figcaption></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="lessons">
+        <p class="eyebrow">What I learned</p>
+        <h2 id="lessons">Four takeaways</h2>
+        <div class="gallery">
+          <figure class="g pano sample"><a href="../assets/workshop/red-hill-four-lids.webp" data-lb><img src="../assets/workshop/red-hill-four-lids-t.webp" width="520" height="183" loading="lazy" decoding="async" alt="Four engraved tin lids side by side" /></a><figcaption><b>Nov 8–10, left to right:</b> first chapel lid, a nearly blank lid (cause still unknown), the ladder lid and the full-verse lid.</figcaption></figure>
+          </div>
+        <ul class="lessons">
+          <li><b>Type is the limit.</b>Lettering under about 1 mm is what breaks first on this lid.</li>
+          <li><b>Context changes the mark.</b>The same art behaves differently with power, speed, direction and what's already on the lid.</li>
+          <li><b>Map before you tune.</b>A ladder on a fresh lid is how to choose tones, not more passes.</li>
+          <li><b>Batches need fixtures.</b>A jig is what turns a good test into repeatable work.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="next">
+        <p class="eyebrow">Next</p>
+        <h2 id="next">What comes next</h2>
+        <p>The lids above are tests. The finished design and settings come once these steps are done.</p>
+        <ul class="card-note" style="list-style:disc;padding-left:36px">
+          <li>A tighter ladder around the tones I want to use.</li>
+          <li>The one-direction scan of the full-verse design on a fresh lid.</li>
+          <li>A two- or three-tone version, each tone its own pass.</li>
+          <li>Print the fit coupon, then the jig.</li>
+        </ul>
+      </section>
+
+      <section class="hask-way" aria-labelledby="hask-way">
+        <p class="eyebrow">Working with HASK</p>
+        <h2 id="hask-way">How HASK takes an idea into development</h2>
+        <p>Red Hill started as a small business idea: engraved tins and cards for a handmade product. The same approach works for any product or business proposal. Each step builds on what the last one proved, and you see the tests, not just the end result.</p>
+        <ol class="hask-steps">
+          <li><a href="#artwork"><b>Brand and artwork</b><span>Turn the idea into designs sized for the real part and the real machine.</span></a></li>
+          <li><a href="#chapel"><b>Prototype early</b><span>Make physical test pieces quickly to find out what actually works.</span></a></li>
+          <li><a href="#settings"><b>Test and record</b><span>Log every run's settings and result so decisions rest on evidence.</span></a></li>
+          <li><a href="#software"><b>Custom software</b><span>Build or fix the tools when off-the-shelf ones get in the way.</span></a></li>
+          <li><a href="#ladder"><b>Map the process</b><span>Run structured tests, like the power and speed ladder, before tuning.</span></a></li>
+          <li><a href="#jig"><b>Plan for production</b><span>Design fixtures and workflows so one good piece becomes a repeatable batch.</span></a></li>
+        </ol>
+        <p>Engraving, 3D printing, software and design all happen in one place, so an idea can move from sketch to tested sample without being handed between shops.</p>
+      </section>
+
       <div class="links">
         <a class="btn primary" href="https://tboy450.github.io/#contact">Work with HASK</a>
         <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Laser Photo Studio code</a>
       </div>
+      <p class="small-link">Earlier notes: <a href="https://red-hill-lid-progress.tboy450.chatgpt.site/">progress log through November 8</a>.</p>
     </main>
-    <footer class="wrap case-study">
+    <dialog class="lb" aria-label="Photo viewer"><img alt="" /><p></p><button class="close" type="button" aria-label="Close">×</button><button class="prev" type="button" aria-label="Previous photo">‹</button><button class="next" type="button" aria-label="Next photo">›</button></dialog>
+    <script>
+      (() => {
+        const lb = document.querySelector('.lb');
+        if (!lb || typeof lb.showModal !== 'function') return;
+        const img = lb.querySelector('img'), cap = lb.querySelector('p');
+        let set = [], i = 0;
+        const show = () => {
+          const a = set[i], fc = a.parentElement.querySelector('figcaption');
+          img.src = a.href; img.alt = a.querySelector('img').alt; cap.innerHTML = fc ? fc.innerHTML : '';
+          lb.querySelector('.prev').hidden = lb.querySelector('.next').hidden = set.length < 2;
+        };
+        document.addEventListener('click', (e) => {
+          const a = e.target.closest('a[data-lb]');
+          if (!a) return;
+          e.preventDefault();
+          set = [...a.closest('.gallery').querySelectorAll('a[data-lb]')]; i = set.indexOf(a); show(); lb.showModal();
+        });
+        const step = (d) => { i = (i + d + set.length) % set.length; show(); };
+        lb.querySelector('.close').onclick = () => lb.close();
+        lb.querySelector('.prev').onclick = () => step(-1);
+        lb.querySelector('.next').onclick = () => step(1);
+        lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
+        lb.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+      })();
+    </script>
+    <footer class="wrap rh">
       <p>© 2026 Tristan Boyd Hash · Hybridized Business Solutions</p>
     </footer>
   </body>
