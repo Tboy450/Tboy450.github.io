@@ -114,6 +114,22 @@
       .hask-steps a::before { content: counter(hs); position: absolute; left: 14px; top: 14px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 700 0.85rem/1 var(--slab); color: var(--ink); background: var(--cream); }
       .hask-steps b { display: block; font: 700 1rem/1.3 var(--slab); color: var(--cream); margin-bottom: 4px; }
       .hask-steps span { color: var(--silver); font-size: 0.9rem; }
+      /* Working checklist */
+      .checklist { margin-top: 56px; }
+      .legend { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 16px 0 6px; padding: 0; color: var(--muted); font-size: 0.86rem; }
+      .legend b { color: var(--text); margin-right: 4px; }
+      .tally { margin: 6px 0 18px; font: 600 12px/1.4 var(--mono); letter-spacing: 0.06em; color: var(--cream-2); }
+      .cl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px; align-items: start; }
+      .cl { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 10px; }
+      .cl h3 { font-size: 1rem; margin: 0 0 8px; }
+      .cl ul { list-style: none; margin: 0; padding: 0; }
+      .cl li, .legend li { position: relative; padding-left: 26px; }
+      .cl li { margin: 0 0 7px; color: var(--silver); font-size: 0.9rem; line-height: 1.4; }
+      .cl li::before, .legend li::before { position: absolute; left: 0; top: 1px; width: 17px; height: 17px; border-radius: 50%; display: grid; place-items: center; font: 700 11px/1 var(--sans); }
+      .cl li.done::before, .legend li.done::before { content: "✓"; background: rgba(78, 224, 138, 0.16); color: var(--green); border: 1px solid rgba(78, 224, 138, 0.45); }
+      .cl li.prep::before, .legend li.prep::before { content: ""; background: linear-gradient(90deg, var(--cream-2) 50%, transparent 50%); border: 1px solid var(--cream-2); }
+      .cl li.next::before, .legend li.next::before { content: ""; border: 1px dashed var(--muted); }
+      .cl li.next { color: var(--muted); }
       .small-link { color: var(--muted); font-size: 0.88rem; }
       .small-link a { color: var(--silver); }
 
@@ -197,8 +213,8 @@
       </div>
 
       <aside class="notice" aria-label="About these photos">
-        <div><strong>Every lid and card here is a test sample.</strong>
-        <p>Nothing on this page is the finished product. These are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it.</p></div>
+        <div><strong>Every lid here is a test sample.</strong>
+        <p>None of the lids is the finished product. They are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it.</p></div>
       </aside>
 
       <section class="process" aria-labelledby="process">
@@ -214,6 +230,65 @@
           <li><span class="n">6</span><h3>Batch jig</h3><span class="when">Nov 10</span><p>42-pocket tray designed. Not printed yet.</p></li>
           <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Tone ladder, one-direction scan, fresh-lid comparison.</p></li>
         </ol>
+      </section>
+
+      <section class="checklist" aria-labelledby="checklist">
+        <p class="eyebrow">Behind the six stages</p>
+        <h2 id="checklist">The working checklist</h2>
+        <p>The timeline is the short version. The project runs on a checklist where every item carries a status, and an item never claims more than its evidence shows. Client and business items are kept off this page.</p>
+        <ul class="legend" aria-label="Status key">
+          <li class="done"><b>Done</b> run on the machine or completed, with a record</li>
+          <li class="prep"><b>Prepared</b> file made and checked offline, not yet run</li>
+          <li class="next"><b>Planned</b> next, not started</li>
+        </ul>
+        <p class="tally"><span>16 done</span> · <span>4 prepared</span> · <span>13 planned</span></p>
+        <div class="cl-grid">
+          <div class="cl"><h3>Design and artwork</h3><ul>
+            <li class="done">Chapel and full-verse art redrawn for a 45.72 mm (1.8 in) face</li>
+            <li class="done">Dark- and light-lettering versions proofed for reflective tin</li>
+            <li class="done">Woodcut card art prepared for black aluminum</li>
+            <li class="next">Pick dark, mid and light tones from the ladder for a three-tone design</li>
+          </ul></div>
+          <div class="cl"><h3>Test engraving</h3><ul>
+            <li class="done">First chapel lid, one pass</li>
+            <li class="done">Second chapel lid, two passes plus masked detail runs</li>
+            <li class="done">Deliberate disconnect mid-job to test recovery</li>
+            <li class="done">Dense badge design in threshold mode</li>
+            <li class="done">Full-verse lid: grayscale pass, then a Floyd–Steinberg pass</li>
+            <li class="done">Business cards engraved on black anodized aluminum</li>
+            <li class="next">One-direction scan on a fresh lid</li>
+            <li class="next">Three-tone version on a fresh lid</li>
+            <li class="next">First test on a black tin finish</li>
+          </ul></div>
+          <div class="cl"><h3>Measurement and records</h3><ul>
+            <li class="done">Settings, run time and photos logged for every run</li>
+            <li class="done">Saved jobs checked against the commands they generated</li>
+            <li class="done">165-patch ladder: first run and finishing job complete</li>
+            <li class="next">Photograph the cooled ladder lid and fill in its results sheet</li>
+            <li class="next">Confirm both ladder jobs used the same lid and zero point</li>
+            <li class="next">Measure the tins with calipers: base, widest diameter, height, lip</li>
+          </ul></div>
+          <div class="cl"><h3>Software: Laser Photo Studio</h3><ul>
+            <li class="done">Optional left-to-right-only scan</li>
+            <li class="done">Saved setup and position recovery</li>
+            <li class="done">Inspection park and return-to-zero</li>
+            <li class="done">77 offline tests passed</li>
+            <li class="prep">Ladder generator built, in review before merging</li>
+            <li class="next">Tidy job folders and photo filing</li>
+          </ul></div>
+          <div class="cl"><h3>Production tooling</h3><ul>
+            <li class="prep">42-pocket jig designed and split into printer-sized tiles</li>
+            <li class="prep">Mesh checks passed offline</li>
+            <li class="prep">Three-pocket fit coupon ready to print</li>
+            <li class="next">Measure the laser bed plate</li>
+            <li class="next">Print the coupon; set pocket clearance from real tins</li>
+            <li class="next">Only then print the full jig</li>
+          </ul></div>
+          <div class="cl"><h3>Machine and housekeeping</h3><ul>
+            <li class="next">Laser head and air-assist maintenance check</li>
+            <li class="next">Back up the project files with version history</li>
+          </ul></div>
+        </div>
       </section>
 
       <section aria-labelledby="settings">
@@ -324,15 +399,18 @@
       </section>
 
       <section aria-labelledby="cards">
-        <p class="eyebrow">Same artwork, another material</p>
-        <h2 id="cards">Test cards on black anodized aluminum</h2>
+        <p class="eyebrow">Finished piece</p>
+        <h2 id="cards">Business cards on black anodized aluminum</h2>
         <div class="split">
           <div class="prose">
-            <p>The same woodcut-style art also went onto 4 × 2 in black anodized aluminum test cards: light marks on black, Floyd–Steinberg dots, 60% · 2,400 mm/min, one pass, about 85 minutes.</p>
-            <p>Fine detail reads well here. It's a different material from the tin, so it isn't a direct comparison, but it shows the artwork itself holds up at small sizes.</p>
+            <p>Unlike the lids, these are finished: Red Hill Forest Products business cards, 4 × 2 in black anodized aluminum. The woodcut art is engraved as light marks on black with Floyd–Steinberg dots, 60% · 2,400 mm/min, in one pass of about 85 minutes.</p>
+            <p>The fine pine and cone detail holds up well on aluminum. Cards like these are part of the wider laser and CNC work: <a href="https://tboy450.github.io/#workshop-title">see more in From the workshop</a>.</p>
           </div>
-          <figure class="vid sample"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Test card, Forest Products design · Nov 10.</b> One pass. 11 s, muted.</figcaption></figure>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Red Hill Forest Products business card · Nov 10.</b> 11 s, muted.</figcaption></figure>
         </div>
+        <div class="gallery">
+          <figure class="g wide"><a href="../assets/workshop/red-hill-business-card.webp" data-lb><img src="../assets/workshop/red-hill-business-card.webp" width="800" height="600" loading="lazy" decoding="async" alt="Finished Red Hill Forest Products business card on black anodized aluminum, engraved with mountains, pines and cones" /></a><figcaption><b>The finished card.</b> Red Hill Forest Products, pine salve and leather care.</figcaption></figure>
+          </div>
       </section>
 
       <section aria-labelledby="lessons">

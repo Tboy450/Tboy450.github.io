@@ -3,6 +3,24 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-11: Red Hill working checklist; business cards shown as finished
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - Added "The working checklist" under the Red Hill timeline:
+    - 33 items in six groups: design, test engraving, measurement and records, software, production tooling,
+      machine and housekeeping
+    - the owner's status system: Done (with a record), Prepared (checked offline), Planned
+    - a tally: 16 done, 4 prepared, 13 planned
+  - The checklist is drawn from the owner's master checklist, public items only.
+  - The business cards are finished pieces, not tests. The test-sample tag and "test card" wording are removed,
+    and a still of the finished card is added.
+  - The Red Hill business card now also appears in From the workshop on the homepage. The case study links back
+    to it.
+- **Kept private:** prices and quotes, equipment recommendations, partner tasks and messages, business decisions,
+  orders and family-history dates.
+- **Why:** The owner said the six stages didn't show how extensive the checklist really is, and that the cards are
+  finished products that belong with the wider laser and CNC work.
+
 ## 2026-11-11: Rebuild the Red Hill case study with the full process and media
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:**
