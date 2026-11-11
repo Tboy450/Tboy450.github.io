@@ -3,6 +3,22 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-11: Red Hill field footage from the founder
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** Added "Where the salve starts" to the Red Hill page: three muted clips filmed by the Red Hill
+  founder, used with his permission as relayed by the owner.
+  - **Tapping pines for resin:** 66 s.
+  - **From resin to salve:** 32 s, joined from three clips.
+  - **The pines:** 28 s, joined from two clips.
+- **Edits:**
+  - Audio removed from all clips.
+  - Cut: label art with health and "100% natural" claims; a kitchen-scale reading; a laptop screen; a generated
+    crate mock-up; a personal wallet; a black case on the ground.
+  - Every half second was checked.
+  - The letterboxed shots are part of the founder's original edit.
+- **Credit:** "the Red Hill founder" (alias). The credits card now includes the field footage.
+- **Sizes:** 9.6 MB, 5.5 MB and 4.1 MB. They load only on play.
+
 ## 2026-11-11: Red Hill credits, with a founder alias
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** Added a "Who does what" credits section to the Red Hill page:
