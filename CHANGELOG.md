@@ -3,6 +3,16 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-11: Show both Red Hill business cards, art next to the engraved card
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:**
+  - The business card section now shows both designs, Forest Products and Leather Care (White Pine). Each is shown
+    as artwork, then as the engraved card on black anodized aluminum.
+  - The Leather Care art is the corrected-spelling version, at the owner's request. Its wording is captioned as
+    part of the design.
+  - The card art was moved out of Stage 1 so it sits with the finished cards. Stage 1 points down to it.
+- **Why:** The owner asked for both business card designs and both engraved cards as example work.
+
 ## 2026-11-11: Red Hill working checklist; business cards shown as finished
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:**

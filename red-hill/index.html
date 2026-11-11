@@ -143,6 +143,10 @@
       .gallery .g.wide { grid-column: span 2; }
       .gallery .g.wide a { aspect-ratio: 2 / 1; }
       .gallery .g.fit img { object-fit: contain; background: #fff; }
+      .gallery .g.fit.dark img { background: #000; }
+      .rh .pair-title { margin: 34px 0 0; }
+      .gallery.pair { margin-top: 12px; }
+      .gallery.pair .g.wide a { aspect-ratio: 16 / 9; }
       .gallery .g a { position: relative; }
       .gallery .g.sample a::after, .rh figure.vid.sample::before {
         content: "Test sample"; position: absolute; top: 8px; left: 8px; z-index: 1; padding: 2px 8px; border-radius: 99px;
@@ -314,10 +318,9 @@
       <section aria-labelledby="artwork">
         <p class="eyebrow">Stage 1</p>
         <h2 id="artwork">The artwork</h2>
-        <p>The designs are drawn in a woodcut style: black linework with hatching, pines and a chapel. Each was redrawn for a 45.72 mm (1.8 in) round so it stays on the flat face of a 2 in lid, then prepared for the laser in Laser Photo Studio.</p>
+        <p>The designs are drawn in a woodcut style: black linework with hatching, pines and a chapel. Each lid design was redrawn for a 45.72 mm (1.8 in) round so it stays on the flat face of a 2 in lid, then prepared for the laser in Laser Photo Studio. The business card designs are shown with the finished cards below.</p>
         <div class="gallery">
           <figure class="g fit"><a href="../assets/workshop/red-hill-crest-art.webp" data-lb><img src="../assets/workshop/red-hill-crest-art-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Matthew 6:25 crest artwork: the verse above a chapel with sun rays, clouds and pines" /></a><figcaption><b>Matthew 6:25 crest · Nov 8–9.</b> As drawn for engraving.</figcaption></figure>
-          <figure class="g wide fit"><a href="../assets/workshop/red-hill-card-art.webp" data-lb><img src="../assets/workshop/red-hill-card-art-t.webp" width="520" height="260" loading="lazy" decoding="async" alt="Red Hill Forest Products card artwork with pines, cones and a mountain" /></a><figcaption><b>Forest Products card art · Nov 9.</b> Before engraving.</figcaption></figure>
           </div>
       </section>
 
@@ -399,18 +402,25 @@
       </section>
 
       <section aria-labelledby="cards">
-        <p class="eyebrow">Finished piece</p>
+        <p class="eyebrow">Finished pieces</p>
         <h2 id="cards">Business cards on black anodized aluminum</h2>
         <div class="split">
           <div class="prose">
-            <p>Unlike the lids, these are finished: Red Hill Forest Products business cards, 4 × 2 in black anodized aluminum. The woodcut art is engraved as light marks on black with Floyd–Steinberg dots, 60% · 2,400 mm/min, in one pass of about 85 minutes.</p>
-            <p>The fine pine and cone detail holds up well on aluminum. Cards like these are part of the wider laser and CNC work: <a href="https://tboy450.github.io/#workshop-title">see more in From the workshop</a>.</p>
+            <p>Unlike the lids, these are finished: two Red Hill business card designs, each 4 × 2 in black anodized aluminum. The woodcut art is engraved as light marks on black with Floyd–Steinberg dots at 60% · 2,400 mm/min, in one pass: about 85 minutes for the Forest Products card and about 65 for Leather Care.</p>
+            <p>Each design is shown as artwork first, then as the engraved card. The fine pine, cone and jar detail holds up well on aluminum. Cards like these are part of the wider laser and CNC work: <a href="https://tboy450.github.io/#workshop-title">see more in From the workshop</a>.</p>
           </div>
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Red Hill Forest Products business card · Nov 10.</b> 11 s, muted.</figcaption></figure>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Forest Products card · Nov 10.</b> 11 s, muted.</figcaption></figure>
         </div>
-        <div class="gallery">
-          <figure class="g wide"><a href="../assets/workshop/red-hill-business-card.webp" data-lb><img src="../assets/workshop/red-hill-business-card.webp" width="800" height="600" loading="lazy" decoding="async" alt="Finished Red Hill Forest Products business card on black anodized aluminum, engraved with mountains, pines and cones" /></a><figcaption><b>The finished card.</b> Red Hill Forest Products, pine salve and leather care.</figcaption></figure>
-          </div>
+        <h3 class="pair-title">Forest Products card: art, then engraved</h3>
+        <div class="gallery pair">
+          <figure class="g wide fit dark"><a href="../assets/workshop/red-hill-card-art.webp" data-lb><img src="../assets/workshop/red-hill-card-art-t.webp" loading="lazy" decoding="async" alt="Red Hill Forest Products card artwork with mountains, pines, cones and a tin" /></a><figcaption><b>The artwork.</b> Woodcut-style design before engraving.</figcaption></figure>
+          <figure class="g wide"><a href="../assets/workshop/red-hill-business-card.webp" data-lb><img src="../assets/workshop/red-hill-business-card.webp" loading="lazy" decoding="async" alt="Finished Red Hill Forest Products business card on black anodized aluminum" /></a><figcaption><b>The engraved card · Nov 10.</b> One pass, about 85 minutes.</figcaption></figure>
+        </div>
+        <h3 class="pair-title">Leather Care card: art, then engraved</h3>
+        <div class="gallery pair">
+          <figure class="g wide fit dark"><a href="../assets/workshop/red-hill-card-art-leather.webp" data-lb><img src="../assets/workshop/red-hill-card-art-leather-t.webp" loading="lazy" decoding="async" alt="Red Hill Leather Care White Pine card artwork with a jar, mountains, pines and cones" /></a><figcaption><b>The artwork.</b> Design before engraving. The card's wording is part of the design.</figcaption></figure>
+          <figure class="g wide"><a href="../assets/workshop/red-hill-business-card-leather.webp" data-lb><img src="../assets/workshop/red-hill-business-card-leather-t.webp" loading="lazy" decoding="async" alt="Finished Red Hill Leather Care White Pine business card on black anodized aluminum" /></a><figcaption><b>The engraved card · Nov 10.</b> One pass, about 65 minutes.</figcaption></figure>
+        </div>
       </section>
 
       <section aria-labelledby="lessons">
