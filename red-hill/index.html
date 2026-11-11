@@ -134,6 +134,8 @@
       .credit-list div { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--cream-2); border-radius: 12px; padding: 14px 16px; }
       .credit-list dt { font: 700 1rem/1.3 var(--slab); color: var(--cream); margin-bottom: 4px; }
       .credit-list dd { margin: 0; color: var(--silver); font-size: 0.92rem; }
+      .field-vids { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 18px; margin: 18px 0 10px; align-items: start; }
+      .field-vids figure.vid { max-width: 320px; justify-self: center; }
       .small-link { color: var(--muted); font-size: 0.88rem; }
       .small-link a { color: var(--silver); }
 
@@ -319,6 +321,18 @@
         </div>
       </section>
 
+      <section class="field" aria-labelledby="field">
+        <p class="eyebrow">From the field · filmed by the Red Hill founder</p>
+        <h2 id="field">Where the salve starts</h2>
+        <p>Before any tin reaches the laser, the salve begins in the woods. The Red Hill founder taps pine trees for their resin, then melts, strains and pours it into tins by hand. These are his clips, shown with his permission. Formulas and quantities stay private.</p>
+        <div class="field-vids">
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-tapping-poster.webp" width="540" height="960" aria-label="Video: fresh cuts in pine bark weeping resin, a hatchet shaping a cut, and a collection cup hung below it"><source src="../assets/video/red-hill-field-tapping.mp4" type="video/mp4" /></video><figcaption><b>Tapping pines for resin · Nov 1.</b> Fresh cuts, resin running and a cup to catch it. 66 s, muted.</figcaption></figure>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-resin-to-salve-poster.webp" width="540" height="960" aria-label="Video: raw resin melted in a pot, strained into jars, then poured into rows of open tins"><source src="../assets/video/red-hill-field-resin-to-salve.mp4" type="video/mp4" /></video><figcaption><b>From resin to salve · Oct 29 to Nov 8.</b> Melting, straining and filling tins by hand. 32 s, muted.</figcaption></figure>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-pines-poster.webp" width="540" height="960" aria-label="Video: tall pines among fall color, then a thinned pine stand under blue sky"><source src="../assets/video/red-hill-field-pines.mp4" type="video/mp4" /></video><figcaption><b>The pines · Nov 8–9.</b> The kind of stand the resin comes from. 28 s, muted.</figcaption></figure>
+        </div>
+        <p class="note">Field footage: the Red Hill founder. Edited for the web, with the sound removed.</p>
+      </section>
+
       <section aria-labelledby="artwork">
         <p class="eyebrow">Stage 1</p>
         <h2 id="artwork">The artwork</h2>
@@ -473,7 +487,7 @@
         <h2 id="credits">Who does what</h2>
         <dl class="credit-list">
           <div><dt>Red Hill Forest Products</dt><dd>The business, its products and its brand.</dd></div>
-          <div><dt>The Red Hill founder</dt><dd>Founding vision, and the harvesting and processing work behind the products.</dd></div>
+          <div><dt>The Red Hill founder</dt><dd>Founding vision, the harvesting and processing work behind the products, and the field footage.</dd></div>
           <div><dt>HASK · Tristan Boyd Hash</dt><dd>Business development: artwork prepared for engraving, laser testing, Laser Photo Studio software, the batch jig, the business cards and this documentation.</dd></div>
         </dl>
         <p class="note">Credits describe contributions only, not ownership.</p>
