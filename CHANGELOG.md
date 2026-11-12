@@ -11,6 +11,8 @@ Newest first. Each entry is signed with who made it, so the next person or assis
   - The notice, ladder text and captions now say the photos were taken before wiping.
   - The settings table, timeline, checklist and next steps now show a permanent dark tone as unproven.
   - New takeaway: "Wipe before you judge."
+  - Added an after-wiping photo of the Forest Products lid next to the before photo (a frame from the owner's
+    video, used with the owner's OK).
 - **Source:** the owner's finding (Nov 12, about 6:48 AM), relayed by the coordinating session.
 
 ## 2026-11-12: Red Hill two-tone lids
