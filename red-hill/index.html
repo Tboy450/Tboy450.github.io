@@ -72,7 +72,7 @@
       .process h2 { color: var(--ink); }
       .process .eyebrow { color: #6b5a3e; opacity: 1; }
       .process > p { color: #3b352b; max-width: 70ch; }
-      .steps { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; position: relative; }
+      .steps { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; position: relative; }
       .steps::before {
         content: ""; position: absolute; left: 3%; right: 3%; top: 19px; height: 4px; border-radius: 4px;
         background: repeating-linear-gradient(90deg, rgba(255,255,255,0.25) 0 1px, transparent 1px 3px), linear-gradient(90deg, #6b7278, #c9ced2, #7a8187, #b4b9bd);
@@ -168,6 +168,8 @@
       .lid-wrap { justify-self: center; width: min(100%, 400px); }
       .lid-wrap .lid { width: 100%; }
       .gallery .g.pano { grid-column: 1 / -1; max-width: 760px; }
+      .gallery.trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      @media (max-width: 760px) { .gallery.trio { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gallery.trio .g:first-child { grid-column: 1 / -1; } }
       .gallery .g.pano a { aspect-ratio: 1600 / 563; }
       .rh figure.vid { max-width: 320px; width: 100%; justify-self: center; }
       .rh figure.vid video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #000; border: 1px solid var(--line); border-radius: var(--radius); }
@@ -205,7 +207,7 @@
       <header class="rh-hero">
         <div>
           <a class="btn" href="https://tboy450.github.io/">Back to projects</a>
-          <p class="sub">HASK workshop · Updated November 11, 2026</p>
+          <p class="sub">HASK workshop · Updated November 12, 2026</p>
           <h1>Red Hill <span>Tin lid engraving, from first test to batch jig</span></h1>
           <p class="lede">Packaging tests for a small-batch pine salve. I adapted engraved chapel and verse artwork to the face of a 2&nbsp;in reflective tin lid, tested it on the laser, mapped how power and speed change the mark, and designed a jig for running lids in batches. It's also a worked example of <a href="#hask-way">how HASK takes an idea into development</a>.</p>
           <dl class="facts">
@@ -229,7 +231,7 @@
 
       <section class="process" aria-labelledby="process">
         <p class="eyebrow">The process</p>
-        <h2 id="process">Four days, six stages</h2>
+        <h2 id="process">Six days, seven stages</h2>
         <p>Each stage answered one question before the next started. Small lettering turned out to be the hard part, so most of the work went into finding out why.</p>
         <ol class="steps">
           <li><span class="n">1</span><h3>Artwork</h3><span class="when">Nov 7–8</span><p>Chapel and verse art redrawn for a 45.72 mm face.</p></li>
@@ -238,12 +240,13 @@
           <li><span class="n">4</span><h3>Software check</h3><span class="when">Nov 9</span><p>Jobs checked against their commands. 77 offline tests.</p></li>
           <li><span class="n">5</span><h3>Power and speed ladder</h3><span class="when">Nov 10</span><p>165 patches map which exposure gives which tone.</p></li>
           <li><span class="n">6</span><h3>Batch jig</h3><span class="when">Nov 10</span><p>42-pocket tray designed. Not printed yet.</p></li>
-          <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Tone ladder, one-direction scan, fresh-lid comparison.</p></li>
+          <li><span class="n">7</span><h3>Two-tone lids</h3><span class="when">Nov 11–12</span><p>Two laser tones on one lid, each its own pass. No paint.</p></li>
+          <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Charcoal-first burn, tone-overlap test, one-direction scan.</p></li>
         </ol>
       </section>
 
       <section class="checklist" aria-labelledby="checklist">
-        <p class="eyebrow">Behind the six stages</p>
+        <p class="eyebrow">Behind the seven stages</p>
         <h2 id="checklist">The working checklist</h2>
         <p>The timeline is the short version. The project runs on a checklist where every item carries a status, and an item never claims more than its evidence shows. Client and business items are kept off this page.</p>
         <ul class="legend" aria-label="Status key">
@@ -251,7 +254,7 @@
           <li class="prep"><b>Prepared</b> file made and checked offline, not yet run</li>
           <li class="next"><b>Planned</b> next, not started</li>
         </ul>
-        <p class="tally"><span>16 done</span> · <span>4 prepared</span> · <span>13 planned</span></p>
+        <p class="tally"><span>18 done</span> · <span>4 prepared</span> · <span>15 planned</span></p>
         <div class="cl-grid">
           <div class="cl"><h3>Design and artwork</h3><ul>
             <li class="done">Chapel and full-verse art redrawn for a 45.72 mm (1.8 in) face</li>
@@ -266,6 +269,10 @@
             <li class="done">Dense badge design in threshold mode</li>
             <li class="done">Full-verse lid: grayscale pass, then a Floyd–Steinberg pass</li>
             <li class="done">Business cards engraved on black anodized aluminum</li>
+            <li class="done">First two-tone lid: Matthew 6:25 in copper and charcoal</li>
+            <li class="done">Forest Products lid in gold and charcoal, gold burned first</li>
+            <li class="next">The same two-tone design burned charcoal-first</li>
+            <li class="next">Tone-overlap test: where the two tones meet</li>
             <li class="next">One-direction scan on a fresh lid</li>
             <li class="next">Three-tone version on a fresh lid</li>
             <li class="next">First test on a black tin finish</li>
@@ -304,7 +311,7 @@
       <section aria-labelledby="settings">
         <p class="eyebrow">Settings and results</p>
         <h2 id="settings">Every run, in order</h2>
-        <p>All runs used 0.10 mm rows on the diode laser. Results are judged by eye from the photos, not measured.</p>
+        <p>The runs through Nov 10 used 0.10 mm rows on the diode laser. Results are judged by eye from the photos, not measured.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Run</th><th>Date</th><th>Power and speed</th><th>Mode and time</th><th>What it showed</th></tr></thead>
@@ -316,6 +323,8 @@
               <tr><td>Full verse, pass 1</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">65% · 600 mm/min</td><td data-label="Mode and time">Grayscale, about 29 min</td><td data-label="What it showed">Chapel and rays clear. Verse strokes uneven.</td></tr>
               <tr><td>Full verse, pass 2</td><td class="num" data-label="Date">Nov 9</td><td class="num" data-label="Power and speed">65% · 450 mm/min</td><td data-label="Mode and time">Floyd–Steinberg over pass 1, about 38 min</td><td data-label="What it showed">Better illustration detail. Best test lid so far; letters still a little short.</td></tr>
               <tr><td>Power and speed ladder</td><td class="num" data-label="Date">Nov 10</td><td class="num" data-label="Power and speed">50–100% · 50–6,000 mm/min</td><td data-label="Mode and time">165 patches, one pass each; finishing job 39.6 min</td><td data-label="What it showed">A full tone map. Did not burn through the lid.</td></tr>
+              <tr><td>Two-tone Matthew 6:25</td><td class="num" data-label="Date">Nov 11</td><td class="num" data-label="Power and speed">80% · 140 mm/min (copper); 80% · 3,000 mm/min (charcoal)</td><td data-label="Mode and time">Two passes, one per tone</td><td data-label="What it showed">"Red Hill" and the reference read clearly. Small verse lettering broken.</td></tr>
+              <tr><td>Two-tone Forest Products</td><td class="num" data-label="Date">Nov 12</td><td class="num" data-label="Power and speed">80% · 140 mm/min (gold); 80% · 2,200 mm/min (charcoal)</td><td data-label="Mode and time">Gold first, about 80 min; then charcoal, about 15 min</td><td data-label="What it showed">Strong gold. Charcoal grey with fine scan lines; top-left of the outer border didn't mark.</td></tr>
             </tbody>
           </table>
         </div>
@@ -419,6 +428,18 @@
           </div>
       </section>
 
+      <section aria-labelledby="two-tone">
+        <p class="eyebrow">Stage 7 · Latest</p>
+        <h2 id="two-tone">Two tones from the laser</h2>
+        <p>After the ladder, the next step was to use two of its tones on purpose, each as its own pass on bare reflective tin. There's no paint or ink; both colours come from the laser. The first try, on Nov 11, was the Matthew 6:25 design: a slow pass for the warm copper tone and a fast pass for the charcoal outlines and lettering. "Red Hill" and the reference read clearly, but the small verse lettering came out broken.</p>
+        <p>On Nov 12 I burned the Red Hill Forest Products design the same way. It was developed from an AI-generated mock-up and redrawn for the laser. Gold went first, then charcoal. The gold came out strong; the charcoal is grey with fine scan lines, and the top-left of the thin outer border didn't mark. Next up are the same design burned charcoal-first and a test of how the two tones overlap.</p>
+        <div class="gallery trio">
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Reflective tin lid engraved with the Red Hill Forest Products design, mountains, pines, lettering and crossed axes in gold on a charcoal grey field" /></a><figcaption><b>Forest Products lid · Nov 12.</b> Gold and charcoal, gold burned first.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-bed.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-bed-t.webp" width="520" height="416" loading="lazy" decoding="async" alt="The same two-tone lid on the laser bed under shop light, where the gold reads as a darker brass" /></a><figcaption><b>On the laser bed · Nov 12.</b> Under shop light the gold reads darker. The colour shifts with the light.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-matthew.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-matthew-t.webp" width="520" height="488" loading="lazy" decoding="async" alt="Matthew 6:25 lid with the chapel and sun rays in a warm copper tone and the lettering in charcoal" /></a><figcaption><b>The first two-tone lid · Nov 11.</b> Matthew 6:25 in copper and charcoal. Glare on the right side.</figcaption></figure>
+          </div>
+      </section>
+
       <section aria-labelledby="cards">
         <p class="eyebrow">Finished pieces</p>
         <h2 id="cards">Business cards on black anodized aluminum</h2>
@@ -462,7 +483,8 @@
         <ul class="card-note" style="list-style:disc;padding-left:36px">
           <li>A tighter ladder around the tones I want to use.</li>
           <li>The one-direction scan of the full-verse design on a fresh lid.</li>
-          <li>A two- or three-tone version, each tone its own pass.</li>
+          <li>The two-tone design burned charcoal-first, and a tone-overlap test.</li>
+          <li>A three-tone version, each tone its own pass.</li>
           <li>Print the fit coupon, then the jig.</li>
         </ul>
       </section>
