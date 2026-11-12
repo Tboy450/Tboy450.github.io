@@ -3,6 +3,29 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-12: Soot correction on the Red Hill page
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** The owner found that the dark grey or "charcoal" from fast passes on the reflective tin lids is
+  soot. It wipes off, leaving a light frosted etch; the gold stays. Stage 7 is now "Two tones, then a wipe", and
+  the page no longer says fast passes make a charcoal tone.
+  - The notice, ladder text and captions now say the photos were taken before wiping.
+  - The settings table, timeline, checklist and next steps now show a permanent dark tone as unproven.
+  - New takeaway: "Wipe before you judge."
+  - Added an after-wiping photo of the Forest Products lid next to the before photo (a frame from the owner's
+    video, used with the owner's OK).
+- **Source:** the owner's finding (Nov 12, about 6:48 AM), relayed by the coordinating session.
+
+## 2026-11-12: Red Hill two-tone lids
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** Added Stage 7, "Two tones from the laser", to the Red Hill page, with three photos:
+  - the Red Hill Forest Products lid in gold and charcoal (Nov 12), from the owner's full-size phone photo;
+  - the same lid on the laser bed, where the colour reads darker;
+  - the first two-tone lid, Matthew 6:25 in copper and charcoal (Nov 11), from the media pack, rotated upright.
+- **Also:** both runs added to the settings table; the process timeline is now seven stages with "Next" on the
+  same row; checklist counts 18 done, 4 prepared, 15 planned.
+- **Notes:** all three are labelled test samples. The page says the Forest Products design came from an
+  AI-generated mock-up, as the media pack asks. Colour words are by eye. Photos carry no location or camera data.
+
 ## 2026-11-12: Red Hill ladder colour corrected
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** The ladder's slow, hot squares are a rosy brass with coppery edges, not gold. The ladder

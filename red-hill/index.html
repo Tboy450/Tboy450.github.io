@@ -72,7 +72,7 @@
       .process h2 { color: var(--ink); }
       .process .eyebrow { color: #6b5a3e; opacity: 1; }
       .process > p { color: #3b352b; max-width: 70ch; }
-      .steps { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; position: relative; }
+      .steps { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 12px; position: relative; }
       .steps::before {
         content: ""; position: absolute; left: 3%; right: 3%; top: 19px; height: 4px; border-radius: 4px;
         background: repeating-linear-gradient(90deg, rgba(255,255,255,0.25) 0 1px, transparent 1px 3px), linear-gradient(90deg, #6b7278, #c9ced2, #7a8187, #b4b9bd);
@@ -168,6 +168,8 @@
       .lid-wrap { justify-self: center; width: min(100%, 400px); }
       .lid-wrap .lid { width: 100%; }
       .gallery .g.pano { grid-column: 1 / -1; max-width: 760px; }
+      .gallery.quad { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      @media (max-width: 760px) { .gallery.quad { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
       .gallery .g.pano a { aspect-ratio: 1600 / 563; }
       .rh figure.vid { max-width: 320px; width: 100%; justify-self: center; }
       .rh figure.vid video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #000; border: 1px solid var(--line); border-radius: var(--radius); }
@@ -205,7 +207,7 @@
       <header class="rh-hero">
         <div>
           <a class="btn" href="https://tboy450.github.io/">Back to projects</a>
-          <p class="sub">HASK workshop · Updated November 11, 2026</p>
+          <p class="sub">HASK workshop · Updated November 12, 2026</p>
           <h1>Red Hill <span>Tin lid engraving, from first test to batch jig</span></h1>
           <p class="lede">Packaging tests for a small-batch pine salve. I adapted engraved chapel and verse artwork to the face of a 2&nbsp;in reflective tin lid, tested it on the laser, mapped how power and speed change the mark, and designed a jig for running lids in batches. It's also a worked example of <a href="#hask-way">how HASK takes an idea into development</a>.</p>
           <dl class="facts">
@@ -224,12 +226,12 @@
 
       <aside class="notice" aria-label="About these photos">
         <div><strong>Every lid here is a test sample.</strong>
-        <p>None of the lids is the finished product. They are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it.</p></div>
+        <p>None of the lids is the finished product. They are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it. Photos up to Nov 12 show the lids before wiping. On Nov 12 the dark grey from fast passes turned out to be soot: it wipes off and leaves a light frosted etch (<a href="#two-tone">see Stage 7</a>).</p></div>
       </aside>
 
       <section class="process" aria-labelledby="process">
         <p class="eyebrow">The process</p>
-        <h2 id="process">Four days, six stages</h2>
+        <h2 id="process">Six days, seven stages</h2>
         <p>Each stage answered one question before the next started. Small lettering turned out to be the hard part, so most of the work went into finding out why.</p>
         <ol class="steps">
           <li><span class="n">1</span><h3>Artwork</h3><span class="when">Nov 7–8</span><p>Chapel and verse art redrawn for a 45.72 mm face.</p></li>
@@ -238,12 +240,13 @@
           <li><span class="n">4</span><h3>Software check</h3><span class="when">Nov 9</span><p>Jobs checked against their commands. 77 offline tests.</p></li>
           <li><span class="n">5</span><h3>Power and speed ladder</h3><span class="when">Nov 10</span><p>165 patches map which exposure gives which tone.</p></li>
           <li><span class="n">6</span><h3>Batch jig</h3><span class="when">Nov 10</span><p>42-pocket tray designed. Not printed yet.</p></li>
-          <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Tone ladder, one-direction scan, fresh-lid comparison.</p></li>
+          <li><span class="n">7</span><h3>Two-tone lids</h3><span class="when">Nov 11–12</span><p>The gold held. The fast-pass dark wiped off as soot.</p></li>
+          <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>A permanent dark tone, wiped-lid photos, one-direction scan.</p></li>
         </ol>
       </section>
 
       <section class="checklist" aria-labelledby="checklist">
-        <p class="eyebrow">Behind the six stages</p>
+        <p class="eyebrow">Behind the seven stages</p>
         <h2 id="checklist">The working checklist</h2>
         <p>The timeline is the short version. The project runs on a checklist where every item carries a status, and an item never claims more than its evidence shows. Client and business items are kept off this page.</p>
         <ul class="legend" aria-label="Status key">
@@ -251,7 +254,7 @@
           <li class="prep"><b>Prepared</b> file made and checked offline, not yet run</li>
           <li class="next"><b>Planned</b> next, not started</li>
         </ul>
-        <p class="tally"><span>16 done</span> · <span>4 prepared</span> · <span>13 planned</span></p>
+        <p class="tally"><span>18 done</span> · <span>4 prepared</span> · <span>15 planned</span></p>
         <div class="cl-grid">
           <div class="cl"><h3>Design and artwork</h3><ul>
             <li class="done">Chapel and full-verse art redrawn for a 45.72 mm (1.8 in) face</li>
@@ -266,6 +269,10 @@
             <li class="done">Dense badge design in threshold mode</li>
             <li class="done">Full-verse lid: grayscale pass, then a Floyd–Steinberg pass</li>
             <li class="done">Business cards engraved on black anodized aluminum</li>
+            <li class="done">First two-tone lid: Matthew 6:25, a copper pass plus a fast pass</li>
+            <li class="done">Forest Products lid, gold first; wiping showed the fast-pass dark is soot</li>
+            <li class="next">Find a permanent dark: slower speed, repeat passes, finer rows or wiping between passes</li>
+            <li class="next">Photograph every lid after wiping, and say which photos are before</li>
             <li class="next">One-direction scan on a fresh lid</li>
             <li class="next">Three-tone version on a fresh lid</li>
             <li class="next">First test on a black tin finish</li>
@@ -274,7 +281,7 @@
             <li class="done">Settings, run time and photos logged for every run</li>
             <li class="done">Saved jobs checked against the commands they generated</li>
             <li class="done">165-patch ladder: first run and finishing job complete</li>
-            <li class="next">Photograph the cooled ladder lid and fill in its results sheet</li>
+            <li class="next">Wipe and photograph the ladder lid, then fill in its results sheet</li>
             <li class="next">Confirm both ladder jobs used the same lid and zero point</li>
             <li class="next">Measure the tins with calipers: base, widest diameter, height, lip</li>
           </ul></div>
@@ -304,7 +311,7 @@
       <section aria-labelledby="settings">
         <p class="eyebrow">Settings and results</p>
         <h2 id="settings">Every run, in order</h2>
-        <p>All runs used 0.10 mm rows on the diode laser. Results are judged by eye from the photos, not measured.</p>
+        <p>The runs through Nov 10 used 0.10 mm rows on the diode laser. Results are judged by eye from the photos, not measured.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Run</th><th>Date</th><th>Power and speed</th><th>Mode and time</th><th>What it showed</th></tr></thead>
@@ -316,6 +323,8 @@
               <tr><td>Full verse, pass 1</td><td class="num" data-label="Date">Nov 8</td><td class="num" data-label="Power and speed">65% · 600 mm/min</td><td data-label="Mode and time">Grayscale, about 29 min</td><td data-label="What it showed">Chapel and rays clear. Verse strokes uneven.</td></tr>
               <tr><td>Full verse, pass 2</td><td class="num" data-label="Date">Nov 9</td><td class="num" data-label="Power and speed">65% · 450 mm/min</td><td data-label="Mode and time">Floyd–Steinberg over pass 1, about 38 min</td><td data-label="What it showed">Better illustration detail. Best test lid so far; letters still a little short.</td></tr>
               <tr><td>Power and speed ladder</td><td class="num" data-label="Date">Nov 10</td><td class="num" data-label="Power and speed">50–100% · 50–6,000 mm/min</td><td data-label="Mode and time">165 patches, one pass each; finishing job 39.6 min</td><td data-label="What it showed">A full tone map. Did not burn through the lid.</td></tr>
+              <tr><td>Two-tone Matthew 6:25</td><td class="num" data-label="Date">Nov 11</td><td class="num" data-label="Power and speed">80% · 140 mm/min (copper); 80% · 3,000 mm/min (fast pass)</td><td data-label="Mode and time">Two passes, one per tone</td><td data-label="What it showed">"Red Hill" and the reference read clearly. Small verse lettering broken. Not yet checked after wiping.</td></tr>
+              <tr><td>Two-tone Forest Products</td><td class="num" data-label="Date">Nov 12</td><td class="num" data-label="Power and speed">80% · 140 mm/min (gold); 80% · 2,200 mm/min (fast pass)</td><td data-label="Mode and time">Gold first, about 80 min; then the fast pass, about 15 min</td><td data-label="What it showed">The gold stayed after wiping. The fast pass's dark grey was soot; under it is a light frosted etch.</td></tr>
             </tbody>
           </table>
         </div>
@@ -397,14 +406,14 @@
         <div class="split">
           <div class="prose">
             <p>To stop guessing, I burned a ladder: 165 squares of 2 mm on one lid, 11 power levels (50 to 100% in 5% steps) against 15 speeds (50 to 6,000 mm/min). I ran it fastest first and stopped partway to protect the lid, then finished the last 33 squares, the slowest ones, in a second job.</p>
-            <p>In the photos, the hottest corner turned a rosy brass with coppery edges, the middle went dark grey and the fast end stayed light grey. It never burned through. It's the first map of which exposure gives which tone on this tin.</p>
+            <p>In the photos, taken before wiping, the hottest corner turned a rosy brass with coppery edges, the middle looked dark grey and the fast end stayed light grey. It never burned through. It's the first map of which exposure gives which tone on this tin. Since then, the dark grey from fast passes has turned out to be soot (<a href="#two-tone">Stage 7</a>), so the grey squares need reading again after a wipe.</p>
           </div>
           <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-laser-running-poster.webp" width="540" height="960" aria-label="Video: the diode laser head running in the dark with its blue light"><source src="../assets/video/red-hill-laser-running.mp4" type="video/mp4" /></video><figcaption><b>The laser at work · Nov 10.</b> 12 s, muted. Mostly blue light; it shows the machine, not a result.</figcaption></figure>
         </div>
         <div class="gallery">
-          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder.webp" data-lb><img src="../assets/workshop/red-hill-ladder-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Tin lid covered in a grid of small engraved squares from rosy brass through dark grey to light grey" /></a><figcaption><b>Ladder after the finishing job · Nov 10.</b> Power rises one way, speed the other.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder.webp" data-lb><img src="../assets/workshop/red-hill-ladder-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Tin lid, before wiping, covered in a grid of small engraved squares from rosy brass through dark grey to light grey" /></a><figcaption><b>Ladder after the finishing job · Nov 10.</b> Power rises one way, speed the other.</figcaption></figure>
           <figure class="g sample"><a href="../assets/workshop/red-hill-ladder-in-hand.webp" data-lb><img src="../assets/workshop/red-hill-ladder-in-hand-t.webp" width="488" height="520" loading="lazy" decoding="async" alt="The ladder lid held up mid-run, grid of squares partly burned" /></a><figcaption><b>Mid-run · Nov 10, 6:11 PM.</b> The ladder lid held up between jobs.</figcaption></figure>
-          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder-close.webp" data-lb><img src="../assets/workshop/red-hill-ladder-close-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Close-up of the ladder squares during the run" /></a><figcaption><b>Close-up during the run · Nov 10.</b> Rosy brass at the hot end, grey through the middle.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-ladder-close.webp" data-lb><img src="../assets/workshop/red-hill-ladder-close-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Close-up of the ladder squares during the run" /></a><figcaption><b>Close-up during the run · Nov 10.</b> Before wiping: rosy brass at the hot end, grey through the middle.</figcaption></figure>
           <figure class="g fit"><a href="../assets/workshop/red-hill-ladder-map.webp" data-lb><img src="../assets/workshop/red-hill-ladder-map-t.webp" width="499" height="520" loading="lazy" decoding="async" alt="Map of all 165 ladder patches labelled with power and speed; the 33 slowest are outlined in red" /></a><figcaption><b>Ladder map.</b> Each square's power % over speed. Red outlines: the 33 slowest, hottest squares burned in the finishing job.</figcaption></figure>
           </div>
       </section>
@@ -416,6 +425,20 @@
         <div class="gallery">
           <figure class="g wide fit"><a href="../assets/workshop/red-hill-jig-drawing.webp" data-lb><img src="../assets/workshop/red-hill-jig-drawing-t.webp" width="520" height="302" loading="lazy" decoding="async" alt="Dimensioned drawing of the provisional 42-pocket tin jig" /></a><figcaption><b>Provisional jig drawing · Nov 10.</b> Pocket grid, section and fit coupon.</figcaption></figure>
           <figure class="g fit"><a href="../assets/workshop/red-hill-fit-coupon.webp" data-lb><img src="../assets/workshop/red-hill-fit-coupon-t.webp" width="520" height="344" loading="lazy" decoding="async" alt="3D render of the three-pocket fit-test coupon" /></a><figcaption><b>Fit coupon render.</b> Three pocket sizes. This gets printed first.</figcaption></figure>
+          </div>
+      </section>
+
+      <section aria-labelledby="two-tone">
+        <p class="eyebrow">Stage 7 · Latest</p>
+        <h2 id="two-tone">Two tones, then a wipe</h2>
+        <p>After the ladder, the next step was to burn two of its tones on purpose, each as its own pass on bare reflective tin: a slow pass for a warm gold or copper tone and a fast pass for what looked like charcoal. The first try, on Nov 11, was the Matthew 6:25 design. On Nov 12 I burned the Red Hill Forest Products design the same way, gold first. That design was developed from an AI-generated mock-up and redrawn for the laser.</p>
+        <p>Then I wiped the Forest Products lid. The gold stayed. The charcoal didn't: it was soot sitting on the surface, and under it is only a light, frosted etch that still looks like bare metal. So this lid is really gold plus a light etch, and the dark in the earlier photos was misleading.</p>
+        <p>A true, permanent dark on these lids is still unproven. It will need much slower speeds or more exposure; repeat passes, a finer row pitch and wiping between passes are the next things to test. The soot might even work as a temporary stencil for the gold, but for now that's only an idea. From here on, every lid gets photographed after a wipe.</p>
+        <div class="gallery quad">
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Reflective tin lid, before wiping, engraved with the Red Hill Forest Products design: mountains, pines, lettering and crossed axes in gold on a dark grey field" /></a><figcaption><b>Forest Products lid · Nov 12, before wiping.</b> The dark grey here is soot.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-wiped.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-wiped-t.webp" width="504" height="504" loading="lazy" decoding="async" alt="The same Forest Products lid after wiping: the gold design remains on a light frosted etch that still looks like bare metal" /></a><figcaption><b>The same lid after wiping · Nov 12.</b> The gold stayed; the soot came off, leaving a light etch.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-bed.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-bed-t.webp" width="520" height="416" loading="lazy" decoding="async" alt="The same two-tone lid on the laser bed under shop light, where the gold reads as a darker brass" /></a><figcaption><b>On the laser bed · Nov 12, before wiping.</b> Under shop light the gold reads darker.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-matthew.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-matthew-t.webp" width="520" height="488" loading="lazy" decoding="async" alt="Matthew 6:25 lid, before wiping, with the chapel and sun rays in a warm copper tone and the lettering in dark grey" /></a><figcaption><b>The first two-tone lid · Nov 11, before wiping.</b> Copper plus a fast-pass dark, likely soot too. Glare on the right.</figcaption></figure>
           </div>
       </section>
 
@@ -443,7 +466,7 @@
 
       <section aria-labelledby="lessons">
         <p class="eyebrow">What I learned</p>
-        <h2 id="lessons">Four takeaways</h2>
+        <h2 id="lessons">Five takeaways</h2>
         <div class="gallery">
           <figure class="g pano sample"><a href="../assets/workshop/red-hill-four-lids.webp" data-lb><img src="../assets/workshop/red-hill-four-lids-t.webp" width="520" height="183" loading="lazy" decoding="async" alt="Four engraved tin lids side by side" /></a><figcaption><b>Nov 8–10, left to right:</b> first chapel lid, a nearly blank lid (cause still unknown), the ladder lid and the full-verse lid.</figcaption></figure>
           </div>
@@ -452,6 +475,7 @@
           <li><b>Context changes the mark.</b>The same art behaves differently with power, speed, direction and what's already on the lid.</li>
           <li><b>Map before you tune.</b>A ladder on a fresh lid is how to choose tones, not more passes.</li>
           <li><b>Batches need fixtures.</b>A jig is what turns a good test into repeatable work.</li>
+          <li><b>Wipe before you judge.</b>The dark from fast passes was soot. A mark only counts once it survives a wipe.</li>
         </ul>
       </section>
 
@@ -462,7 +486,8 @@
         <ul class="card-note" style="list-style:disc;padding-left:36px">
           <li>A tighter ladder around the tones I want to use.</li>
           <li>The one-direction scan of the full-verse design on a fresh lid.</li>
-          <li>A two- or three-tone version, each tone its own pass.</li>
+          <li>A permanent dark tone: slower speeds, repeat passes, finer rows or wiping between passes.</li>
+          <li>A three-tone version, once a dark tone holds.</li>
           <li>Print the fit coupon, then the jig.</li>
         </ul>
       </section>
