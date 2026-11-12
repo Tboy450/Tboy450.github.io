@@ -3,6 +3,13 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-12: Red Hill ladder colour corrected
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** The ladder's slow, hot squares are light tan, not gold. The ladder never reached a true gold.
+  Fixed the Stage 5 paragraph, the ladder photo's alt text and the close-up caption.
+- **Source:** the owner's correction, relayed by the records session, which fixed the media pack's captions and
+  brief to match.
+
 ## 2026-11-11: Red Hill field footage from the founder
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** Added "Where the salve starts" to the Red Hill page: three muted clips filmed by the Red Hill
