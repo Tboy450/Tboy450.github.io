@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://tboy450.github.io/red-hill/" />
     <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-verse-pass-1.webp" />
     <meta property="og:image:alt" content="Laser-engraved Red Hill tin lid with the Matthew 6:25 verse and a chapel illustration" />
-    <link rel="stylesheet" href="../assets/site.css?v=solar-mobile-20261105" />
+    <link rel="stylesheet" href="../assets/site.css?v=tabs-20261113" />
     <style>
       /* Red Hill touches, this page only: engraved serif type, cream-on-ink panel, brushed metal. */
       .rh {
@@ -61,6 +61,23 @@
       }
       .lid img { position: absolute; inset: 9%; width: 82%; height: 82%; border: 0; border-radius: 50%; background: none; }
       .lid::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, rgba(255,255,255,0.16), transparent 42%); pointer-events: none; }
+
+      /* Tabs: shown only when the script runs; without it every section stays on one page */
+      .tabs { position: sticky; top: 0; z-index: 5; margin: 0 0 34px; padding: 10px 0; background: linear-gradient(var(--bg) 82%, transparent); }
+      .tablist { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 4px; border: 1px solid var(--line); border-radius: 99px; background: rgba(12, 23, 33, 0.92); backdrop-filter: blur(6px); }
+      .tablist::-webkit-scrollbar { display: none; }
+      @media (max-width: 760px) { .tablist { -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent); } }
+      .tablist a { flex: 0 0 auto; padding: 8px 16px; border-radius: 99px; color: var(--silver); font: 600 0.9rem/1.2 var(--sans); text-decoration: none; white-space: nowrap; }
+      .tablist a:hover { color: var(--cream); background: rgba(239, 227, 206, 0.08); }
+      .tablist a[aria-selected="true"] { background: var(--cream); color: var(--ink); }
+      .tablist a:focus-visible { outline: 2px solid var(--cream); outline-offset: 2px; }
+      .panel-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .js-tabs .tab-panel[hidden] { display: none; }
+      .tab-panel:focus { outline: none; }
+      .tab-panel > section, .tab-panel > .process, .tab-panel > .checklist { scroll-margin-top: 80px; }
+      .rh [id] { scroll-margin-top: 80px; }
+      .panel-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: -24px 0 56px; color: var(--muted); font-size: 0.92rem; }
+      .panel-foot a { color: var(--cream-2); }
 
       /* Pine rule */
       .pine-rule { display: flex; align-items: center; gap: 14px; color: var(--cream-2); margin: 0 0 52px; opacity: 0.8; }
@@ -233,6 +250,19 @@
         <p>None of the lids is the finished product. They are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it. Photos up to Nov 12 show the lids before wiping. On Nov 12 the dark grey from fast passes turned out to be soot: it wipes off and leaves a light frosted etch (<a href="#two-tone">see Stage 7</a>).</p></div>
       </aside>
 
+      <nav class="tabs" aria-label="Case study sections" hidden>
+        <div class="tablist" role="tablist">
+          <a role="tab" id="tab-overview" href="#overview" aria-controls="overview">Overview</a>
+          <a role="tab" id="tab-lid-tests" href="#lid-tests" aria-controls="lid-tests">Lid tests</a>
+          <a role="tab" id="tab-business-cards" href="#business-cards" aria-controls="business-cards">Business cards</a>
+          <a role="tab" id="tab-from-the-field" href="#from-the-field" aria-controls="from-the-field">From the field</a>
+          <a role="tab" id="tab-working-with-hask" href="#working-with-hask" aria-controls="working-with-hask">Working with HASK</a>
+        </div>
+      </nav>
+
+      <div class="tab-panel" id="overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="-1">
+        <h2 class="panel-title">Overview</h2>
+
       <section class="process" aria-labelledby="process">
         <p class="eyebrow">The process</p>
         <h2 id="process">Seven days, eight stages</h2>
@@ -248,6 +278,35 @@
           <li><span class="n">8</span><h3>Tone combo test</h3><span class="when">Nov 12–13</span><p>Gold first survives; soot first blocks gold.</p></li>
           <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Small filled shapes, a sharper soot stencil, a permanent dark.</p></li>
         </ol>
+      </section>
+
+      <section aria-labelledby="next">
+        <p class="eyebrow">Next</p>
+        <h2 id="next">What comes next</h2>
+        <p>Every lid on this page is a test. The finished design and settings come once these steps are done.</p>
+        <ul class="card-note" style="list-style:disc;padding-left:36px">
+          <li>A tighter ladder around the tones I want to use.</li>
+          <li>The one-direction scan of the full-verse design on a fresh lid.</li>
+          <li>Small filled shapes, burned slowly several times over, and a sharper soot-stencil trial.</li>
+          <li>A permanent dark tone: slower speeds, repeat passes, finer rows or wiping between passes.</li>
+          <li>A three-tone version, once a dark tone holds.</li>
+          <li>Print the fit coupon, then the jig.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="lessons">
+        <p class="eyebrow">What I learned</p>
+        <h2 id="lessons">Five takeaways</h2>
+        <div class="gallery">
+          <figure class="g pano sample"><a href="../assets/workshop/red-hill-four-lids.webp" data-lb><img src="../assets/workshop/red-hill-four-lids-t.webp" width="520" height="183" loading="lazy" decoding="async" alt="Four engraved tin lids side by side" /></a><figcaption><b>Nov 8–10, left to right:</b> first chapel lid, a nearly blank lid (cause still unknown), the ladder lid and the full-verse lid.</figcaption></figure>
+          </div>
+        <ul class="lessons">
+          <li><b>Type is the limit.</b>Lettering under about 1 mm is what breaks first on this lid.</li>
+          <li><b>Context changes the mark.</b>The same art behaves differently with power, speed, direction and what's already on the lid.</li>
+          <li><b>Map before you tune.</b>A ladder on a fresh lid is how to choose tones, not more passes.</li>
+          <li><b>Batches need fixtures.</b>A jig is what turns a good test into repeatable work.</li>
+          <li><b>Wipe before you judge.</b>The dark from fast passes was soot. A mark only counts once it survives a wipe. And burn gold first: soot underneath blocks it.</li>
+        </ul>
       </section>
 
       <section class="checklist" aria-labelledby="checklist">
@@ -316,6 +375,10 @@
           </ul></div>
         </div>
       </section>
+      </div>
+
+      <div class="tab-panel" id="lid-tests" role="tabpanel" aria-labelledby="tab-lid-tests" tabindex="-1">
+        <h2 class="panel-title">Lid tests</h2>
 
       <section aria-labelledby="settings">
         <p class="eyebrow">Settings and results</p>
@@ -338,18 +401,6 @@
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section class="field" aria-labelledby="field">
-        <p class="eyebrow">From the field · filmed by the Red Hill founder</p>
-        <h2 id="field">Where the salve starts</h2>
-        <p>Before any tin reaches the laser, the salve begins in the woods. The Red Hill founder taps pine trees for their resin, then melts, strains and pours it into tins by hand. These are his clips, shown with his permission. Formulas and quantities stay private.</p>
-        <div class="field-vids">
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-tapping-poster.webp" width="540" height="960" aria-label="Video: fresh cuts in pine bark weeping resin, a hatchet shaping a cut, and a collection cup hung below it"><source src="../assets/video/red-hill-field-tapping.mp4" type="video/mp4" /></video><figcaption><b>Tapping pines for resin · Nov 1.</b> Fresh cuts, resin running and a cup to catch it. 66 s, muted.</figcaption></figure>
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-resin-to-salve-poster.webp" width="540" height="960" aria-label="Video: raw resin melted in a pot, strained into jars, then poured into rows of open tins"><source src="../assets/video/red-hill-field-resin-to-salve.mp4" type="video/mp4" /></video><figcaption><b>From resin to salve · Oct 29 to Nov 8.</b> Melting, straining and filling tins by hand. 32 s, muted.</figcaption></figure>
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-pines-poster.webp" width="540" height="960" aria-label="Video: tall pines among fall color, then a thinned pine stand under blue sky"><source src="../assets/video/red-hill-field-pines.mp4" type="video/mp4" /></video><figcaption><b>The pines · Nov 8–9.</b> The kind of stand the resin comes from. 28 s, muted.</figcaption></figure>
-        </div>
-        <p class="note">Field footage: the Red Hill founder. Edited for the web, with the sound removed.</p>
       </section>
 
       <section aria-labelledby="artwork">
@@ -479,6 +530,10 @@
           <figure class="g sample"><a href="../assets/workshop/red-hill-combo-after.webp" data-lb><img src="../assets/workshop/red-hill-combo-after-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="The same lid after wiping: two columns of tan gold squares remain, the soot-only areas show as a faint light etch" /></a><figcaption><b>After wiping · Nov 13.</b> What stays: the gold squares and a light etch.</figcaption></figure>
           </div>
       </section>
+      </div>
+
+      <div class="tab-panel" id="business-cards" role="tabpanel" aria-labelledby="tab-business-cards" tabindex="-1">
+        <h2 class="panel-title">Business cards</h2>
 
       <section aria-labelledby="cards">
         <p class="eyebrow">Finished pieces</p>
@@ -501,35 +556,26 @@
           <figure class="g wide"><a href="../assets/workshop/red-hill-business-card-leather.webp" data-lb><img src="../assets/workshop/red-hill-business-card-leather-t.webp" loading="lazy" decoding="async" alt="Finished Red Hill Leather Care White Pine business card on black anodized aluminum" /></a><figcaption><b>The engraved card · Nov 10.</b> One pass, about 65 minutes.</figcaption></figure>
         </div>
       </section>
+      </div>
 
-      <section aria-labelledby="lessons">
-        <p class="eyebrow">What I learned</p>
-        <h2 id="lessons">Five takeaways</h2>
-        <div class="gallery">
-          <figure class="g pano sample"><a href="../assets/workshop/red-hill-four-lids.webp" data-lb><img src="../assets/workshop/red-hill-four-lids-t.webp" width="520" height="183" loading="lazy" decoding="async" alt="Four engraved tin lids side by side" /></a><figcaption><b>Nov 8–10, left to right:</b> first chapel lid, a nearly blank lid (cause still unknown), the ladder lid and the full-verse lid.</figcaption></figure>
-          </div>
-        <ul class="lessons">
-          <li><b>Type is the limit.</b>Lettering under about 1 mm is what breaks first on this lid.</li>
-          <li><b>Context changes the mark.</b>The same art behaves differently with power, speed, direction and what's already on the lid.</li>
-          <li><b>Map before you tune.</b>A ladder on a fresh lid is how to choose tones, not more passes.</li>
-          <li><b>Batches need fixtures.</b>A jig is what turns a good test into repeatable work.</li>
-          <li><b>Wipe before you judge.</b>The dark from fast passes was soot. A mark only counts once it survives a wipe. And burn gold first: soot underneath blocks it.</li>
-        </ul>
-      </section>
+      <div class="tab-panel" id="from-the-field" role="tabpanel" aria-labelledby="tab-from-the-field" tabindex="-1">
+        <h2 class="panel-title">From the field</h2>
 
-      <section aria-labelledby="next">
-        <p class="eyebrow">Next</p>
-        <h2 id="next">What comes next</h2>
-        <p>The lids above are tests. The finished design and settings come once these steps are done.</p>
-        <ul class="card-note" style="list-style:disc;padding-left:36px">
-          <li>A tighter ladder around the tones I want to use.</li>
-          <li>The one-direction scan of the full-verse design on a fresh lid.</li>
-          <li>Small filled shapes, burned slowly several times over, and a sharper soot-stencil trial.</li>
-          <li>A permanent dark tone: slower speeds, repeat passes, finer rows or wiping between passes.</li>
-          <li>A three-tone version, once a dark tone holds.</li>
-          <li>Print the fit coupon, then the jig.</li>
-        </ul>
+      <section class="field" aria-labelledby="field">
+        <p class="eyebrow">From the field · filmed by the Red Hill founder</p>
+        <h2 id="field">Where the salve starts</h2>
+        <p>Before any tin reaches the laser, the salve begins in the woods. The Red Hill founder taps pine trees for their resin, then melts, strains and pours it into tins by hand. These are his clips, shown with his permission. Formulas and quantities stay private.</p>
+        <div class="field-vids">
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-tapping-poster.webp" width="540" height="960" aria-label="Video: fresh cuts in pine bark weeping resin, a hatchet shaping a cut, and a collection cup hung below it"><source src="../assets/video/red-hill-field-tapping.mp4" type="video/mp4" /></video><figcaption><b>Tapping pines for resin · Nov 1.</b> Fresh cuts, resin running and a cup to catch it. 66 s, muted.</figcaption></figure>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-resin-to-salve-poster.webp" width="540" height="960" aria-label="Video: raw resin melted in a pot, strained into jars, then poured into rows of open tins"><source src="../assets/video/red-hill-field-resin-to-salve.mp4" type="video/mp4" /></video><figcaption><b>From resin to salve · Oct 29 to Nov 8.</b> Melting, straining and filling tins by hand. 32 s, muted.</figcaption></figure>
+          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-pines-poster.webp" width="540" height="960" aria-label="Video: tall pines among fall color, then a thinned pine stand under blue sky"><source src="../assets/video/red-hill-field-pines.mp4" type="video/mp4" /></video><figcaption><b>The pines · Nov 8–9.</b> The kind of stand the resin comes from. 28 s, muted.</figcaption></figure>
+        </div>
+        <p class="note">Field footage: the Red Hill founder. Edited for the web, with the sound removed.</p>
       </section>
+      </div>
+
+      <div class="tab-panel" id="working-with-hask" role="tabpanel" aria-labelledby="tab-working-with-hask" tabindex="-1">
+        <h2 class="panel-title">Working with HASK</h2>
 
       <section class="hask-way" aria-labelledby="hask-way">
         <p class="eyebrow">Working with HASK</p>
@@ -556,15 +602,63 @@
         </dl>
         <p class="note">Credits describe contributions only, not ownership.</p>
       </section>
+      </div>
 
       <div class="links">
-        <a class="btn primary" href="https://tboy450.github.io/#contact">Work with HASK</a>
+        <a class="btn primary" href="https://tboy450.github.io/#contact">Start a project with HASK</a>
         <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Laser Photo Studio code</a>
       </div>
       <p class="small-link">Earlier notes: <a href="https://red-hill-lid-progress.tboy450.chatgpt.site/">progress log through November 8</a>.</p>
     </main>
     <dialog class="lb" aria-label="Photo viewer"><img alt="" /><p></p><button class="close" type="button" aria-label="Close">×</button><button class="prev" type="button" aria-label="Previous photo">‹</button><button class="next" type="button" aria-label="Next photo">›</button></dialog>
     <script>
+      (() => {
+        const main = document.querySelector('main.rh'), nav = document.querySelector('.tabs');
+        const tabs = [...document.querySelectorAll('.tablist [role="tab"]')];
+        const panels = [...document.querySelectorAll('.tab-panel')];
+        if (!nav || !tabs.length) return;
+        main.classList.add('js-tabs'); nav.hidden = false;
+        const panelFor = (id) => {
+          const el = id && document.getElementById(id);
+          return el ? (el.classList.contains('tab-panel') ? el : el.closest('.tab-panel')) : null;
+        };
+        const activate = (panel, focusTab) => {
+          panels.forEach((p) => { p.hidden = p !== panel; });
+          tabs.forEach((t) => {
+            const on = t.getAttribute('aria-controls') === panel.id;
+            t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+            if (on && focusTab) t.focus();
+            if (on) { const l = t.parentElement; if (t.offsetLeft < l.scrollLeft || t.offsetLeft + t.offsetWidth > l.scrollLeft + l.clientWidth) l.scrollLeft = t.offsetLeft - 8; }
+          });
+        };
+        const go = (id, push) => {
+          const panel = panelFor(id) || panels[0];
+          activate(panel);
+          const target = document.getElementById(id);
+          const jump = () => { if (target && target !== panel) target.scrollIntoView(); else if (push !== undefined) nav.scrollIntoView(); };
+          jump(); requestAnimationFrame(jump);
+          if (push) history.pushState(null, '', '#' + id);
+        };
+        document.addEventListener('click', (e) => {
+          const a = e.target.closest('a[href^="#"]');
+          if (!a || a.closest('.lb')) return;
+          const id = decodeURIComponent(a.getAttribute('href').slice(1));
+          if (!panelFor(id)) return;
+          e.preventDefault(); go(id, true);
+        });
+        nav.addEventListener('keydown', (e) => {
+          const i = tabs.indexOf(document.activeElement);
+          if (i < 0 || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
+          e.preventDefault();
+          const n = e.key === 'Home' ? 0 : e.key === 'End' ? tabs.length - 1 : (i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+          const id = tabs[n].getAttribute('aria-controls');
+          activate(panelFor(id), true); history.replaceState(null, '', '#' + id);
+        });
+        window.addEventListener('popstate', () => go(location.hash.slice(1)));
+        const first = location.hash.slice(1);
+        if (first && panelFor(first)) { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; go(first); window.addEventListener('load', () => go(first)); }
+        else activate(panels[0]);
+      })();
       (() => {
         const lb = document.querySelector('.lb');
         if (!lb || typeof lb.showModal !== 'function') return;
@@ -590,7 +684,8 @@
       })();
     </script>
     <footer class="wrap rh">
-      <p>© 2026 Tristan Boyd Hash · Hybridized Business Solutions</p>
+      <p>Engraving, prototypes, custom parts or software in mind? <a href="https://tboy450.github.io/#contact">Get in touch with HASK</a>.</p>
+      <p>© 2026 Tristan Boyd Hash · HASK – Hybridized Business Solutions · Red Hill Forest Products and its brand belong to its founder.</p>
     </footer>
   </body>
 </html>
