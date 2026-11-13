@@ -3,6 +3,17 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-13: Red Hill tone combo test
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **What changed:** Added Stage 8, "How the tones interact", to the Red Hill page: one scrap lid, six passes.
+  - Gold burned first survives a later fast pass; soot laid first blocks gold, so it works as a resist.
+  - The new burn-in-place mode in Laser Photo Studio left only pinpoints, so small filled shapes are next.
+  - A permanent dark is still unproven.
+- **Images:** the results diagram (top half only, with the plan and the before and after photos), plus the lid
+  before and after wiping, labelled. No location or camera data.
+- **Also:** settings table row, timeline (eight stages), checklist (20 done, 4 prepared, 17 planned), next steps.
+- **Source:** the jig and lid-test session's results, at the owner's request.
+
 ## 2026-11-12: Soot correction on the Red Hill page
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** The owner found that the dark grey or "charcoal" from fast passes on the reflective tin lids is
