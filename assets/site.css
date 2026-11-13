@@ -280,6 +280,11 @@ h2 { margin: 0; color: var(--cyan); font-size: 0.78rem; font-weight: 700; letter
 .contact p { max-width: 62ch; margin: 0 0 18px; color: var(--silver); }
 .contact-emblem { position: absolute; top: 50%; right: clamp(24px, 5vw, 64px); width: 190px; height: 190px; transform: translateY(-50%); filter: drop-shadow(0 0 30px rgba(47, 208, 224, 0.3)); }
 footer { padding: 40px 0 56px; color: var(--muted); font-size: 0.85rem; }
+footer p { margin: 0 0 6px; }
+.site-foot strong { color: var(--silver); font-weight: 600; }
+.offer { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; max-width: 62ch; }
+.offer li { padding: 5px 12px; border: 1px solid var(--line-strong); border-radius: 99px; color: var(--silver); font-size: 0.88rem; background: rgba(12, 23, 33, 0.6); }
+.contact p a { color: var(--cyan); }
 footer a { color: var(--cyan); }
 
 @media (max-width: 960px) {

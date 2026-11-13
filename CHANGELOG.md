@@ -3,6 +3,18 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-13: Red Hill tabs and a new contact section
+- **Signed:** Claude Code (Claude Opus 5.5)
+- **Red Hill page:** the long page is now five tabs: Overview, Lid tests, Business cards, From the field and
+  Working with HASK.
+  - Every old link still works. A link like `#cards` or `#two-tone` opens the right tab and jumps to the section.
+  - Arrow keys move between tabs. Without JavaScript, the page shows every section in one column, as before.
+  - The footer now invites engraving, prototype and software enquiries and says the Red Hill brand belongs to
+    its founder.
+- **Homepage:** "Work with HASK" is reworded for services and custom work, with four offer chips and a link to
+  the Red Hill case study. The footer now has a one-line pitch, a "Start a project" link, GitHub and LinkedIn.
+- **CSS:** offer chips and footer spacing in `assets/site.css`; stylesheet version bumped.
+
 ## 2026-11-13: Red Hill tone combo test
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **What changed:** Added Stage 8, "How the tones interact", to the Red Hill page: one scrap lid, six passes.
