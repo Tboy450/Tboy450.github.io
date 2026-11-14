@@ -14,7 +14,10 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
     repository for the "updated X ago" date.
   - The status badge is `badge live`, `badge dev` or plain `badge` (prototype).
   - Emberwake and Smoke Cult appear immediately above Tboy450 RPG, with playable-site and public-code links.
-  - **From the workshop** shows laser-engraved wood and metal, an engraving-process photo and the fitted handguard prototype. The handguard comparison credits 3D Print Studio VA for printing.
+  - **From the workshop** shows laser-engraved wood and metal, an engraving-process photo and the fitted handguard prototype. It links to the dedicated [Woodworking & Woodcraft](woodworking/index.html) and [Laser Studio](laser-studio/index.html) pages. The handguard comparison credits 3D Print Studio VA for printing.
+  - `laser-studio/index.html`: overview of Laser Photo Studio, material evidence levels, image-to-mark styles, placement, job checks and recovery.
+  - `woodworking/index.html`: woodcraft overview using the existing pine engraving samples; grain, preparation and finish topics are identified as active development rather than completed claims.
+  - `red-hill/index.html`: one Red Hill project page covering product/material development plus packaging and laser-marking tests. “Forest Products” is treated as a test label within Red Hill, not a separate project page.
   - **Early work & experiments** is the collapsible list of beginner repositories.
   - List only **public** repositories; private ones stay off on purpose.
   - Four public repositories are also left off on purpose: `Rblox-game` (an empty duplicate of
