@@ -3,6 +3,14 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-14: Clarify the Fabrication and Laser Studio page structure
+- **Signed:** ChatGPT (OpenAI)
+- **Site audit:** The live `main` branch has an `All projects` homepage and a `Fabrication` category; it does not contain a separate CNC page or CNC route.
+- **Existing Laser Photo Studio listing:** The homepage already lists Laser Photo Studio under Fabrication and links to its GitHub application repository and the Red Hill test history.
+- **Draft-page distinction:** `/laser-studio/` is a newly added, detailed portfolio overview of the laser workflow. It is not an existing CNC page or a duplicate application. The GitHub repository contains the desktop application and its install/use documentation.
+- **Correction:** Keep the existing Fabrication category and Laser Photo Studio project identity. Do not create a second CNC identity or a redundant application listing.
+- **Validation:** Read the live repository tree and homepage, the draft homepage and overview page, and the Laser Photo Studio repository root and README.
+
 ## 2026-11-13: Add Laser Studio and Woodworking pages; broaden Red Hill project overview
 - **Signed:** ChatGPT (OpenAI)
 - **New pages:** `/laser-studio/` documents the Laser Photo Studio workflow, material evidence levels, image treatments, placement, offline checks, 1% perimeter check and USB recovery. `/woodworking/` organizes existing wood-burned samples and the grain, surface-preparation and finishing work around them.
