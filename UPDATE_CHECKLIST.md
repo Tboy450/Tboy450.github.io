@@ -124,7 +124,9 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 
 ## 10. Laser Studio, Red Hill and Woodworking
 
-This website now presents three connected but distinct areas of the workshop. Keep each area's evidence and progress in its own page; do not turn one Red Hill test label into a separate project.
+This website presents three connected but distinct areas of the workshop. Keep each area's evidence and progress in its own page; do not turn one Red Hill test label into a separate project.
+
+**Structure note:** The live `main` branch has a homepage **Fabrication** category, not a separate CNC page. Laser Photo Studio already has a card in that category, linking to its GitHub application repository and the Red Hill test history. The new `/laser-studio/` page in this draft is a more detailed overview of the laser workflow; it is not an existing CNC page or a second copy of the application.
 
 - [x] Add a Laser Studio page describing the Laser Photo Studio application, material-status system, image styles, placement, offline checks, positioning and recovery.
 - [x] Keep Red Hill as one project page. Present “Forest Products” as a wording and packaging test within Red Hill, not a standalone HASK project.
