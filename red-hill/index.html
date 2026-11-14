@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Red Hill tin lid engraving · Tristan Boyd Hash</title>
-    <meta name="description" content="A HASK workshop case study: engraving a 2 in reflective tin lid on a diode laser, from first test lids to a power and speed ladder and a batch jig." />
+    <title>Red Hill project · HASK development log</title>
+    <meta name="description" content="Pine-resin product development, field and material research, packaging presentation and laser-marking tests for the Red Hill project." />
     <meta name="theme-color" content="#070d13" />
     <link rel="canonical" href="https://tboy450.github.io/red-hill/" />
     <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Red Hill tin lid engraving · HASK workshop" />
-    <meta property="og:description" content="Test lids, settings, a 165-patch power and speed ladder and a batch jig for engraving reflective tin." />
+    <meta property="og:title" content="Red Hill project · HASK development log" />
+    <meta property="og:description" content="Red Hill product development, field research and packaging trials, including tin-lid engraving tests." />
     <meta property="og:url" content="https://tboy450.github.io/red-hill/" />
     <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-verse-pass-1.webp" />
     <meta property="og:image:alt" content="Laser-engraved Red Hill tin lid with the Matthew 6:25 verse and a chapel illustration" />
@@ -228,14 +228,14 @@
       <header class="rh-hero">
         <div>
           <a class="btn" href="https://tboy450.github.io/">Back to projects</a>
-          <p class="sub">HASK workshop · Updated November 13, 2026</p>
-          <h1>Red Hill <span>Tin lid engraving, from first test to batch jig</span></h1>
-          <p class="lede">Packaging tests for a small-batch pine salve. I adapted engraved chapel and verse artwork to the face of a 2&nbsp;in reflective tin lid, tested it on the laser, mapped how power and speed change the mark, and designed a jig for running lids in batches. It's also a worked example of <a href="#hask-way">how HASK takes an idea into development</a>.</p>
+          <p class="sub">Red Hill project · HASK development log · Updated November 13, 2026</p>
+          <h1>Red Hill <span>Product development, material research and packaging tests</span></h1>
+          <p class="lede">Red Hill is one developing product project centered on pine-resin work. This page keeps its work together: field and material research, product presentation, and packaging and laser-marking experiments. The “Forest Products” wording and engraved pieces shown here are trials within Red Hill, not a separate project. Tin lids and cards remain development samples; this log records what has been tested and what still needs work.</p>
           <dl class="facts">
-            <div><dt>Material</dt><dd>Reflective tin, 2 in lid</dd></div>
-            <div><dt>Artwork</dt><dd>45.72 mm (1.8 in) face</dd></div>
-            <div><dt>Machine</dt><dd>Tronxy Ultrabot U20 diode laser</dd></div>
-            <div><dt>Software</dt><dd>Laser Photo Studio, my own</dd></div>
+            <div><dt>Project focus</dt><dd>Pine-resin product development</dd></div>
+            <div><dt>Presentation tests</dt><dd>Tins, cards and label artwork</dd></div>
+            <div><dt>Laser platform</dt><dd>Tronxy Ultrabot U20 diode laser</dd></div>
+            <div><dt>Software</dt><dd>Laser Photo Studio · HASK</dd></div>
           </dl>
         </div>
         <div class="lid-wrap"><div class="lid"><img src="../assets/workshop/red-hill-crest.webp" width="640" height="640" alt="Drawing of the Red Hill Matthew 6:25 artwork as dark engraving on a silver tin lid: the verse above a chapel with sun rays and pines" /></div><p class="lid-note">The lid artwork on a drawn tin. Not a photo of a finished lid.</p></div>
@@ -263,10 +263,21 @@
       <div class="tab-panel" id="overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="-1">
         <h2 class="panel-title">Overview</h2>
 
+      <section aria-labelledby="red-hill-scope">
+        <p class="eyebrow">Project overview</p>
+        <h2 id="red-hill-scope">One Red Hill project, several lines of testing</h2>
+        <p>Red Hill brings together the product concept and the work needed to develop it. The visible samples on this page are part of that development record; a promising test is not treated as a finished material choice, formulation or production method.</p>
+        <div class="grid3">
+          <div class="card-note"><h3>Product and material research</h3><p>Pine resin is central to the product direction. Ingredient selection, material identification, processing and formulation remain under evaluation; no final recipe is claimed here.</p></div>
+          <div class="card-note"><h3>Presentation and packaging</h3><p>Tin artwork, card layouts and “Forest Products” wording were explored as presentation tests within Red Hill. They are not separate HASK projects or standalone product claims.</p></div>
+          <div class="card-note"><h3>Engraving and tooling</h3><p>The lid tests record artwork, power/speed trials, tone interaction and a planned batch jig. The detailed machine results stay in the test history below.</p></div>
+        </div>
+      </section>
+
       <section class="process" aria-labelledby="process">
         <p class="eyebrow">The process</p>
-        <h2 id="process">Seven days, eight stages</h2>
-        <p>Each stage answered one question before the next started. Small lettering turned out to be the hard part, so most of the work went into finding out why.</p>
+        <h2 id="process">Eight stages in the tin-lid test</h2>
+        <p>This is the packaging and engraving track within Red Hill. Each stage answered one question before the next started; small lettering turned out to be the hard part, so most of the work went into finding out why.</p>
         <ol class="steps">
           <li><span class="n">1</span><h3>Artwork</h3><span class="when">Nov 7–8</span><p>Chapel and verse art redrawn for a 45.72 mm face.</p></li>
           <li><span class="n">2</span><h3>First lids</h3><span class="when">Nov 8</span><p>Chapel lids: big shapes read, fine type is patchy.</p></li>
@@ -396,7 +407,7 @@
               <tr><td>Full verse, pass 2</td><td class="num" data-label="Date">Nov 9</td><td class="num" data-label="Power and speed">65% · 450 mm/min</td><td data-label="Mode and time">Floyd–Steinberg over pass 1, about 38 min</td><td data-label="What it showed">Better illustration detail. Best test lid so far; letters still a little short.</td></tr>
               <tr><td>Power and speed ladder</td><td class="num" data-label="Date">Nov 10</td><td class="num" data-label="Power and speed">50–100% · 50–6,000 mm/min</td><td data-label="Mode and time">165 patches, one pass each; finishing job 39.6 min</td><td data-label="What it showed">A full tone map. Did not burn through the lid.</td></tr>
               <tr><td>Two-tone Matthew 6:25</td><td class="num" data-label="Date">Nov 11</td><td class="num" data-label="Power and speed">80% · 140 mm/min (copper); 80% · 3,000 mm/min (fast pass)</td><td data-label="Mode and time">Two passes, one per tone</td><td data-label="What it showed">"Red Hill" and the reference read clearly. Small verse lettering broken. Not yet checked after wiping.</td></tr>
-              <tr><td>Two-tone Forest Products</td><td class="num" data-label="Date">Nov 12</td><td class="num" data-label="Power and speed">80% · 140 mm/min (gold); 80% · 2,200 mm/min (fast pass)</td><td data-label="Mode and time">Gold first, about 80 min; then the fast pass, about 15 min</td><td data-label="What it showed">The gold stayed after wiping. The fast pass's dark grey was soot; under it is a light frosted etch.</td></tr>
+              <tr><td>Forest Products wording test</td><td class="num" data-label="Date">Nov 12</td><td class="num" data-label="Power and speed">80% · 140 mm/min (gold); 80% · 2,200 mm/min (fast pass)</td><td data-label="Mode and time">Gold first, about 80 min; then the fast pass, about 15 min</td><td data-label="What it showed">The gold stayed after wiping. The fast pass's dark grey was soot; under it is a light frosted etch.</td></tr>
               <tr><td>Tone combo test</td><td class="num" data-label="Date">Nov 12–13</td><td class="num" data-label="Power and speed">80% · 140 (gold), 2,200 (fast) and 400 mm/min; dots at 80 and 100%, 5–40 s</td><td data-label="Mode and time">Six passes on one scrap lid, about 43 min</td><td data-label="What it showed">Gold first survives a later fast pass. Soot first blocks gold. Dots left only pinpoints; 400 mm/min barely marked.</td></tr>
             </tbody>
           </table>
@@ -545,7 +556,7 @@
           </div>
           <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Forest Products card · Nov 10.</b> 11 s, muted.</figcaption></figure>
         </div>
-        <h3 class="pair-title">Forest Products card: art, then engraved</h3>
+        <h3 class="pair-title">Forest Products wording test: artwork, then engraved</h3>
         <div class="gallery pair">
           <figure class="g wide fit dark"><a href="../assets/workshop/red-hill-card-art.webp" data-lb><img src="../assets/workshop/red-hill-card-art-t.webp" loading="lazy" decoding="async" alt="Red Hill Forest Products card artwork with mountains, pines, cones and a tin" /></a><figcaption><b>The artwork.</b> Woodcut-style design before engraving.</figcaption></figure>
           <figure class="g wide"><a href="../assets/workshop/red-hill-business-card.webp" data-lb><img src="../assets/workshop/red-hill-business-card.webp" loading="lazy" decoding="async" alt="Finished Red Hill Forest Products business card on black anodized aluminum" /></a><figcaption><b>The engraved card · Nov 10.</b> One pass, about 85 minutes.</figcaption></figure>
@@ -596,7 +607,7 @@
         <p class="eyebrow">Credits</p>
         <h2 id="credits">Who does what</h2>
         <dl class="credit-list">
-          <div><dt>Red Hill Forest Products</dt><dd>The business, its products and its brand.</dd></div>
+          <div><dt>Forest Products wording test</dt><dd>Test presentation and label wording explored within the Red Hill project.</dd></div>
           <div><dt>The Red Hill founder</dt><dd>Founding vision, the harvesting and processing work behind the products, and the field footage.</dd></div>
           <div><dt>HASK · Tristan Boyd Hash</dt><dd>Business development: artwork prepared for engraving, laser testing, Laser Photo Studio software, the batch jig, the business cards and this documentation.</dd></div>
         </dl>
@@ -606,6 +617,7 @@
 
       <div class="links">
         <a class="btn primary" href="https://tboy450.github.io/#contact">Start a project with HASK</a>
+        <a class="btn" href="/laser-studio/">Laser Studio overview</a>
         <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Laser Photo Studio code</a>
       </div>
       <p class="small-link">Earlier notes: <a href="https://red-hill-lid-progress.tboy450.chatgpt.site/">progress log through November 8</a>.</p>
