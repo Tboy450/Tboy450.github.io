@@ -12,6 +12,7 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
     then the featured Dragonfly and Swarmfall row, then games, the Assets & Environments Lab and side projects. Each card's `data-cat` sets its filter
     (`simulations`, `games`, `fabrication`, `research` or `tools`), and `data-repo` names its GitHub
     repository for the "updated X ago" date.
+  - **Fabrication is a homepage category, not a separate CNC page.** Laser Photo Studio already has a card in this category, linking to its GitHub application repository and Red Hill test history. The `laser-studio/index.html` page added in this draft is a deeper portfolio overview of the laser workflow, not a second application or an existing CNC page.
   - The status badge is `badge live`, `badge dev` or plain `badge` (prototype).
   - Emberwake and Smoke Cult appear immediately above Tboy450 RPG, with playable-site and public-code links.
   - **From the workshop** shows laser-engraved wood and metal, an engraving-process photo and the fitted handguard prototype. It links to the dedicated [Woodworking & Woodcraft](woodworking/index.html) and [Laser Studio](laser-studio/index.html) pages. The handguard comparison credits 3D Print Studio VA for printing.
