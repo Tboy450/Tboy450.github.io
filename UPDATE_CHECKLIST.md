@@ -122,9 +122,32 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 - [ ] Check accessibility and readability.
 - [ ] Remove broken links and outdated project information.
 
+## 10. Laser Studio, Red Hill and Woodworking
+
+This website presents three connected but distinct areas of the workshop. Keep each area's evidence and progress in its own page; do not turn one Red Hill test label into a separate project.
+
+**Structure note:** The live `main` branch has a homepage **Fabrication** category, not a separate CNC page. Laser Photo Studio already has a card in that category, linking to its GitHub application repository and the Red Hill test history. The new `/laser-studio/` page in this draft is a more detailed overview of the laser workflow; it is not an existing CNC page or a second copy of the application.
+
+- [x] Add a Laser Studio page describing the Laser Photo Studio application, material-status system, image styles, placement, offline checks, positioning and recovery.
+- [x] Keep Red Hill as one project page. Present “Forest Products” as a wording and packaging test within Red Hill, not a standalone HASK project.
+- [x] Add a Woodworking & Woodcraft page using the existing pine engraving examples and describing grain-aware design and surface/finish testing.
+- [x] Link the new pages from the homepage, add them to the sitemap and include case-correcting 404 routes.
+- [ ] Browser-check all new pages at desktop and phone widths; verify image loading, internal links and no horizontal overflow.
+- [ ] Add further woodworking and hand-finished examples only when their photographs and process details are available.
+- [ ] Keep Laser Studio material records split between physically tested settings, outside starting points, experiments and untested ideas.
+
 ## Completion record
 
 For completed items, record the date, changed files or commit, verification performed and remaining limitations. Sign substantive changes in CHANGELOG.md under the project's existing convention.
+
+### November 13, 2026 · Laser Studio, Red Hill and Woodworking
+
+- Added dedicated Laser Studio and Woodworking & Woodcraft pages.
+- Updated the homepage so Laser Photo Studio links to its own overview and Red Hill remains one project page. “Forest Products” is documented as a test label/presentation treatment inside Red Hill, not as a standalone HASK project.
+- Expanded the Red Hill page with an overview of its product/material research, presentation tests and engraving/tooling work. Formulation and material selections remain described as in development, not finalized.
+- Added the new pages to the sitemap and lowercase route correction.
+- Validation so far: GitHub writes succeeded and each created/updated file was read back for structural review. Browser rendering, image loading and responsive layout checks are still pending.
+- Signed: ChatGPT (OpenAI).
 
 ### November 10, 2026 · Red Hill samples and investigation status
 

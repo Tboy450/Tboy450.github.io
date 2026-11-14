@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laser Studio · HASK</title>
+  <meta name="description" content="HASK Laser Studio: image preparation, Grbl diode-laser workflows, material testing, job verification and repeatable engraving." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#070d13" />
+  <link rel="canonical" href="https://tboy450.github.io/laser-studio/" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="stylesheet" href="/assets/site.css?v=laser-studio-20261113" />
+  <style>
+    .page-hero { padding: 54px 0 30px; max-width: 1080px; }
+    .page-hero h1 { margin: 22px 0 12px; }
+    .page-hero .lede { max-width: 68ch; }
+    .page-main { padding-bottom: 58px; }
+    .page-section { margin: 0 0 46px; }
+    .page-section > p { max-width: 76ch; color: var(--silver); }
+    .page-section h2 { margin-bottom: 12px; }
+    .eyebrow { margin: 0 0 8px; color: var(--muted); font: 0.72rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .intro-panel { padding: clamp(20px, 4vw, 34px); border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(135deg, rgba(47,208,224,.08), transparent 55%), var(--panel); }
+    .page-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; margin-top: 18px; }
+    .page-card { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(12,23,33,.78); }
+    .page-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
+    .page-card p, .page-card li { color: var(--silver); font-size: .93rem; }
+    .page-card p:last-child { margin-bottom: 0; }
+    .page-card ul { margin: 8px 0 0; padding-left: 18px; }
+    .steps { counter-reset: step; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .steps li { counter-increment: step; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); }
+    .steps li::before { content: "0" counter(step); display: block; margin-bottom: 10px; color: var(--cyan); font: 700 .78rem var(--mono); }
+    .steps b { display: block; margin-bottom: 5px; }
+    .steps span { display: block; color: var(--muted); font-size: .88rem; }
+    .status-table { width: 100%; border-collapse: collapse; margin-top: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .status-table th, .status-table td { padding: 11px 13px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .status-table th { color: var(--muted); font: 600 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; background: var(--panel-2); }
+    .status-table td { color: var(--silver); font-size: .91rem; }
+    .status-table tr:last-child td { border-bottom: 0; }
+    .page-note { padding: 15px 18px; border-left: 3px solid var(--cyan); border-radius: 8px; background: var(--cyan-soft); color: var(--silver); }
+    .page-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    @media (max-width: 620px) {
+      .page-hero { padding: 38px 0 24px; }
+      .status-table, .status-table tbody, .status-table tr, .status-table td { display: block; width: 100%; }
+      .status-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      .status-table tr { padding: 8px 12px; border-bottom: 1px solid var(--line); }
+      .status-table td { padding: 6px 0; border: 0; }
+      .status-table td:first-child { color: var(--text); font-weight: 700; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <header class="wrap page-hero">
+    <a class="btn" href="/">← Back to HASK projects</a>
+    <div class="brand" style="margin-top:26px">
+      <img class="emblem" src="/assets/hask-emblem.webp" alt="HASK logo" width="256" height="256" />
+      <div class="wordmark"><span class="bar"></span><strong>HASK</strong><small>Hybridized Business Solutions</small></div>
+    </div>
+    <p class="eyebrow" style="margin-top:28px">Digital fabrication · Software · Material testing</p>
+    <h1>Laser <span>Studio</span></h1>
+    <p class="lede">A connected laser-workflow project: image preparation, the Laser Photo Studio application, positioning tools, material experiments, sample records and repeatable physical setup. The software and the machine are treated as separate parts of one working system.</p>
+    <div class="page-links">
+      <a class="btn primary" href="https://github.com/Tboy450/laser-photo-studio">Laser Photo Studio code</a>
+      <a class="btn" href="https://github.com/Tboy450/positioning-laser">Positioning Laser code</a>
+      <a class="btn" href="/red-hill/">Red Hill test history</a>
+    </div>
+  </header>
+
+  <main class="wrap page-main">
+    <section class="page-section intro-panel" aria-labelledby="workflow">
+      <p class="eyebrow">The working sequence</p>
+      <h2 id="workflow">Picture to checked job to physical sample</h2>
+      <p>Laser Photo Studio is built around a five-step workflow. It prepares the image and job file, checks the generated commands offline, and leaves the final material result to be judged on the actual workpiece.</p>
+      <ol class="steps">
+        <li><b>Choose the picture</b><span>Open a photo, drawing or logo; rotate or mirror it as needed.</span></li>
+        <li><b>Choose material and style</b><span>Use a machine-tested preset, an external starting point, an experimental setting or a saved personal preset.</span></li>
+        <li><b>Set size and placement</b><span>Choose the workpiece, origin, margins, no-burn zones and small position adjustments.</span></li>
+        <li><b>Preview and verify</b><span>Adjust tone and detail, inspect the output, then replay every command through the offline checks.</span></li>
+        <li><b>Position and run</b><span>Set the origin, use the 1% dot perimeter check, and start the job through the controller workflow.</span></li>
+      </ol>
+    </section>
+
+    <section class="page-section" aria-labelledby="software">
+      <p class="eyebrow">The software layer</p>
+      <h2 id="software">What Laser Photo Studio handles</h2>
+      <div class="page-grid">
+        <article class="page-card">
+          <h3>Material-specific presets</h3>
+          <p>Presets distinguish settings proven on the U20 from external starting points, experimental options and user-saved presets. Each can carry its explanation, matching LaserGRBL settings and supporting sample photos.</p>
+        </article>
+        <article class="page-card">
+          <h3>Image-to-mark styles</h3>
+          <p>Layered shading, error-diffusion dots, ordered grids, halftone, grayscale power, black-and-white, thin-line and pencil-sketch treatments turn artwork into different engraving patterns.</p>
+        </article>
+        <article class="page-card">
+          <h3>Workpiece geometry</h3>
+          <p>Set the piece dimensions and origin, preserve margins and no-burn zones, and nudge artwork in measured increments. This is the software side of repeatable placement.</p>
+        </article>
+        <article class="page-card">
+          <h3>Offline job checks</h3>
+          <p>The job is inspected before it reaches the laser: command ranges, burn area, duplicate dots and laser-off starts and ends are checked against the generated file.</p>
+        </article>
+        <article class="page-card">
+          <h3>Positioning and perimeter check</h3>
+          <p>The companion positioning workflow uses a 1% dot. The perimeter routine checks the work area at its corners, can add edge points, then returns to the origin.</p>
+        </article>
+        <article class="page-card">
+          <h3>Run records and recovery</h3>
+          <p>Jobs keep previews, settings, logs and photos. A USB interruption can be handled through a deliberate stop-point check and continuation from the next command, rather than blindly restarting the file.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="machine">
+      <p class="eyebrow">The machine layer</p>
+      <h2 id="machine">Built around a Grbl diode workflow</h2>
+      <p>The current application is documented for the Tronxy Ultrabot U20 and its Grbl-based controller. Its machine interface is designed around a known controller configuration and a controlled command path, not arbitrary G-code streaming.</p>
+      <div class="page-grid">
+        <article class="page-card">
+          <h3>Controller constraints</h3>
+          <ul>
+            <li>Does not home the machine.</li>
+            <li>Refuses controller setting changes through the job workflow.</li>
+            <li>Checks the expected laser and axis configuration before output.</li>
+            <li>Uses explicit laser-off commands at row and job boundaries.</li>
+          </ul>
+        </article>
+        <article class="page-card">
+          <h3>Operator-visible run state</h3>
+          <ul>
+            <li>Shows layer progress, estimated time and head position.</li>
+            <li>Can park between layers for a progress photo.</li>
+            <li>Provides pause, controlled stop and emergency-stop controls.</li>
+            <li>Does not automatically restart a job after a fault.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="page-note">The software's checks describe the generated job and controller workflow. They do not certify a material, focus, fixture, ventilation setup or physical engraving result; those are recorded against the actual machine and sample.</p>
+    </section>
+
+    <section class="page-section" aria-labelledby="evidence">
+      <p class="eyebrow">Material evidence</p>
+      <h2 id="evidence">Settings are tied to the material and the test</h2>
+      <p>The app's preset labels are deliberately evidence-based. A setting that works on one surface is not silently promoted into a universal recipe.</p>
+      <table class="status-table">
+        <thead><tr><th>Workpiece</th><th>Recorded status</th><th>What the current record supports</th></tr></thead>
+        <tbody>
+          <tr><td>Pine wood</td><td><span class="badge live">U20 proven</span></td><td>Layered photo shading, lettering and outline examples are documented from physical plank tests.</td></tr>
+          <tr><td>Black anodized aluminum</td><td><span class="badge live">U20 proven</span></td><td>Dot-pattern engraving is documented on finished card samples.</td></tr>
+          <tr><td>Coated steel lids</td><td><span class="badge live">Line test recorded</span></td><td>A vector-line setting is recorded for decorative marks; it is not a photo-engraving recipe.</td></tr>
+          <tr><td>Reflective tin</td><td><span class="badge dev">Project testing</span></td><td>Red Hill records the lid artwork, power/speed ladder, two-tone attempts, soot wipe test and outstanding work.</td></tr>
+          <tr><td>Other materials</td><td><span class="badge">Starting point / experimental</span></td><td>These remain test candidates until a result is established on this machine.</td></tr>
+        </tbody>
+      </table>
+      <div class="page-links">
+        <a class="btn primary" href="/red-hill/">Open the Red Hill tin tests</a>
+        <a class="btn" href="/woodworking/">See woodcraft examples</a>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="next">
+      <p class="eyebrow">Ongoing development</p>
+      <h2 id="next">Where the studio is being improved</h2>
+      <div class="page-grid">
+        <article class="page-card"><h3>Repeatable positioning</h3><p>Connect the digital origin and perimeter preview to a physical jig so the workpiece can be centered and registered consistently.</p></article>
+        <article class="page-card"><h3>Better material records</h3><p>Keep the material, surface condition, focus, fixture, settings, passes, result photo and wipe/finish observations together.</p></article>
+        <article class="page-card"><h3>Richer artwork preparation</h3><p>Continue improving masks, grayscale and dither treatment, linework and relief-style outputs for different engraving jobs.</p></article>
+        <article class="page-card"><h3>Wood-aware design</h3><p>Account for grain direction, surface ridges and unevenness when artwork is sized and prepared for wood.</p></article>
+      </div>
+      <div class="page-links">
+        <a class="btn primary" href="https://github.com/Tboy450/laser-photo-studio">View the application repository</a>
+        <a class="btn" href="/">Back to all HASK projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap site-foot">
+    <p><strong>HASK – Hybridized Business Solutions.</strong> Software, prototyping and digital fabrication developed around real samples and recorded tests.</p>
+    <p>© 2026 Tristan Boyd Hash · <a href="https://github.com/Tboy450">GitHub</a> · <a href="/#contact">Work with HASK</a></p>
+  </footer>
+</body>
+</html>
