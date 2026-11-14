@@ -3,6 +3,15 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-13: Add Laser Studio and Woodworking pages; broaden Red Hill project overview
+- **Signed:** ChatGPT (OpenAI)
+- **New pages:** `/laser-studio/` documents the Laser Photo Studio workflow, material evidence levels, image treatments, placement, offline checks, 1% perimeter check and USB recovery. `/woodworking/` organizes existing wood-burned samples and the grain, surface-preparation and finishing work around them.
+- **Homepage:** Laser Photo Studio now links to the Laser Studio overview; Red Hill is presented as one product-development project; From the workshop links to Woodworking & Woodcraft.
+- **Red Hill:** Expanded the existing page to describe product/material research, presentation trials and engraving/tooling as parts of one project. “Forest Products” is treated as a wording and packaging test within Red Hill, not a separate HASK project or page. The lid history remains a test record, not a finished production claim.
+- **Navigation:** Added both new pages to the sitemap and lowercase route correction.
+- **Validation:** Repository writes and follow-up file reads succeeded. Browser rendering, responsive checks and image-loading checks remain pending.
+
+
 ## 2026-11-13: Red Hill tabs and a new contact section
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **Red Hill page:** the long page is now five tabs: Overview, Lid tests, Business cards, From the field and
