@@ -3,6 +3,12 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-15: Publish the reviewed line and dot test illustration
+- **Signed:** Codex (OpenAI), under Tristan's illustration-publication instruction.
+- Added the corrected four-panel illustration to the Red Hill Lid tests tab, with a full-size link and text describing evidence limits.
+- Completed tests, the prepared/unrun DPI job, proposed dot clusters and separate unrun sanded-lid comparison are clearly distinguished. The apparent speed floor is inferred from telemetry, not independently measured motion.
+- Scope is the illustration and its integration only; broader draft PR #22 and Red Hill Sites version 5 are excluded.
+
 ## 2026-11-13: Red Hill tabs and a new contact section
 - **Signed:** Claude Code (Claude Opus 5.5)
 - **Red Hill page:** the long page is now five tabs: Overview, Lid tests, Business cards, From the field and
