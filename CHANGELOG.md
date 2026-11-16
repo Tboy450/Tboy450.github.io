@@ -1,3 +1,17 @@
+## 2026-11-16: Red Hill finish direction and record update
+
+- **Signed:** ChatGPT (OpenAI)
+- **What changed in the open website enhancement branch:**
+  - Reframed the Red Hill page's lid notice so it describes a test sequence and its evidence limits rather than saying every lid is still simply a test lid.
+  - Added the owner-reported darker-copper result as a dated but incomplete record; 24 mm/min is retained as the reference for the speed-up comparison. The actual photograph and complete machine settings still need to be added.
+  - Expanded the Red Hill working checklist to separate physical runs, reported-but-incomplete records, planned surface tests and parked historical ideas.
+  - Added the three-bottom-line comparison with a brushed/sanded aluminum spot on the tin, and alternative finish investigations for paint and prefinished black tins.
+  - Removed the three-tone design from the active direction. Older soot/dark-tone investigations remain documented as history.
+  - Reframed the 165-patch ladder as a tin-specific Red Hill test and placed refined material-response ladders, including possible identified steel/titanium candidates, under the wider Laser Studio research objective.
+  - Added session management, cross-account record continuity, and synchronized Red Hill/Laser Studio/HASK checklist updates to the next-work list.
+- **Not claimed complete:** the latest physical lid photograph is not present in the accessible mobile files; no image was fabricated or substituted. The full new-lid settings and wipe/repeatability evidence also remain to be recorded.
+- **Publication:** changes are on the existing hask/site-enhancements branch in open PR #22; they are not merged and are not live on GitHub Pages.
+
 # Change Log
 
 Newest first. Each entry is signed with who made it, so the next person or assistant
