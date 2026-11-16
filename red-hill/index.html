@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Red Hill project · HASK development log</title>
-    <meta name="description" content="Pine-resin product development, field and material research, packaging presentation and laser-marking tests for the Red Hill project." />
+    <title>Red Hill project · HASK development and test record</title>
+    <meta name="description" content="Red Hill product development, packaging alternatives, tin-finish comparisons and recorded laser tests." />
     <meta name="theme-color" content="#070d13" />
     <link rel="canonical" href="https://tboy450.github.io/red-hill/" />
     <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Red Hill project · HASK development log" />
-    <meta property="og:description" content="Red Hill product development, field research and packaging trials, including tin-lid engraving tests." />
+    <meta property="og:description" content="Red Hill product development and packaging research, including copper-tone, painted and prefinished tin comparisons." />
     <meta property="og:url" content="https://tboy450.github.io/red-hill/" />
     <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-verse-pass-1.webp" />
     <meta property="og:image:alt" content="Laser-engraved Red Hill tin lid with the Matthew 6:25 verse and a chapel illustration" />
@@ -146,7 +146,9 @@
       .cl li.done::before, .legend li.done::before { content: "✓"; background: rgba(78, 224, 138, 0.16); color: var(--green); border: 1px solid rgba(78, 224, 138, 0.45); }
       .cl li.prep::before, .legend li.prep::before { content: ""; background: linear-gradient(90deg, var(--cream-2) 50%, transparent 50%); border: 1px solid var(--cream-2); }
       .cl li.next::before, .legend li.next::before { content: ""; border: 1px dashed var(--muted); }
-      .cl li.next { color: var(--muted); }
+      .cl li.reported::before, .legend li.reported::before { content: "•"; color: var(--cream-2); border: 1px solid var(--cream-2); font-size: 15px; line-height: 12px; text-align: center; }
+      .cl li.deferred::before, .legend li.deferred::before { content: "–"; color: var(--muted); border: 1px dashed var(--muted); text-align: center; }
+      .cl li.next, .cl li.deferred { color: var(--muted); }
       .credit-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 12px; margin: 16px 0 10px; }
       .credit-list div { background: var(--panel); border: 1px solid var(--line); border-top: 3px solid var(--cream-2); border-radius: 12px; padding: 14px 16px; }
       .credit-list dt { font: 700 1rem/1.3 var(--slab); color: var(--cream); margin-bottom: 4px; }
@@ -245,9 +247,9 @@
         <svg viewBox="0 0 54 22" fill="currentColor"><path d="M8 2 3 10h3l-4 6h4v4h4v-4h4l-4-6h3z"/><path d="M27 0l-6 9h4l-5 7h5v6h4v-6h5l-5-7h4z"/><path d="M46 2l-5 8h3l-4 6h4v4h4v-4h4l-4-6h3z"/></svg>
       </div>
 
-      <aside class="notice" aria-label="About these photos">
-        <div><strong>Every lid here is a test sample.</strong>
-        <p>None of the lids is the finished product. They are test pieces from work that's still going: the power and speed ladder is under way, and the final settings, tones and lid design come after it. Photos up to Nov 12 show the lids before wiping. On Nov 12 the dark grey from fast passes turned out to be soot: it wipes off and leaves a light frosted etch (<a href="#two-tone">see Stage 7</a>).</p></div>
+      <aside class="notice" aria-label="About these photos and finish tests">
+        <div><strong>These lids document a series of material and finish tests, not a finished packaging specification.</strong>
+        <p>The results are specific to the sample and its surface. The earlier rosy-brass and copper appearances are useful references, but the dark grey from fast passes proved to be removable soot, not a durable dark finish. A newer, slightly deeper copper result has now been reported. The current work compares how to reproduce that color faster and whether paint or factory-finished black tins offer a better route. The three-tone concept is not the active direction.</p></div>
       </aside>
 
       <nav class="tabs" aria-label="Case study sections" hidden>
@@ -276,8 +278,8 @@
 
       <section class="process" aria-labelledby="process">
         <p class="eyebrow">The process</p>
-        <h2 id="process">Eight stages in the tin-lid test</h2>
-        <p>This is the packaging and engraving track within Red Hill. Each stage answered one question before the next started; small lettering turned out to be the hard part, so most of the work went into finding out why.</p>
+        <h2 id="process">Nine stages in the packaging and finish work</h2>
+        <p>This is the product-specific packaging track within Red Hill. It records the physical lid trials, what survived wiping, and the shift from chasing a three-tone laser effect toward comparing practical finish routes.</p>
         <ol class="steps">
           <li><span class="n">1</span><h3>Artwork</h3><span class="when">Nov 7–8</span><p>Chapel and verse art redrawn for a 45.72 mm face.</p></li>
           <li><span class="n">2</span><h3>First lids</h3><span class="when">Nov 8</span><p>Chapel lids: big shapes read, fine type is patchy.</p></li>
@@ -287,21 +289,21 @@
           <li><span class="n">6</span><h3>Batch jig</h3><span class="when">Nov 10</span><p>42-pocket tray designed. Not printed yet.</p></li>
           <li><span class="n">7</span><h3>Two-tone lids</h3><span class="when">Nov 11–12</span><p>The gold held. The fast-pass dark wiped off as soot.</p></li>
           <li><span class="n">8</span><h3>Tone combo test</h3><span class="when">Nov 12–13</span><p>Gold first survives; soot first blocks gold.</p></li>
-          <li class="next"><span class="n">→</span><h3>Next</h3><span class="when">Planned</span><p>Small filled shapes, a sharper soot stencil, a permanent dark.</p></li>
+          <li><span class="n">9</span><h3>Alternative finishes and speed</h3><span class="when">Nov 16 · owner-reported</span><p>A slightly deeper copper result is reported; faster reproduction and other finish routes are now being compared.</p></li>
         </ol>
       </section>
 
       <section aria-labelledby="next">
-        <p class="eyebrow">Next</p>
+        <p class="eyebrow">Next · current work</p>
         <h2 id="next">What comes next</h2>
-        <p>Every lid on this page is a test. The finished design and settings come once these steps are done.</p>
+        <p>The next decisions depend on repeatable results and a clean record of what was actually tested. The active direction is no longer a three-tone laser lid.</p>
         <ul class="card-note" style="list-style:disc;padding-left:36px">
-          <li>A tighter ladder around the tones I want to use.</li>
-          <li>The one-direction scan of the full-verse design on a fresh lid.</li>
-          <li>Small filled shapes, burned slowly several times over, and a sharper soot-stencil trial.</li>
-          <li>A permanent dark tone: slower speeds, repeat passes, finer rows or wiping between passes.</li>
-          <li>A three-tone version, once a dark tone holds.</li>
-          <li>Print the fit coupon, then the jig.</li>
+          <li><b>Reproduce the darker copper faster.</b> Use the current 24 mm/min result as the reference, then increase feed rate in controlled steps while holding the other relevant settings steady. Record the fastest setting that retains the same appearance, the run time, and whether the color survives wiping.</li>
+          <li><b>Run the three bottom-line comparison.</b> Include a small brushed or sanded aluminum spot on the tin as a separate surface condition, then compare it with the untouched area. Photograph and identify exactly what surface was exposed/prepared.</li>
+          <li><b>Compare finish alternatives.</b> Evaluate a suitable paint finish and supplier-made black tins alongside the laser-marked result. Keep each route distinct; a prefinished black tin is not a laser recipe.</li>
+          <li><b>Keep the wider ladder in Laser Studio.</b> Refined power/speed ladders are a general material-research objective, potentially including identified steel or titanium stock after its exact grade, coating and suitability are established. They are not all Red Hill tin tests. <a href="../laser-studio/">See the Laser Studio research workflow</a>.</li>
+          <li><b>Keep the evidence connected.</b> Reconcile the project session in session management, then update the Red Hill packaging/test log, Laser Studio material log, master and website checklists, and the public page from the same dated evidence. Preserve source files, settings, before/after-wipe photos, and the status of every run.</li>
+          <li>Continue the prepared one-direction lettering comparison on a fresh lid and complete the fit-coupon/jig checks when the packaging route is clearer.</li>
         </ul>
       </section>
 
@@ -321,25 +323,28 @@
       </section>
 
       <section class="checklist" aria-labelledby="checklist">
-        <p class="eyebrow">Behind the eight stages</p>
+        <p class="eyebrow">Behind the nine stages</p>
         <h2 id="checklist">The working checklist</h2>
         <p>The timeline is the short version. The project runs on a checklist where every item carries a status, and an item never claims more than its evidence shows. Client and business items are kept off this page.</p>
         <ul class="legend" aria-label="Status key">
           <li class="done"><b>Done</b> run on the machine or completed, with a record</li>
           <li class="prep"><b>Prepared</b> file made and checked offline, not yet run</li>
+          <li class="reported"><b>Reported</b> physical result shared; supporting record still incomplete</li>
           <li class="next"><b>Planned</b> next, not started</li>
+          <li class="deferred"><b>Parked</b> historical idea, not in the active direction</li>
         </ul>
-        <p class="tally"><span>20 done</span> · <span>4 prepared</span> · <span>17 planned</span></p>
+        <p class="tally"><span>22 done</span> · <span>5 prepared</span> · <span>2 reported · record pending</span> · <span>23 planned</span> · <span>2 parked</span></p>
         <div class="cl-grid">
           <div class="cl"><h3>Design and artwork</h3><ul>
             <li class="done">Chapel and full-verse art redrawn for a 45.72 mm (1.8 in) face</li>
             <li class="done">Dark- and light-lettering versions proofed for reflective tin</li>
             <li class="done">Woodcut card art prepared for black aluminum</li>
-            <li class="next">Pick dark, mid and light tones from the ladder for a three-tone design</li>
+            <li class="next">Compare artwork and presentation against painted and prefinished black tin options</li>
           </ul></div>
           <div class="cl"><h3>Test engraving</h3><ul>
             <li class="done">First chapel lid, one pass</li>
-            <li class="done">Second chapel lid, two passes plus masked detail runs</li>
+            <li class="done">Second chapel lid, two passes</li>
+            <li class="done">Separate masked detail and title touch-up runs</li>
             <li class="done">Deliberate disconnect mid-job to test recovery</li>
             <li class="done">Dense badge design in threshold mode</li>
             <li class="done">Full-verse lid: grayscale pass, then a Floyd–Steinberg pass</li>
@@ -347,13 +352,14 @@
             <li class="done">First two-tone lid: Matthew 6:25, a copper pass plus a fast pass</li>
             <li class="done">Forest Products lid, gold first; wiping showed the fast-pass dark is soot</li>
             <li class="done">Tone combo test: burn order, soot as a stencil and burn-in-place dots</li>
-            <li class="next">Find a permanent dark: slower speed, repeat passes, finer rows or wiping between passes</li>
-            <li class="next">Small filled shapes, burned slowly several times over</li>
-            <li class="next">A sharper soot-stencil trial before using it for lettering</li>
-            <li class="next">Photograph every lid after wiping, and say which photos are before</li>
+            <li class="reported">New darker-copper lid result reported; supporting photo and complete settings record still needed</li>
+            <li class="next">Repeat the copper target above the 24 mm/min reference to find the fastest repeatable feed that retains the color</li>
+            <li class="next">Three bottom-line comparison, including a brushed or sanded aluminum spot on the tin</li>
+            <li class="next">Evaluate a paint finish as an alternative route</li>
+            <li class="next">Evaluate supplier-made/pre-finished black tins as an alternative container</li>
+            <li class="next">Photograph each new lid after wiping and label before/after-wipe views</li>
             <li class="next">One-direction scan on a fresh lid</li>
-            <li class="next">Three-tone version on a fresh lid</li>
-            <li class="next">First test on a black tin finish</li>
+            <li class="deferred">Slow dark-tone build-up and sharper soot-stencil experiments from the earlier branch; not the current direction</li>
           </ul></div>
           <div class="cl"><h3>Measurement and records</h3><ul>
             <li class="done">Settings, run time and photos logged for every run</li>
@@ -361,6 +367,8 @@
             <li class="done">165-patch ladder: first run and finishing job complete</li>
             <li class="next">Wipe and photograph the ladder lid, then fill in its results sheet</li>
             <li class="next">Confirm both ladder jobs used the same lid and zero point</li>
+            <li class="next">Add the new copper run's actual power, interval, pass count, job time and wipe result to its record</li>
+            <li class="next">Record the three-bottom-line surface-preparation comparison separately from the tin's original surface</li>
             <li class="next">Measure the tins with calipers: base, widest diameter, height, lip</li>
           </ul></div>
           <div class="cl"><h3>Software: Laser Photo Studio</h3><ul>
@@ -368,7 +376,7 @@
             <li class="done">Saved setup and position recovery</li>
             <li class="done">Inspection park and return-to-zero</li>
             <li class="done">77 offline tests passed</li>
-            <li class="prep">Ladder generator built, in review before merging</li>
+            <li class="prep">Ladder generator built, in review before merging; intended as reusable Laser Studio research tooling</li>
             <li class="done">Burn-in-place mode, run on a test lid</li>
             <li class="next">Tidy job folders and photo filing</li>
           </ul></div>
@@ -384,6 +392,12 @@
             <li class="next">Laser head and air-assist maintenance check</li>
             <li class="next">Back up the project files with version history</li>
           </ul></div>
+          <div class="cl"><h3>Session and record continuity</h3><ul>
+            <li class="next">Recover and reconcile the relevant Red Hill session in the session manager and cross-account handoff log</li>
+            <li class="next">Update the Red Hill product/packaging log and Laser Studio material/research log from the same dated test evidence</li>
+            <li class="next">Refresh the HASK master checklist, website update checklist and Red Hill working checklist together</li>
+            <li class="next">Link each test to its source artwork, job/G-code, settings, photos, result and evidence status</li>
+          </ul></div>
         </div>
       </section>
       </div>
@@ -394,7 +408,7 @@
       <section aria-labelledby="settings">
         <p class="eyebrow">Settings and results</p>
         <h2 id="settings">Every run, in order</h2>
-        <p>The runs through Nov 10 used 0.10 mm rows on the diode laser. Results are judged by eye from the photos, not measured.</p>
+        <p>The recorded runs below use the settings preserved in the available test history. Visual tone descriptions are observations, not calibrated color measurements. The latest darker-copper result is owner-reported; its complete job record and photo have not yet been added to the website.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Run</th><th>Date</th><th>Power and speed</th><th>Mode and time</th><th>What it showed</th></tr></thead>
@@ -409,9 +423,23 @@
               <tr><td>Two-tone Matthew 6:25</td><td class="num" data-label="Date">Nov 11</td><td class="num" data-label="Power and speed">80% · 140 mm/min (copper); 80% · 3,000 mm/min (fast pass)</td><td data-label="Mode and time">Two passes, one per tone</td><td data-label="What it showed">"Red Hill" and the reference read clearly. Small verse lettering broken. Not yet checked after wiping.</td></tr>
               <tr><td>Forest Products wording test</td><td class="num" data-label="Date">Nov 12</td><td class="num" data-label="Power and speed">80% · 140 mm/min (gold); 80% · 2,200 mm/min (fast pass)</td><td data-label="Mode and time">Gold first, about 80 min; then the fast pass, about 15 min</td><td data-label="What it showed">The gold stayed after wiping. The fast pass's dark grey was soot; under it is a light frosted etch.</td></tr>
               <tr><td>Tone combo test</td><td class="num" data-label="Date">Nov 12–13</td><td class="num" data-label="Power and speed">80% · 140 (gold), 2,200 (fast) and 400 mm/min; dots at 80 and 100%, 5–40 s</td><td data-label="Mode and time">Six passes on one scrap lid, about 43 min</td><td data-label="What it showed">Gold first survives a later fast pass. Soot first blocks gold. Dots left only pinpoints; 400 mm/min barely marked.</td></tr>
+              <tr><td>New darker-copper lid</td><td class="num" data-label="Date">Nov 16 · owner-reported</td><td class="num" data-label="Power and speed">24 mm/min reference; remaining settings not yet recorded</td><td data-label="Mode and time">Physical result reported; job time and pass details pending</td><td data-label="What it showed">Slightly darker/deeper copper than the earlier rose-brass tone. Wipe durability and repeatability still need a complete record.</td></tr>
             </tbody>
           </table>
         </div>
+      </section>
+      <section aria-labelledby="surface-options">
+        <p class="eyebrow">New active comparisons · not yet run</p>
+        <h2 id="surface-options">Surface preparation and finish alternatives</h2>
+        <p>These are separate questions, not completed results or universal material settings.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Comparison</th><th>Current status</th><th>Question being tested</th></tr></thead>
+          <tbody>
+            <tr><td>Three bottom-line samples</td><td>Planned</td><td>Include a brushed or sanded aluminum spot on the tin and compare its response with the untouched surface. Identify what material is actually exposed before interpreting the result.</td></tr>
+            <tr><td>Painted tin finish</td><td>Candidate method</td><td>Evaluate paint as a finish alternative; record the coating and its suitability before any laser interaction.</td></tr>
+            <tr><td>Prefinished black tins</td><td>Candidate container</td><td>Compare supplier-made black tins as a packaging route rather than assuming a black laser finish must be created on bare reflective tin.</td></tr>
+          </tbody>
+        </table></div>
       </section>
 
       <section aria-labelledby="artwork">
@@ -474,11 +502,11 @@
 
       <section aria-labelledby="ladder">
         <p class="eyebrow">Stage 5</p>
-        <h2 id="ladder">Mapping power and speed</h2>
+        <h2 id="ladder">The first tin-specific power and speed map</h2>
         <div class="split">
           <div class="prose">
-            <p>To stop guessing, I burned a ladder: 165 squares of 2 mm on one lid, 11 power levels (50 to 100% in 5% steps) against 15 speeds (50 to 6,000 mm/min). I ran it fastest first and stopped partway to protect the lid, then finished the last 33 squares, the slowest ones, in a second job.</p>
-            <p>In the photos, taken before wiping, the hottest corner turned a rosy brass with coppery edges, the middle looked dark grey and the fast end stayed light grey. It never burned through. It's the first map of which exposure gives which tone on this tin. Since then, the dark grey from fast passes has turned out to be soot (<a href="#two-tone">Stage 7</a>), so the grey squares need reading again after a wipe.</p>
+            <p>To stop guessing, I burned a tin-specific ladder: 165 squares of 2 mm on one lid, 11 power levels (50 to 100% in 5% steps) against 15 speeds (50 to 6,000 mm/min). I ran it fastest first and stopped partway to protect the lid, then finished the last 33 squares, the slowest ones, in a second job.</p>
+            <p>In the photos, taken before wiping, the hottest corner turned a rosy brass with coppery edges, the middle looked dark grey and the fast end stayed light grey. It never burned through. This is a record for this particular tin, not a general metal recipe. Since then, the dark grey from fast passes has turned out to be soot (<a href="#two-tone">Stage 7</a>), so the grey squares need reading again after a wipe. More refined ladders belong to the wider Laser Studio material-research program, with each identified material (including any steel or titanium candidate) receiving its own evidence record.</p>
           </div>
           <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-laser-running-poster.webp" width="540" height="960" aria-label="Video: the diode laser head running in the dark with its blue light"><source src="../assets/video/red-hill-laser-running.mp4" type="video/mp4" /></video><figcaption><b>The laser at work · Nov 10.</b> 12 s, muted. Mostly blue light; it shows the machine, not a result.</figcaption></figure>
         </div>
@@ -505,7 +533,7 @@
         <h2 id="two-tone">Two tones, then a wipe</h2>
         <p>After the ladder, the next step was to burn two of its tones on purpose, each as its own pass on bare reflective tin: a slow pass for a warm gold or copper tone and a fast pass for what looked like charcoal. The first try, on Nov 11, was the Matthew 6:25 design. On Nov 12 I burned the Red Hill Forest Products design the same way, gold first. That design was developed from an AI-generated mock-up and redrawn for the laser.</p>
         <p>Then I wiped the Forest Products lid. The gold stayed. The charcoal didn't: it was soot sitting on the surface, and under it is only a light, frosted etch that still looks like bare metal. So this lid is really gold plus a light etch, and the dark in the earlier photos was misleading.</p>
-        <p>A true, permanent dark on these lids is still unproven. It will need much slower speeds or more exposure; repeat passes, a finer row pitch and wiping between passes are the next things to test. The soot might even work as a temporary stencil for the gold, but for now that's only an idea. From here on, every lid gets photographed after a wipe.</p>
+        <p>The wipe established that the apparent charcoal was soot, not a durable dark mark. That is a useful historical result, but continuing to chase that dark through slower speeds and soot stencils is not the current direction. The next work compares alternative finish routes and documents the newer copper result. New samples should be photographed both before and after wiping.</p>
         <div class="gallery quad">
           <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Reflective tin lid, before wiping, engraved with the Red Hill Forest Products design: mountains, pines, lettering and crossed axes in gold on a dark grey field" /></a><figcaption><b>Forest Products lid · Nov 12, before wiping.</b> The dark grey here is soot.</figcaption></figure>
           <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-wiped.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-wiped-t.webp" width="504" height="504" loading="lazy" decoding="async" alt="The same Forest Products lid after wiping: the gold design remains on a light frosted etch that still looks like bare metal" /></a><figcaption><b>The same lid after wiping · Nov 12.</b> The gold stayed; the soot came off, leaving a light etch.</figcaption></figure>
@@ -517,7 +545,7 @@
       <section aria-labelledby="combo">
         <p class="eyebrow">Stage 8 · Latest</p>
         <h2 id="combo">How the tones interact</h2>
-        <p>After the soot finding, I burned six passes on one scrap lid to answer three questions: does the order of the passes matter, can soot work as a stencil, and can a beam held still make a darker spot?</p>
+        <p>After the soot finding, I burned six passes on one scrap lid to test pass order, soot as a stencil, and whether a beam held still could make a darker spot. These findings stay in the record as completed experiments; they do not define the current finish direction.</p>
         <div class="grid2">
           <div class="card-note"><h3>What it showed</h3>
             <ul>
@@ -530,8 +558,7 @@
             <ul>
               <li>A new mode in Laser Photo Studio holds the beam still on chosen spots.</li>
               <li>Eight dots, at 80 and 100% power for 5 to 40 seconds each, left only super-fine pinpoints with no coloured halo. The likely reason, not yet measured: the metal carries the heat away from one tiny spot.</li>
-              <li>Next: small filled shapes, burned slowly several times over, to keep the heat in one place.</li>
-              <li>A permanent dark is still being worked out.</li>
+              <li>These stationary-dot and small-fill ideas are retained as historical experiments, not the active Red Hill finish route.</li>
             </ul>
           </div>
         </div>
