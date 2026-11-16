@@ -1,3 +1,13 @@
+## 2026-11-16: Reconcile mobile PR and website checklists (local review)
+
+- **Signed:** Codex (OpenAI).
+- Reviewed the eight newer mobile PR22 commits through `87debf7`, retaining their finish-direction changes and test inventory. Incorporated main's already-published PR23 illustration; preserved both changelog histories.
+- Updated the master website checklist to distinguish live, draft and local work; marked implemented website features and retained incomplete broad goals with explicit remaining scope.
+- Updated the public Red Hill checklist for prepared strips/DPI/33 mm/min packages, software-recorded 24 mm/min completion, installed learning records, reported coating appearance and unapplied lettering revision. Exposed substrate remains unidentified.
+- Recounted the actual checklist entries: 24 done, 7 prepared, 3 reported, 22 planned and 1 parked. No physical quality or coating-performance claim is implied.
+- Headless Edge passed 16 route/width combinations (1440/768/390/360 px), image loading, local fragments, overflow and script checks, plus Red Hill tabs, keyboard navigation and photo viewer checks. Real-device and full external-link checks remain open.
+- Local review only. Remote PR22 and the live site have not been changed by this reconciliation.
+
 ## 2026-11-16: Red Hill finish direction and record update
 
 - **Signed:** ChatGPT (OpenAI)
@@ -19,6 +29,12 @@
 Newest first. Each entry is signed with who made it, so the next person or assistant
 (Claude, ChatGPT, Codex or a human) can see what was done and why.
 
+## 2026-11-15: Publish the reviewed line and dot test illustration
+- **Signed:** Codex (OpenAI), under Tristan's illustration-publication instruction.
+- Added the corrected four-panel illustration to the Red Hill Lid tests tab, with a full-size link and text describing evidence limits.
+- Completed tests, the prepared/unrun DPI job, proposed dot clusters and separate unrun sanded-lid comparison are clearly distinguished. The apparent speed floor is inferred from telemetry, not independently measured motion.
+- Scope is the illustration and its integration only; broader draft PR #22 and Red Hill Sites version 5 are excluded.
+
 ## 2026-11-14: Clarify the Fabrication and Laser Studio page structure
 - **Signed:** ChatGPT (OpenAI)
 - **Site audit:** The live `main` branch has an `All projects` homepage and a `Fabrication` category; it does not contain a separate CNC page or CNC route.
@@ -34,6 +50,7 @@ Newest first. Each entry is signed with who made it, so the next person or assis
 - **Red Hill:** Expanded the existing page to describe product/material research, presentation trials and engraving/tooling as parts of one project. “Forest Products” is treated as a wording and packaging test within Red Hill, not a separate HASK project or page. The lid history remains a test record, not a finished production claim.
 - **Navigation:** Added both new pages to the sitemap and lowercase route correction.
 - **Validation:** Repository writes and follow-up file reads succeeded. Browser rendering, responsive checks and image-loading checks remain pending.
+
 
 
 ## 2026-11-13: Red Hill tabs and a new contact section
