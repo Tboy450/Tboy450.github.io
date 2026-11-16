@@ -231,7 +231,7 @@
       <header class="rh-hero">
         <div>
           <a class="btn" href="https://tboy450.github.io/">Back to projects</a>
-          <p class="sub">Red Hill project · HASK development log · Updated November 13, 2026</p>
+          <p class="sub">Red Hill project · HASK development log · Updated November 16, 2026</p>
           <h1>Red Hill <span>Product development, material research and packaging tests</span></h1>
           <p class="lede">Red Hill is one developing product project centered on pine-resin work. This page keeps its work together: field and material research, product presentation, and packaging and laser-marking experiments. The “Forest Products” wording and engraved pieces shown here are trials within Red Hill, not a separate project. Tin lids and cards remain development samples; this log records what has been tested and what still needs work.</p>
           <dl class="facts">
@@ -495,7 +495,7 @@
       <section aria-labelledby="software">
         <p class="eyebrow">Stage 4</p>
         <h2 id="software">Checking the software</h2>
-        <p>Before blaming the machine, I checked my own software. I compared every saved job against the commands it generated: no missing samples, no power or direction mismatches. The rough letters weren't a software fault. Spot width and how the laser handles very short marks are still unmeasured.</p>
+        <p>The November 9 offline investigation compared the saved jobs with their generated commands and found no missing samples or power/direction mismatches in those checks. It did not establish the cause of the rough lettering. Spot width, command timing and how the laser handles very short marks still need physical investigation.</p>
         <div class="grid2">
           <div class="card-note"><h3>Added to Laser Photo Studio</h3>
             <ul>
@@ -504,8 +504,8 @@
               <li>A park-left inspection move and return-to-zero</li>
             </ul>
           </div>
-          <div class="card-note"><span class="stat">77</span>offline tests passed, including simulated jobs and recovery.
-            <ul><li>The one-direction scan is ready for a fresh-lid comparison. It hasn't been run on a lid yet.</li></ul>
+          <div class="card-note"><span class="stat">77</span>offline tests passed in the November 9 investigation, including simulated jobs and recovery.
+            <ul><li>A later one-direction full-lid trial is recorded in the <a href="#nov16-progress">November 16 update</a>; physical quality remains under review.</li></ul>
           </div>
         </div>
       </section>
@@ -577,6 +577,17 @@
           <figure class="g sample"><a href="../assets/workshop/red-hill-combo-before.webp" data-lb><img src="../assets/workshop/red-hill-combo-before-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="The combo test lid before wiping, at an angle: rows of squares in gold, pink and grey tints, with stencilled R tiles on the right" /></a><figcaption><b>Before wiping · Nov 13.</b> The strongest colours, but the grey is soot.</figcaption></figure>
           <figure class="g sample"><a href="../assets/workshop/red-hill-combo-after.webp" data-lb><img src="../assets/workshop/red-hill-combo-after-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="The same lid after wiping: two columns of tan gold squares remain, the soot-only areas show as a faint light etch" /></a><figcaption><b>After wiping · Nov 13.</b> What stays: the gold squares and a light etch.</figcaption></figure>
           </div>
+      </section>
+
+      <section id="nov16-progress" aria-labelledby="nov16-title">
+        <p class="eyebrow">Development update · November 16, 2026</p>
+        <h2 id="nov16-title">A full-lid trial and better test records</h2>
+        <div class="grid3">
+          <div class="card-note"><h3>Full-lid run: assessment pending</h3><p>A full-design trial at a commanded 24 mm/min used left-to-right powered rows at 0.10 mm pitch. USB interruptions required recovery; the saved job records software completion. Physical coverage, registration and finished lettering quality still need assessment.</p></div>
+          <div class="card-note"><h3>Separate comparisons: prepared</h3><p>The earlier 33 mm/min full-lid package, a three-strip sanded-lid comparison and the seven-band DPI job are prepared, with no recorded runs. Their previews and estimates are not physical results.</p></div>
+          <div class="card-note"><h3>Software: learning records added</h3><p>Laser Photo Studio's sample records now capture evidence status, material and surface preparation, commanded versus measured or inferred speed, row pitch, passes and outcome limits. Offline checks support this record-keeping update; physical engraving and recovery still require validation.</p></div>
+        </div>
+        <p>This run is recorded separately from the reported darker-copper sample until their identities can be confirmed. Wiped-sample photographs and an inspection record are needed to judge colour, fine lettering and repeatability.</p>
       </section>
 
       <section id="line-dot-test-plan" aria-labelledby="line-dot-title">
@@ -655,7 +666,7 @@
         <p class="eyebrow">Credits</p>
         <h2 id="credits">Who does what</h2>
         <dl class="credit-list">
-          <div><dt>Forest Products wording test</dt><dd>Test presentation and label wording explored within the Red Hill project.</dd></div>
+          <div><dt>Red Hill project</dt><dd>The business, its products and its brand. “Forest Products” is a presentation and wording test within Red Hill.</dd></div>
           <div><dt>The Red Hill founder</dt><dd>Founding vision, the harvesting and processing work behind the products, and the field footage.</dd></div>
           <div><dt>HASK · Tristan Boyd Hash</dt><dd>Business development: artwork prepared for engraving, laser testing, Laser Photo Studio software, the batch jig, the business cards and this documentation.</dd></div>
         </dl>

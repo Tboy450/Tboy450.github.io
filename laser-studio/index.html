@@ -8,19 +8,25 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#070d13" />
   <link rel="canonical" href="https://tboy450.github.io/laser-studio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Laser Studio · HASK" />
+  <meta property="og:description" content="From image preparation to physical samples: the software, workflow and test records behind HASK laser work." />
+  <meta property="og:url" content="https://tboy450.github.io/laser-studio/" />
+  <meta property="og:image" content="https://tboy450.github.io/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
   <link rel="stylesheet" href="/assets/site.css?v=laser-studio-20261113" />
   <style>
     .page-hero { padding: 54px 0 30px; max-width: 1080px; }
     .page-hero h1 { margin: 22px 0 12px; }
     .page-hero .lede { max-width: 68ch; }
-    .page-main { padding-bottom: 58px; }
+    .page-main { max-width: 1080px; padding-bottom: 58px; }
     .page-section { margin: 0 0 46px; }
     .page-section > p { max-width: 76ch; color: var(--silver); }
     .page-section h2 { margin-bottom: 12px; }
     .eyebrow { margin: 0 0 8px; color: var(--muted); font: 0.72rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
     .intro-panel { padding: clamp(20px, 4vw, 34px); border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(135deg, rgba(47,208,224,.08), transparent 55%), var(--panel); }
-    .page-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 14px; margin-top: 18px; }
+    .page-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin-top: 18px; }
     .page-card { padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: rgba(12,23,33,.78); }
     .page-card h3 { margin: 0 0 8px; font-size: 1.02rem; }
     .page-card p, .page-card li { color: var(--silver); font-size: .93rem; }
@@ -49,6 +55,7 @@
   </style>
 </head>
 <body>
+  <a class="skip" href="#content">Skip to content</a>
   <div class="bg" aria-hidden="true"></div>
   <header class="wrap page-hero">
     <a class="btn" href="/">← Back to HASK projects</a>
@@ -66,7 +73,7 @@
     </div>
   </header>
 
-  <main class="wrap page-main">
+  <main id="content" class="wrap page-main">
     <section class="page-section intro-panel" aria-labelledby="workflow">
       <p class="eyebrow">The working sequence</p>
       <h2 id="workflow">Picture to checked job to physical sample</h2>
@@ -76,7 +83,7 @@
         <li><b>Choose material and style</b><span>Use a machine-tested preset, an external starting point, an experimental setting or a saved personal preset.</span></li>
         <li><b>Set size and placement</b><span>Choose the workpiece, origin, margins, no-burn zones and small position adjustments.</span></li>
         <li><b>Preview and verify</b><span>Adjust tone and detail, inspect the output, then replay every command through the offline checks.</span></li>
-        <li><b>Position and run</b><span>Set the origin, use the 1% dot perimeter check, and start the job through the controller workflow.</span></li>
+        <li><b>Position and run</b><span>Set the origin, preview the selected placement check, confirm alignment, and start through the controller workflow.</span></li>
       </ol>
     </section>
 
@@ -86,7 +93,7 @@
       <div class="page-grid">
         <article class="page-card">
           <h3>Material-specific presets</h3>
-          <p>Presets distinguish settings proven on the U20 from external starting points, experimental options and user-saved presets. Each can carry its explanation, matching LaserGRBL settings and supporting sample photos.</p>
+          <p>Presets distinguish settings with recorded U20 samples from external starting points, experimental options and user-saved presets. Each can carry its explanation, matching LaserGRBL settings and supporting sample photos. A sample supports its recorded setup, not every workpiece of the same material.</p>
         </article>
         <article class="page-card">
           <h3>Image-to-mark styles</h3>
@@ -102,11 +109,11 @@
         </article>
         <article class="page-card">
           <h3>Positioning and perimeter check</h3>
-          <p>The companion positioning workflow uses a 1% dot. The perimeter routine checks the work area at its corners, can add edge points, then returns to the origin.</p>
+          <p>The application offers a 1% alignment dot, footprint and outline checks, a 2% full burn trace, and a laser-off dry run. Each check has a preview; the operator confirms the selected path and placement before the job.</p>
         </article>
         <article class="page-card">
           <h3>Run records and recovery</h3>
-          <p>Jobs keep previews, settings, logs and photos. A USB interruption can be handled through a deliberate stop-point check and continuation from the next command, rather than blindly restarting the file.</p>
+          <p>Jobs keep previews, settings, logs and photos. Recovery requires checking the saved job reference and physical alignment. A reset during queued motion leaves the stop point uncertain, so the last sent command cannot be assumed to be the last executed command.</p>
         </article>
       </div>
     </section>
@@ -145,8 +152,8 @@
       <table class="status-table">
         <thead><tr><th>Workpiece</th><th>Recorded status</th><th>What the current record supports</th></tr></thead>
         <tbody>
-          <tr><td>Pine wood</td><td><span class="badge live">U20 proven</span></td><td>Layered photo shading, lettering and outline examples are documented from physical plank tests.</td></tr>
-          <tr><td>Black anodized aluminum</td><td><span class="badge live">U20 proven</span></td><td>Dot-pattern engraving is documented on finished card samples.</td></tr>
+          <tr><td>Pine wood</td><td><span class="badge live">Physical samples recorded</span></td><td>Layered photo shading, lettering and outline examples are documented from physical plank tests.</td></tr>
+          <tr><td>Black anodized aluminum</td><td><span class="badge live">Physical samples recorded</span></td><td>Dot-pattern engraving is documented on card samples.</td></tr>
           <tr><td>Coated steel lids</td><td><span class="badge live">Line test recorded</span></td><td>A vector-line setting is recorded for decorative marks; it is not a photo-engraving recipe.</td></tr>
           <tr><td>Reflective tin</td><td><span class="badge dev">Project testing</span></td><td>Red Hill records the tin-specific ladder, wipe findings, a newer darker-copper result and comparisons against paint and prefinished black tins.</td></tr>
           <tr><td>Other materials</td><td><span class="badge">Starting point / experimental</span></td><td>These remain test candidates until a result is established on this machine.</td></tr>

@@ -6,19 +6,19 @@ Added November 4, 2026, from the owner's website-specific working checklist.
 
 This checklist covers the Projects website at https://tboy450.github.io/ and its presentation, navigation, previews, case studies and collaboration information. Keep the wider AI Projects & Computer master list and standalone AI, Ghost, CNC and computer projects separate. Links, galleries or demonstrations of those projects on this website are in scope; developing those separate products is not part of this checklist.
 
-Checked means implemented for the scope stated beside the item. **Live** means merged into published main; **draft PR #22** and **local review** are not live. Broad unfinished items remain unchecked with their completed subset noted. Historical completion records below describe their date, not necessarily current release status.
+Checked means implemented for the scope stated beside the item. This file describes the source revision that contains it; live publication requires the corresponding merge and successful GitHub Pages deployment. Historical completion records below describe their date. Broad unfinished items remain unchecked with their completed subset noted.
 
-## Current release and review status — November 16, 2026
+## November 16 release manifest — PR #22
 
-| Work | Status |
+| Work | Included status |
 | --- | --- |
-| Homepage, workshop, Red Hill stages/tabs and PR23 illustration | Live on main `143ca11` |
-| Laser Studio/Woodworking pages, expanded Red Hill inventory and changed finish direction | Draft PR #22, mobile head `87debf7`; not live |
-| Prior PR22 review corrections | Local commit `78f4ad1`; still needs reconciliation with the newer mobile changes |
-| November 16 software-completion progress summary | Local commit `c957e8f`; not published |
-| Red Hill Sites v5 | Saved, not deployed; fresh privacy review required |
+| Homepage, workshop, Red Hill stages/tabs and PR23 illustration | Retained from published main `143ca11` |
+| Laser Studio/Woodworking pages and expanded Red Hill inventory | Included from mobile head `87debf7` |
+| Prior PR22 review corrections | Integrated: layout spacing, material evidence and recovery wording |
+| November 16 progress summary | Integrated: software-recorded completion, prepared comparisons and learning records |
+| Red Hill Sites v5 | Separate saved version; not part of this release and still requires privacy review |
 
-This review retains the mobile changes, incorporates published PR23, and reconciles checklist statuses. No new physical test or media review is implied by a checked website task.
+The owner authorized merging and publishing this release. It preserves reviewed public media and distinguishes completed, reported, prepared and planned work. No new physical test or media review is implied by a checked website task. Publication is tracked by [PR #22](https://github.com/Tboy450/Tboy450.github.io/pull/22) and its GitHub Pages deployment.
 
 ## Recommended priority
 
@@ -41,7 +41,7 @@ This review retains the mobile changes, incorporates published PR23, and reconci
 
 - [ ] Complete responsive mobile redesign.
 - [ ] Fix clipped, tiny or inaccessible project content. Current reviewed pages fit 360–1440 px; real-device/accessibility follow-up remains open.
-- [x] Improve mobile navigation. **Live:** project links and Red Hill tabs/deep links; new page navigation is in draft PR #22.
+- [x] Improve mobile navigation. **Live:** project links and Red Hill tabs/deep links; new page navigation is included in PR #22.
 - [ ] Optimize interactive visualizations for touchscreens.
 - [x] Ensure large elements scale or scroll properly. Reviewed page cards/galleries fit; Red Hill tables/tabs adapt or scroll.
 
@@ -74,7 +74,7 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 - [ ] Zoom Loop: add a demonstration.
 - [ ] White House Rocket Run: add a playable preview.
 - [ ] Solar System: improve its presentation and accessibility.
-- [x] Laser Photo Studio: showcase functionality. Live card/code link; detailed workflow page in **draft PR #22**, not published.
+- [x] Laser Photo Studio: showcase functionality. Card/code link and detailed workflow page are implemented; the new page is included in PR #22.
 - [ ] Positioning Laser: showcase functionality.
 - [ ] TINEBOX C-01: document mechanical design and prototyping.
 - [x] BMW F800GS fabrication: showcase design and physical development. **Live:** fitted prototype and original-part comparison with printing credit.
@@ -138,15 +138,15 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 
 This website presents three connected but distinct areas of the workshop. Keep each area's evidence and progress in its own page; do not turn one Red Hill test label into a separate project.
 
-**Structure note:** The live `main` branch has a homepage **Fabrication** category, not a separate CNC page. Laser Photo Studio already has a card in that category, linking to its GitHub application repository and the Red Hill test history. The new `/laser-studio/` page in this draft is a more detailed overview of the laser workflow; it is not an existing CNC page or a second copy of the application.
+**Structure note:** The live `main` branch has a homepage **Fabrication** category, not a separate CNC page. Laser Photo Studio already has a card in that category, linking to its GitHub application repository and the Red Hill test history. The new `/laser-studio/` page in this release is a more detailed overview of the laser workflow; it is not an existing CNC page or a second copy of the application.
 
 - [x] Add a Laser Studio page describing the Laser Photo Studio application, material-status system, image styles, placement, offline checks, positioning and recovery.
 - [x] Keep Red Hill as one project page. Present “Forest Products” as a wording and packaging test within Red Hill, not a standalone HASK project.
 - [x] Add a Woodworking & Woodcraft page using the existing pine engraving examples and describing grain-aware design and surface/finish testing.
 - [x] Link the new pages from the homepage, add them to the sitemap and include case-correcting 404 routes.
-- [x] Browser-check the current draft pages at desktop and phone widths. Headless Edge 1440/768/390/360 px, image decoding, fragment links, tabs and overflow checks; real-device and full external-link audit remain open.
+- [x] Browser-check the current release pages at desktop and phone widths. Headless Edge 1440/768/390/360 px, image decoding, fragment links, tabs and overflow checks; real-device and full external-link audit remain open.
 - [ ] Add further woodworking and hand-finished examples only when their photographs and process details are available.
-- [ ] Keep Laser Studio material records split between physically tested settings, outside starting points, experiments and untested ideas. The draft has evidence categories; prior local wording corrections remain to be integrated.
+- [x] Keep Laser Studio material records split between physically tested settings, outside starting points, experiments and untested ideas. Reviewed copy distinguishes sample-specific evidence from general material claims.
 
 ### November 16, 2026 · Red Hill and Laser Studio record reconciliation
 
@@ -157,7 +157,7 @@ This website presents three connected but distinct areas of the workshop. Keep e
 - [ ] Add every physical lid run to both the Red Hill page table and working checklist, with completed, reported, prepared, planned or parked status kept distinct.
 - [x] Prepare the three-strip sanded-lid comparison. **Prepared, not run:** separate saved passes and offline checks exist; substrate identity and physical result remain unverified.
 - [ ] Compare paint and supplier-made/pre-finished black tins as alternative packaging finishes. Do not present these as proven until evaluated.
-- [x] Remove the three-tone finish from the active direction; retain older tone/soot work as test history. Implemented in draft PR #22.
+- [x] Remove the three-tone finish from the active direction; retain older tone/soot work as test history. Implemented in PR #22.
 - [ ] Keep tin-specific testing in Red Hill and broad material-response ladder research (including possible identified steel/titanium candidates) in Laser Studio.
 - [ ] Reconcile the Red Hill session in session management; synchronize the Red Hill product/packaging log, Laser Studio material/research log, HASK master checklist and website checklists from the same dated source evidence.
 - [ ] Cross-link job files, source artwork, G-code, settings, sample IDs, photographs, wipe results and current status rather than relying on a checklist tally alone.
@@ -170,12 +170,21 @@ This website presents three connected but distinct areas of the workshop. Keep e
 - [ ] Apply the requested small-lettering size/gap revision, preserving wording; inspect actual-resolution cells and later physical output.
 - [ ] Review coating/touch-up photos and video for public use. Appearance reports are not adhesion, cure, durability or laser-result validation.
 - [ ] Design/test any painting holder separately from the engraving jig; the holder/weighted-base idea remains proposed.
-- [ ] Reconcile prior local PR22 code/copy corrections before release; rerun affected checks after integration.
-- [ ] Review and release draft PR22 separately from the local progress summary and Sites v5.
+- [x] Reconcile prior local PR22 code/copy corrections before release; rerun affected checks after integration. All 16 route/width checks passed after integration.
+- [x] Review PR22 together with the November 16 progress summary; keep the separate Sites v5 out of this release. Publication is tracked by the PR and deployment linked above.
 
 ## Completion record
 
 For completed items, record the date, changed files or commit, verification performed and remaining limitations. Sign substantive changes in CHANGELOG.md under the project's existing convention.
+
+### November 16, 2026 · Combined release review
+
+- Integrated the mobile PR, published illustration, earlier copy/layout corrections and November 16 progress summary.
+- Aligned the new pages to a consistent content width, corrected gallery margins, added skip links and social-sharing metadata.
+- Replaced an overly broad software-cause conclusion with the limits of the November 9 checks, and linked the later physical trial record.
+- Headless Edge passed four pages at 1440, 768, 390 and 360 px, including image decoding, local fragments, overflow, script errors, Red Hill tabs, deep links and the photo viewer. Desktop and phone layouts were visually reviewed.
+- Real-device interaction, broader browser coverage, full accessibility and third-party embedded demos remain open.
+- Signed: Codex (OpenAI).
 
 ### November 13, 2026 · Laser Studio, Red Hill and Woodworking
 

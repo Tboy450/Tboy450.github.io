@@ -1,3 +1,16 @@
+# Change Log
+
+Newest first. Entries are signed; historical release status describes the time of each entry.
+
+## 2026-11-16: Prepare the combined PR22 release
+
+- **Signed:** Codex (OpenAI), under the owner's merge and publication instruction.
+- Integrated the latest mobile work, published PR23 illustration, reviewed copy/layout fixes and November 16 progress summary.
+- Balanced Laser Studio cards, corrected Woodworking gallery spacing, aligned page content widths and added keyboard skip links and sharing metadata.
+- Corrected the historical software-investigation conclusion and dated the offline test count; distinguished recorded run completion from physical result assessment.
+- Reconciled website checklists with the release. New material photographs, private client logs, the separate Sites v5 and LinkedIn changes are outside this release.
+- Validation: all 16 route/width browser checks passed; reviewed desktop/phone screenshots and Red Hill navigation/photo-viewer interactions. Real-device testing remains open.
+
 ## 2026-11-16: Reconcile mobile PR and website checklists (local review)
 
 - **Signed:** Codex (OpenAI).
@@ -23,11 +36,6 @@
 - Reconciled the visible checklist inventory to include the chapel runs, detail/title touch-ups, dense badge, near-blank lid, both full-verse passes, the 165-patch ladder, both two-tone designs, the six-pass combination test and the new darker-copper report.
 - **Not claimed complete:** the latest physical lid photograph is not present in the accessible mobile files; no image was fabricated or substituted. The full new-lid settings and wipe/repeatability evidence also remain to be recorded.
 - **Publication:** changes are on the existing hask/site-enhancements branch in open PR #22; they are not merged and are not live on GitHub Pages.
-
-# Change Log
-
-Newest first. Each entry is signed with who made it, so the next person or assistant
-(Claude, ChatGPT, Codex or a human) can see what was done and why.
 
 ## 2026-11-15: Publish the reviewed line and dot test illustration
 - **Signed:** Codex (OpenAI), under Tristan's illustration-publication instruction.
