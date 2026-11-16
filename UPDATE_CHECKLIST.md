@@ -136,6 +136,18 @@ This website presents three connected but distinct areas of the workshop. Keep e
 - [ ] Add further woodworking and hand-finished examples only when their photographs and process details are available.
 - [ ] Keep Laser Studio material records split between physically tested settings, outside starting points, experiments and untested ideas.
 
+### November 16, 2026 · Red Hill and Laser Studio record reconciliation
+
+- [ ] Add the latest darker-copper lid photograph to the Red Hill page when the actual source image is available; include an accurate caption and before/after-wipe status.
+- [ ] Record the new lid's full job settings, pass count, interval, focus, run time and wipe result; use 24 mm/min as the stated comparison reference for the speed-up trial.
+- [ ] Add every physical lid run to both the Red Hill page table and working checklist, with completed, reported, prepared, planned or parked status kept distinct.
+- [ ] Add the three-bottom-line comparison with a brushed/sanded aluminum spot on the tin; keep it planned until physically run and photographed.
+- [ ] Compare paint and supplier-made/pre-finished black tins as alternative packaging finishes. Do not present these as proven until evaluated.
+- [ ] Remove the three-tone finish from the active direction; retain older tone/soot work as test history.
+- [ ] Keep tin-specific testing in Red Hill and broad material-response ladder research (including possible identified steel/titanium candidates) in Laser Studio.
+- [ ] Reconcile the Red Hill session in session management; synchronize the Red Hill product/packaging log, Laser Studio material/research log, HASK master checklist and website checklists from the same dated source evidence.
+- [ ] Cross-link job files, source artwork, G-code, settings, sample IDs, photographs, wipe results and current status rather than relying on a checklist tally alone.
+
 ## Completion record
 
 For completed items, record the date, changed files or commit, verification performed and remaining limitations. Sign substantive changes in CHANGELOG.md under the project's existing convention.
