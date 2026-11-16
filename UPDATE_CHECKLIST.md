@@ -138,6 +138,8 @@ This website presents three connected but distinct areas of the workshop. Keep e
 
 ### November 16, 2026 · Red Hill and Laser Studio record reconciliation
 
+- [x] Reconcile the known lid-run inventory across the Red Hill page table and working checklist: first and second chapel lids; masked detail/title runs; dense badge; nearly blank lid (unresolved); full-verse passes 1 and 2; 165-patch ladder; Matthew two-tone; Forest Products wording test; six-pass tone-combination test; and the newly reported darker-copper result.
+- [ ] Identify the nearly blank lid's source job, actual date, settings and cause; it is retained as an unresolved physical test, not omitted.
 - [ ] Add the latest darker-copper lid photograph to the Red Hill page when the actual source image is available; include an accurate caption and before/after-wipe status.
 - [ ] Record the new lid's full job settings, pass count, interval, focus, run time and wipe result; use 24 mm/min as the stated comparison reference for the speed-up trial.
 - [ ] Add every physical lid run to both the Red Hill page table and working checklist, with completed, reported, prepared, planned or parked status kept distinct.
