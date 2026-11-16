@@ -1,13 +1,65 @@
 # Change Log
 
-Newest first. Each entry is signed with who made it, so the next person or assistant
-(Claude, ChatGPT, Codex or a human) can see what was done and why.
+Newest first. Entries are signed; historical release status describes the time of each entry.
+
+## 2026-11-16: Prepare the combined PR22 release
+
+- **Signed:** Codex (OpenAI), under the owner's merge and publication instruction.
+- Integrated the latest mobile work, published PR23 illustration, reviewed copy/layout fixes and November 16 progress summary.
+- Balanced Laser Studio cards, corrected Woodworking gallery spacing, aligned page content widths and added keyboard skip links and sharing metadata.
+- Corrected the historical software-investigation conclusion and dated the offline test count; distinguished recorded run completion from physical result assessment.
+- Reconciled website checklists with the release. New material photographs, private client logs, the separate Sites v5 and LinkedIn changes are outside this release.
+- Validation: all 16 route/width browser checks passed; reviewed desktop/phone screenshots and Red Hill navigation/photo-viewer interactions. Real-device testing remains open.
+
+## 2026-11-16: Reconcile mobile PR and website checklists (local review)
+
+- **Signed:** Codex (OpenAI).
+- Reviewed the eight newer mobile PR22 commits through `87debf7`, retaining their finish-direction changes and test inventory. Incorporated main's already-published PR23 illustration; preserved both changelog histories.
+- Updated the master website checklist to distinguish live, draft and local work; marked implemented website features and retained incomplete broad goals with explicit remaining scope.
+- Updated the public Red Hill checklist for prepared strips/DPI/33 mm/min packages, software-recorded 24 mm/min completion, installed learning records, reported coating appearance and unapplied lettering revision. Exposed substrate remains unidentified.
+- Recounted the actual checklist entries: 24 done, 7 prepared, 3 reported, 22 planned and 1 parked. No physical quality or coating-performance claim is implied.
+- Headless Edge passed 16 route/width combinations (1440/768/390/360 px), image loading, local fragments, overflow and script checks, plus Red Hill tabs, keyboard navigation and photo viewer checks. Real-device and full external-link checks remain open.
+- Local review only. Remote PR22 and the live site have not been changed by this reconciliation.
+
+## 2026-11-16: Red Hill finish direction and record update
+
+- **Signed:** ChatGPT (OpenAI)
+- **What changed in the open website enhancement branch:**
+  - Reframed the Red Hill page's lid notice so it describes a test sequence and its evidence limits rather than saying every lid is still simply a test lid.
+  - Added the owner-reported darker-copper result as a dated but incomplete record; 24 mm/min is retained as the reference for the speed-up comparison. The actual photograph and complete machine settings still need to be added.
+  - Expanded the Red Hill working checklist to separate physical runs, reported-but-incomplete records, planned surface tests and parked historical ideas.
+  - Added the three-bottom-line comparison with a brushed/sanded aluminum spot on the tin, and alternative finish investigations for paint and prefinished black tins.
+  - Removed the three-tone design from the active direction. Older soot/dark-tone investigations remain documented as history.
+  - Reframed the 165-patch ladder as a tin-specific Red Hill test and placed refined material-response ladders, including possible identified steel/titanium candidates, under the wider Laser Studio research objective.
+  - Added session management, cross-account record continuity, and synchronized Red Hill/Laser Studio/HASK checklist updates to the next-work list.
+- Added the nearly blank lid from the four-lid comparison as a separate unresolved test record because its source job, settings and cause are not identified in the available record.
+- Reconciled the visible checklist inventory to include the chapel runs, detail/title touch-ups, dense badge, near-blank lid, both full-verse passes, the 165-patch ladder, both two-tone designs, the six-pass combination test and the new darker-copper report.
+- **Not claimed complete:** the latest physical lid photograph is not present in the accessible mobile files; no image was fabricated or substituted. The full new-lid settings and wipe/repeatability evidence also remain to be recorded.
+- **Publication:** changes are on the existing hask/site-enhancements branch in open PR #22; they are not merged and are not live on GitHub Pages.
 
 ## 2026-11-15: Publish the reviewed line and dot test illustration
 - **Signed:** Codex (OpenAI), under Tristan's illustration-publication instruction.
 - Added the corrected four-panel illustration to the Red Hill Lid tests tab, with a full-size link and text describing evidence limits.
 - Completed tests, the prepared/unrun DPI job, proposed dot clusters and separate unrun sanded-lid comparison are clearly distinguished. The apparent speed floor is inferred from telemetry, not independently measured motion.
 - Scope is the illustration and its integration only; broader draft PR #22 and Red Hill Sites version 5 are excluded.
+
+## 2026-11-14: Clarify the Fabrication and Laser Studio page structure
+- **Signed:** ChatGPT (OpenAI)
+- **Site audit:** The live `main` branch has an `All projects` homepage and a `Fabrication` category; it does not contain a separate CNC page or CNC route.
+- **Existing Laser Photo Studio listing:** The homepage already lists Laser Photo Studio under Fabrication and links to its GitHub application repository and the Red Hill test history.
+- **Draft-page distinction:** `/laser-studio/` is a newly added, detailed portfolio overview of the laser workflow. It is not an existing CNC page or a duplicate application. The GitHub repository contains the desktop application and its install/use documentation.
+- **Correction:** Keep the existing Fabrication category and Laser Photo Studio project identity. Do not create a second CNC identity or a redundant application listing.
+- **Validation:** Read the live repository tree and homepage, the draft homepage and overview page, and the Laser Photo Studio repository root and README.
+
+## 2026-11-13: Add Laser Studio and Woodworking pages; broaden Red Hill project overview
+- **Signed:** ChatGPT (OpenAI)
+- **New pages:** `/laser-studio/` documents the Laser Photo Studio workflow, material evidence levels, image treatments, placement, offline checks, 1% perimeter check and USB recovery. `/woodworking/` organizes existing wood-burned samples and the grain, surface-preparation and finishing work around them.
+- **Homepage:** Laser Photo Studio now links to the Laser Studio overview; Red Hill is presented as one product-development project; From the workshop links to Woodworking & Woodcraft.
+- **Red Hill:** Expanded the existing page to describe product/material research, presentation trials and engraving/tooling as parts of one project. “Forest Products” is treated as a wording and packaging test within Red Hill, not a separate HASK project or page. The lid history remains a test record, not a finished production claim.
+- **Navigation:** Added both new pages to the sitemap and lowercase route correction.
+- **Validation:** Repository writes and follow-up file reads succeeded. Browser rendering, responsive checks and image-loading checks remain pending.
+
+
 
 ## 2026-11-13: Red Hill tabs and a new contact section
 - **Signed:** Claude Code (Claude Opus 5.5)
