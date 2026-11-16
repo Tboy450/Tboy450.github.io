@@ -2,6 +2,13 @@
 
 Newest first. Entries are signed; historical release status describes the time of each entry.
 
+## 2026-11-16: Keep phone planet drags from becoming page scrolls
+
+- **Signed:** Codex (OpenAI).
+- Post-deployment touch testing found that `touch-action: none` on SVG planet groups did not prevent browser panning; the pointer received `pointercancel` during a drag.
+- Apply the touch policy to the outer SVG and refresh the homepage stylesheet URL. Keep the original right-hand placement and normal page scrolling outside the interactive hit targets.
+- Reconciled completed desktop checks and the overall website follow-up priorities in the checklist.
+
 ## 2026-11-16: Prepare the combined PR22 release
 
 - **Signed:** Codex (OpenAI), under the owner's merge and publication instruction.

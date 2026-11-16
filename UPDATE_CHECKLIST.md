@@ -20,6 +20,20 @@ Checked means implemented for the scope stated beside the item. This file descri
 
 The owner authorized merging and publishing this release. It preserves reviewed public media and distinguishes completed, reported, prepared and planned work. No new physical test or media review is implied by a checked website task. Publication is tracked by [PR #22](https://github.com/Tboy450/Tboy450.github.io/pull/22) and its GitHub Pages deployment.
 
+## Overall site review — November 16, 2026
+
+PR22 is merged (`572cb26`) and GitHub Pages deployment `43975048096` succeeded. All four public page sources and the reviewed illustration were verified. Layout checks passed at 360–1440 px.
+
+Next priorities:
+
+1. Add a short homepage About / Approach section and the Blue Ridge / Roanoke, Virginia service area.
+2. Select a few flagship examples near the top; the full catalog currently precedes much of the workshop story.
+3. Add consistent project years, status labels and concise outcomes; expand individual case studies as evidence is ready.
+4. Add short demos for flagship software and games, and show CAD alongside the fitted handguard.
+5. Test real Android/iPhone interactions, keyboard access and other browser engines. Confirm the LinkedIn profile manually; automated requests were blocked.
+
+The separate Red Hill Sites log still reflects older progress and needs its own sanitized update. New coating/copper photographs remain pending review. This release does not update LinkedIn.
+
 ## Recommended priority
 
 1. Mobile experience.
@@ -53,7 +67,7 @@ graphics and mechanics update: interactive and draggable, and working on phones 
 - [x] Make planets draggable, with spring-back, flick-to-spin and a clickable sun. (Nov 4, PR #8; tested in the browser.)
 - [x] Show it on phones with finger-sized touch targets. (Nov 4; checked at 375 px wide. Not yet tried on a real phone.)
 - [ ] Further graphics polish as the owner directs. Glowing sun is live; additional changes remain optional.
-- [ ] Verify the desktop solar-system experience, preserving interactions and the original right-hand position (owner correction, Nov 5).
+- [x] Verify the desktop solar-system experience, preserving interactions and the original right-hand position. November 16 live checks passed mouse drag, sun pulse and category filters. Phone touch handling received a focused follow-up; real-device testing remains open.
 
 ## 3. Project presentation
 
