@@ -99,7 +99,7 @@ h1 span {
 .cta { display: flex; flex-wrap: wrap; gap: 10px; }
 .corner { position: absolute; top: 46px; right: 0; width: 150px; height: 150px; color: var(--cyan); filter: drop-shadow(0 0 10px rgba(47, 208, 224, 0.45)); }
 /* Original desktop position: to the right of the identity and contact buttons. */
-.orbit { position: absolute; top: 120px; right: 40px; z-index: 0; width: min(400px, 36vw); height: auto; overflow: visible; color: var(--cyan); opacity: 0.85; pointer-events: none; }
+.orbit { position: absolute; top: 120px; right: 40px; z-index: 0; width: min(400px, 36vw); height: auto; overflow: visible; color: var(--cyan); opacity: 0.85; pointer-events: none; touch-action: none; }
 .orbit .spin { transform-origin: 200px 200px; animation: spin 40s linear infinite; }
 .orbit .slow { animation-duration: 90s; }
 .orbit .fast { animation-duration: 18s; }
