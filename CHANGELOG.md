@@ -9,6 +9,8 @@
   - Removed the three-tone design from the active direction. Older soot/dark-tone investigations remain documented as history.
   - Reframed the 165-patch ladder as a tin-specific Red Hill test and placed refined material-response ladders, including possible identified steel/titanium candidates, under the wider Laser Studio research objective.
   - Added session management, cross-account record continuity, and synchronized Red Hill/Laser Studio/HASK checklist updates to the next-work list.
+- Added the nearly blank lid from the four-lid comparison as a separate unresolved test record because its source job, settings and cause are not identified in the available record.
+- Reconciled the visible checklist inventory to include the chapel runs, detail/title touch-ups, dense badge, near-blank lid, both full-verse passes, the 165-patch ladder, both two-tone designs, the six-pass combination test and the new darker-copper report.
 - **Not claimed complete:** the latest physical lid photograph is not present in the accessible mobile files; no image was fabricated or substituted. The full new-lid settings and wipe/repeatability evidence also remain to be recorded.
 - **Publication:** changes are on the existing hask/site-enhancements branch in open PR #22; they are not merged and are not live on GitHub Pages.
 
