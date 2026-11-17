@@ -1,5 +1,13 @@
 # Change Log
 
+## 2026-11-16: Add optional Red Hill background music
+
+- **Signed:** Codex (OpenAI), following the owner's approved selection and download confirmation.
+- Added the four actual recordings in the requested repeating order, with source credits and license provenance. Music loads only after Play, initially at 20% volume.
+- Added pause/resume, previous/next, volume and persistent mute. Controls restore by touch, hover or keyboard focus and tuck away after idle without hiding focused controls.
+- Reserved space above the desktop tabs and mobile section selector; retained the compact project records and History & Industry subsections.
+- Verified actual playback, native end-of-track advancement through all four recordings and wraparound, paused selection, error recovery, no initial audio downloads and responsive controls at 360, 390 and 1440 px. Physical phone testing remains open.
+
 ## 2026-11-16: Shorten Red Hill sections while retaining the full record
 
 - **Signed:** Codex (OpenAI), following the owner's request for shorter, more organized main sections on desktop and mobile.

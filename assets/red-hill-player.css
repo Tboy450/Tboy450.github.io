@@ -1,0 +1,16 @@
+.rh-music { position:fixed; top:max(8px,env(safe-area-inset-top)); right:max(12px,env(safe-area-inset-right)); z-index:20; width:min(280px,calc(100vw - 24px)); color:#efe3ce; font:14px/1.5 system-ui,sans-serif; pointer-events:none; }
+.music-handle { display:flex; justify-content:flex-end; gap:4px; pointer-events:auto; }
+.rh-music button { min-height:44px; min-width:44px; border:1px solid #766c59; border-radius:7px; background:#15221f; color:#efe3ce; font:600 13px/1.3 system-ui,sans-serif; padding:8px 12px; cursor:pointer; }
+.rh-music button:hover { background:#294139; }.rh-music button:focus-visible,.rh-music input:focus-visible,.rh-music a:focus-visible { outline:2px solid #f8e5b7; outline-offset:3px; }
+#music-controls { margin-top:6px; padding:16px; border:1px solid #766c59; border-radius:10px; background:#101c19; box-shadow:0 12px 35px #0008; pointer-events:auto; max-height:calc(100dvh - 90px); overflow:auto; }
+#music-controls[hidden] { display:none; }.music-title { font-weight:700; margin:0 0 6px; }.music-artist { font-size:12px;color:#b6b9ac;margin:0 0 12px; }
+.music-buttons { display:flex; gap:8px; }.music-play { flex:1; }.music-volume { display:flex; align-items:center; gap:10px; margin-top:12px; font-size:12px; }.music-volume input { min-width:0; width:100%; height:36px; accent-color:#d5bd8c; }
+.music-state { font-size:12px; color:#c4c8bb; margin:8px 0; }.music-credit { color:#dbcaa8;font-size:11px; }
+/* Leave a dedicated top rail above the sticky page navigation. */
+body:has(.rh-music) { padding-top:var(--music-rail,60px); }
+body:has(.rh-music) .tabs { top:var(--music-rail,60px); }
+body:has(.rh-music) .knowledge-nav { top:calc(var(--music-rail,60px) + 65px); }
+body:has(.rh-music) .rh [id] { scroll-margin-top:calc(var(--music-rail,60px) + 85px); }
+body:has(.rh-music) .rh .knowledge-panel { scroll-margin-top:calc(var(--music-rail,60px) + 150px); }
+@media(max-width:760px) { body:has(.rh-music) .rh .knowledge-panel { scroll-margin-top:calc(var(--music-rail,60px) + 200px); } }
+@media(prefers-reduced-motion:reduce) { .rh-music * { animation:none!important; transition:none!important; } }
