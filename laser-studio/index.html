@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Laser Studio · HASK</title>
-  <meta name="description" content="HASK Laser Studio: image preparation, Grbl diode-laser workflows, material testing, job verification and repeatable engraving." />
+  <title>Laser Photo Studio · HASK</title>
+  <meta name="description" content="Laser Photo Studio by HASK: custom engraving software for clearer controls, image preparation and documented tests on wood, metal and slate." />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#070d13" />
   <link rel="canonical" href="https://tboy450.github.io/laser-studio/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Laser Studio · HASK" />
+  <meta property="og:title" content="Laser Photo Studio · HASK" />
   <meta property="og:description" content="From image preparation to physical samples: the software, workflow and test records behind HASK laser work." />
   <meta property="og:url" content="https://tboy450.github.io/laser-studio/" />
   <meta property="og:image" content="https://tboy450.github.io/assets/og-image.jpg" />
@@ -23,7 +23,7 @@
     .page-main { max-width: 1080px; padding-bottom: 58px; }
     .page-section { margin: 0 0 46px; }
     .page-section > p { max-width: 76ch; color: var(--silver); }
-    .page-section h2 { margin-bottom: 12px; }
+    .page-section h2 { margin-bottom:12px; font:700 clamp(1.4rem,3vw,2rem)/1.2 system-ui,sans-serif; letter-spacing:-.02em; text-transform:none; color:var(--text); }
     .eyebrow { margin: 0 0 8px; color: var(--muted); font: 0.72rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
     .intro-panel { padding: clamp(20px, 4vw, 34px); border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(135deg, rgba(47,208,224,.08), transparent 55%), var(--panel); }
     .page-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin-top: 18px; }
@@ -52,6 +52,25 @@
       .status-table td { padding: 6px 0; border: 0; }
       .status-table td:first-child { color: var(--text); font-weight: 700; }
     }
+    .studio-nav { margin:0 0 36px; }
+    section[aria-labelledby="latest-development"] .page-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .studio-nav .btn { min-height:44px; }
+    .studio-slate { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:28px; align-items:start; }
+    .studio-preview { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
+    .studio-preview img { display:block; width:100%; height:auto; border-radius:8px; }
+    .studio-preview figcaption,.studio-gallery figcaption { padding:12px 2px 2px; color:var(--muted); font-size:.86rem; }
+    .studio-preview figcaption strong,.studio-gallery figcaption strong { display:block; margin-bottom:5px; color:var(--text); }
+    .studio-facts { padding-left:20px; color:var(--silver); }
+    .studio-facts li { margin-bottom:14px; }
+    .studio-details { margin-top:20px; padding:0 18px; border:1px solid var(--line); border-radius:12px; background:var(--panel); }
+    .studio-details summary { padding:16px 0; cursor:pointer; font-weight:600; }
+    .studio-details p { color:var(--silver); font-size:.93rem; }
+    .studio-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .studio-gallery figure { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
+    .studio-gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:8px; }
+    h2[id] { scroll-margin-top:24px; }
+    @media(max-width:760px) { .studio-slate { grid-template-columns:1fr; } .studio-preview { max-width:440px; width:100%; justify-self:center; } .studio-gallery { grid-template-columns:1fr; } }
+    @media(max-width:620px) { section[aria-labelledby="latest-development"] .page-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -64,16 +83,26 @@
       <div class="wordmark"><span class="bar"></span><strong>HASK</strong><small>Hybridized Business Solutions</small></div>
     </div>
     <p class="eyebrow" style="margin-top:28px">Digital fabrication · Software · Material testing</p>
-    <h1>Laser <span>Studio</span></h1>
-    <p class="lede">A connected laser-workflow project: image preparation, the Laser Photo Studio application, positioning tools, material experiments, sample records and repeatable physical setup. The software and the machine are treated as separate parts of one working system.</p>
+    <h1>Laser Photo <span>Studio</span></h1>
+    <p class="lede">Custom engraving software by HASK, created to work around unclear controls, limited adjustment and misleading terminology in the existing laser-software workflow. It brings image preparation, placement, job checks and recorded experiments into one application.</p>
     <div class="page-links">
-      <a class="btn primary" href="https://github.com/Tboy450/laser-photo-studio">Laser Photo Studio code</a>
+      <a class="btn primary" href="#slate-coasters">Slate coaster project</a>
+      <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Application code</a>
       <a class="btn" href="https://github.com/Tboy450/positioning-laser">Positioning Laser code</a>
       <a class="btn" href="/red-hill/">Red Hill test history</a>
     </div>
   </header>
 
   <main id="content" class="wrap page-main">
+    <nav class="page-links studio-nav" aria-label="Laser Studio sections">
+      <a class="btn" href="#why-built">Why it was built</a><a class="btn" href="#software">Working features</a><a class="btn" href="#latest-development">Recent progress</a><a class="btn" href="#slate-coasters">Slate</a><a class="btn" href="#physical-samples">Physical samples</a>
+    </nav>
+    <section class="page-section" aria-labelledby="why-built">
+      <p class="eyebrow">The reason for the software</p>
+      <h2 id="why-built">Understand the controls. Control the result.</h2>
+      <p>Laser Photo Studio grew out of hands-on frustration with the existing LaserGRBL workflow: controls that did not explain their effects, too little useful control over the job, and technical labels that obscured what the machine would actually do. The goal is practical control with explanations tied to the picture, the material and the movement.</p>
+      <p>That work has produced a functioning desktop application: image treatments, saved material settings, placement previews, command checks, job records and run controls. The interface continues to be refined as real projects expose confusing labels or missing adjustments.</p>
+    </section>
     <section class="page-section intro-panel" aria-labelledby="workflow">
       <p class="eyebrow">The working sequence</p>
       <h2 id="workflow">Picture to checked job to physical sample</h2>
@@ -92,15 +121,15 @@
       <h2 id="software">What Laser Photo Studio handles</h2>
       <div class="page-grid">
         <article class="page-card">
-          <h3>Material-specific presets</h3>
+          <h3>Settings saved for the material</h3>
           <p>Presets distinguish settings with recorded U20 samples from external starting points, experimental options and user-saved presets. Each can carry its explanation, matching LaserGRBL settings and supporting sample photos. A sample supports its recorded setup, not every workpiece of the same material.</p>
         </article>
         <article class="page-card">
-          <h3>Image-to-mark styles</h3>
+          <h3>Choose how the image is marked</h3>
           <p>Layered shading, error-diffusion dots, ordered grids, halftone, grayscale power, black-and-white, thin-line and pencil-sketch treatments turn artwork into different engraving patterns.</p>
         </article>
         <article class="page-card">
-          <h3>Workpiece geometry</h3>
+          <h3>Size, placement and margins</h3>
           <p>Set the piece dimensions and origin, preserve margins and no-burn zones, and nudge artwork in measured increments. This is the software side of repeatable placement.</p>
         </article>
         <article class="page-card">
@@ -118,10 +147,40 @@
       </div>
     </section>
 
+    <section class="page-section" aria-labelledby="latest-development">
+      <p class="eyebrow">Development record · November 17, 2026</p>
+      <h2 id="latest-development">More control, added through actual projects</h2>
+      <p>These additions are implemented in the workshop application. They build on the original five-step workflow rather than remaining ideas for a future app.</p>
+      <div class="page-grid">
+        <article class="page-card"><h3>Scan direction and return speed</h3><p>Choose alternating rows or left-to-right marking. A separate laser-off return-speed control changes the movement between rows without changing engraving speed or power, and saves with the preset and job.</p></article>
+        <article class="page-card"><h3>Saved setup and inspection moves</h3><p>Keep the artwork and job setup available, park to inspect the piece and return to job zero. Physical alignment still needs checking after an interruption.</p></article>
+        <article class="page-card"><h3>Saved USB-port choices</h3><p>Keep known ports available and refresh device detection without silently switching the selection. This addresses using different USB sockets; it does not release another running sender.</p></article>
+        <article class="page-card"><h3>Richer test and sample records</h3><p>Record material, surface preparation, row spacing, passes and result status alongside settings and photos. Separate commanded speed from a measured or inferred result.</p></article>
+      </div>
+      <details class="studio-details"><summary>Verification and current limits</summary><div>
+        <p>The November 9 investigation recorded 77 offline checks. Later port-selection and return-speed updates have their own regression checks; those counts describe different revisions, not one combined test total.</p>
+        <p>The live completion-time estimate has been reported to jump by hours and remains under investigation. Clearer Check-page explanations, native loading of prepared samples, project-size presets and release of another idle Studio connection remain unfinished.</p>
+        <p>Recent workshop-build changes are described here separately from the public application-code reference. Offline checks do not establish a physical engraving result.</p>
+      </div></details>
+    </section>
+
+    <section class="page-section" aria-labelledby="slate-coasters">
+      <p class="eyebrow">Current material project · In development</p>
+      <h2 id="slate-coasters">Portrait artwork for slate coasters</h2>
+      <div class="studio-slate">
+        <figure class="studio-preview"><a href="/assets/workshop/slate-portrait-preview-20261117.webp"><img src="/assets/workshop/slate-portrait-preview-20261117.webp" width="890" height="890" loading="lazy" alt="Digital dot-map preview of Artemis’s Place portrait and dog artwork on simulated dark slate" /></a><figcaption><strong>Digital preview.</strong> Planned engraving dots on simulated dark stone; a finished-slate photograph is still to be added.</figcaption></figure>
+        <div>
+          <p>The Artemis’s Place design extends the work from pine to a raw slate coaster. Preparation preserves the supplied portrait, dog, lettering and background detail while converting the image into a dot pattern intended to mark light on dark stone.</p>
+          <ul class="studio-facts"><li><strong>Artwork prepared:</strong> 89 × 89 mm for a measured coaster of approximately 100.6 × 100.6 mm.</li><li><strong>Processing checked:</strong> Stucki dots, light-mark polarity and left-to-right scan preparation, with no extra sharpening added.</li><li><strong>Physical assessment pending:</strong> finished contrast, small detail, placement and actual run time still need a reviewed sample record.</li></ul>
+          <details class="studio-details"><summary>Recorded preparation and next checks</summary><div><p>The prepared job uses 50% power, 3500 mm/min engraving and 0.10 mm rows as a starting point for this slate. A later setup adds an independently adjustable laser-off return speed. These are job-specific preparation values, not a calibrated recipe for all slate.</p><p>Placement has required adjustment on the actual coaster. The digital preview does not prove registration. Compare the finished piece with the dot map before drawing conclusions about likeness, eye detail, lettering or repeatability.</p></div></details>
+        </div>
+      </div>
+    </section>
+
     <section class="page-section" aria-labelledby="machine">
       <p class="eyebrow">The machine layer</p>
-      <h2 id="machine">Built around a Grbl diode workflow</h2>
-      <p>The current application is documented for the Tronxy Ultrabot U20 and its Grbl-based controller. Its machine interface is designed around a known controller configuration and a controlled command path, not arbitrary G-code streaming.</p>
+      <h2 id="machine">Current machine compatibility</h2>
+      <p>The workshop installation connects to a Tronxy Ultrabot U20 using its Grbl controller. The connection checks and movement rules below describe that installation; the purpose of the application is to make engraving setup and control clearer.</p>
       <div class="page-grid">
         <article class="page-card">
           <h3>Controller constraints</h3>
@@ -156,12 +215,23 @@
           <tr><td>Black anodized aluminum</td><td><span class="badge live">Physical samples recorded</span></td><td>Dot-pattern engraving is documented on card samples.</td></tr>
           <tr><td>Coated steel lids</td><td><span class="badge live">Line test recorded</span></td><td>A vector-line setting is recorded for decorative marks; it is not a photo-engraving recipe.</td></tr>
           <tr><td>Reflective tin</td><td><span class="badge dev">Project testing</span></td><td>Red Hill records the tin-specific ladder, wipe findings, a newer darker-copper result and comparisons against paint and prefinished black tins.</td></tr>
+          <tr><td>Raw slate coaster</td><td><span class="badge dev">Artwork and job prepared</span></td><td>Portrait dot-map preparation and placement work are recorded. <a href="#slate-coasters">See the slate project</a>; finished-sample assessment remains open.</td></tr>
           <tr><td>Other materials</td><td><span class="badge">Starting point / experimental</span></td><td>These remain test candidates until a result is established on this machine.</td></tr>
         </tbody>
       </table>
       <div class="page-links">
         <a class="btn primary" href="/red-hill/">Open the Red Hill tin tests</a>
         <a class="btn" href="/woodworking/">See woodcraft examples</a>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="physical-samples">
+      <p class="eyebrow">Work already made</p>
+      <h2 id="physical-samples">The samples that shaped the software</h2>
+      <div class="studio-gallery">
+        <figure><a href="/woodworking/"><img src="/assets/workshop/north-pole-plank.webp" width="800" height="600" loading="lazy" alt="North Pole artwork engraved on a pine plank" /></a><figcaption><strong>Layered pine engraving</strong>Wood shading, lettering and grain response informed the image treatment.</figcaption></figure>
+        <figure><a href="/red-hill/#cards"><img src="/assets/workshop/red-hill-business-card.webp" width="800" height="600" loading="lazy" alt="Red Hill artwork engraved on a black anodized business card" /></a><figcaption><strong>Anodized cards</strong>Dot patterns, light-on-dark artwork and placement on small parts.</figcaption></figure>
+        <figure><a href="/red-hill/#latest-lid"><img src="/assets/workshop/red-hill-rock-lid-20261116-t.webp" width="640" height="572" loading="lazy" alt="Latest Red Hill Rock-design tin sample" /></a><figcaption><strong>Red Hill tin trials</strong>Fine lettering, slow-feed tests, finish comparisons and documented revisions.</figcaption></figure>
       </div>
     </section>
 
@@ -172,6 +242,8 @@
         <article class="page-card"><h3>Repeatable positioning</h3><p>Connect the digital origin and perimeter preview to a physical jig so the workpiece can be centered and registered consistently.</p></article>
         <article class="page-card"><h3>Better material records</h3><p>Keep the material, surface condition, focus, fixture, settings, passes, result photo and wipe/finish observations together.</p></article>
         <article class="page-card"><h3>Richer artwork preparation</h3><p>Continue improving masks, grayscale and dither treatment, linework and relief-style outputs for different engraving jobs.</p></article>
+        <article class="page-card"><h3>Clearer explanations and loading</h3><p>Explain what Check-page controls actually change, load prepared projects with their complete settings, and add useful size presets.</p></article>
+        <article class="page-card"><h3>A stable time estimate</h3><p>Investigate the live estimate jumping by hours. Faster laser-off returns are implemented separately; their predicted savings are not measured run-time results.</p></article>
         <article class="page-card"><h3>Wood-aware design</h3><p>Account for grain direction, surface ridges and unevenness when artwork is sized and prepared for wood.</p></article>
       </div>
       <article class="page-card" style="margin-top:18px">
@@ -186,6 +258,7 @@
   </main>
 
   <footer class="wrap site-foot">
+    <p><strong>Laser Photo Studio · Developed by HASK.</strong> <a href="https://tboy450.github.io/#contact">Contact HASK</a></p>
     <p><strong>HASK – Hybridized Business Solutions.</strong> Software, prototyping and digital fabrication developed around real samples and recorded tests.</p>
     <p>© 2026 Tristan Boyd Hash · <a href="https://github.com/Tboy450">GitHub</a> · <a href="/#contact">Work with HASK</a></p>
   </footer>

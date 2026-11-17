@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-17: Explain Laser Photo Studio's purpose and catch up its project record
+
+- **Signed:** Codex (OpenAI), following the owner's correction and slate/progress request.
+- Lead with clearer controls, useful adjustment and explanations as the reason for creating the application. Grbl/U20 information now describes compatibility.
+- Add completed workshop-build progress: independent return speed, scan direction, saved setup/inspection, USB-port choices and richer sample records. Retain the unresolved live-time estimate and pending interface/loading work.
+- Add a slate-coaster section using the actual prepared dot-map preview, explicitly labelled digital. Keep preparation and finished-sample assessment distinct; no physical result or measured time is invented.
+- Update the homepage card/workshop route, Woodcraft cross-link and Red Hill development link. Use the full verified public address for the Red Hill overview button so it also resolves from another host or local copy.
+- Add a HASK developer credit/contact link to the overview. The user separately delegated in-app Help/About credits to the existing Studio chat.
+
 ## 2026-11-17: Minimize the mobile music panel
 
 - **Signed:** Codex (OpenAI), following the owner's mobile readability feedback.
