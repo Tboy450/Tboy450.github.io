@@ -71,6 +71,27 @@
     h2[id] { scroll-margin-top:24px; }
     @media(max-width:760px) { .studio-slate { grid-template-columns:1fr; } .studio-preview { max-width:440px; width:100%; justify-self:center; } .studio-gallery { grid-template-columns:1fr; } }
     @media(max-width:620px) { section[aria-labelledby="latest-development"] .page-grid { grid-template-columns:1fr; } }
+    .slate-process-title { margin:32px 0 10px; scroll-margin-top:24px; }
+    .slate-sequence { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:20px; }
+    .slate-step { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
+    .slate-step a { display:block; background:#070d13; }
+    .slate-step img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; }
+    .slate-step figcaption { padding:14px; color:var(--muted); font-size:.86rem; }
+    .slate-step figcaption strong { display:block; color:var(--text); margin-bottom:6px; }
+    .slate-extra { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; padding-bottom:18px; }
+    a[data-studio-photo] { cursor:zoom-in; }
+    .studio-lightbox { width:min(1100px,calc(100% - 24px)); max-width:none; max-height:calc(100dvh - 24px); padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--panel); color:var(--text); }
+    .studio-lightbox::backdrop { background:rgba(0,0,0,.88); }
+    .studio-lightbox header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+    .studio-lightbox h2 { margin:0; font:700 1rem/1.3 system-ui,sans-serif; letter-spacing:normal; text-transform:none; color:var(--text); }
+    .studio-lightbox figure { margin:0; }
+    .studio-lightbox img { display:block; width:100%; height:min(65dvh,760px); object-fit:contain; }
+    .studio-lightbox figcaption { max-width:80ch; margin:12px auto; font-size:.9rem; color:var(--silver); }
+    .studio-lightbox nav { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+    .studio-lightbox .btn { min-width:44px; min-height:44px; cursor:pointer; white-space:nowrap; }
+    .studio-lightbox [data-photo-count] { font: .8rem var(--mono); }
+    @media(max-width:900px) { .slate-sequence { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:620px) { .slate-sequence,.slate-extra { grid-template-columns:1fr; } .studio-lightbox { padding:12px; } .studio-lightbox img { height:52dvh; } }
   </style>
 </head>
 <body>
@@ -165,16 +186,36 @@
     </section>
 
     <section class="page-section" aria-labelledby="slate-coasters">
-      <p class="eyebrow">Current material project · In development</p>
-      <h2 id="slate-coasters">Portrait artwork for slate coasters</h2>
+      <p class="eyebrow">Slate fabrication · Physical sample documented · November 17, 2026</p>
+      <h2 id="slate-coasters">Artemis’s Place: portrait to engraved slate</h2>
       <div class="studio-slate">
-        <figure class="studio-preview"><a href="/assets/workshop/slate-portrait-preview-20261117.webp"><img src="/assets/workshop/slate-portrait-preview-20261117.webp" width="890" height="890" loading="lazy" alt="Digital dot-map preview of Artemis’s Place portrait and dog artwork on simulated dark slate" /></a><figcaption><strong>Digital preview.</strong> Planned engraving dots on simulated dark stone; a finished-slate photograph is still to be added.</figcaption></figure>
+        <figure class="studio-preview"><a href="/assets/workshop/artemis-slate-finished-in-hand-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-finished-in-hand-20261117.webp" width="1152" height="1536" loading="lazy" alt="Finished Artemis’s Place slate coaster held in a hand, showing an engraved owner-and-dog portrait" /></a><figcaption><strong>Actual finished sample · November 17, 2026</strong>The engraved coaster held in hand. Open the photograph to inspect the lettering, portrait and slate edges.</figcaption></figure>
         <div>
-          <p>The Artemis’s Place design extends the work from pine to a raw slate coaster. Preparation preserves the supplied portrait, dog, lettering and background detail while converting the image into a dot pattern intended to mark light on dark stone.</p>
-          <ul class="studio-facts"><li><strong>Artwork prepared:</strong> 89 × 89 mm for a measured coaster of approximately 100.6 × 100.6 mm.</li><li><strong>Processing checked:</strong> Stucki dots, light-mark polarity and left-to-right scan preparation, with no extra sharpening added.</li><li><strong>Physical assessment pending:</strong> finished contrast, small detail, placement and actual run time still need a reviewed sample record.</li></ul>
-          <details class="studio-details"><summary>Recorded preparation and next checks</summary><div><p>The prepared job uses 50% power, 3500 mm/min engraving and 0.10 mm rows as a starting point for this slate. A later setup adds an independently adjustable laser-off return speed. These are job-specific preparation values, not a calibrated recipe for all slate.</p><p>Placement has required adjustment on the actual coaster. The digital preview does not prove registration. Compare the finished piece with the dot map before drawing conclusions about likeness, eye detail, lettering or repeatability.</p></div></details>
+          <p>A custom portrait of Artemis and the owner has moved from digital preparation to a physical slate coaster. These photographs document the blank, marking in progress and completed engraving made with Laser Photo Studio and the Tronxy Ultrabot U20.</p>
+          <h3>What the finished sample shows</h3>
+          <p>The title reads clearly, with the owner’s hat, beard and sunglasses and Artemis’s facial features retained at coaster scale. Pale marks separate the portrait from the dark stone, while the natural edge frames the artwork.</p>
+          <p>The photographs also give the next tests a focus: finer tonal separation in the light fur and a more convincing mirrored sheen in the sunglasses. These are visual observations from this sample, rather than measured resolution or depth.</p>
+          <ul class="studio-facts"><li><strong>Preparation dimensions:</strong> 89 × 89 mm artwork for a blank measured at approximately 100.6 × 100.6 mm.</li><li><strong>Evidence now available:</strong> six actual photographs covering before, process and completion.</li><li><strong>Still to reconcile:</strong> the exact saved job and settings for this run, actual duration, and repeatability across further blanks.</li></ul>
+          <a class="btn" href="#slate-process">Follow the photo sequence ↓</a>
         </div>
       </div>
+      <h3 id="slate-process" class="slate-process-title">From blank to finished sample</h3>
+      <p>Open any image for a larger view. The dot map is digital preparation; the other images are photographs of the physical coaster.</p>
+      <div class="slate-sequence">
+        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-blank-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-blank-20261117-t.webp" width="525" height="700" loading="lazy" alt="Unengraved square slate coaster with a rough natural edge" /></a><figcaption><strong>01 · Raw slate</strong>The unengraved blank, with its natural surface and irregular edges.</figcaption></figure>
+        <figure class="slate-step"><a href="/assets/workshop/slate-portrait-preview-20261117.webp" data-studio-photo><img src="/assets/workshop/slate-portrait-preview-20261117.webp" width="890" height="890" loading="lazy" alt="Digital dot-map preview of the Artemis’s Place artwork on simulated dark slate" /></a><figcaption><strong>02 · Digital preparation</strong>The previously prepared dot map on simulated slate. This image is not a photograph of the finished work.</figcaption></figure>
+        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-01-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-01-20261117-t.webp" width="700" height="525" loading="lazy" alt="Partly engraved slate portrait beneath the laser head, with an unmarked lower area" /></a><figcaption><strong>03 · Physical engraving</strong>Pale marks build the portrait on the dark stone; the lower portion is still unmarked.</figcaption></figure>
+        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-finished-on-bed-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-finished-on-bed-20261117-t.webp" width="700" height="525" loading="lazy" alt="Completed Artemis’s Place owner-and-dog engraving on the machine bed" /></a><figcaption><strong>04 · Finished on the bed</strong>The full portrait, dog and title photographed after engraving.</figcaption></figure>
+      </div>
+      <details class="studio-details"><summary>Two more photographs from the engraving process</summary><div class="slate-extra">
+        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-02-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-02-20261117-t.webp" width="700" height="525" loading="lazy" alt="Partial engraved hat and sunglasses on slate with the laser head in view" /></a><figcaption><strong>Portrait detail in progress</strong>The hat, sunglasses and background appear while part of the coaster is still blank.</figcaption></figure>
+        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-03-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-03-20261117-t.webp" width="700" height="525" loading="lazy" alt="Artemis’s Place lettering and background partially engraved on a slate coaster" /></a><figcaption><strong>Lettering and background in progress</strong>Another view of the partly marked coaster during the engraving process.</figcaption></figure>
+      </div></details>
+      <details class="studio-details"><summary>Prepared settings and the next comparison</summary><div>
+        <p>The earlier prepared job records Stucki dots, light-mark polarity, left-to-right scanning, 50% power, 3500 mm/min engraving and 0.10 mm rows, with no added sharpening. A later setup adds independent laser-off return speed. Those values describe preparation; they have not yet been independently matched to the run in these photographs.</p>
+        <p>The next record should tie the finished sample to its exact artwork and saved job, focus and placement, settings, actual duration and cleaned surface. Further samples can then test contrast and detail without assuming one result establishes a general slate preset.</p>
+        <p>A possible reflection study would adjust the actual lens pixels while preserving their geometry. Earlier generated comparisons do not establish a tested tonal-inversion method. Mixed scan directions and wood-relief experiments remain separate future research.</p>
+      </div></details>
     </section>
 
     <section class="page-section" aria-labelledby="machine">
@@ -215,7 +256,7 @@
           <tr><td>Black anodized aluminum</td><td><span class="badge live">Physical samples recorded</span></td><td>Dot-pattern engraving is documented on card samples.</td></tr>
           <tr><td>Coated steel lids</td><td><span class="badge live">Line test recorded</span></td><td>A vector-line setting is recorded for decorative marks; it is not a photo-engraving recipe.</td></tr>
           <tr><td>Reflective tin</td><td><span class="badge dev">Project testing</span></td><td>Red Hill records the tin-specific ladder, wipe findings, a newer darker-copper result and comparisons against paint and prefinished black tins.</td></tr>
-          <tr><td>Raw slate coaster</td><td><span class="badge dev">Artwork and job prepared</span></td><td>Portrait dot-map preparation and placement work are recorded. <a href="#slate-coasters">See the slate project</a>; finished-sample assessment remains open.</td></tr>
+          <tr><td>Raw slate coaster</td><td><span class="badge live">Physical sample documented</span></td><td>Actual blank, process and finished photographs document the Artemis’s Place portrait. <a href="#slate-coasters">See the slate project</a>; exact job-to-photo settings and repeatability remain open.</td></tr>
           <tr><td>Other materials</td><td><span class="badge">Starting point / experimental</span></td><td>These remain test candidates until a result is established on this machine.</td></tr>
         </tbody>
       </table>
@@ -262,5 +303,11 @@
     <p><strong>HASK – Hybridized Business Solutions.</strong> Software, prototyping and digital fabrication developed around real samples and recorded tests.</p>
     <p>© 2026 Tristan Boyd Hash · <a href="https://github.com/Tboy450">GitHub</a> · <a href="/#contact">Work with HASK</a></p>
   </footer>
+  <dialog class="studio-lightbox" aria-labelledby="studio-photo-title">
+    <header><h2 id="studio-photo-title">Slate photo viewer</h2><button type="button" class="btn" data-photo-close autofocus>Close ✕</button></header>
+    <figure><img data-photo-image alt="" /><figcaption data-photo-caption aria-live="polite"></figcaption></figure>
+    <nav aria-label="Photo navigation"><button type="button" class="btn" data-photo-prev aria-label="Previous image">← Previous</button><span data-photo-count></span><button type="button" class="btn" data-photo-next aria-label="Next image">Next →</button></nav>
+  </dialog>
+  <script src="/assets/studio-gallery.js?v=20261117" defer></script>
 </body>
 </html>
