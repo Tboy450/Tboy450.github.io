@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-11-17: Request background music on page opening
+
+- **Signed:** Codex (OpenAI), following the owner's revised playback preference.
+- Request playback automatically at 90% player volume. Preserve the four-track sequence, persistent mute and all existing controls.
+- When the browser requires interaction, show “Tap Play to start music” and an accessible Play music handle. A blocked autoplay request is handled separately from a failed audio file.
+
 ## 2026-11-16: Add optional Red Hill background music
 
 - **Signed:** Codex (OpenAI), following the owner's approved selection and download confirmation.
