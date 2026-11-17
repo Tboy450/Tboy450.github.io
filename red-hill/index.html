@@ -287,6 +287,35 @@
       .episode-list h3 { margin:0 0 8px; font-size:1.15rem; }.episode-list p { margin:0; font-size:.94rem; }
       .episode-list .relevance { font-size:.85rem; color:var(--muted); margin-top:7px; }
       @media(max-width:760px) { .rh .knowledge-panel { scroll-margin-top:200px; } .history-lead,.term-list { grid-template-columns:1fr; }.map-route { grid-template-columns:1fr; gap:3px; }.map-arrow { transform:rotate(90deg); }.use-band { grid-template-columns:48px 1fr; gap:12px; }.use-band svg { width:44px;height:44px; } }
+
+      .panel-intro { margin:0 0 28px; max-width:78ch; }
+      .panel-intro p { color:var(--silver); }
+      .route-links { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0; }
+      .route-links a { padding:10px 13px; border:1px solid var(--line-strong); border-radius:7px; color:var(--cream); text-decoration:none; font-size:.9rem; }
+      .route-links a:hover,.route-links a:focus-visible { background:var(--panel); border-color:var(--cream-2); }
+      .record-fold { margin:0 0 12px; border:1px solid var(--line); border-radius:10px; background:rgba(14,23,29,.6); }
+      .record-fold > summary { display:flex; align-items:center; gap:14px; padding:18px 20px; cursor:pointer; list-style:none; color:var(--cream); min-height:76px; }
+      .record-fold > summary::-webkit-details-marker { display:none; }
+      .record-fold > summary::after { content:'+'; margin-left:auto; font:400 1.6rem/1 var(--sans); }
+      .record-fold[open] > summary::after { content:'−'; }
+      .record-fold > summary b { display:block; font:700 1.05rem/1.4 var(--slab); }
+      .record-fold > summary small { display:block; color:var(--muted); font:.82rem/1.5 var(--sans); margin-top:4px; }
+      .record-fold > summary:focus-visible,.knowledge-panel summary:focus-visible { outline:2px solid var(--cream); outline-offset:3px; }
+      .record-body { padding:8px clamp(14px,3vw,24px) 22px; }
+      .rh .record-body > section { margin:0; }
+      .record-body .process { padding:24px; }
+      .record-body .hask-steps { margin-top:0; }
+      .rh .field-vids { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; align-items:start; }
+      .field-film > summary { padding:12px; align-items:center; }
+      .field-film > summary img { width:62px; height:82px; object-fit:cover; border-radius:5px; }
+      .field-film > summary b { font-size:.93rem; }.field-film > summary::after { font-size:1.2rem; }
+      .field-film .record-body { padding:0 12px 14px; }
+      .field-film video { width:100%; height:auto; max-height:65vh; }
+      .episode-list li { padding-top:0; padding-bottom:0; }.episode-list li::before { top:18px; }
+      .episode-list details { border:0; }.episode-body { padding:10px 0 20px; }
+      @media(max-width:760px) { .rh .field-vids { grid-template-columns:1fr; }.field-film > summary img { width:62px; height:82px; }.record-fold > summary { padding:16px; }.record-body .process { padding:20px; } }
+      .mobile-section-select { display:none; }
+      @media(max-width:620px) { .js-tabs .mobile-section-select { display:flex; gap:12px; align-items:center; color:var(--muted); font:.75rem/1.4 var(--sans); }.mobile-section-select select { min-width:0; flex:1; min-height:44px; padding:9px 30px 9px 12px; border:1px solid var(--line-strong); border-radius:8px; background:#14211e; color:var(--cream); font:600 .9rem/1.3 var(--sans); }.tabs .tablist { display:none; } }
     </style>
   </head>
   <body>
@@ -318,6 +347,7 @@
       </aside>
 
       <nav class="tabs" aria-label="Case study sections" hidden>
+        <label class="mobile-section-select">Project section<select aria-label="Project section"><option value="overview">Overview</option><option value="lid-tests">Lid tests</option><option value="business-cards">Business cards</option><option value="from-the-field">From the field</option><option value="knowledge">History &amp; Industry</option><option value="working-with-hask">Working with HASK</option></select></label>
         <div class="tablist" role="tablist">
           <a role="tab" id="tab-overview" href="#overview" aria-controls="overview">Overview</a>
           <a role="tab" id="tab-lid-tests" href="#lid-tests" aria-controls="lid-tests">Lid tests</a>
@@ -330,8 +360,10 @@
 
       <div class="tab-panel" id="overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="-1">
         <h2 class="panel-title">Overview</h2>
+        <div class="panel-intro"><p class="eyebrow">Current position</p><h2>Finish refinement, with the evidence in view</h2><p>The new Rock-design tin and black-finish comparisons lead the current work. Phase 2 is active; lettering, wear and repeatability remain open, alongside the Phase 1 carryovers.</p><div class="route-links"><a href="#latest-lid">Watch the new tin</a><a href="#coating-trials">Compare finishes</a><a href="#phase-2">Current phase</a><a href="#checklist">Full checklist</a></div></div>
 
-      <section aria-labelledby="red-hill-scope">
+
+      <details class="record-fold"><summary><span><b>Project scope</b><small>Materials, packaging, engraving and tooling</small></span></summary><div class="record-body"><section aria-labelledby="red-hill-scope">
         <p class="eyebrow">Project overview</p>
         <h2 id="red-hill-scope">One Red Hill project, several lines of testing</h2>
         <p>Red Hill brings together the product concept and the work needed to develop it. The visible samples on this page are part of that development record; a promising test is not treated as a finished material choice, formulation or production method.</p>
@@ -340,9 +372,10 @@
           <div class="card-note"><h3>Presentation and packaging</h3><p>Tin artwork, card layouts and “Forest Products” wording were explored as presentation tests within Red Hill. They are not separate HASK projects or standalone product claims.</p></div>
           <div class="card-note"><h3>Engraving and tooling</h3><p>The lid tests record artwork, power/speed trials, tone interaction and a planned batch jig. The detailed machine results stay in the test history below.</p></div>
         </div>
-      </section>
+      </section></div></details>
 
-      <section class="process" aria-labelledby="process">
+      <details class="record-fold" data-record="process"><summary><span><b>The development phases</b><small>Phase 2 active · Phase 1 follow-ups open</small></span></summary><div class="record-body">
+<section class="process" aria-labelledby="process">
         <p class="eyebrow">Packaging development · November 2026</p>
         <h2 id="process">From foundation trials to finish refinement</h2>
         <p>The first eight checkpoints established what the artwork, laser and reflective lid could do. The new black-face tin starts a second phase. Earlier follow-ups stay open until their results are recorded.</p>
@@ -374,8 +407,10 @@
           <li><span class="when">04 / Planned</span><h4>Prove the finish before a batch</h4><p>Check wipe resistance and wear, settle the container route, then validate workholding and document a repeatable small batch.</p></li>
         </ol>
       </section>
+</div></details>
 
-      <section aria-labelledby="next">
+      <details class="record-fold" data-record="next"><summary><span><b>Current work and next decisions</b><small>Finish consistency, lettering and prepared comparisons</small></span></summary><div class="record-body">
+<section aria-labelledby="next">
         <p class="eyebrow">Next · current work</p>
         <h2 id="next">What comes next</h2>
         <p>The next decisions depend on repeatable results and a clean record of what was actually tested. The active direction is no longer a three-tone laser lid.</p>
@@ -388,8 +423,10 @@
           <li>Continue the prepared one-direction lettering comparison on a fresh lid and complete the fit-coupon/jig checks when the packaging route is clearer.</li>
         </ul>
       </section>
+</div></details>
 
-      <section aria-labelledby="lessons">
+      <details class="record-fold" data-record="lessons"><summary><span><b>Five lessons from the trials</b><small>What the physical samples taught us</small></span></summary><div class="record-body">
+<section aria-labelledby="lessons">
         <p class="eyebrow">What I learned</p>
         <h2 id="lessons">Five takeaways</h2>
         <div class="gallery">
@@ -403,8 +440,10 @@
           <li><b>Wipe before you judge.</b>The dark from fast passes was soot. A mark only counts once it survives a wipe. And burn gold first: soot underneath blocks it.</li>
         </ul>
       </section>
+</div></details>
 
-      <section class="checklist" aria-labelledby="checklist">
+      <details class="record-fold" data-record="checklist"><summary><span><b>Full working checklist</b><small>Completed, prepared, reported, planned and parked work</small></span></summary><div class="record-body">
+<section class="checklist" aria-labelledby="checklist">
         <p class="eyebrow">Across both phases</p>
         <h2 id="checklist">The working checklist</h2>
         <p>The timeline is the short version. The project runs on a checklist where every item carries a status, and an item never claims more than its evidence shows. Client and business items are kept off this page.</p>
@@ -490,10 +529,11 @@
           </ul></div>
         </div>
       </section>
+</div></details>
       </div>
 
       <div class="tab-panel" id="lid-tests" role="tabpanel" aria-labelledby="tab-lid-tests" tabindex="-1">
-        <h2 class="panel-title">Lid tests</h2>
+        <h2 class="panel-title">Lid tests</h2><div class="panel-intro"><p class="eyebrow">Samples first, records when you need them</p><h2>Lid tests &amp; finish development</h2><p>Start with the latest physical sample, then open a comparison or dated record. Prepared and proposed tests keep their original status.</p><div class="route-links"><a href="#latest-lid">Latest sample</a><a href="#coating-trials">Black finishes</a><a href="#settings">Settings</a><a href="#artwork">Foundation trials</a><a href="#line-dot-title">Line &amp; dot tests</a></div></div>
 
       <section id="latest-lid" class="latest-lid" aria-labelledby="latest-lid-title">
         <p class="eyebrow">Phase 2 · Latest progress · November 16, 2026</p>
@@ -509,7 +549,8 @@
         </div>
       </section>
 
-      <section id="coating-trials" aria-labelledby="coating-title">
+      <details class="record-fold" data-record="coating-title"><summary><span><b>Compare the three black finishes</b><small>Matte appearance preferred · durability checks open</small></span></summary><div class="record-body">
+<section id="coating-trials" aria-labelledby="coating-title">
         <p class="eyebrow">Surface development</p>
         <h2 id="coating-title">Finding a cleaner black finish</h2>
         <p>Three coating approaches gave noticeably different appearances. Matte-black spray was my preferred result. The paint marker left visible application marks, while this gloss attempt developed a heavily wrinkled surface after I added a second coat while the first was partly dry.</p>
@@ -520,8 +561,10 @@
         </div>
         <p>Next: hold the lightweight lids steady during spraying, improve consistency and assess the coating after curing. A painting holder or weighted tin base is still an idea; it is separate from the planned engraving jig.</p>
       </section>
+</div></details>
 
-      <section aria-labelledby="settings">
+      <details class="record-fold" data-record="settings"><summary><span><b>Run settings and sample records</b><small>Preserved settings, observations and evidence limits</small></span></summary><div class="record-body">
+<section aria-labelledby="settings">
         <p class="eyebrow">Settings and results</p>
         <h2 id="settings">Run history and sample records</h2>
         <p>The recorded runs below use the settings preserved in the test history. The latest video and coating photos appear above. Visual tones vary with light; matching that sample to the earlier darker-copper report and complete machine settings remains open.</p>
@@ -545,7 +588,9 @@
           </table>
         </div>
       </section>
-      <section aria-labelledby="surface-options">
+</div></details>
+      <details class="record-fold" data-record="surface-options"><summary><span><b>Surface preparation and alternatives</b><small>Prepared comparisons and open material questions</small></span></summary><div class="record-body">
+<section aria-labelledby="surface-options">
         <p class="eyebrow">Next comparisons and open checks</p>
         <h2 id="surface-options">Surface preparation and finish alternatives</h2>
         <p>The coating appearance trials are photographed above. The remaining comparisons and performance checks have their own status.</p>
@@ -558,8 +603,10 @@
           </tbody>
         </table></div>
       </section>
+</div></details>
 
-      <section aria-labelledby="artwork">
+      <details class="record-fold" data-record="artwork"><summary><span><b>01 · Artwork</b><small>November 7–8 · engraving preparation</small></span></summary><div class="record-body">
+<section aria-labelledby="artwork">
         <p class="eyebrow">Phase 1 · Checkpoint 1</p>
         <h2 id="artwork">The artwork</h2>
         <p>The designs are drawn in a woodcut style: black linework with hatching, pines and a chapel. Each lid design was redrawn for a 45.72 mm (1.8 in) round so it stays on the flat face of a 2 in lid, then prepared for the laser in Laser Photo Studio. The business card designs are shown with the finished cards below.</p>
@@ -567,8 +614,10 @@
           <figure class="g fit"><a href="../assets/workshop/red-hill-crest-art.webp" data-lb><img src="../assets/workshop/red-hill-crest-art-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="Matthew 6:25 crest artwork: the verse above a chapel with sun rays, clouds and pines" /></a><figcaption><b>Matthew 6:25 crest · Nov 8–9.</b> As drawn for engraving.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="chapel">
+      <details class="record-fold" data-record="chapel"><summary><span><b>02 · First chapel lids</b><small>November 8 · large shapes read, fine type patchy</small></span></summary><div class="record-body">
+<section aria-labelledby="chapel">
         <p class="eyebrow">Phase 1 · Checkpoint 2</p>
         <h2 id="chapel">First lids: the chapel</h2>
         <p>The chapel design was the first artwork on tin. The church, trees and rim came through from the first lid. The small lines of lettering under the title did not, and more passes made them patchier, not sharper. That set the question for the rest of the project: how small can type get on this lid?</p>
@@ -579,8 +628,10 @@
           <figure class="g sample"><a href="../assets/workshop/red-hill-trial-3.webp" data-lb><img src="../assets/workshop/red-hill-trial-3-t.webp" width="420" height="409" loading="lazy" decoding="async" alt="The same second lid after detail runs" /></a><figcaption><b>After detail runs.</b> 55–60% · 1,700–1,750. The title reads; the small lines don't.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="verse">
+      <details class="record-fold" data-record="verse"><summary><span><b>03 · Full-verse lid</b><small>November 8–9 · tested, lettering still unresolved</small></span></summary><div class="record-body">
+<section aria-labelledby="verse">
         <p class="eyebrow">Phase 1 · Checkpoint 3</p>
         <h2 id="verse">The full-verse lid</h2>
         <div class="split">
@@ -598,8 +649,10 @@
           <figure class="g sample"><a href="../assets/workshop/red-hill-verse-test-lid.webp" data-lb><img src="../assets/workshop/red-hill-verse-test-lid-t.webp" width="465" height="520" loading="lazy" decoding="async" alt="Still of the full-verse test lid in daylight" /></a><figcaption><b>After both passes · Nov 9.</b> Still from the video.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="software">
+      <details class="record-fold" data-record="software"><summary><span><b>04 · Software investigation</b><small>November 9 · offline checks and conclusions</small></span></summary><div class="record-body">
+<section aria-labelledby="software">
         <p class="eyebrow">Phase 1 · Checkpoint 4</p>
         <h2 id="software">Checking the software</h2>
         <p>The November 9 offline investigation compared the saved jobs with their generated commands and found no missing samples or power/direction mismatches in those checks. It did not establish the cause of the rough lettering. Spot width, command timing and how the laser handles very short marks still need physical investigation.</p>
@@ -616,8 +669,10 @@
           </div>
         </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="ladder">
+      <details class="record-fold" data-record="ladder"><summary><span><b>05 · Power and speed ladder</b><small>November 10 · physical tests, wipe closeout open</small></span></summary><div class="record-body">
+<section aria-labelledby="ladder">
         <p class="eyebrow">Phase 1 · Checkpoint 5</p>
         <h2 id="ladder">The first tin-specific power and speed map</h2>
         <div class="split">
@@ -634,8 +689,10 @@
           <figure class="g fit"><a href="../assets/workshop/red-hill-ladder-map.webp" data-lb><img src="../assets/workshop/red-hill-ladder-map-t.webp" width="499" height="520" loading="lazy" decoding="async" alt="Map of all 165 ladder patches labelled with power and speed; the 33 slowest are outlined in red" /></a><figcaption><b>Ladder map.</b> Each square's power % over speed. Red outlines: the 33 slowest, hottest squares burned in the finishing job.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="jig">
+      <details class="record-fold" data-record="jig"><summary><span><b>06 · Batch jig and fit coupon</b><small>Designed · unprinted and not fit-validated</small></span></summary><div class="record-body">
+<section aria-labelledby="jig">
         <p class="eyebrow">Phase 1 · Checkpoint 6</p>
         <h2 id="jig">A jig for batches <span class="status">Designed, not yet printed</span></h2>
         <p>A single lid can be lined up by eye. A batch can't. The jig is a 6 mm tray with 42 pockets (7 × 6 on 57.15 mm centres), each Ø51.30 mm for a 2 in tin, so every lid sits at a known position. It's split into tiles that fit a 3D printer bed, with a three-pocket fit coupon to print first. Mesh checks passed offline. The tin sizes are nominal, so the coupon has to prove the fit before the full tray is printed.</p>
@@ -644,8 +701,10 @@
           <figure class="g fit"><a href="../assets/workshop/red-hill-fit-coupon.webp" data-lb><img src="../assets/workshop/red-hill-fit-coupon-t.webp" width="520" height="344" loading="lazy" decoding="async" alt="3D render of the three-pocket fit-test coupon" /></a><figcaption><b>Fit coupon render.</b> Three pocket sizes. This gets printed first.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="two-tone">
+      <details class="record-fold" data-record="two-tone"><summary><span><b>07 · Two-tone lid trials</b><small>November 11–12 · dark soot wiped away</small></span></summary><div class="record-body">
+<section aria-labelledby="two-tone">
         <p class="eyebrow">Phase 1 · Checkpoint 7</p>
         <h2 id="two-tone">Two tones, then a wipe</h2>
         <p>After the ladder, the next step was to burn two of its tones on purpose, each as its own pass on bare reflective tin: a slow pass for a warm gold or copper tone and a fast pass for what looked like charcoal. The first try, on Nov 11, was the Matthew 6:25 design. On Nov 12 I burned the Red Hill Forest Products design the same way, gold first. That design was developed from an AI-generated mock-up and redrawn for the laser.</p>
@@ -658,8 +717,10 @@
           <figure class="g sample"><a href="../assets/workshop/red-hill-two-tone-matthew.webp" data-lb><img src="../assets/workshop/red-hill-two-tone-matthew-t.webp" width="520" height="488" loading="lazy" decoding="async" alt="Matthew 6:25 lid, before wiping, with the chapel and sun rays in a warm copper tone and the lettering in dark grey" /></a><figcaption><b>The first two-tone lid · Nov 11, before wiping.</b> Copper plus a fast-pass dark, likely soot too. Glare on the right.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section aria-labelledby="combo">
+      <details class="record-fold" data-record="combo"><summary><span><b>08 · Tone combination test</b><small>November 12–13 · historical trial</small></span></summary><div class="record-body">
+<section aria-labelledby="combo">
         <p class="eyebrow">Phase 1 · Checkpoint 8 · Completed combo test</p>
         <h2 id="combo">How the tones interact</h2>
         <p>After the soot finding, I burned six passes on one scrap lid to test pass order, soot as a stencil, and whether a beam held still could make a darker spot. These findings stay in the record as completed experiments; they do not define the current finish direction.</p>
@@ -685,8 +746,10 @@
           <figure class="g sample"><a href="../assets/workshop/red-hill-combo-after.webp" data-lb><img src="../assets/workshop/red-hill-combo-after-t.webp" width="520" height="520" loading="lazy" decoding="async" alt="The same lid after wiping: two columns of tan gold squares remain, the soot-only areas show as a faint light etch" /></a><figcaption><b>After wiping · Nov 13.</b> What stays: the gold squares and a light etch.</figcaption></figure>
           </div>
       </section>
+</div></details>
 
-      <section id="nov16-progress" aria-labelledby="nov16-title">
+      <details class="record-fold" data-record="nov16-progress"><summary><span><b>November 16 · Progress and pending comparisons</b><small>Recorded completion differs from physical validation</small></span></summary><div class="record-body">
+<section id="nov16-progress" aria-labelledby="nov16-title">
         <p class="eyebrow">Development update · November 16, 2026</p>
         <h2 id="nov16-title">A full-lid trial and better test records</h2>
         <div class="grid3">
@@ -696,8 +759,10 @@
         </div>
         <p>This run is recorded separately from the reported darker-copper sample until their identities can be confirmed. Wiped-sample photographs and an inspection record are needed to judge colour, fine lettering and repeatability.</p>
       </section>
+</div></details>
 
-      <section id="line-dot-test-plan" aria-labelledby="line-dot-title">
+      <details class="record-fold" data-record="line-dot-title"><summary><span><b>Line and dot tests</b><small>Completed observations, prepared DPI job and proposed clusters</small></span></summary><div class="record-body">
+<section id="line-dot-test-plan" aria-labelledby="line-dot-title">
         <p class="eyebrow">Test record and follow-ups · November 15, 2026</p>
         <h2 id="line-dot-title">Line and dot tests: results and next questions</h2>
         <p>The illustration separates completed line and stationary-dot tests from follow-up work. Saved telemetry and timing suggest an apparent low-speed floor near 23.6 mm/min; this is an inference, not an independent measurement of physical motion. The controller cause and thermal explanations remain unconfirmed.</p>
@@ -707,6 +772,7 @@
         </div>
         <p class="small-link"><a href="../assets/workshop/red-hill-line-dot-tests-v2-20261115.png">Open the full-size illustration</a> to read the individual panels.</p>
       </section>
+</div></details>
       </div>
 
       <div class="tab-panel" id="business-cards" role="tabpanel" aria-labelledby="tab-business-cards" tabindex="-1">
@@ -722,16 +788,16 @@
           </div>
           <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-card-poster.webp" width="540" height="960" aria-label="Video: engraved black aluminum business card with Red Hill Forest Products pine artwork"><source src="../assets/video/red-hill-card.mp4" type="video/mp4" /></video><figcaption><b>Forest Products card · Nov 10.</b> 11 s, muted.</figcaption></figure>
         </div>
-        <h3 class="pair-title">Forest Products wording test: artwork, then engraved</h3>
+        <details class="record-fold"><summary><span><b>Forest Products · artwork and engraved card</b><small>Open the side-by-side design comparison</small></span></summary><div class="record-body"><h3 class="pair-title">Forest Products wording test: artwork, then engraved</h3>
         <div class="gallery pair">
           <figure class="g wide fit dark"><a href="../assets/workshop/red-hill-card-art.webp" data-lb><img src="../assets/workshop/red-hill-card-art-t.webp" loading="lazy" decoding="async" alt="Red Hill Forest Products card artwork with mountains, pines, cones and a tin" /></a><figcaption><b>The artwork.</b> Woodcut-style design before engraving.</figcaption></figure>
           <figure class="g wide"><a href="../assets/workshop/red-hill-business-card.webp" data-lb><img src="../assets/workshop/red-hill-business-card.webp" loading="lazy" decoding="async" alt="Finished Red Hill Forest Products business card on black anodized aluminum" /></a><figcaption><b>The engraved card · Nov 10.</b> One pass, about 85 minutes.</figcaption></figure>
-        </div>
-        <h3 class="pair-title">Leather Care card: art, then engraved</h3>
+        </div></div></details>
+        <details class="record-fold"><summary><span><b>Leather Care · artwork and engraved card</b><small>Open the side-by-side design comparison</small></span></summary><div class="record-body"><h3 class="pair-title">Leather Care card: art, then engraved</h3>
         <div class="gallery pair">
           <figure class="g wide fit dark"><a href="../assets/workshop/red-hill-card-art-leather.webp" data-lb><img src="../assets/workshop/red-hill-card-art-leather-t.webp" loading="lazy" decoding="async" alt="Red Hill Leather Care White Pine card artwork with a jar, mountains, pines and cones" /></a><figcaption><b>The artwork.</b> Design before engraving. The card's wording is part of the design.</figcaption></figure>
           <figure class="g wide"><a href="../assets/workshop/red-hill-business-card-leather.webp" data-lb><img src="../assets/workshop/red-hill-business-card-leather-t.webp" loading="lazy" decoding="async" alt="Finished Red Hill Leather Care White Pine business card on black anodized aluminum" /></a><figcaption><b>The engraved card · Nov 10.</b> One pass, about 65 minutes.</figcaption></figure>
-        </div>
+        </div></div></details>
       </section>
       </div>
 
@@ -743,9 +809,9 @@
         <h2 id="field">Where the salve starts</h2>
         <p>Before any tin reaches the laser, the salve begins in the woods. The Red Hill founder taps pine trees for their resin, then melts, strains and pours it into tins by hand. These are his clips, shown with his permission. Formulas and quantities stay private.</p>
         <div class="field-vids">
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-tapping-poster.webp" width="540" height="960" aria-label="Video: fresh cuts in pine bark weeping resin, a hatchet shaping a cut, and a collection cup hung below it"><source src="../assets/video/red-hill-field-tapping.mp4" type="video/mp4" /></video><figcaption><b>Tapping pines for resin · Nov 1.</b> Fresh cuts, resin running and a cup to catch it. 66 s, muted.</figcaption></figure>
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-resin-to-salve-poster.webp" width="540" height="960" aria-label="Video: raw resin melted in a pot, strained into jars, then poured into rows of open tins"><source src="../assets/video/red-hill-field-resin-to-salve.mp4" type="video/mp4" /></video><figcaption><b>From resin to salve · Oct 29 to Nov 8.</b> Melting, straining and filling tins by hand. 32 s, muted.</figcaption></figure>
-          <figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-pines-poster.webp" width="540" height="960" aria-label="Video: tall pines among fall color, then a thinned pine stand under blue sky"><source src="../assets/video/red-hill-field-pines.mp4" type="video/mp4" /></video><figcaption><b>The pines · Nov 8–9.</b> The kind of stand the resin comes from. 28 s, muted.</figcaption></figure>
+          <details class="field-film record-fold"><summary><img src="../assets/video/red-hill-field-tapping-poster.webp" alt="" loading="lazy" /><span><b>Tapping pines for resin · Nov 1.</b><small>Open video and field notes</small></span></summary><div class="record-body"><figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-tapping-poster.webp" width="540" height="960" aria-label="Video: fresh cuts in pine bark weeping resin, a hatchet shaping a cut, and a collection cup hung below it"><source src="../assets/video/red-hill-field-tapping.mp4" type="video/mp4" /></video><figcaption><b>Tapping pines for resin · Nov 1.</b> Fresh cuts, resin running and a cup to catch it. 66 s, muted.</figcaption></figure></div></details>
+          <details class="field-film record-fold"><summary><img src="../assets/video/red-hill-field-resin-to-salve-poster.webp" alt="" loading="lazy" /><span><b>From resin to salve · Oct 29 to Nov 8.</b><small>Open video and field notes</small></span></summary><div class="record-body"><figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-resin-to-salve-poster.webp" width="540" height="960" aria-label="Video: raw resin melted in a pot, strained into jars, then poured into rows of open tins"><source src="../assets/video/red-hill-field-resin-to-salve.mp4" type="video/mp4" /></video><figcaption><b>From resin to salve · Oct 29 to Nov 8.</b> Melting, straining and filling tins by hand. 32 s, muted.</figcaption></figure></div></details>
+          <details class="field-film record-fold"><summary><img src="../assets/video/red-hill-field-pines-poster.webp" alt="" loading="lazy" /><span><b>The pines · Nov 8–9.</b><small>Open video and field notes</small></span></summary><div class="record-body"><figure class="vid"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-field-pines-poster.webp" width="540" height="960" aria-label="Video: tall pines among fall color, then a thinned pine stand under blue sky"><source src="../assets/video/red-hill-field-pines.mp4" type="video/mp4" /></video><figcaption><b>The pines · Nov 8–9.</b> The kind of stand the resin comes from. 28 s, muted.</figcaption></figure></div></details>
         </div>
         <p class="note">Field footage: the Red Hill founder. Edited for the web, with the sound removed.</p>
       </section>
@@ -782,17 +848,17 @@
             <div class="map-route"><div class="map-input"><b>Pine pulpwood</b><small>Kraft pulping and recovery</small></div><span class="map-arrow" aria-label="can also yield">→</span><div class="map-output"><b>Tall oil + sulfate turpentine</b><small>Industrial coproduct streams alongside pulp</small></div></div>
             <p>Original HASK schematic; simplified from <a href="https://www.fao.org/4/x5326e/x5326e0a.htm">FAO’s material routes</a> and the <a href="https://research.fs.usda.gov/treesearch/58160">Forest Service history</a>. Products vary with species and process.</p>
           </div>
-          <dl class="term-list">
+          <details><summary>Material names · fatwood, dross, tar, pitch, rosin and turpentine</summary><dl class="term-list">
             <div><dt>Fatwood / lightwood</dt><dd>Wood naturally enriched with resin. It remains a wood material; resin content explains its traditional use as kindling. <a href="https://research.fs.usda.gov/treesearch/download/46091.pdf">USFS-hosted research, PNNL-23025</a>.</dd></div>
             <div><dt>Dross / strainer residues</dt><dd>Residues separated during processing, sometimes retaining recoverable resin. Historical trade records distinguish batting and strainer dross. This is a residue stream, distinct from fatwood. <a href="https://ufdcimages.uflib.ufl.edu/AA/00/08/10/09/00661/19161223.pdf">1916 trade journal, p. 26</a>.</dd></div>
             <div><dt>Tar &amp; pitch</dt><dd>Tar is associated with heating resinous wood; pitch is a thicker material historically prepared from tar for sealing work. <a href="https://research.fs.usda.gov/treesearch/58160">Forest Service</a>.</dd></div>
             <div><dt>Rosin &amp; turpentine</dt><dd>The solid resin fraction and volatile oil obtained from processing pine oleoresin. Neither term describes every sticky substance found on a pine. <a href="https://www.fao.org/4/x5326e/x5326e0a.htm">FAO</a>.</dd></div>
-          </dl>
-          <h3>Product families &amp; applications</h3>
+          </dl></details>
+          <details><summary>Industrial uses · four product families</summary><h3>Product families &amp; applications</h3>
           <div class="use-band"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 43h52L47 55H20zM32 8v35M29 12L12 37h17zM36 16l15 21H36zM4 60q7-5 14 0t14 0t14 0t14 0"/></svg><div><h3>Sealing &amp; preservation</h3><p>Historic tar and pitch applications included wooden hulls, seams and rigging. <a href="https://research.fs.usda.gov/treesearch/58160">Forest Service</a>.</p></div></div>
           <div class="use-band"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 10h38v15H13zM32 25v9H20v20h10V39h14V25M17 14v7M23 14v7M29 14v7M35 14v7M41 14v7M47 14v7"/></svg><div><h3>Adhesives, coatings &amp; printing</h3><p>Rosin derivatives serve paper sizing, adhesives, printing inks, rubber compounds and surface coatings. <a href="https://www.fao.org/4/x5326e/x5326e0a.htm">FAO</a>.</p></div></div>
           <div class="use-band"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 7h16M27 7v21L12 51q-3 6 5 6h30q8 0 5-6L37 28V7M20 41h24"/><circle cx="29" cy="48" r="2"/><circle cx="37" cy="51" r="2"/></svg><div><h3>Chemical ingredients</h3><p>Turpentine’s pinene components provide starting materials for fragrance ingredients and other chemical products. Further processing creates the useful ingredient. <a href="https://www.fao.org/4/v6460e/v6460e.pdf">FAO, Gum naval stores</a>.</p></div></div>
-          <div class="use-band"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9h32l9 10v37H12zM44 9v12h9M20 30h24M20 37h24M20 44h17"/><path d="M5 15v44h37"/></svg><div><h3>Fibres, energy &amp; advanced materials</h3><p>The wider wood resource also supplies cellulose, lignin, fuel streams and materials for further development. <a href="https://www2.gov.bc.ca/gov/content/industry/forestry/supporting-innovation/bio-economy/bioproduct-development">British Columbia’s forest bioeconomy overview</a>.</p></div></div>
+          <div class="use-band"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9h32l9 10v37H12zM44 9v12h9M20 30h24M20 37h24M20 44h17"/><path d="M5 15v44h37"/></svg><div><h3>Fibres, energy &amp; advanced materials</h3><p>The wider wood resource also supplies cellulose, lignin, fuel streams and materials for further development. <a href="https://www2.gov.bc.ca/gov/content/industry/forestry/supporting-innovation/bio-economy/bioproduct-development">British Columbia’s forest bioeconomy overview</a>.</p></div></div></details>
         </div>
         <div class="knowledge-panel" data-knowledge-panel id="pine-research" role="tabpanel" aria-labelledby="kt-research">
           <h3>From renewable feedstocks to useful products</h3>
@@ -805,14 +871,14 @@
         <div class="knowledge-panel" data-knowledge-panel id="tar-heel-films" role="tabpanel" aria-labelledby="kt-films">
           <h3>Tar Heel History · eight-film viewing guide</h3>
           <p>Eight demonstrations from <a href="https://www.youtube.com/@tarheelhistory3390">Tar Heel History</a>, presented by Brian Avery. These concise notes are based on caption transcripts; they summarize the demonstrations and their relevance to this project. Follow each link for the full film.</p>
-          <ol class="episode-list"><li><h3><a href="https://www.youtube.com/watch?v=WbLidKtyP2g">Pines, resin and fatwood ↗</a></h3><p>Introduces longleaf and loblolly pines, resin as part of tree defense, and resin-rich heartwood that remains as softer wood decays. Connects fatwood with the later tar, pitch and turpentine demonstrations.</p><p class="relevance">Useful starting vocabulary for living-tree resin and resin-rich wood.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=WdZV4TLfavM">Carolina pine resources ↗</a></h3><p>Connects pine resources with shipbuilding demand, shows a worked tree face, and contrasts flowing tar with solidified pitch. Discusses longleaf ecology and the value of old resin-rich tree hearts.</p><p class="relevance">A visual introduction to material differences; historical interpretations remain the presenter’s account.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=C6SZRvQ6RXY">The tar-kiln model ↗</a></h3><p>Uses a model to explain an earth-covered kiln, drainage into a collection barrel and the charcoal left behind. Places the process within the supply of naval stores and longleaf forest renewal.</p><p class="relevance">Connects raw material, processing and coproducts.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=FBL7nKW3AsI">Pine tar ↗</a></h3><p>Demonstrates tar production from fatwood using a small iron-pot setup. Shows runoff and remaining charcoal, then discusses historical rope protection and ship maintenance.</p><p class="relevance">Shows a wood-processing route distinct from collecting and cleaning raw resin.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=AhNREZELI5g">From tar to pitch ↗</a></h3><p>Demonstrates thickening tar into pitch and describes historical ship-sealing mixtures and caulking. Includes the presenter’s interpretations of regional history and the Tar Heel nickname.</p><p class="relevance">Focus here is the change in material and its sealing use; nickname stories require separate historical corroboration.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=4QkslvwH59k">Fat lightered / fatwood ↗</a></h3><p>Identifies and splits resin-rich heartwood, then demonstrates its use as kindling for a stove in snowy weather. Also shows the heavy smoke associated with using too much.</p><p class="relevance">Sixth in this viewing sequence; the upload itself has an unnumbered title.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=_uZHG5mNvzg">Turpentine boxes ↗</a></h3><p>Uses display sections to explain deep collection boxes, worked tree faces and their drawbacks. Introduces Charles Herty’s movable cup-and-gutter system, later collection tools and transport.</p><p class="relevance">A useful comparison of collection methods and the effect of collection methods on the tree.</p></li>
-<li><h3><a href="https://www.youtube.com/watch?v=Dc5R9LrSg7I">Hacking the pines ↗</a></h3><p>Begins with cooperage: barrel grooves, hoops, leaks and makers’ brands. Demonstrates renewing the worked face with a hack and puller, then distinguishes fresh dip from dried scrape.</p><p class="relevance">Connects collection, containers and traceability with today’s documentation questions.</p></li></ol><p class="source-note">Viewing order follows episodes 1–5, the unnumbered fat-lightered upload, then episodes 7–8. Historical interpretations belong to the presenter; the independent sources in the other sections supply the wider context. This guide covers material history, rather than product formulas.</p>
+          <ol class="episode-list"><li><details><summary>Pines, resin and fatwood</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=WbLidKtyP2g">Pines, resin and fatwood ↗</a></h3><p>Introduces longleaf and loblolly pines, resin as part of tree defense, and resin-rich heartwood that remains as softer wood decays. Connects fatwood with the later tar, pitch and turpentine demonstrations.</p><p class="relevance">Useful starting vocabulary for living-tree resin and resin-rich wood.</p></div></details></li>
+<li><details><summary>Carolina pine resources</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=WdZV4TLfavM">Carolina pine resources ↗</a></h3><p>Connects pine resources with shipbuilding demand, shows a worked tree face, and contrasts flowing tar with solidified pitch. Discusses longleaf ecology and the value of old resin-rich tree hearts.</p><p class="relevance">A visual introduction to material differences; historical interpretations remain the presenter’s account.</p></div></details></li>
+<li><details><summary>The tar-kiln model</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=C6SZRvQ6RXY">The tar-kiln model ↗</a></h3><p>Uses a model to explain an earth-covered kiln, drainage into a collection barrel and the charcoal left behind. Places the process within the supply of naval stores and longleaf forest renewal.</p><p class="relevance">Connects raw material, processing and coproducts.</p></div></details></li>
+<li><details><summary>Pine tar</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=FBL7nKW3AsI">Pine tar ↗</a></h3><p>Demonstrates tar production from fatwood using a small iron-pot setup. Shows runoff and remaining charcoal, then discusses historical rope protection and ship maintenance.</p><p class="relevance">Shows a wood-processing route distinct from collecting and cleaning raw resin.</p></div></details></li>
+<li><details><summary>From tar to pitch</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=AhNREZELI5g">From tar to pitch ↗</a></h3><p>Demonstrates thickening tar into pitch and describes historical ship-sealing mixtures and caulking. Includes the presenter’s interpretations of regional history and the Tar Heel nickname.</p><p class="relevance">Focus here is the change in material and its sealing use; nickname stories require separate historical corroboration.</p></div></details></li>
+<li><details><summary>Fat lightered / fatwood</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=4QkslvwH59k">Fat lightered / fatwood ↗</a></h3><p>Identifies and splits resin-rich heartwood, then demonstrates its use as kindling for a stove in snowy weather. Also shows the heavy smoke associated with using too much.</p><p class="relevance">Sixth in this viewing sequence; the upload itself has an unnumbered title.</p></div></details></li>
+<li><details><summary>Turpentine boxes</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=_uZHG5mNvzg">Turpentine boxes ↗</a></h3><p>Uses display sections to explain deep collection boxes, worked tree faces and their drawbacks. Introduces Charles Herty’s movable cup-and-gutter system, later collection tools and transport.</p><p class="relevance">A useful comparison of collection methods and the effect of collection methods on the tree.</p></div></details></li>
+<li><details><summary>Hacking the pines</summary><div class="episode-body"><h3><a href="https://www.youtube.com/watch?v=Dc5R9LrSg7I">Hacking the pines ↗</a></h3><p>Begins with cooperage: barrel grooves, hoops, leaks and makers’ brands. Demonstrates renewing the worked face with a hack and puller, then distinguishes fresh dip from dried scrape.</p><p class="relevance">Connects collection, containers and traceability with today’s documentation questions.</p></div></details></li></ol><p class="source-note">Viewing order follows episodes 1–5, the unnumbered fat-lightered upload, then episodes 7–8. Historical interpretations belong to the presenter; the independent sources in the other sections supply the wider context. This guide covers material history, rather than product formulas.</p>
         </div>
       </div>
 
@@ -823,18 +889,19 @@
         <p class="eyebrow">Working with HASK</p>
         <h2 id="hask-way">How HASK takes an idea into development</h2>
         <p>Red Hill Forest Products began as its founder's idea for handmade forest products. HASK's part is the development: engraved tins and cards, testing, software and tooling. The same approach works for any product or business proposal. Each step builds on what the last one proved, and you see the tests, not just the end result.</p>
-        <ol class="hask-steps">
+        <details class="record-fold"><summary><span><b>Explore the six development steps</b><small>Each step links to the actual project evidence</small></span></summary><div class="record-body"><ol class="hask-steps">
           <li><a href="#artwork"><b>Brand and artwork</b><span>Turn the idea into designs sized for the real part and the real machine.</span></a></li>
           <li><a href="#chapel"><b>Prototype early</b><span>Make physical test pieces quickly to find out what actually works.</span></a></li>
           <li><a href="#settings"><b>Test and record</b><span>Log every run's settings and result so decisions rest on evidence.</span></a></li>
           <li><a href="#software"><b>Custom software</b><span>Build or fix the tools when off-the-shelf ones get in the way.</span></a></li>
           <li><a href="#ladder"><b>Map the process</b><span>Run structured tests, like the power and speed ladder, before tuning.</span></a></li>
           <li><a href="#jig"><b>Plan for production</b><span>Design fixtures and workflows so one good piece becomes a repeatable batch.</span></a></li>
-        </ol>
+        </ol></div></details>
         <p>Engraving, 3D printing, software and design all happen in one place, so an idea can move from sketch to tested sample without being handed between shops.</p>
       </section>
 
-      <section class="credits" aria-labelledby="credits">
+      <details class="record-fold" data-record="credits"><summary><span><b>Project contributions</b><small>Red Hill founder, HASK and the development record</small></span></summary><div class="record-body">
+<section class="credits" aria-labelledby="credits">
         <p class="eyebrow">Credits</p>
         <h2 id="credits">Who does what</h2>
         <dl class="credit-list">
@@ -844,6 +911,7 @@
         </dl>
         <p class="note">Credits describe contributions only, not ownership.</p>
       </section>
+</div></details>
       </div>
 
       <div class="links">
@@ -867,6 +935,7 @@
         };
         const activate = (panel, focusTab) => {
           panels.forEach((p) => { p.hidden = p !== panel; });
+          nav.querySelector("select").value = panel.id;
           tabs.forEach((t) => {
             const on = t.getAttribute('aria-controls') === panel.id;
             t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
@@ -895,6 +964,7 @@
           const target = document.getElementById(id);
           const knowledgeTarget = target && target.closest("[data-knowledge-panel]");
           if (knowledgeTarget) showKnowledge(knowledgeTarget.id);
+          for (let parent = target; parent; parent = parent.parentElement) { if (parent.tagName === "DETAILS") parent.open = true; }
           const jump = () => { if (target && target !== panel) target.scrollIntoView(); else if (push !== undefined) nav.scrollIntoView(); };
           jump(); requestAnimationFrame(jump);
           if (push) history.pushState(null, '', '#' + id);
@@ -906,6 +976,7 @@
           if (!panelFor(id)) return;
           e.preventDefault(); go(id, true);
         });
+        nav.querySelector('select').addEventListener('change', e => go(e.target.value, true));
         nav.addEventListener('keydown', (e) => {
           const i = tabs.indexOf(document.activeElement);
           if (i < 0 || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
@@ -933,7 +1004,7 @@
           const a = e.target.closest('a[data-lb]');
           if (!a) return;
           e.preventDefault();
-          set = [...a.closest('.gallery').querySelectorAll('a[data-lb]')]; i = set.indexOf(a); show(); lb.showModal();
+          set = a.closest('.gallery') ? [...a.closest('.gallery').querySelectorAll('a[data-lb]')] : [a]; i = set.indexOf(a); show(); lb.showModal();
         });
         const step = (d) => { i = (i + d + set.length) % set.length; show(); };
         lb.querySelector('.close').onclick = () => lb.close();

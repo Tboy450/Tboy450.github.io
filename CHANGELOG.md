@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-16: Shorten Red Hill sections while retaining the full record
+
+- **Signed:** Codex (OpenAI), following the owner's request for shorter, more organized main sections on desktop and mobile.
+- Overview now leads with current status and short routes; full phases, decisions, lessons and checklist expand on demand.
+- Lid tests retain the latest tin video first, followed by expandable comparisons, settings and dated test records. Card comparisons and field videos use compact records; history keeps its subtopics with expandable terms, uses and film notes.
+- Added a native phone section selector for all six main sections. Existing deep links reveal their containing records; keyboard and browser navigation remain available.
+- Preserved every prior text block, anchor, media item and link in a before/after inventory. Fixed the standalone archival-photo viewer.
+- The music player remains prepared separately; missing licensed audio files are not part of this release.
+
 ## 2026-11-16: Organize Red Hill phases and the pine-resource field guide
 
 - **Signed:** Codex (OpenAI), following the owner's phase review and illustrated history/industry request.
