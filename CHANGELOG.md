@@ -2,6 +2,15 @@
 
 Newest first. Entries are signed; historical release status describes the time of each entry.
 
+## 2026-11-16: Show the new tin and painted-surface progress
+
+- **Signed:** Codex (OpenAI), following the owner's request to integrate the actual new progress and lead with the short tin video.
+- New 12-second Rock-design tin video at the top of Lid tests, with a full-size close-up and black-coated blank / paint-marker / gloss comparison gallery.
+- The latest physical sample replaces the old hero artwork and homepage/workshop previews; direct links make the update easy to find.
+- Updated the timeline, current finish direction, surface status and public checklist (25 done, 7 prepared, 2 reported, 22 planned, 1 parked).
+- Reviewed source photos and one-second samples throughout the clip. Public derivatives retain the photographed appearance, remove metadata and omit video audio. No source files or private logs changed.
+- Exact sample-to-job matching, cure, adhesion, wear and repeatability remain open; the photos are not presented as production validation.
+
 ## 2026-11-16: Keep phone planet drags from becoming page scrolls
 
 - **Signed:** Codex (OpenAI).
