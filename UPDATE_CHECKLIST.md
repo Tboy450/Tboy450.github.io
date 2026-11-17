@@ -32,7 +32,7 @@ Next priorities:
 4. Add short demos for flagship software and games, and show CAD alongside the fitted handguard.
 5. Test real Android/iPhone interactions, keyboard access and other browser engines. Confirm the LinkedIn profile manually; automated requests were blocked.
 
-The separate Red Hill Sites log still reflects older progress and needs its own sanitized update. New coating/copper photographs remain pending review. This release does not update LinkedIn.
+The separate Red Hill Sites log still reflects older progress and needs its own sanitized update. The new Rock-design video and painted samples are integrated into the latest update; matching the earlier copper report to the full settings record remains open. This release does not update LinkedIn.
 
 ## Recommended priority
 
@@ -182,7 +182,7 @@ This website presents three connected but distinct areas of the workshop. Keep e
 - [x] Reconcile the Red Hill working checklist with prepared strip/DPI packages and the installed sample/test-record features.
 - [ ] Assess physical quality of the separate 24 mm/min full-lid trial; saved software state records completion after interruptions, not verified coverage or finish quality.
 - [ ] Apply the requested small-lettering size/gap revision, preserving wording; inspect actual-resolution cells and later physical output.
-- [ ] Review coating/touch-up photos and video for public use. Appearance reports are not adhesion, cure, durability or laser-result validation.
+- [x] Review the new Rock-design video and coating photos for public use. Published selection: new tin video/close-up, black-coated blank, marker and gloss attempts. Edge-touch-up image held as it adds little to this gallery. Appearance is not adhesion, cure or durability validation.
 - [ ] Design/test any painting holder separately from the engraving jig; the holder/weighted-base idea remains proposed.
 - [x] Reconcile prior local PR22 code/copy corrections before release; rerun affected checks after integration. All 16 route/width checks passed after integration.
 - [x] Review PR22 together with the November 16 progress summary; keep the separate Sites v5 out of this release. Publication is tracked by the PR and deployment linked above.
@@ -228,4 +228,12 @@ For completed items, record the date, changed files or commit, verification perf
 - Expanded From the workshop from four examples to seven: anodized card, laser-process close-up and the fitted handguard with a comparison link.
 - Added both game URLs to the sitemap and case-correcting 404 routes.
 - Validation: Passed 99 headless Microsoft Edge checks at 1440, 768, 390 and 360 px: project order/counts, category filters, image decoding, gallery links, no horizontal overflow and no page script errors. Both live game pages returned HTTP 200. Desktop and phone-width previews were visually reviewed. No real-device gameplay testing is claimed.
+- Signed: Codex (OpenAI).
+
+### November 16, 2026 · New tin and coating media
+
+- Integrated the actual 12-second Rock-design tin video at the top of Lid tests, with a close-up and three coating comparison photographs.
+- Replaced the case-study hero mock-up and homepage/workshop previews with the latest physical tin; linked directly to the new section.
+- Updated the ninth timeline stage, surface-comparison status and checklist. Kept historical tests and unresolved sample/job matching explicit.
+- Public video is a silent H.264 derivative with metadata removed; original footage and photos preserved. No synthetic or retouched result imagery.
 - Signed: Codex (OpenAI).

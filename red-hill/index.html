@@ -12,8 +12,8 @@
     <meta property="og:title" content="Red Hill project · HASK development log" />
     <meta property="og:description" content="Red Hill product development and packaging research, including copper-tone, painted and prefinished tin comparisons." />
     <meta property="og:url" content="https://tboy450.github.io/red-hill/" />
-    <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-verse-pass-1.webp" />
-    <meta property="og:image:alt" content="Laser-engraved Red Hill tin lid with the Matthew 6:25 verse and a chapel illustration" />
+    <meta property="og:image" content="https://tboy450.github.io/assets/workshop/red-hill-rock-lid-20261116.webp" />
+    <meta property="og:image:alt" content="New Red Hill Rock-design tin with metallic cross and mountain artwork and lettering on a black face" />
     <link rel="stylesheet" href="../assets/site.css?v=tabs-20261113" />
     <style>
       /* Red Hill touches, this page only: engraved serif type, cream-on-ink panel, brushed metal. */
@@ -197,6 +197,15 @@
       .gallery .g.pano a { aspect-ratio: 1600 / 563; }
       .rh figure.vid { max-width: 320px; width: 100%; justify-self: center; }
       .rh figure.vid video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #000; border: 1px solid var(--line); border-radius: var(--radius); }
+      .latest-hero { max-width: 420px; justify-self: center; }
+      .latest-hero img { aspect-ratio: 1; object-fit: cover; }
+      .latest-hero figcaption a { color: var(--cream); }
+      .latest-lid { padding: clamp(20px, 4vw, 32px); border: 1px solid rgba(239,227,206,.24); border-radius: 18px; background: linear-gradient(135deg, rgba(165,116,66,.12), transparent 65%), var(--panel); }
+      .latest-lid .split { align-items: center; }
+      .gallery.coatings { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .gallery.coatings .g a { aspect-ratio: 4 / 3; }
+      .latest-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 0; }
+      @media (max-width: 620px) { .gallery.coatings { grid-template-columns: 1fr; } .latest-lid .vid { order: -1; } }
       .lb { padding: 0; border: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; overflow: visible; }
       .lb::backdrop { background: rgba(4, 7, 10, 0.88); }
       .lb img { display: block; max-width: 100%; max-height: 80vh; margin: 0 auto; border-radius: 10px; }
@@ -241,7 +250,7 @@
             <div><dt>Software</dt><dd>Laser Photo Studio · HASK</dd></div>
           </dl>
         </div>
-        <div class="lid-wrap"><div class="lid"><img src="../assets/workshop/red-hill-crest.webp" width="640" height="640" alt="Drawing of the Red Hill Matthew 6:25 artwork as dark engraving on a silver tin lid: the verse above a chapel with sun rays and pines" /></div><p class="lid-note">The lid artwork on a drawn tin. Not a photo of a finished lid.</p></div>
+        <figure class="latest-hero"><a href="#latest-lid"><img src="../assets/workshop/red-hill-rock-lid-20261116.webp" width="1170" height="1046" alt="New Red Hill tin: cross, mountains and crossed axes with The Lord Is My Rock lettering on a black face" /></a><figcaption><b>Latest physical sample · November 16.</b> <a href="#latest-lid">Watch the 12-second tin video</a> and see the painted-surface comparisons.</figcaption></figure>
       </header>
 
       <div class="pine-rule" aria-hidden="true">
@@ -250,7 +259,7 @@
 
       <aside class="notice" aria-label="About these photos and finish tests">
         <div><strong>These lids document a series of material and finish tests, not a finished packaging specification.</strong>
-        <p>The results are specific to the sample and its surface. The earlier rosy-brass and copper appearances are useful references, but the dark grey from fast passes proved to be removable soot, not a durable dark finish. A newer, slightly deeper copper result has now been reported. The current work compares how to reproduce that color faster and whether paint or factory-finished black tins offer a better route. The three-tone concept is not the active direction.</p></div>
+        <p>The newest sample and coating photos are now in <a href="#latest-lid">Lid tests</a>. A black face gives the new cross-and-axes design a different presentation; paint-marker and gloss trials show why surface preparation matters. Matte-black spray is the preferred appearance so far. Finish durability and repeatability are still being evaluated.</p></div>
       </aside>
 
       <nav class="tabs" aria-label="Case study sections" hidden>
@@ -290,7 +299,7 @@
           <li><span class="n">6</span><h3>Batch jig</h3><span class="when">Nov 10</span><p>42-pocket tray designed. Not printed yet.</p></li>
           <li><span class="n">7</span><h3>Two-tone lids</h3><span class="when">Nov 11–12</span><p>The gold held. The fast-pass dark wiped off as soot.</p></li>
           <li><span class="n">8</span><h3>Tone combo test</h3><span class="when">Nov 12–13</span><p>Gold first survives; soot first blocks gold.</p></li>
-          <li><span class="n">9</span><h3>Alternative finishes and speed</h3><span class="when">Nov 16 · owner-reported</span><p>A slightly deeper copper result is reported; faster reproduction and other finish routes are now being compared.</p></li>
+          <li><span class="n">9</span><h3>New tin and black finishes</h3><span class="when">Nov 16 · photos &amp; video</span><p>The Rock design on a black face, with matte, marker and gloss appearance comparisons. Durability remains open.</p></li>
         </ol>
       </section>
 
@@ -301,7 +310,7 @@
         <ul class="card-note" style="list-style:disc;padding-left:36px">
           <li><b>Reproduce the darker copper faster.</b> Use the current 24 mm/min result as the reference, then increase feed rate in controlled steps while holding the other relevant settings steady. Record the fastest setting that retains the same appearance, the run time, and whether the color survives wiping.</li>
           <li><b>Run the prepared three-strip comparison.</b> Use the prepared sanded-patch comparison as a separate surface condition; the exposed substrate remains unconfirmed, then compare it with the untouched area. Photograph and identify exactly what surface was exposed/prepared.</li>
-          <li><b>Compare finish alternatives.</b> Evaluate a suitable paint finish and supplier-made black tins alongside the laser-marked result. Keep each route distinct; a prefinished black tin is not a laser recipe.</li>
+          <li><b>Develop the preferred black finish.</b> Build on the matte-black appearance, improve coating consistency and assess cure, adhesion and wear. Compare supplier-made black tins separately. <a href="#coating-trials">See the current painted samples</a>.</li>
           <li><b>Keep the wider ladder in Laser Studio.</b> Refined power/speed ladders are a general material-research objective, potentially including identified steel or titanium stock after its exact grade, coating and suitability are established. They are not all Red Hill tin tests. <a href="../laser-studio/">See the Laser Studio research workflow</a>.</li>
           <li><b>Keep the evidence connected.</b> Maintain dated test records with artwork, settings, before/after-wipe photographs and the status of each run.</li>
           <li>Continue the prepared one-direction lettering comparison on a fresh lid and complete the fit-coupon/jig checks when the packaging route is clearer.</li>
@@ -334,7 +343,7 @@
           <li class="next"><b>Planned</b> next, not started</li>
           <li class="deferred"><b>Parked</b> historical idea, not in the active direction</li>
         </ul>
-        <p class="tally"><span>24 done</span> · <span>7 prepared</span> · <span>3 reported · record pending</span> · <span>22 planned</span> · <span>1 parked</span></p>
+        <p class="tally"><span>25 done</span> · <span>7 prepared</span> · <span>2 reported · record pending</span> · <span>22 planned</span> · <span>1 parked</span></p>
         <div class="cl-grid">
           <div class="cl"><h3>Design and artwork</h3><ul>
             <li class="done">Chapel and full-verse art redrawn for a 45.72 mm (1.8 in) face</li>
@@ -355,7 +364,7 @@
             <li class="done">First two-tone lid: Matthew 6:25, a copper pass plus a fast pass</li>
             <li class="done">Forest Products lid, gold first; wiping showed the fast-pass dark is soot</li>
             <li class="done">Tone combo test: burn order, soot as a stencil and burn-in-place dots</li>
-            <li class="reported">New darker-copper lid result reported; supporting photo and complete settings record still needed</li>
+            <li class="reported">Earlier darker-copper result reported; matching it to the new Rock-design media and complete settings remains open</li>
             <li class="next">Repeat the copper target above the 24 mm/min reference to find the fastest repeatable feed that retains the color</li>
             <li class="prep">Three-strip sanded-lid comparison prepared and checked offline; not run, exposed substrate unconfirmed</li>
             <li class="prep">Seven-band DPI comparison prepared and checked offline; not run</li>
@@ -363,7 +372,7 @@
             <li class="done">24 mm/min full-lid trial reached software-recorded completion after interruptions; physical coverage and quality still require assessment</li>
             <li class="next">Inspect the 24 mm/min result and record registration, lettering and before/after-wipe observations</li>
             <li class="next">Modestly enlarge small lettering and open internal gaps/dot spacing, preserving wording; revision not yet applied</li>
-            <li class="reported">Coating appearance comparisons reported; media and coating performance still need review</li>
+            <li class="done">Coating photos and new Rock-design tin video reviewed and presented; matte-black appearance preferred, coating performance still unverified</li>
             <li class="next">Evaluate coating cure, adhesion, durability and suitability separately from reported appearance</li>
             <li class="next">Review proposed painting holder or weighted base; distinct from the engraving jig</li>
             <li class="next">Evaluate supplier-made/pre-finished black tins as an alternative container</li>
@@ -414,10 +423,36 @@
       <div class="tab-panel" id="lid-tests" role="tabpanel" aria-labelledby="tab-lid-tests" tabindex="-1">
         <h2 class="panel-title">Lid tests</h2>
 
+      <section id="latest-lid" class="latest-lid" aria-labelledby="latest-lid-title">
+        <p class="eyebrow">Latest progress · November 16, 2026</p>
+        <div class="split">
+          <div class="prose">
+            <h2 id="latest-lid-title">The new tin, in the light</h2>
+            <p>The new Red Hill design pairs a cross on a rocky base with mountains, pines and crossed axes and “The Lord Is My Rock · Psalm 18:2”. The short video shows the actual tin turning in the light: the artwork shifts from pale metal to a warmer gold appearance against the black face.</p>
+            <p>This is the latest physical sample, following the earlier chapel and two-tone trials. The larger name and illustration are visible; the small lettering and its internal gaps remain the next detail to refine.</p>
+            <p>The coating trials below explain the current preference for a matte-black surface. Appearance is the progress shown here; wipe resistance, wear and a repeatable production process still need testing.</p>
+            <div class="latest-links"><a class="btn" href="#coating-trials">Compare the painted samples</a><a class="btn" href="../assets/workshop/red-hill-rock-lid-20261116.webp" data-lb>Open the close-up photo</a></div>
+          </div>
+          <figure class="vid sample"><video controls muted playsinline preload="none" poster="../assets/video/red-hill-rock-tin-20261116-poster.webp" width="540" height="960" aria-label="New Red Hill Rock-design tin turned in the light"><source src="../assets/video/red-hill-rock-tin-20261116.mp4" type="video/mp4" /></video><figcaption><b>New Rock-design tin · November 16.</b> 12 seconds, silent. Changing reflections show the surface and lettering from several angles.</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="coating-trials" aria-labelledby="coating-title">
+        <p class="eyebrow">Surface development</p>
+        <h2 id="coating-title">Finding a cleaner black finish</h2>
+        <p>Three coating approaches gave noticeably different appearances. Matte-black spray was my preferred result. The paint marker left visible application marks, while this gloss attempt developed a heavily wrinkled surface after I added a second coat while the first was partly dry.</p>
+        <div class="gallery coatings">
+          <figure class="g sample"><a href="../assets/workshop/red-hill-black-coated-blank-20261116.webp" data-lb><img src="../assets/workshop/red-hill-black-coated-blank-20261116-t.webp" width="640" height="557" loading="lazy" alt="Black-coated tin lid on cardboard, showing its plain surface before any visible artwork" /></a><figcaption><b>Black-coated blank.</b> Surface reference from the coating trials. Matte-black spray is the preferred appearance reported so far.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-paint-marker-20261116.webp" data-lb><img src="../assets/workshop/red-hill-paint-marker-20261116-t.webp" width="640" height="512" loading="lazy" alt="Tin lid with visible streaks and uneven reflective coverage from the paint-marker trial" /></a><figcaption><b>Paint-marker trial.</b> Streaking and a thick, uneven look made it a poor choice for the main surface.</figcaption></figure>
+          <figure class="g sample"><a href="../assets/workshop/red-hill-gloss-trial-20261116.webp" data-lb><img src="../assets/workshop/red-hill-gloss-trial-20261116-t.webp" width="640" height="512" loading="lazy" alt="Gloss-coated lid with a strongly wrinkled surface reflecting the light" /></a><figcaption><b>Gloss spray attempt.</b> This application wrinkled. It records a failed attempt, rather than ruling out a better-controlled gloss finish.</figcaption></figure>
+        </div>
+        <p>Next: hold the lightweight lids steady during spraying, improve consistency and assess the coating after curing. A painting holder or weighted tin base is still an idea; it is separate from the planned engraving jig.</p>
+      </section>
+
       <section aria-labelledby="settings">
         <p class="eyebrow">Settings and results</p>
-        <h2 id="settings">Every run, in order</h2>
-        <p>The recorded runs below use the settings preserved in the available test history. Visual tone descriptions are observations, not calibrated color measurements. The latest darker-copper result is owner-reported; its complete job record and photo have not yet been added to the website.</p>
+        <h2 id="settings">Run history and sample records</h2>
+        <p>The recorded runs below use the settings preserved in the test history. The latest video and coating photos appear above. Visual tones vary with light; matching that sample to the earlier darker-copper report and complete machine settings remains open.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Run</th><th>Date</th><th>Power and speed</th><th>Mode and time</th><th>What it showed</th></tr></thead>
@@ -439,14 +474,14 @@
         </div>
       </section>
       <section aria-labelledby="surface-options">
-        <p class="eyebrow">New active comparisons · not yet run</p>
+        <p class="eyebrow">Next comparisons and open checks</p>
         <h2 id="surface-options">Surface preparation and finish alternatives</h2>
-        <p>These are separate questions, not completed results or universal material settings.</p>
+        <p>The coating appearance trials are photographed above. The remaining comparisons and performance checks have their own status.</p>
         <div class="table-wrap"><table>
           <thead><tr><th>Comparison</th><th>Current status</th><th>Question being tested</th></tr></thead>
           <tbody>
             <tr><td>Three bottom-line samples</td><td>Prepared, not run</td><td>Compare a sanded patch with the untouched area. Identify the exposed substrate before interpreting a result; no aluminum identity is established.</td></tr>
-            <tr><td>Painted tin finish</td><td>Appearance reported; performance unverified</td><td>Coating trials have reported appearance feedback. Media review, cure, adhesion, durability and suitability remain separate checks.</td></tr>
+            <tr><td>Painted tin finish</td><td>Photos reviewed; performance checks open</td><td>Matte-black appearance preferred over the marker and flawed gloss attempts. Cure, adhesion, durability and repeatability remain separate checks.</td></tr>
             <tr><td>Prefinished black tins</td><td>Candidate container</td><td>Compare supplier-made black tins as a packaging route rather than assuming a black laser finish must be created on bare reflective tin.</td></tr>
           </tbody>
         </table></div>
