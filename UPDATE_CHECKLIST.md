@@ -6,7 +6,7 @@
 - [x] Keep the latest tin video visible, with comparisons and historical records easy to find.
 - [x] Add a phone section selector covering every main tab and retain existing deep links.
 - [x] Preserve all prior text, anchors, media and source links in the content inventory.
-- [ ] Publish the separate music player after acquiring all four approved MP3s and their license records. One acquired; three downloads blocked by the in-app browser.
+- [x] Add the separate optional music player with all four owner-downloaded recordings, source/license provenance, repeat order, quiet initial volume and persistent mute. Actual playback and mobile controls verified; publication follows the release merge. The available individual certificate is retained privately.
 
 ## November 16 — Red Hill phases and resource guide
 
