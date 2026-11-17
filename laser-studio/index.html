@@ -15,7 +15,7 @@
   <meta property="og:image" content="https://tboy450.github.io/assets/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
-  <link rel="stylesheet" href="/assets/site.css?v=laser-studio-20261113" />
+  <link rel="stylesheet" href="/assets/site.css?v=studio-sync-20261117" />
   <style>
     .page-hero { padding: 54px 0 30px; max-width: 1080px; }
     .page-hero h1 { margin: 22px 0 12px; }
@@ -65,7 +65,7 @@
     .studio-details { margin-top:20px; padding:0 18px; border:1px solid var(--line); border-radius:12px; background:var(--panel); }
     .studio-details summary { padding:16px 0; cursor:pointer; font-weight:600; }
     .studio-details p { color:var(--silver); font-size:.93rem; }
-    .studio-gallery { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .studio-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:16px; }
     .studio-gallery figure { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
     .studio-gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:8px; }
     h2[id] { scroll-margin-top:24px; }
@@ -108,6 +108,7 @@
     <p class="lede">Custom engraving software by HASK, created to work around unclear controls, limited adjustment and misleading terminology in the existing laser-software workflow. It brings image preparation, placement, job checks and recorded experiments into one application.</p>
     <div class="page-links">
       <a class="btn primary" href="#slate-coasters">Artemis’s Place coaster project</a>
+      <a class="btn" href="#source-updates">Development updates</a>
       <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Application code</a>
       <a class="btn" href="https://github.com/Tboy450/positioning-laser">Positioning Laser code</a>
       <a class="btn" href="/red-hill/">Red Hill test history</a>
@@ -180,8 +181,29 @@
       </div>
       <details class="studio-details"><summary>Verification and current limits</summary><div>
         <p>The November 9 investigation recorded 77 offline checks. Later port-selection and return-speed updates have their own regression checks; those counts describe different revisions, not one combined test total.</p>
-        <p>The live completion-time estimate has been reported to jump by hours and remains under investigation. Clearer Check-page explanations, native loading of prepared samples, project-size presets and release of another idle Studio connection remain unfinished.</p>
+        <p>The workshop’s live completion-time estimate has been reported to jump by hours. A replacement planned-time countdown and clearer sizing explanations are now prepared for review below; neither update is installed yet. Native loading of prepared samples, project-size presets and release of another idle Studio connection remain unfinished.</p>
         <p>Recent workshop-build changes are described here separately from the public application-code reference. Offline checks do not establish a physical engraving result.</p>
+      </div></details>
+    </section>
+
+    <section class="page-section" aria-labelledby="source-updates">
+      <p class="eyebrow">Development checkpoint · November 17, 2026</p>
+      <h2 id="source-updates">Prepared updates, awaiting installation</h2>
+      <p>The next changes are written and checked offline. They are available for source review, with installation and physical validation still ahead.</p>
+      <div class="page-grid">
+        <article class="page-card"><h3>Clearer sizing and edge spacing</h3><p>Explain the physical piece and picture size separately. Show the picture box’s left, bottom, right and top clearances, flag artwork entering a masked margin, and identify a readout that is waiting for the preview to rebuild. This improves the sizing display without changing the engraving geometry.</p></article>
+        <article class="page-card"><h3>A stable planned-time countdown</h3><p>Replace the fluctuating progress-based correction with a countdown from the saved motion plan. Separate engraving, laser-off travel, dwell and overhead, with active and paused time shown independently. This is a planning estimate, not a calibrated physical completion forecast; reaching zero does not mean the controller has finished.</p></article>
+        <article class="page-card"><h3>Portrait and slate learning preserved</h3><p>Document why source texture, real reflections and the actual burn map matter. Keep photographed results separate from prepared settings. Regional lens inversion and mixed scan directions remain future work; this update records their requirements rather than adding those features.</p></article>
+      </div>
+      <details class="studio-details"><summary>Source review and verification status</summary><div>
+        <p>The repository update is staged in four open pull requests. The first collects the workshop’s existing control and record improvements; the later updates build on it. These are review links, not a newly installed release.</p>
+        <ul class="studio-facts">
+          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/2">Workshop controls and repository update</a> — recovery, test tools, saved ports, sample records, return speed and HASK credits.</li>
+          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/3">Portrait and slate learning record</a> — documentation and future comparison criteria.</li>
+          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/4">Sizing explanations and four edge clearances</a> — checked with placement and saved-setup interface tests.</li>
+          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/5">Stable planned-time estimate</a> — checked with offline timing, pause, resume and status-display tests.</li>
+        </ul>
+        <p>Source review does not establish a physical engraving improvement. Prepared sample import, regional processing and repeatability checks remain separate work.</p>
       </div></details>
     </section>
 
@@ -275,6 +297,7 @@
         <figure><a href="/woodworking/"><img src="/assets/workshop/north-pole-plank.webp" width="800" height="600" loading="lazy" alt="North Pole artwork engraved on a pine plank" /></a><figcaption><strong>Layered pine engraving</strong>Wood shading, lettering and grain response informed the image treatment.</figcaption></figure>
         <figure><a href="/red-hill/#cards"><img src="/assets/workshop/red-hill-business-card.webp" width="800" height="600" loading="lazy" alt="Red Hill artwork engraved on a black anodized business card" /></a><figcaption><strong>Anodized cards</strong>Dot patterns, light-on-dark artwork and placement on small parts.</figcaption></figure>
         <figure><a href="/red-hill/#latest-lid"><img src="/assets/workshop/red-hill-rock-lid-20261116-t.webp" width="640" height="572" loading="lazy" alt="Latest Red Hill Rock-design tin sample" /></a><figcaption><strong>Red Hill tin trials</strong>Fine lettering, slow-feed tests, finish comparisons and documented revisions.</figcaption></figure>
+        <figure><a href="/red-hill/#red-hill-slate"><img src="/assets/workshop/red-hill-slate-finished-20261117-t.webp" width="700" height="525" loading="lazy" alt="Finished Red Hill square slate with chapel, pine branches and engraved title" /></a><figcaption><strong>Red Hill square slate</strong>A separate 94 mm design with a recorded 49 min 17.8 sec run. Main lettering reads clearly; the lower verse remains a refinement target.</figcaption></figure>
       </div>
     </section>
 
@@ -285,8 +308,8 @@
         <article class="page-card"><h3>Repeatable positioning</h3><p>Connect the digital origin and perimeter preview to a physical jig so the workpiece can be centered and registered consistently.</p></article>
         <article class="page-card"><h3>Better material records</h3><p>Keep the material, surface condition, focus, fixture, settings, passes, result photo and wipe/finish observations together.</p></article>
         <article class="page-card"><h3>Richer artwork preparation</h3><p>Continue improving masks, grayscale and dither treatment, linework and relief-style outputs for different engraving jobs.</p></article>
-        <article class="page-card"><h3>Clearer explanations and loading</h3><p>Explain what Check-page controls actually change, load prepared projects with their complete settings, and add useful size presets.</p></article>
-        <article class="page-card"><h3>A stable time estimate</h3><p>Investigate the live estimate jumping by hours. Faster laser-off returns are implemented separately; their predicted savings are not measured run-time results.</p></article>
+        <article class="page-card"><h3>Clearer explanations and loading</h3><p>The sizing explanation and edge-clearance update is ready for review. Native loading of prepared projects with their complete settings and useful project-size presets remain next steps.</p></article>
+        <article class="page-card"><h3>Time estimates checked against real runs</h3><p>Review and install the prepared countdown, then compare its plan with matched physical runs. Faster laser-off returns are a separate implemented control; predicted savings are not measured run-time results.</p></article>
         <article class="page-card"><h3>Wood-aware design</h3><p>Account for grain direction, surface ridges and unevenness when artwork is sized and prepared for wood.</p></article>
       </div>
       <article class="page-card" style="margin-top:18px">
@@ -301,7 +324,7 @@
   </main>
 
   <footer class="wrap site-foot">
-    <p><strong>Laser Photo Studio · Developed by HASK.</strong> <a href="https://tboy450.github.io/#contact">Contact HASK</a></p>
+    <p><strong>Laser Photo Studio · Developed by HASK.</strong> <a href="https://tboy450.github.io/#contact">Contact HASK</a> · <a href="#source-updates">Development updates</a></p>
     <p><strong>HASK – Hybridized Business Solutions.</strong> Software, prototyping and digital fabrication developed around real samples and recorded tests.</p>
     <p>© 2026 Tristan Boyd Hash · <a href="https://github.com/Tboy450">GitHub</a> · <a href="/#contact">Work with HASK</a></p>
   </footer>

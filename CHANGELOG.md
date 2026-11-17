@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-17: Sync the Laser Studio development overview
+
+- **Signed:** Codex (OpenAI), following the owner’s request to refresh the footer-linked Studio information after the history review.
+- Add reviewed source-status summaries for clearer sizing and edge clearances, a stable planned-time countdown, and portrait/slate learning. Link the four open application reviews without calling them an installed release or physical validation.
+- Preserve the HASK contact destination and Guide coaster anchor; add a development-update route on the Studio page and its footer.
+- Add the existing LinkedIn and professional-mode Facebook profiles to the homepage contact buttons at the owner’s request.
+- Add the finished 94 mm Red Hill square slate to the sample gallery with matched recorded duration and remaining verse refinement, separate from Artemis’s Place.
+- Reconcile the checklist with PR37’s published church-history correction: documented Church of God identity, unresolved fire narrative removed, earlier chronology still open. Private ownership/deed research is excluded from website source.
+
 ## 2026-11-17: Add Red Hill square slate and local roots
 
 - **Signed:** Codex (OpenAI), following the owner-authorized master handoffs and Records source review.

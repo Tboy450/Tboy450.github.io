@@ -277,6 +277,8 @@ h2 { margin: 0; color: var(--cyan); font-size: 0.78rem; font-weight: 700; letter
   background: radial-gradient(700px 240px at 0% 0%, rgba(47, 208, 224, 0.15), transparent 70%), var(--panel);
 }
 .contact h3 { margin: 10px 0 8px; font-size: clamp(1.4rem, 3vw, 2rem); }
+.contact .cta .btn { min-height: 44px; display: inline-flex; align-items: center; }
+.contact-social { margin-top: 10px; }
 .contact p { max-width: 62ch; margin: 0 0 18px; color: var(--silver); }
 .contact-emblem { position: absolute; top: 50%; right: clamp(24px, 5vw, 64px); width: 190px; height: 190px; transform: translateY(-50%); filter: drop-shadow(0 0 30px rgba(47, 208, 224, 0.3)); }
 footer { padding: 40px 0 56px; color: var(--muted); font-size: 0.85rem; }
