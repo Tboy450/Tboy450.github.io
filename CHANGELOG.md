@@ -5,6 +5,7 @@
 - **Signed:** Codex (OpenAI), following the owner’s project-framing correction.
 - Present Artemis’s Place as a custom coaster project in its own homepage Fabrication card, case-study heading, navigation and workshop links.
 - Recognize the first finished coaster as HASK’s first successful slate engraving test, preserving both the project story and its value to Laser Photo Studio’s material development. Retain the existing URL and photo record.
+- Cross-reference the mobile development supplement: preserve fine detail and real reflection geometry; label masked inversion, dither comparison and gap-free mixed-direction processing as future experiments. No old suggested settings are promoted into actual run data.
 
 
 ## 2026-11-17: Document the physical Artemis’s Place slate coaster
