@@ -25,6 +25,15 @@
 - [ ] Match the photographed slate run to its exact job/settings and actual run time; verify repeatability on further blanks.
 - [ ] Reconcile later workshop-build changes into the public application repository in the Studio workstream; website descriptions do not publish application changes.
 
+## November17 — Red Hill slate, product directions and local roots
+
+- [x] Add actual finished94mm square slate and matched runner timing/settings; keep verse/sizing refinements and unrun cleanup distinct.
+- [x] Add Local roots history chapter using attributed family memory and cited documentary/regional sources.
+- [x] Record proposed decorative/custom Gold Label and coloured-tin starter directions without claiming a launch or throughput.
+- [x] Verify new deep links, all five history tabs and finished-photo viewer at1440/768/390/360px; retain49 prior anchors and48 media references.
+- [ ] Trace original founding/fire/rebuilding and family/preacher/Civil-War records; exact relationships remain open.
+- [ ] Test verse refinements, cleanup and repeatability on later physical samples.
+
 ## November 17 — Music playback preference
 
 - [x] Revise Red Hill’s starting volume to 75% in both audio and slider, superseding the earlier 90% instruction.

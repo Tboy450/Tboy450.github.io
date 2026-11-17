@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-17: Add Red Hill square slate and local roots
+
+- **Signed:** Codex (OpenAI), following the owner-authorized master handoffs and Records source review.
+- Add the real finished94mm slate photograph and matched49m17.8s runner result, with separate engraving/laser-off-return speeds and verse refinements. Distinguish it from89mm Artemis and the unrun cleanup candidate.
+- Add an illustrated Local roots chapter: attributed family/congregation memory, documented1996 service, official Boones Mill regional timeline and Monacan resources. No current-building founding date, genealogy or burial-site assertion inferred.
+- Present Gold Label/decorative/custom and coloured-tin starter directions as proposals. Preserve existing tin video, public records and music.
+- Verified Local roots, slate and product-direction deep links at1440/768/390/360px, all five nested history tabs, photo decoding/viewer and no overflow/errors. Retained all49 prior IDs and48 media references. Real-device checks remain open.
+
+
 ## 2026-11-17: Add Explorations to the main portfolio
 
 - **Signed:** Codex (OpenAI), following the owner’s track selection.
