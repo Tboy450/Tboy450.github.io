@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-16: Organize Red Hill phases and the pine-resource field guide
+
+- **Signed:** Codex (OpenAI), following the owner's phase review and illustrated history/industry request.
+- Replaced the compressed nine-stage strip with Phase 1 foundation checkpoints and active Phase 2 finish refinement. Kept the unprinted jig, unrun comparisons, lettering revision and evidence closeout visible.
+- Added History & Industry with four keyboard-accessible sections: history, materials and uses, research outlook, and eight Tar Heel films.
+- Added a credited public-domain archival photograph, an original responsive material-route diagram and application icons. Distinguished fatwood from dross, established industry from research, and broader material uses from Red Hill capabilities.
+
 Newest first. Entries are signed; historical release status describes the time of each entry.
 
 ## 2026-11-16: Show the new tin and painted-surface progress
