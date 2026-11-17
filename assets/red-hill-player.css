@@ -14,3 +14,6 @@ body:has(.rh-music) .rh [id] { scroll-margin-top:calc(var(--music-rail,60px) + 8
 body:has(.rh-music) .rh .knowledge-panel { scroll-margin-top:calc(var(--music-rail,60px) + 150px); }
 @media(max-width:760px) { body:has(.rh-music) .rh .knowledge-panel { scroll-margin-top:calc(var(--music-rail,60px) + 200px); } }
 @media(prefers-reduced-motion:reduce) { .rh-music * { animation:none!important; transition:none!important; } }
+
+.music-panel-header { display:none; }
+@media(max-width:760px) { .music-panel-header { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:0 0 12px; color:#b6b9ac; font-size:12px; } }
