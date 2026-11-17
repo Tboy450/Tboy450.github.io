@@ -1,5 +1,9 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
+## November 17 — Music playback preference
+
+- [x] Request music automatically when Red Hill opens, at 90% player volume, with a Play fallback when browser autoplay policy requires interaction. Keep mute visible and preserve the sequence and mobile controls.
+
 ## November 16 — Compact Red Hill navigation
 
 - [x] Replace long initial views with concise summaries and expandable full records across the main sections.

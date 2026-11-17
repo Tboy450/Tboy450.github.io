@@ -9,9 +9,9 @@
   ];
   const box = document.createElement('aside'); box.className='rh-music'; box.setAttribute('aria-label','Optional background music');
   box.innerHTML=`<div class="music-handle"><button type="button" class="music-toggle" aria-expanded="false" aria-controls="music-controls">♫ <span>Music</span></button><button type="button" class="music-mute" aria-label="Mute music" aria-pressed="false">Mute</button></div>
-    <div id="music-controls" hidden><p class="music-title"></p><p class="music-artist"></p><div class="music-buttons"><button type="button" class="music-prev" aria-label="Previous track">‹</button><button type="button" class="music-play">Play</button><button type="button" class="music-next" aria-label="Next track">›</button></div><label class="music-volume">Volume <input type="range" min="0" max="100" value="20" step="5" aria-label="Music volume" /></label><p class="music-state" role="status" aria-live="polite">Press Play to listen</p><a class="music-credit" target="_blank" rel="noopener">Track credit · Pixabay</a></div>`;
+    <div id="music-controls" hidden><p class="music-title"></p><p class="music-artist"></p><div class="music-buttons"><button type="button" class="music-prev" aria-label="Previous track">‹</button><button type="button" class="music-play">Play</button><button type="button" class="music-next" aria-label="Next track">›</button></div><label class="music-volume">Volume <input type="range" min="0" max="100" value="90" step="5" aria-label="Music volume" /></label><p class="music-state" role="status" aria-live="polite">Starting music…</p><a class="music-credit" target="_blank" rel="noopener">Track credit · Pixabay</a></div>`;
   document.body.append(box);
-  const audio = document.createElement('audio');audio.preload='none';audio.volume=.2;audio.setAttribute('aria-label','Optional Red Hill background music');box.append(audio);
+  const audio = document.createElement('audio');audio.preload='auto';audio.volume=.9;audio.setAttribute('aria-label','Red Hill background music');box.append(audio);
   const panel=box.querySelector('#music-controls'),toggle=box.querySelector('.music-toggle'),play=box.querySelector('.music-play'),mute=box.querySelector('.music-mute'),volume=box.querySelector('input'),status=box.querySelector('.music-state');
   let index=0, loaded=null, wanted=false, generation=0, timer=null, hover=false;
   const describe=()=>{const t=tracks[index];box.dataset.trackId=t.id;box.querySelector('.music-title').textContent=t.title;box.querySelector('.music-artist').textContent=t.artist+' · '+(index+1)+' / '+tracks.length;box.querySelector('.music-credit').href=t.source;};
@@ -22,7 +22,7 @@
   const fail=()=>{wanted=false;generation++;audio.pause();loaded=null;status.textContent='This track could not load. Try Play again or choose Next.';sync();};
   const start=async()=>{wanted=true;const token=++generation;sync();status.textContent='Loading…';
     if(loaded!==index){audio.src=new URL(tracks[index].id+'.mp3',base).href;loaded=index;audio.load();}
-    try{await audio.play();if(token!==generation){if(!wanted)audio.pause();return;}status.textContent='Playing';sync();}catch{if(token===generation)fail();}
+    try{await audio.play();if(token!==generation){if(!wanted)audio.pause();return;}status.textContent='Playing';toggle.querySelector('span').textContent='Music';sync();}catch(error){if(token!==generation)return;if(error.name==='NotAllowedError'){wanted=false;status.textContent='Tap Play to start music.';toggle.querySelector('span').textContent='Play music';expand();sync();schedule();}else fail();}
   };
   const select=(offset)=>{const resume=wanted;generation++;audio.pause();index=(index+offset+tracks.length)%tracks.length;loaded=null;describe();wanted=false;status.textContent='Press Play to listen';sync();if(resume)start();};
   play.onclick=()=>{if(wanted){wanted=false;generation++;audio.pause();status.textContent='Paused';sync();}else start();schedule();};
@@ -38,5 +38,5 @@
   box.addEventListener('focusin',()=>{expand();clearTimeout(timer);});box.addEventListener('focusout',schedule);
   box.addEventListener('keydown',e=>{if(e.key==='Escape'){toggle.focus();panel.hidden=true;toggle.setAttribute('aria-expanded','false');}});
   new ResizeObserver(()=>document.documentElement.style.setProperty('--music-rail',Math.ceil(box.getBoundingClientRect().bottom+8)+'px')).observe(box);
-  describe();sync();schedule();
+  describe();sync();schedule();start();
 })();
