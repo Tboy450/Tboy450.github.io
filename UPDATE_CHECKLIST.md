@@ -1,5 +1,21 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
+## November 17 — Laser Studio source and website sync
+
+- [x] Add the verified LinkedIn profile and existing professional-mode Facebook profile beside the homepage email contacts at the owner’s request.
+- [x] Check the app’s HASK contact callback and Guide coaster destination; retain the existing contact and sample links.
+- [x] Describe the prepared sizing/edge-clearance, planned-time countdown and portrait/slate documentation updates, with source-review links and installation status.
+- [x] Distinguish open application PRs from installed workshop controls and physical test results; leave native prepared-job import, regional inversion and hybrid scanning open.
+- [x] Add the matched 94 mm Red Hill slate sample to the Studio sample gallery, separate from Artemis’s Place.
+- [ ] Merge/install application updates in the Studio workstream and validate them against matched physical runs; a website publication does not complete these tasks.
+
+## November 17 — Church history evidence correction
+
+- [x] Add the visually verified 1994 Church of God yearbook source at the exact Indian Grave Road address and retain the 1996 notice.
+- [x] Remove the unresolved fire narrative and unsupported nineteenth-century continuity from the public history section at the owner’s direction (PR37).
+- [x] Record county ownership, the assessor’s 1950 field, earlier yearbooks and the free deed-index leads privately; no relocation or founding date inferred. Deed images and historical scanned indexes require separate access.
+- [ ] Establish the earlier chapel, original land donation, construction chronology and any relocation through actual church/deed records before expanding the public account.
+
 ## November 17 — Artemis’s Place project identity
 
 - [x] Present Artemis’s Place as a custom coaster project with its own Fabrication card, project heading and links.
