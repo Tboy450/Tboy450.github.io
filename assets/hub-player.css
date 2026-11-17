@@ -1,0 +1,10 @@
+.hub-profile:has(.rh-music) { padding-top:max(64px,calc(env(safe-area-inset-top) + 56px)); }
+.hub-profile .rh-music { color:var(--text); }
+.hub-profile .rh-music button { border-color:var(--line); background:#0c1721; color:var(--text); }
+.hub-profile .rh-music button:hover { background:#16303b; }
+.hub-profile .rh-music button:focus-visible,.hub-profile .rh-music input:focus-visible,.hub-profile .rh-music a:focus-visible { outline-color:var(--cyan); }
+.hub-profile #music-controls { background:#0c1721; border-color:var(--line); }
+.hub-profile .music-artist,.hub-profile .music-panel-header,.hub-profile .music-state { color:var(--silver); }
+.hub-profile .music-credit { color:var(--cyan); }
+.hub-profile .music-volume input { accent-color:var(--cyan); }
+.hub-profile .music-buttons [hidden] { display:none; }

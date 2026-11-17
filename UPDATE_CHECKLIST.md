@@ -28,7 +28,7 @@
 ## November 17 — Music playback preference
 
 - [x] Revise Red Hill’s starting volume to 75% in both audio and slider, superseding the earlier 90% instruction.
-- [ ] Add the same compact player style to the main portfolio at 75% once its separate electronic/lounge tracks are selected and received.
+- [x] Add the compact player to the main portfolio at75% with the owner-selected Explorations by Musinova, actual received MP3, source credit and single-track repeat. More tracks can follow later.
 
 - [x] Add explicit mobile Minimize and five-second touch idle collapse, with persistent Music/Mute and uninterrupted playback.
 

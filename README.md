@@ -27,6 +27,7 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
     owner's request).
 - `assets/site.css` and `assets/site.js`: styles, the filters, the header counts and the GitHub dates.
   The page works without scripts.
+- `assets/red-hill-player.js` and `assets/red-hill-player.css`: compact music controls reused by Red Hill and the main portfolio. The homepage supplies its own Explorations track metadata and uses `assets/hub-player.css` for cyan styling. Both start at75%; the homepage repeats its single selected track. Credits/provenance: [portfolio music](assets/audio/portfolio/README.md).
 - `assets/shots/`: card images, 800 × 500 WebP, with 1280 × 720 `-wide` versions for featured cards.
   Live sites were captured with headless Edge. When adding a project, add a screenshot in the
   same size.

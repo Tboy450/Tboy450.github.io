@@ -1,7 +1,7 @@
 (() => {
   const script = document.currentScript;
   const base = new URL(script.dataset.audioBase || 'audio/', script.src);
-  const tracks = [
+  const tracks = script.dataset.trackId ? [{id:Number(script.dataset.trackId),title:script.dataset.trackTitle,artist:script.dataset.trackArtist,source:script.dataset.trackSource}] : [
     {id:540662,title:'Sentimental Acoustic Cinematic Folk – Loop',artist:'Sonican',source:'https://pixabay.com/music/folk-sentimental-acoustic-cinematic-folk-loop-540662/'},
     {id:246502,title:'Atmospheric Acoustic Cinematic – Emotional Journey',artist:'Sonican',source:'https://pixabay.com/music/acoustic-group-atmospheric-acoustic-cinematic-emotional-journey-246502/'},
     {id:362273,title:'Nature Travel – Acoustic Music',artist:'Sonican',source:'https://pixabay.com/music/acoustic-group-nature-travel-acoustic-music-362273/'},
@@ -11,8 +11,9 @@
   box.innerHTML=`<div class="music-handle"><button type="button" class="music-toggle" aria-expanded="false" aria-controls="music-controls">♫ <span>Music</span></button><button type="button" class="music-mute" aria-label="Mute music" aria-pressed="false">Mute</button></div>
     <div id="music-controls" hidden><div class="music-panel-header"><span>Now playing</span><button type="button" class="music-minimize" aria-label="Minimize music controls">Minimize</button></div><p class="music-title"></p><p class="music-artist"></p><div class="music-buttons"><button type="button" class="music-prev" aria-label="Previous track">‹</button><button type="button" class="music-play">Play</button><button type="button" class="music-next" aria-label="Next track">›</button></div><label class="music-volume">Volume <input type="range" min="0" max="100" value="75" step="5" aria-label="Music volume" /></label><p class="music-state" role="status" aria-live="polite">Starting music…</p><a class="music-credit" target="_blank" rel="noopener">Track credit · Pixabay</a></div>`;
   document.body.append(box);
-  const audio = document.createElement('audio');audio.preload='auto';audio.volume=.75;audio.setAttribute('aria-label','Red Hill background music');box.append(audio);
+  const audio = document.createElement('audio');audio.preload='auto';audio.volume=.75;audio.setAttribute('aria-label',script.dataset.audioLabel || 'Red Hill background music');box.append(audio);
   const panel=box.querySelector('#music-controls'),toggle=box.querySelector('.music-toggle'),play=box.querySelector('.music-play'),mute=box.querySelector('.music-mute'),volume=box.querySelector('input'),status=box.querySelector('.music-state');
+  if(tracks.length===1){box.querySelector('.music-prev').hidden=true;box.querySelector('.music-next').hidden=true;}
   let index=0, loaded=null, wanted=false, generation=0, timer=null, hover=false, keyboardMode=false;
   const mobile=matchMedia('(max-width:760px)');
   const describe=()=>{const t=tracks[index];box.dataset.trackId=t.id;box.querySelector('.music-title').textContent=t.title;box.querySelector('.music-artist').textContent=t.artist+' · '+(index+1)+' / '+tracks.length;box.querySelector('.music-credit').href=t.source;};

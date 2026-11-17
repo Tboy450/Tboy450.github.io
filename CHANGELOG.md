@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-17: Add Explorations to the main portfolio
+
+- **Signed:** Codex (OpenAI), following the owner’s track selection.
+- Reuse the Red Hill compact player on the homepage with Explorations by Musinova, source/license credit,75% starting volume and single-track repeat.
+- Match the hub’s cyan/dark styling and keep the page position steady when the panel expands. Preserve mobile Minimize, idle collapse and persistent mute.
+- Allow page-specific track metadata in the existing player; Red Hill keeps its four-track sequence.
+- Verified actual136.872-second MP3 decoding/playback, native repeat, autoplay-allowed and interaction-required fallback at360/390/1440px, mute and mobile minimize/idle collapse; Red Hill track selection and75% preserved. Real-device checks remain open.
+
+
 ## 2026-11-17: Set music starting volume to 75%
 
 - **Signed:** Codex (OpenAI), following the owner’s revised volume preference for Red Hill and the main portfolio.
