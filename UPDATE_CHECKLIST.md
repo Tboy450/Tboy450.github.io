@@ -27,6 +27,9 @@
 
 ## November 17 — Music playback preference
 
+- [x] Revise Red Hill’s starting volume to 75% in both audio and slider, superseding the earlier 90% instruction.
+- [ ] Add the same compact player style to the main portfolio at 75% once its separate electronic/lounge tracks are selected and received.
+
 - [x] Add explicit mobile Minimize and five-second touch idle collapse, with persistent Music/Mute and uninterrupted playback.
 
 - [x] Request music automatically when Red Hill opens, at 90% player volume, with a Play fallback when browser autoplay policy requires interaction. Keep mute visible and preserve the sequence and mobile controls.

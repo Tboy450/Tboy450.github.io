@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-17: Set music starting volume to 75%
+
+- **Signed:** Codex (OpenAI), following the owner’s revised volume preference for Red Hill and the main portfolio.
+- Set Red Hill’s initial audio and slider to 75%, superseding 90%. Update the script URL so returning visitors receive the change.
+- Main portfolio player and its 75% default are planned while its separate lobby-style music selection is finalized.
+
+
 ## 2026-11-17: Give the Artemis’s Place coaster project its own identity
 
 - **Signed:** Codex (OpenAI), following the owner’s project-framing correction.
