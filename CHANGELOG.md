@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-17: Minimize the mobile music panel
+
+- **Signed:** Codex (OpenAI), following the owner's mobile readability feedback.
+- Added a visible Minimize button on phone/tablet widths and reduced touch idle collapse from fifteen to five seconds. Touch focus no longer keeps the track panel open indefinitely.
+- Music continues while minimized; Music and Mute remain available. Keyboard focus is preserved until the visitor closes or leaves the controls. Desktop idle timing remains fifteen seconds.
+- Verified touch minimize/reopen, continued playback, mute, idle collapse and keyboard/Escape behavior at 360, 390 and 760 px; desktop timing at 1440 px.
+
 ## 2026-11-17: Request background music on page opening
 
 - **Signed:** Codex (OpenAI), following the owner's revised playback preference.

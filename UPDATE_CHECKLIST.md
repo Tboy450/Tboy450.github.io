@@ -2,6 +2,8 @@
 
 ## November 17 — Music playback preference
 
+- [x] Add explicit mobile Minimize and five-second touch idle collapse, with persistent Music/Mute and uninterrupted playback.
+
 - [x] Request music automatically when Red Hill opens, at 90% player volume, with a Play fallback when browser autoplay policy requires interaction. Keep mute visible and preserve the sequence and mobile controls.
 
 ## November 16 — Compact Red Hill navigation
