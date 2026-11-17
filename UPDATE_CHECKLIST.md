@@ -1,5 +1,13 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
+## November 16 — Red Hill phases and resource guide
+
+- [x] Reorganize the foundation trials and current finish work into Phase 1 / Phase 2, retaining open Phase 1 carryovers.
+- [x] Add illustrated history, material terminology (including fatwood and dross), grouped industrial uses and a research outlook.
+- [x] Add the eight-film Tar Heel viewing guide with concise transcript-based summaries, direct public links and the unnumbered sixth-upload clarification.
+- [x] Keep historical sources and image credits alongside the material; preserve the latest tin video and coating gallery.
+- [ ] Close the physical tests and evidence gaps listed on the project page. Website organization does not complete those trials.
+
 Added November 4, 2026, from the owner's website-specific working checklist.
 
 ## Scope and tracking
