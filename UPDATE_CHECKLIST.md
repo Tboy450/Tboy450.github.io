@@ -1,5 +1,10 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
+## November 17 — Artemis’s Place project identity
+
+- [x] Present Artemis’s Place as a custom coaster project with its own Fabrication card, project heading and links.
+- [x] Identify the first successful slate engraving as a milestone within that project and a material milestone for Laser Photo Studio. Preserve the photo record and existing URL.
+
 ## November 17 — Artemis’s Place physical slate sample
 
 - [x] Receive both mobile media ZIPs, match their SHA-256 and CRC, and verify 40 asset-manifest entries plus 42 SHA-manifest entries.
