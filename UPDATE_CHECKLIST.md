@@ -1,12 +1,23 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
+## November 17 — Artemis’s Place physical slate sample
+
+- [x] Receive both mobile media ZIPs, match their SHA-256 and CRC, and verify 40 asset-manifest entries plus 42 SHA-manifest entries.
+- [x] Inspect all six actual photos and publish their 12 full/thumbnail WebP derivatives; keep source references and mockup history private.
+- [x] Lead the existing slate section with the finished handheld photo, add blank/digital/process/finished progression and a keyboard/touch photo viewer.
+- [x] Add one physical sample tile to From the workshop; update the Fabrication teaser, Woodcraft link and material status.
+- [x] Keep digital preparation labeled; no measured runtime, depth, finalized preset or hybrid scan implementation claimed.
+- [x] Verify homepage, Laser Studio, Woodcraft and Red Hill at 1440/768/390/360 px: no overflow, missing images, broken fragment links or JavaScript errors. Verify all seven viewer images, keyboard/touch navigation, focus return and direct-image links without JavaScript. Live status requires this revision's merge and successful Pages run.
+- [ ] Match physical run settings and time to the saved job; assess repeatability and later contrast/detail experiments.
+
 ## November 17 — Laser Studio purpose and progress
 
 - [x] Correct the application's purpose: clearer controls, explanations and useful adjustment; retain Grbl/U20 as compatibility information.
 - [x] Bring implemented local-build controls and records into the overview, with unfinished work identified.
 - [x] Add the slate portrait/coaster project, actual digital preview and preparation status; connect the homepage, workshop, Woodcraft and Red Hill routes.
 - [x] Give the Red Hill overview link its verified full public destination and clearer label.
-- [ ] Add reviewed finished-slate photographs, physical assessment and measured run time when available.
+- [x] Add reviewed finished-slate photographs and qualitative visual assessment (November 17 physical-sample update above).
+- [ ] Match the photographed slate run to its exact job/settings and actual run time; verify repeatability on further blanks.
 - [ ] Reconcile later workshop-build changes into the public application repository in the Studio workstream; website descriptions do not publish application changes.
 
 ## November 17 — Music playback preference

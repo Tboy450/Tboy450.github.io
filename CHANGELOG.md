@@ -1,5 +1,15 @@
 # Change Log
 
+## 2026-11-17: Document the physical Artemis’s Place slate coaster
+
+- **Signed:** Codex (OpenAI), following the owner’s mobile fabrication handoff.
+- Verify both delivered archives and their asset manifests; inspect the six actual before/process/completed photographs.
+- Promote the real handheld result in Laser Studio, retain the labeled digital dot map, and add a responsive sequence plus keyboard/touch photo viewer.
+- Add the finished slate tile to From the workshop, refresh the Fabrication teaser and Woodcraft link, and mark the material as a documented physical sample.
+- Keep actual run settings, duration and repeatability open. Publish only the 12 photo derivatives and their provenance; source/reference archives remain private. Red Hill content, music behavior and the removed standalone summary are unchanged.
+- Verified four pages at 1440/768/390/360 px, photo decoding, alt text, anchors and Fabrication filtering. All seven viewer images support keyboard/touch navigation, Escape/Close and focus return; direct photograph links also work without JavaScript. Actual Android/iPhone testing remains open.
+
+
 ## 2026-11-17: Explain Laser Photo Studio's purpose and catch up its project record
 
 - **Signed:** Codex (OpenAI), following the owner's correction and slate/progress request.

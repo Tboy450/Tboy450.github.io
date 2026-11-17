@@ -15,8 +15,8 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
   - **Fabrication is a homepage category.** Laser Photo Studio has a card linking to its GitHub application repository and its detailed workflow overview at `laser-studio/index.html`. Red Hill documents the related physical tests.
   - The status badge is `badge live`, `badge dev` or plain `badge` (prototype).
   - Emberwake and Smoke Cult appear immediately above Tboy450 RPG, with playable-site and public-code links.
-  - **From the workshop** shows laser-engraved wood and metal, an engraving-process photo and the fitted handguard prototype. It links to the dedicated [Woodworking & Woodcraft](woodworking/index.html) and [Laser Studio](laser-studio/index.html) pages. The handguard comparison credits 3D Print Studio VA for printing.
-  - `laser-studio/index.html`: why Laser Photo Studio was created (clearer controls and useful adjustment), implemented workshop-build progress, image preparation, placement, job checks and recovery. Includes a clearly labelled digital slate-coaster preview and links to physical pine/card/tin samples; unfinished physical assessment and app work remain explicit.
+  - **From the workshop** shows laser-engraved wood, metal and a completed Artemis’s Place slate portrait, an engraving-process photo and the fitted handguard prototype. It links to the dedicated [Woodworking & Woodcraft](woodworking/index.html) and [Laser Studio](laser-studio/index.html) pages. The handguard comparison credits 3D Print Studio VA for printing.
+  - `laser-studio/index.html`: why Laser Photo Studio was created (clearer controls and useful adjustment), implemented workshop-build progress, image preparation, placement, job checks and recovery. Includes six actual Artemis’s Place slate-coaster photographs, a separately labelled digital dot map and an accessible photo viewer. The completed physical sample is documented; exact job-to-photo settings, actual run time and repeatability remain open. Links to physical pine/card/tin samples and unfinished app work remain explicit.
   - `woodworking/index.html`: woodcraft overview using the existing pine engraving samples; grain, preparation and finish topics are identified as active development rather than completed claims.
   - `red-hill/index.html`: one Red Hill project page covering product/material development plus packaging and laser-marking tests. “Forest Products” is treated as a test label within Red Hill, not a separate project page.
   - **Early work & experiments** is the collapsible list of beginner repositories.
@@ -29,7 +29,8 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
 - `assets/shots/`: card images, 800 × 500 WebP, with 1280 × 720 `-wide` versions for featured cards.
   Live sites were captured with headless Edge. When adding a project, add a screenshot in the
   same size.
-- `assets/workshop/`: 800 × 600 WebP photos for the workshop row.
+- `assets/workshop/`: optimized WebP photos for the workshop row and case studies. The Artemis slate photographs retain their original composition and aspect ratios; [their provenance](assets/workshop/ARTEMIS-SLATE-SOURCES.md) distinguishes them from digital preparation.
+- `assets/studio-gallery.js`: keyboard/touch photo viewer on the Laser Studio page, with direct-image links when JavaScript is unavailable.
 - `assets/hask-emblem.webp` and `.png`: the HASK logo emblem, cut out of the supplied HASK artwork. The
   artwork's lettering misspells "Hybridized", so the page puts a text wordmark beside the emblem.
 - `assets/og-image.jpg`, `favicon-32.png`, `favicon-192.png` and `apple-touch-icon.png`: the share
