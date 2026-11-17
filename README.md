@@ -12,6 +12,7 @@ HASK - Hybridized Business Solutions portfolio. It links each public project's w
     then the featured Dragonfly and Swarmfall row, then games, the Assets & Environments Lab and side projects. Each card's `data-cat` sets its filter
     (`simulations`, `games`, `fabrication`, `research` or `tools`), and `data-repo` names its GitHub
     repository for the "updated X ago" date.
+  - **Artemis’s Place Coaster Project** has its own Fabrication card and an existing case-study section at `/laser-studio/#slate-coasters`. It is a custom coaster project; its first finished piece also records HASK’s first successful slate test. The existing URL and full photo record are retained.
   - **Fabrication is a homepage category.** Laser Photo Studio has a card linking to its GitHub application repository and its detailed workflow overview at `laser-studio/index.html`. Red Hill documents the related physical tests.
   - The status badge is `badge live`, `badge dev` or plain `badge` (prototype).
   - Emberwake and Smoke Cult appear immediately above Tboy450 RPG, with playable-site and public-code links.

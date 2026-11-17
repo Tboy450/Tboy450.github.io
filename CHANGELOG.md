@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-17: Give the Artemis’s Place coaster project its own identity
+
+- **Signed:** Codex (OpenAI), following the owner’s project-framing correction.
+- Present Artemis’s Place as a custom coaster project in its own homepage Fabrication card, case-study heading, navigation and workshop links.
+- Recognize the first finished coaster as HASK’s first successful slate engraving test, preserving both the project story and its value to Laser Photo Studio’s material development. Retain the existing URL and photo record.
+
+
 ## 2026-11-17: Document the physical Artemis’s Place slate coaster
 
 - **Signed:** Codex (OpenAI), following the owner’s mobile fabrication handoff.
