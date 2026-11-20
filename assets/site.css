@@ -70,7 +70,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 /* Header */
 .hero { position: relative; padding: 76px 0 44px; }
 .brand { display: flex; align-items: center; gap: 18px; }
-.brand .emblem { width: 88px; height: 88px; filter: drop-shadow(0 0 22px rgba(47, 208, 224, 0.35)); }
+.brand .emblem { width: 88px; height: 88px; border-radius: 50%; box-shadow: 0 0 22px rgba(47, 208, 224, 0.35); }
 .wordmark { display: flex; flex-direction: column; gap: 2px; }
 .brand .bar { width: 64px; height: 5px; margin-bottom: 14px; border-radius: 2px; background: var(--cyan); box-shadow: 0 0 18px rgba(47, 208, 224, 0.6); }
 .brand strong { font-size: 1.45rem; letter-spacing: 0.05em; }
@@ -280,7 +280,7 @@ h2 { margin: 0; color: var(--cyan); font-size: 0.78rem; font-weight: 700; letter
 .contact .cta .btn { min-height: 44px; display: inline-flex; align-items: center; }
 .contact-social { margin-top: 10px; }
 .contact p { max-width: 62ch; margin: 0 0 18px; color: var(--silver); }
-.contact-emblem { position: absolute; top: 50%; right: clamp(24px, 5vw, 64px); width: 190px; height: 190px; transform: translateY(-50%); filter: drop-shadow(0 0 30px rgba(47, 208, 224, 0.3)); }
+.contact-emblem { position: absolute; top: 50%; right: clamp(24px, 5vw, 64px); width: 190px; height: 190px; transform: translateY(-50%); border-radius: 50%; box-shadow: 0 0 30px rgba(47, 208, 224, 0.3); }
 footer { padding: 40px 0 56px; color: var(--muted); font-size: 0.85rem; }
 footer p { margin: 0 0 6px; }
 .site-foot strong { color: var(--silver); font-weight: 600; }
