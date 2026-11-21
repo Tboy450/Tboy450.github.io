@@ -1,6 +1,6 @@
 # Red Hill optional background music
 
-These downloaded recordings accompany the original Red Hill project page. The page requests playback on opening, initially at 90% player volume. Visitors can pause, mute or adjust the volume. If the browser blocks audible autoplay, the player asks the visitor to tap Play. Device sound settings still apply. No shuffle; order repeats as listed below.
+These downloaded recordings accompany the original Red Hill project page. The page requests playback on opening, initially at 75% player volume. Visitors can pause, mute or adjust the volume. If the browser blocks audible autoplay, the player asks the visitor to tap Play. Device sound settings still apply. No shuffle; order repeats as listed below.
 
 1. Sentimental Acoustic Cinematic Folk – Loop — Sonican (540662): https://pixabay.com/music/folk-sentimental-acoustic-cinematic-folk-loop-540662/
 2. Atmospheric Acoustic Cinematic – Emotional Journey — Sonican (246502): https://pixabay.com/music/acoustic-group-atmospheric-acoustic-cinematic-emotional-journey-246502/
