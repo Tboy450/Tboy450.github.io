@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-22 — Slate Coasters and Red Hill records
+
+- Present Slate Coasters as a Fabrication work category and feature the finished photograph first.
+- Keep all six original photographs, the digital preview, source credits and existing section links. Place the process gallery in an expandable section.
+- Group slate settings with material test notes. Keep development, machine compatibility and next steps available in expandable sections.
+- Feature the six-second first print on the ordered black tins. Keep the earlier Rock-design video and group the dated lid trials under Samples & tests.
+
 ## 2026-11-17: Sync the Laser Studio development overview
 
 - **Signed:** Codex (OpenAI), following the owner’s request to refresh the footer-linked Studio information after the history review.

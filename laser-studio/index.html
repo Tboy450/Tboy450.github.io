@@ -57,11 +57,9 @@
     .studio-nav .btn { min-height:44px; }
     .studio-slate { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:28px; align-items:start; }
     .studio-preview { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
-    .studio-preview img { display:block; width:100%; height:auto; border-radius:8px; }
+    .studio-preview img { display:block; width:100%; height:auto; max-height:420px; object-fit:contain; border-radius:8px; }
     .studio-preview figcaption,.studio-gallery figcaption { padding:12px 2px 2px; color:var(--muted); font-size:.86rem; }
     .studio-preview figcaption strong,.studio-gallery figcaption strong { display:block; margin-bottom:5px; color:var(--text); }
-    .studio-facts { padding-left:20px; color:var(--silver); }
-    .studio-facts li { margin-bottom:14px; }
     .studio-details { margin-top:20px; padding:0 18px; border:1px solid var(--line); border-radius:12px; background:var(--panel); }
     .studio-details summary { padding:16px 0; cursor:pointer; font-weight:600; }
     .studio-details p { color:var(--silver); font-size:.93rem; }
@@ -71,14 +69,17 @@
     h2[id] { scroll-margin-top:24px; }
     @media(max-width:760px) { .studio-slate { grid-template-columns:1fr; } .studio-preview { max-width:440px; width:100%; justify-self:center; } .studio-gallery { grid-template-columns:1fr; } }
     @media(max-width:620px) { section[aria-labelledby="latest-development"] .page-grid { grid-template-columns:1fr; } }
-    .slate-process-title { margin:32px 0 10px; scroll-margin-top:24px; }
-    .slate-sequence { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:20px; }
+    .studio-fold.page-section { padding:0; margin:12px 0; border:0; }
+    .studio-fold .studio-details { margin-top:0; }
+    .studio-fold summary h2 { display:inline; margin:0; font-size:1.15rem; }
+    .studio-fold-content { padding-bottom:18px; }
+    #slate-process, .studio-fold-content[id] { scroll-margin-top:80px; }
+    .slate-sequence { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; padding-bottom:18px; }
     .slate-step { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
     .slate-step a { display:block; background:#070d13; }
     .slate-step img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:contain; }
     .slate-step figcaption { padding:14px; color:var(--muted); font-size:.86rem; }
     .slate-step figcaption strong { display:block; color:var(--text); margin-bottom:6px; }
-    .slate-extra { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; padding-bottom:18px; }
     a[data-studio-photo] { cursor:zoom-in; }
     .studio-lightbox { width:min(1100px,calc(100% - 24px)); max-width:none; max-height:calc(100dvh - 24px); padding:16px; border:1px solid var(--line); border-radius:16px; background:var(--panel); color:var(--text); }
     .studio-lightbox::backdrop { background:rgba(0,0,0,.88); }
@@ -91,7 +92,7 @@
     .studio-lightbox .btn { min-width:44px; min-height:44px; cursor:pointer; white-space:nowrap; }
     .studio-lightbox [data-photo-count] { font: .8rem var(--mono); }
     @media(max-width:900px) { .slate-sequence { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media(max-width:620px) { .slate-sequence,.slate-extra { grid-template-columns:1fr; } .studio-lightbox { padding:12px; } .studio-lightbox img { height:52dvh; } }
+    @media(max-width:620px) { .slate-sequence { grid-template-columns:1fr; } .studio-lightbox { padding:12px; } .studio-lightbox img { height:52dvh; } }
   </style>
 </head>
 <body>
@@ -105,10 +106,10 @@
     </div>
     <p class="eyebrow" style="margin-top:28px">Digital fabrication · Software · Material testing</p>
     <h1>Laser Photo <span>Studio</span></h1>
-    <p class="lede">Custom engraving software by HASK, created to work around unclear controls, limited adjustment and misleading terminology in the existing laser-software workflow. It brings image preparation, placement, job checks and recorded experiments into one application.</p>
+    <p class="lede">HASK’s engraving software brings image preparation, placement, job checks and material presets into one workshop application.</p>
     <div class="page-links">
-      <a class="btn primary" href="#slate-coasters">Artemis’s Place coaster project</a>
-      <a class="btn" href="#source-updates">Development updates</a>
+      <a class="btn primary" href="#slate-coasters">Slate Coasters</a>
+      <a class="btn" href="#evidence">Material presets</a>
       <a class="btn" href="https://github.com/Tboy450/laser-photo-studio">Application code</a>
       <a class="btn" href="https://github.com/Tboy450/positioning-laser">Positioning Laser code</a>
       <a class="btn" href="/red-hill/">Red Hill test history</a>
@@ -117,7 +118,10 @@
 
   <main id="content" class="wrap page-main">
     <nav class="page-links studio-nav" aria-label="Laser Studio sections">
-      <a class="btn" href="#why-built">Why it was built</a><a class="btn" href="#software">Working features</a><a class="btn" href="#latest-development">Recent progress</a><a class="btn" href="#slate-coasters">Coaster project</a><a class="btn" href="#physical-samples">Physical samples</a>
+      <a class="btn" href="#software">Explore the software</a>
+      <a class="btn" href="#physical-samples">Workshop samples</a>
+      <a class="btn" href="#latest-development">Development updates</a>
+      <a class="btn" href="#machine">Machine compatibility</a>
     </nav>
     <section class="page-section" aria-labelledby="why-built">
       <p class="eyebrow">The reason for the software</p>
@@ -169,110 +173,40 @@
       </div>
     </section>
 
-    <section class="page-section" aria-labelledby="latest-development">
-      <p class="eyebrow">Development record · November 17, 2026</p>
-      <h2 id="latest-development">More control, added through actual projects</h2>
-      <p>These additions are implemented in the workshop application. They build on the original five-step workflow rather than remaining ideas for a future app.</p>
-      <div class="page-grid">
-        <article class="page-card"><h3>Scan direction and return speed</h3><p>Choose alternating rows or left-to-right marking. A separate laser-off return-speed control changes the movement between rows without changing engraving speed or power, and saves with the preset and job.</p></article>
-        <article class="page-card"><h3>Saved setup and inspection moves</h3><p>Keep the artwork and job setup available, park to inspect the piece and return to job zero. Physical alignment still needs checking after an interruption.</p></article>
-        <article class="page-card"><h3>Saved USB-port choices</h3><p>Keep known ports available and refresh device detection without silently switching the selection. This addresses using different USB sockets; it does not release another running sender.</p></article>
-        <article class="page-card"><h3>Richer test and sample records</h3><p>Record material, surface preparation, row spacing, passes and result status alongside settings and photos. Separate commanded speed from a measured or inferred result.</p></article>
-      </div>
-      <details class="studio-details"><summary>Verification and current limits</summary><div>
-        <p>The November 9 investigation recorded 77 offline checks. Later port-selection and return-speed updates have their own regression checks; those counts describe different revisions, not one combined test total.</p>
-        <p>The workshop’s live completion-time estimate has been reported to jump by hours. A replacement planned-time countdown and clearer sizing explanations are now prepared for review below; neither update is installed yet. Native loading of prepared samples, project-size presets and release of another idle Studio connection remain unfinished.</p>
-        <p>Recent workshop-build changes are described here separately from the public application-code reference. Offline checks do not establish a physical engraving result.</p>
-      </div></details>
-    </section>
-
-    <section class="page-section" aria-labelledby="source-updates">
-      <p class="eyebrow">Development checkpoint · November 17, 2026</p>
-      <h2 id="source-updates">Prepared updates, awaiting installation</h2>
-      <p>The next changes are written and checked offline. They are available for source review, with installation and physical validation still ahead.</p>
-      <div class="page-grid">
-        <article class="page-card"><h3>Clearer sizing and edge spacing</h3><p>Explain the physical piece and picture size separately. Show the picture box’s left, bottom, right and top clearances, flag artwork entering a masked margin, and identify a readout that is waiting for the preview to rebuild. This improves the sizing display without changing the engraving geometry.</p></article>
-        <article class="page-card"><h3>A stable planned-time countdown</h3><p>Replace the fluctuating progress-based correction with a countdown from the saved motion plan. Separate engraving, laser-off travel, dwell and overhead, with active and paused time shown independently. This is a planning estimate, not a calibrated physical completion forecast; reaching zero does not mean the controller has finished.</p></article>
-        <article class="page-card"><h3>Portrait and slate learning preserved</h3><p>Document why source texture, real reflections and the actual burn map matter. Keep photographed results separate from prepared settings. Regional lens inversion and mixed scan directions remain future work; this update records their requirements rather than adding those features.</p></article>
-      </div>
-      <details class="studio-details"><summary>Source review and verification status</summary><div>
-        <p>The repository update is staged in four open pull requests. The first collects the workshop’s existing control and record improvements; the later updates build on it. These are review links, not a newly installed release.</p>
-        <ul class="studio-facts">
-          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/2">Workshop controls and repository update</a> — recovery, test tools, saved ports, sample records, return speed and HASK credits.</li>
-          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/3">Portrait and slate learning record</a> — documentation and future comparison criteria.</li>
-          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/4">Sizing explanations and four edge clearances</a> — checked with placement and saved-setup interface tests.</li>
-          <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/5">Stable planned-time estimate</a> — checked with offline timing, pause, resume and status-display tests.</li>
-        </ul>
-        <p>Source review does not establish a physical engraving improvement. Prepared sample import, regional processing and repeatability checks remain separate work.</p>
-      </div></details>
-    </section>
-
     <section class="page-section" aria-labelledby="slate-coasters">
-      <p class="eyebrow">Custom coaster project · First slate engraving successful · November 17, 2026</p>
-      <h2 id="slate-coasters">Artemis’s Place Coaster Project</h2>
+      <h2 id="slate-coasters">Slate Coasters</h2>
       <div class="studio-slate">
-        <figure class="studio-preview"><a href="/assets/workshop/artemis-slate-finished-in-hand-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-finished-in-hand-20261117.webp" width="1152" height="1536" loading="lazy" alt="Finished Artemis’s Place slate coaster held in a hand, showing an engraved owner-and-dog portrait" /></a><figcaption><strong>Actual finished sample · November 17, 2026</strong>The engraved coaster held in hand. Open the photograph to inspect the lettering, portrait and slate edges.</figcaption></figure>
+        <figure class="studio-preview">
+          <a href="/assets/workshop/artemis-slate-finished-in-hand-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-finished-in-hand-20261117-t.webp" width="525" height="700" loading="lazy" alt="A finished slate coaster with an engraved owner-and-dog portrait" /></a>
+          <figcaption><strong>Finished portrait coaster</strong>Artemis’s Place artwork engraved on natural slate, November 17, 2026.</figcaption>
+        </figure>
         <div>
-          <p>Artemis’s Place is a custom coaster project built around a portrait of Artemis and the owner. It brings together the artwork, lettering, material choice and physical engraving. The first completed coaster also became HASK’s first successful slate engraving test, adding a new material milestone to Laser Photo Studio’s development.</p>
-          <h3>First milestone: a successful slate coaster</h3>
-          <p>Made with Laser Photo Studio and the Tronxy Ultrabot U20, the finished coaster is documented here from blank to result. The title reads clearly, with the owner’s hat, beard and sunglasses and Artemis’s facial features retained at coaster scale. Pale marks separate the portrait from the dark stone, while the natural edge frames the artwork.</p>
-          <p>The photographs also give the next tests a focus: finer tonal separation in the light fur and a more convincing mirrored sheen in the sunglasses. These are visual observations from this sample, rather than measured resolution or depth.</p>
-          <ul class="studio-facts"><li><strong>Preparation dimensions:</strong> 89 × 89 mm artwork for a blank measured at approximately 100.6 × 100.6 mm.</li><li><strong>Evidence now available:</strong> six actual photographs covering before, process and completion.</li><li><strong>Still to reconcile:</strong> the exact saved job and settings for this run, actual duration, and repeatability across further blanks.</li></ul>
-          <a class="btn" href="#slate-process">Follow the photo sequence ↓</a>
+          <p>This 89 mm portrait on a roughly 100.6 mm coaster was HASK’s first successful slate engraving. The pale marks bring out the lettering, fur and reflected detail in the sunglasses.</p>
+          <p>The photo sequence shows the slate blank, artwork preview and engraving in progress.</p>
+          <div class="page-links">
+            <a class="btn" href="#evidence">Material presets and test notes</a>
+            <a class="btn" href="/assets/workshop/ARTEMIS-SLATE-SOURCES.md">Photo sources</a>
+          </div>
         </div>
       </div>
-      <h3 id="slate-process" class="slate-process-title">From blank to finished sample</h3>
-      <p>Open any image for a larger view. The dot map is digital preparation; the other images are photographs of the physical coaster.</p>
-      <div class="slate-sequence">
-        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-blank-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-blank-20261117-t.webp" width="525" height="700" loading="lazy" alt="Unengraved square slate coaster with a rough natural edge" /></a><figcaption><strong>01 · Raw slate</strong>The unengraved blank, with its natural surface and irregular edges.</figcaption></figure>
-        <figure class="slate-step"><a href="/assets/workshop/slate-portrait-preview-20261117.webp" data-studio-photo><img src="/assets/workshop/slate-portrait-preview-20261117.webp" width="890" height="890" loading="lazy" alt="Digital dot-map preview of the Artemis’s Place artwork on simulated dark slate" /></a><figcaption><strong>02 · Digital preparation</strong>The previously prepared dot map on simulated slate. This image is not a photograph of the finished work.</figcaption></figure>
-        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-01-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-01-20261117-t.webp" width="700" height="525" loading="lazy" alt="Partly engraved slate portrait beneath the laser head, with an unmarked lower area" /></a><figcaption><strong>03 · Physical engraving</strong>Pale marks build the portrait on the dark stone; the lower portion is still unmarked.</figcaption></figure>
-        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-finished-on-bed-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-finished-on-bed-20261117-t.webp" width="700" height="525" loading="lazy" alt="Completed Artemis’s Place owner-and-dog engraving on the machine bed" /></a><figcaption><strong>04 · Finished on the bed</strong>The full portrait, dog and title photographed after engraving.</figcaption></figure>
-      </div>
-      <details class="studio-details"><summary>Two more photographs from the engraving process</summary><div class="slate-extra">
-        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-02-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-02-20261117-t.webp" width="700" height="525" loading="lazy" alt="Partial engraved hat and sunglasses on slate with the laser head in view" /></a><figcaption><strong>Portrait detail in progress</strong>The hat, sunglasses and background appear while part of the coaster is still blank.</figcaption></figure>
-        <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-03-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-03-20261117-t.webp" width="700" height="525" loading="lazy" alt="Artemis’s Place lettering and background partially engraved on a slate coaster" /></a><figcaption><strong>Lettering and background in progress</strong>Another view of the partly marked coaster during the engraving process.</figcaption></figure>
-      </div></details>
-      <details class="studio-details"><summary>Prepared settings and the next comparison</summary><div>
-        <p>The earlier prepared job records Stucki dots, light-mark polarity, left-to-right scanning, 50% power, 3500 mm/min engraving and 0.10 mm rows, with no added sharpening. A later setup adds independent laser-off return speed. Those values describe preparation; they have not yet been independently matched to the run in these photographs.</p>
-        <p>The next record should tie the finished sample to its exact artwork and saved job, focus and placement, settings, actual duration and cleaned surface. Further samples can then test contrast and detail without assuming one result establishes a general slate preset.</p>
-        <p>Preserve fine portrait and fur detail in future comparisons: earlier pine work and this slate sample support testing local adjustments before simplifying the source. The reflected scene in the sunglasses survived; the remaining question is the mirrored-glass appearance. A proposed masked tonal inversion would change only the original lens pixels and compare the result with the untouched image and actual burn map. Earlier generated comparisons do not establish that method.</p>
-        <p>A controlled Stucki/Floyd–Steinberg comparison could examine fur, beard, eyes and lettering at the same physical scale and job settings. Neither method has been established as the winner for this project.</p>
-        <p>Mixed scan directions remain future research: one-direction detail and two-direction broad areas would need one master dot map, a shared canvas and coordinates, and proof that the split leaves no missing or overlapping active dots. Wood-relief and depth-map experiments are a separate future workstream.</p>
-      </div></details>
-    </section>
-
-    <section class="page-section" aria-labelledby="machine">
-      <p class="eyebrow">The machine layer</p>
-      <h2 id="machine">Current machine compatibility</h2>
-      <p>The workshop installation connects to a Tronxy Ultrabot U20 using its Grbl controller. The connection checks and movement rules below describe that installation; the purpose of the application is to make engraving setup and control clearer.</p>
-      <div class="page-grid">
-        <article class="page-card">
-          <h3>Controller constraints</h3>
-          <ul>
-            <li>Does not home the machine.</li>
-            <li>Refuses controller setting changes through the job workflow.</li>
-            <li>Checks the expected laser and axis configuration before output.</li>
-            <li>Uses explicit laser-off commands at row and job boundaries.</li>
-          </ul>
-        </article>
-        <article class="page-card">
-          <h3>Operator-visible run state</h3>
-          <ul>
-            <li>Shows layer progress, estimated time and head position.</li>
-            <li>Can park between layers for a progress photo.</li>
-            <li>Provides pause, controlled stop and emergency-stop controls.</li>
-            <li>Does not automatically restart a job after a fault.</li>
-          </ul>
-        </article>
-      </div>
-      <p class="page-note">The software's checks describe the generated job and controller workflow. They do not certify a material, focus, fixture, ventilation setup or physical engraving result; those are recorded against the actual machine and sample.</p>
+      <details class="studio-details">
+        <summary>Photo sequence from blank to finished coaster</summary>
+        <p id="slate-process">The dot map shows the digital preparation. The photographs document the physical slate and engraving process.</p>
+        <div class="slate-sequence">
+          <figure class="slate-step"><a href="/assets/workshop/artemis-slate-blank-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-blank-20261117-t.webp" width="525" height="700" loading="lazy" alt="Unengraved square slate coaster with a rough natural edge" /></a><figcaption><strong>Raw slate</strong>The unengraved blank, with its natural surface and irregular edges.</figcaption></figure>
+          <figure class="slate-step"><a href="/assets/workshop/slate-portrait-preview-20261117.webp" data-studio-photo><img src="/assets/workshop/slate-portrait-preview-20261117.webp" width="890" height="890" loading="lazy" alt="Digital dot-map preview of the Artemis’s Place artwork on simulated dark slate" /></a><figcaption><strong>Digital preparation</strong>The previously prepared dot map on simulated slate. This image is not a photograph of the finished work.</figcaption></figure>
+          <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-01-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-01-20261117-t.webp" width="700" height="525" loading="lazy" alt="Partly engraved slate portrait beneath the laser head, with an unmarked lower area" /></a><figcaption><strong>Physical engraving</strong>Pale marks build the portrait on the dark stone; the lower portion is still unmarked.</figcaption></figure>
+          <figure class="slate-step"><a href="/assets/workshop/artemis-slate-finished-on-bed-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-finished-on-bed-20261117-t.webp" width="700" height="525" loading="lazy" alt="Completed Artemis’s Place owner-and-dog engraving on the machine bed" /></a><figcaption><strong>Finished on the bed</strong>The full portrait, dog and title photographed after engraving.</figcaption></figure>
+          <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-02-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-02-20261117-t.webp" width="700" height="525" loading="lazy" alt="Partial engraved hat and sunglasses on slate with the laser head in view" /></a><figcaption><strong>Portrait detail in progress</strong>The hat, sunglasses and background appear while part of the coaster is still blank.</figcaption></figure>
+          <figure class="slate-step"><a href="/assets/workshop/artemis-slate-progress-03-20261117.webp" data-studio-photo><img src="/assets/workshop/artemis-slate-progress-03-20261117-t.webp" width="700" height="525" loading="lazy" alt="Artemis’s Place lettering and background partially engraved on a slate coaster" /></a><figcaption><strong>Lettering and background in progress</strong>Another view of the partly marked coaster during the engraving process.</figcaption></figure>
+        </div>
+      </details>
     </section>
 
     <section class="page-section" aria-labelledby="evidence">
       <p class="eyebrow">Material evidence</p>
-      <h2 id="evidence">Settings are tied to the material and the test</h2>
-      <p>The app's preset labels are deliberately evidence-based. A setting that works on one surface is not silently promoted into a universal recipe.</p>
+      <h2 id="evidence">Material presets and test notes</h2>
+      <p>Studio records the material and test conditions behind each setting.</p>
       <table class="status-table">
         <thead><tr><th>Workpiece</th><th>Recorded status</th><th>What the current record supports</th></tr></thead>
         <tbody>
@@ -284,6 +218,13 @@
           <tr><td>Other materials</td><td><span class="badge">Starting point / experimental</span></td><td>These remain test candidates until a result is established on this machine.</td></tr>
         </tbody>
       </table>
+      <details class="studio-details"><summary>Slate coaster settings and comparison notes</summary><div>
+        <p>The earlier prepared job records Stucki dots, light-mark polarity, left-to-right scanning, 50% power, 3500 mm/min engraving and 0.10 mm rows, with no added sharpening. A later setup adds independent laser-off return speed. Those values describe preparation; they have not yet been independently matched to the run in these photographs.</p>
+        <p>The next record should tie the finished sample to its exact artwork and saved job, focus and placement, settings, actual duration and cleaned surface. Further samples can then test contrast and detail without assuming one result establishes a general slate preset.</p>
+        <p>Preserve fine portrait and fur detail in future comparisons: earlier pine work and this slate sample support testing local adjustments before simplifying the source. The reflected scene in the sunglasses survived; the remaining question is the mirrored-glass appearance. A proposed masked tonal inversion would change only the original lens pixels and compare the result with the untouched image and actual burn map. Earlier generated comparisons do not establish that method.</p>
+        <p>A controlled Stucki/Floyd–Steinberg comparison could examine fur, beard, eyes and lettering at the same physical scale and job settings. Neither method has been established as the winner for this project.</p>
+        <p>Mixed scan directions remain future research: one-direction detail and two-direction broad areas would need one master dot map, a shared canvas and coordinates, and proof that the split leaves no missing or overlapping active dots. Wood-relief and depth-map experiments are a separate future workstream.</p>
+      </div></details>
       <div class="page-links">
         <a class="btn primary" href="/red-hill/">Open the Red Hill tin tests</a>
         <a class="btn" href="/woodworking/">See woodcraft examples</a>
@@ -301,25 +242,102 @@
       </div>
     </section>
 
-    <section class="page-section" aria-labelledby="next">
-      <p class="eyebrow">Ongoing development</p>
-      <h2 id="next">Where the studio is being improved</h2>
-      <div class="page-grid">
-        <article class="page-card"><h3>Repeatable positioning</h3><p>Connect the digital origin and perimeter preview to a physical jig so the workpiece can be centered and registered consistently.</p></article>
-        <article class="page-card"><h3>Better material records</h3><p>Keep the material, surface condition, focus, fixture, settings, passes, result photo and wipe/finish observations together.</p></article>
-        <article class="page-card"><h3>Richer artwork preparation</h3><p>Continue improving masks, grayscale and dither treatment, linework and relief-style outputs for different engraving jobs.</p></article>
-        <article class="page-card"><h3>Clearer explanations and loading</h3><p>The sizing explanation and edge-clearance update is ready for review. Native loading of prepared projects with their complete settings and useful project-size presets remain next steps.</p></article>
-        <article class="page-card"><h3>Time estimates checked against real runs</h3><p>Review and install the prepared countdown, then compare its plan with matched physical runs. Faster laser-off returns are a separate implemented control; predicted savings are not measured run-time results.</p></article>
-        <article class="page-card"><h3>Wood-aware design</h3><p>Account for grain direction, surface ridges and unevenness when artwork is sized and prepared for wood.</p></article>
-      </div>
-      <article class="page-card" style="margin-top:18px">
-        <h3>Material-response ladders are a studio-wide research objective</h3>
-        <p>A tighter ladder is not limited to the Red Hill tin. Laser Studio can use controlled power/speed or surface-response matrices to investigate separately identified materials, potentially including steel and titanium. Each material needs its own grade, surface/coating, thickness and suitability record; a result on one tin or metal must not be carried over as a universal preset.</p>
-      </article>
-      <div class="page-links">
-        <a class="btn primary" href="https://github.com/Tboy450/laser-photo-studio">View the application repository</a>
-        <a class="btn" href="/">Back to all HASK projects</a>
-      </div>
+    <section class="page-section studio-fold" aria-labelledby="latest-development-title">
+      <details class="studio-details">
+        <summary><h2 id="latest-development-title">More control, added through actual projects</h2></summary>
+        <div class="studio-fold-content" id="latest-development">
+          <p>These additions are implemented in the workshop application. They build on the original five-step workflow rather than remaining ideas for a future app.</p>
+          <div class="page-grid">
+            <article class="page-card"><h3>Scan direction and return speed</h3><p>Choose alternating rows or left-to-right marking. A separate laser-off return-speed control changes the movement between rows without changing engraving speed or power, and saves with the preset and job.</p></article>
+            <article class="page-card"><h3>Saved setup and inspection moves</h3><p>Keep the artwork and job setup available, park to inspect the piece and return to job zero. Physical alignment still needs checking after an interruption.</p></article>
+            <article class="page-card"><h3>Saved USB-port choices</h3><p>Keep known ports available and refresh device detection without silently switching the selection. This addresses using different USB sockets; it does not release another running sender.</p></article>
+            <article class="page-card"><h3>Richer test and sample records</h3><p>Record material, surface preparation, row spacing, passes and result status alongside settings and photos. Separate commanded speed from a measured or inferred result.</p></article>
+          </div>
+          <details class="studio-details"><summary>Verification and current limits</summary><div>
+            <p>The November 9 investigation recorded 77 offline checks. Later port-selection and return-speed updates have their own regression checks; those counts describe different revisions, not one combined test total.</p>
+            <p>The workshop’s live completion-time estimate has been reported to jump by hours. A replacement planned-time countdown and clearer sizing explanations are now prepared for review below; neither update is installed yet. Native loading of prepared samples, project-size presets and release of another idle Studio connection remain unfinished.</p>
+            <p>Recent workshop-build changes are described here separately from the public application-code reference. Offline checks do not establish a physical engraving result.</p>
+          </div></details>
+        </div>
+      </details>
+    </section>
+
+    <section class="page-section studio-fold" aria-labelledby="source-updates-title">
+      <details class="studio-details">
+        <summary><h2 id="source-updates-title">Prepared updates and source reviews</h2></summary>
+        <div class="studio-fold-content" id="source-updates">
+          <p>The next changes are written and checked offline. They are available for source review, with installation and physical validation still ahead.</p>
+          <div class="page-grid">
+            <article class="page-card"><h3>Clearer sizing and edge spacing</h3><p>Explain the physical piece and picture size separately. Show the picture box’s left, bottom, right and top clearances, flag artwork entering a masked margin, and identify a readout that is waiting for the preview to rebuild. This improves the sizing display without changing the engraving geometry.</p></article>
+            <article class="page-card"><h3>A stable planned-time countdown</h3><p>Replace the fluctuating progress-based correction with a countdown from the saved motion plan. Separate engraving, laser-off travel, dwell and overhead, with active and paused time shown independently. This is a planning estimate, not a calibrated physical completion forecast; reaching zero does not mean the controller has finished.</p></article>
+            <article class="page-card"><h3>Portrait and slate learning preserved</h3><p>Document why source texture, real reflections and the actual burn map matter. Keep photographed results separate from prepared settings. Regional lens inversion and mixed scan directions remain future work; this update records their requirements rather than adding those features.</p></article>
+          </div>
+          <details class="studio-details"><summary>Source review and verification status</summary><div>
+            <p>The four reviews below document the workshop controls and the follow-up changes described here. Installation and physical verification are tracked separately.</p>
+            <ul class="studio-facts">
+              <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/2">Workshop controls and repository update</a> — recovery, test tools, saved ports, sample records, return speed and HASK credits.</li>
+              <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/3">Portrait and slate learning record</a> — documentation and future comparison criteria.</li>
+              <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/4">Sizing explanations and four edge clearances</a> — checked with placement and saved-setup interface tests.</li>
+              <li><a href="https://github.com/Tboy450/laser-photo-studio/pull/5">Stable planned-time estimate</a> — checked with offline timing, pause, resume and status-display tests.</li>
+            </ul>
+            <p>Source review does not establish a physical engraving improvement. Prepared sample import, regional processing and repeatability checks remain separate work.</p>
+          </div></details>
+        </div>
+      </details>
+    </section>
+
+    <section class="page-section studio-fold" aria-labelledby="machine-title">
+      <details class="studio-details">
+        <summary><h2 id="machine-title">Current machine compatibility</h2></summary>
+        <div class="studio-fold-content" id="machine">
+          <p>The workshop installation connects to a Tronxy Ultrabot U20 using its Grbl controller. The connection checks and movement rules below describe that installation; the purpose of the application is to make engraving setup and control clearer.</p>
+          <div class="page-grid">
+            <article class="page-card">
+              <h3>Controller constraints</h3>
+              <ul>
+                <li>Does not home the machine.</li>
+                <li>Refuses controller setting changes through the job workflow.</li>
+                <li>Checks the expected laser and axis configuration before output.</li>
+                <li>Uses explicit laser-off commands at row and job boundaries.</li>
+              </ul>
+            </article>
+            <article class="page-card">
+              <h3>Operator-visible run state</h3>
+              <ul>
+                <li>Shows layer progress, estimated time and head position.</li>
+                <li>Can park between layers for a progress photo.</li>
+                <li>Provides pause, controlled stop and emergency-stop controls.</li>
+                <li>Does not automatically restart a job after a fault.</li>
+              </ul>
+            </article>
+          </div>
+          <p class="page-note">The software's checks describe the generated job and controller workflow. They do not certify a material, focus, fixture, ventilation setup or physical engraving result; those are recorded against the actual machine and sample.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="page-section studio-fold" aria-labelledby="next-title">
+      <details class="studio-details">
+        <summary><h2 id="next-title">Where the studio is being improved</h2></summary>
+        <div class="studio-fold-content" id="next">
+          <div class="page-grid">
+            <article class="page-card"><h3>Repeatable positioning</h3><p>Connect the digital origin and perimeter preview to a physical jig so the workpiece can be centered and registered consistently.</p></article>
+            <article class="page-card"><h3>Better material records</h3><p>Keep the material, surface condition, focus, fixture, settings, passes, result photo and wipe/finish observations together.</p></article>
+            <article class="page-card"><h3>Richer artwork preparation</h3><p>Continue improving masks, grayscale and dither treatment, linework and relief-style outputs for different engraving jobs.</p></article>
+            <article class="page-card"><h3>Clearer explanations and loading</h3><p>The sizing explanation and edge-clearance update is ready for review. Native loading of prepared projects with their complete settings and useful project-size presets remain next steps.</p></article>
+            <article class="page-card"><h3>Time estimates checked against real runs</h3><p>Review and install the prepared countdown, then compare its plan with matched physical runs. Faster laser-off returns are a separate implemented control; predicted savings are not measured run-time results.</p></article>
+            <article class="page-card"><h3>Wood-aware design</h3><p>Account for grain direction, surface ridges and unevenness when artwork is sized and prepared for wood.</p></article>
+          </div>
+          <article class="page-card" style="margin-top:18px">
+            <h3>Material-response ladders are a studio-wide research objective</h3>
+            <p>A tighter ladder is not limited to the Red Hill tin. Laser Studio can use controlled power/speed or surface-response matrices to investigate separately identified materials, potentially including steel and titanium. Each material needs its own grade, surface/coating, thickness and suitability record; a result on one tin or metal must not be carried over as a universal preset.</p>
+          </article>
+          <div class="page-links">
+            <a class="btn primary" href="https://github.com/Tboy450/laser-photo-studio">View the application repository</a>
+            <a class="btn" href="/">Back to all HASK projects</a>
+          </div>
+        </div>
+      </details>
     </section>
   </main>
 
