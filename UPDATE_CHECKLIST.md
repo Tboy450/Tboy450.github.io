@@ -1,15 +1,11 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
-## November 21 — Sample runtime recovery and site backfill (pending)
+## November 21–22 — Sample timing review
 
-- [ ] Cross-match as many finished sample photographs and produced artworks as possible with original image hashes, editable Laser Photo Studio saved jobs, actual controller/runner start/end records and material/size. Preserve each pass on a single workpiece rather than treating repeat passes as different products.
-- [ ] Show **actual measured** or clearly labelled **owner-reported approximate** print/engraving times beside matching approved sample photos in /red-hill/, /laser-studio/, /woodworking/, the homepage workshop gallery and the standalone slate candidate (if published). Do not copy a modeled/planned ETA into a completed-art caption.
-- [x] Initial site audit: Red Hill 94 mm slate **49m18s** already listed; first chapel lid **~8m**, second verse pass **~38m**, Forest Products metal card **~85m**, Leather Care metal card **~65m** also already appear. Preserve and do not duplicate existing captions. Their levels of timing evidence differ.
-- [ ] Investigate additional logged runs before attaching to artwork: earlier Artemis 89 mm completed-job **9462 sec** (saved-job/photo association open); Nov 18 separate slate **~23m22s** (artwork open); Nov 18 matte-black tin **~1h27m43s** (specific piece/photo open); Nov 18 14-pass tin test summed **1250.975 sec** (test series, not a single product); wood J8 two passes on one plaque (no elapsed time verified).
-- [ ] HASK Records, Studio and Fabrication must verify artwork/job/photo joins and actual vs approximate/estimated status; website owner then prepares a reviewed site PR, performs responsive/accessibility checks, and publishes only after normal approval/deployment process. Client media and unpublished sources remain restricted.
-
-**Tracking:** [Private master timing recovery draft PR](https://github.com/Tboy450/session-handoff-hub/pull/14) · [restricted Drive ledger](https://docs.google.com/document/d/1-eSTjmvMjDhOoYqpoJhqKoIlj-cJ4RPpP2XFzBs_Uik/edit). This checklist entry is a task handoff, **not** evidence that site captions have been updated or new runs physically tested.
-
+- [x] Check the homepage workshop, Red Hill, Laser Photo Studio and Woodworking for timings already published beside physical samples. Preserve the 94 mm Red Hill slate duration, about 49 min 18 sec, and the existing approximate times for the first chapel-lid pass, second full-verse pass and the two finished Red Hill business cards.
+- [x] Clarify the 94 mm Red Hill slate gallery caption in Laser Photo Studio as elapsed time for the completed engraving job. Keep one duration beside the matching Studio photograph and a link to the Red Hill test record.
+- [ ] Add more times when the completed job can be matched to the exact approved photograph. Keep runner elapsed, motion time, total session time and estimates distinct. For repeated or resumed passes, label the measured interval.
+- [ ] Review the selected captions and assets before publication. Leave unresolved sample times blank.
 
 ## November 17 — Laser Studio source and website sync
 
