@@ -16,7 +16,14 @@
 - [x] Record county ownership, the assessor’s 1950 field, earlier yearbooks and the free deed-index leads privately; no relocation or founding date inferred. Deed images and historical scanned indexes require separate access.
 - [ ] Establish the earlier chapel, original land donation, construction chronology and any relocation through actual church/deed records before expanding the public account.
 
-## November 17 — Artemis’s Place project identity
+## November 22 — Slate Coasters and Red Hill records
+
+- [x] Use Slate Coasters for the work category and keep Artemis’s Place as the artwork title. Retain the coaster route, photo sequence and existing Studio bookmarks.
+- [x] Put the first engraving on the ordered black tins in the Red Hill lead sample slot. Keep the November 16 Rock-design video in its dated record.
+- [x] Group the earlier Red Hill trials and link directly to the lead sample, coating comparisons, setup and run records. Distinguish the prepared November 15 DPI package from the later software-recorded follow-up.
+- [ ] Confirm the ordered tin’s exact job, stock, preparation, wipe stage and repeatability before adding settings or a duration to its caption.
+
+## November 17 — Coaster project identity
 
 - [x] Present Artemis’s Place as a custom coaster project with its own Fabrication card, project heading and links.
 - [x] Identify the first successful slate engraving as a milestone within that project and a material milestone for Laser Photo Studio. Preserve the photo record and existing URL.
