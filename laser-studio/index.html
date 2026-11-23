@@ -66,6 +66,9 @@
     .studio-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:16px; }
     .studio-gallery figure { margin:0; padding:12px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
     .studio-gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:8px; }
+    .studio-cyborg { max-width:760px; margin-top:24px; scroll-margin-top:24px; }
+    .studio-cyborg h3 { margin:0; }
+    .studio-cyborg p { margin:4px 0 12px; color:var(--silver); }
     h2[id] { scroll-margin-top:24px; }
     @media(max-width:760px) { .studio-slate { grid-template-columns:1fr; } .studio-preview { max-width:440px; width:100%; justify-self:center; } .studio-gallery { grid-template-columns:1fr; } }
     @media(max-width:620px) { section[aria-labelledby="latest-development"] .page-grid { grid-template-columns:1fr; } }
@@ -240,6 +243,20 @@
         <figure><a href="/red-hill/#latest-lid"><img src="/assets/workshop/red-hill-rock-lid-20261116-t.webp" width="640" height="572" loading="lazy" alt="Latest Red Hill Rock-design tin sample" /></a><figcaption><strong>Red Hill tin trials</strong>Fine lettering, slow-feed tests, finish comparisons and documented revisions.</figcaption></figure>
         <figure><a href="/red-hill/#red-hill-slate"><img src="/assets/workshop/red-hill-slate-finished-20261117-t.webp" width="700" height="525" loading="lazy" alt="Finished Red Hill square slate with chapel, pine branches and engraved title" /></a><figcaption><strong>Red Hill square slate</strong>A separate 94 mm design with a recorded 49 min 17.8 sec run. Main lettering reads clearly; the lower verse remains a refinement target.</figcaption></figure>
       </div>
+      <article class="studio-cyborg" id="cyborg-tin-lid" aria-labelledby="cyborg-tin-title">
+        <h3 id="cyborg-tin-title">Cyborg tin lid</h3>
+        <p>A requested Cyborg design engraved in two passes on a black tin lid.</p>
+        <div class="studio-gallery">
+          <figure>
+            <a href="/assets/workshop/cyborg-tin-finished.webp" data-studio-photo><img src="/assets/workshop/cyborg-tin-finished.webp" width="960" height="1280" loading="lazy" alt="Finished black tin lid held in hand, showing a bright cyborg and sword engraving" /></a>
+            <figcaption><strong>Finished two-pass engraving</strong></figcaption>
+          </figure>
+          <figure>
+            <a href="/assets/workshop/cyborg-tin-first-pass.webp" data-studio-photo><img src="/assets/workshop/cyborg-tin-first-pass.webp" width="1280" height="960" loading="lazy" alt="Partly marked cyborg design on a black tin lid resting on the laser bed" /></a>
+            <figcaption><strong>First-pass study</strong>Earlier trial photographed on the laser bed.</figcaption>
+          </figure>
+        </div>
+      </article>
     </section>
 
     <section class="page-section studio-fold" aria-labelledby="latest-development-title">
@@ -348,7 +365,7 @@
     <p>© 2026 Tristan Boyd Hash · <a href="https://github.com/Tboy450">GitHub</a> · <a href="/#contact">Work with HASK</a></p>
   </footer>
   <dialog class="studio-lightbox" aria-labelledby="studio-photo-title">
-    <header><h2 id="studio-photo-title">Slate photo viewer</h2><button type="button" class="btn" data-photo-close autofocus>Close ✕</button></header>
+    <header><h2 id="studio-photo-title">Laser Studio photo viewer</h2><button type="button" class="btn" data-photo-close autofocus>Close ✕</button></header>
     <figure><img data-photo-image alt="" /><figcaption data-photo-caption aria-live="polite"></figcaption></figure>
     <nav aria-label="Photo navigation"><button type="button" class="btn" data-photo-prev aria-label="Previous image">← Previous</button><span data-photo-count></span><button type="button" class="btn" data-photo-next aria-label="Next image">Next →</button></nav>
   </dialog>
