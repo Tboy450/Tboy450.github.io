@@ -1,5 +1,12 @@
 # Tristan Boyd Hash · Projects - Website Update Checklist
 
+## November 21–22 — Sample timing review
+
+- [x] Check the homepage workshop, Red Hill, Laser Photo Studio and Woodworking for timings already published beside physical samples. Preserve the 94 mm Red Hill slate duration, about 49 min 18 sec, and the existing approximate times for the first chapel-lid pass, second full-verse pass and the two finished Red Hill business cards.
+- [x] Clarify the 94 mm Red Hill slate gallery caption in Laser Photo Studio as elapsed time for the completed engraving job. Keep one duration beside the matching Studio photograph and a link to the Red Hill test record.
+- [ ] Add more times when the completed job can be matched to the exact approved photograph. Keep runner elapsed, motion time, total session time and estimates distinct. For repeated or resumed passes, label the measured interval.
+- [ ] Review the selected captions and assets before publication. Leave unresolved sample times blank.
+
 ## November 17 — Laser Studio source and website sync
 
 - [x] Add the verified LinkedIn profile and existing professional-mode Facebook profile beside the homepage email contacts at the owner’s request.
